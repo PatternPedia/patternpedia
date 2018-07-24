@@ -42,36 +42,12 @@
 #    Data properties
 #################################################################
 
-###  http://purl.org/patternpedia#hasContext
-:hasContext rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/patternpedia#hasForce
-:hasForce rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/patternpedia#hasIndication
-:hasIndication rdf:type owl:DatatypeProperty .
-
-
 ###  http://purl.org/patternpedia#hasLogo
 :hasLogo rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/patternpedia#hasName
 :hasName rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/patternpedia#hasProblem
-:hasProblem rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/patternpedia#hasResultingContext
-:hasResultingContext rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/patternpedia#hasSolution
-:hasSolution rdf:type owl:DatatypeProperty .
 
 
 #################################################################
