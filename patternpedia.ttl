@@ -16,6 +16,12 @@
 :contains rdf:type owl:ObjectProperty .
 
 
+###  http://purl.org/patternpedia#hasPatternRelation
+:hasPatternRelation rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Pattern ;
+                    rdfs:range :PatternRelationDescriptor .
+
+
 ###  http://purl.org/patternpedia#hasRelatedPattern
 :hasRelatedPattern rdf:type owl:ObjectProperty .
 
