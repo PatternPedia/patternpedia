@@ -6,14 +6,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://purl.org/patternpedia> .
 
-<http://purl.org/patternpedia> rdf:type owl:Ontology .
+<http://purl.org/patternpedia> rdf:type owl:Ontology ;
+                                owl:imports <http://purl.org/patternpedia/cloudcomputingpatterns> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://purl.org/patternpedia#contains
-:contains rdf:type owl:ObjectProperty .
+
+###  http://purl.org/patternpedia#containsPatternLanguage
+:containsPatternLanguage rdf:type owl:ObjectProperty ;
+                         rdfs:domain :PatternPedia ;
+                         rdfs:range :PatternLanguage .
 
 
 ###  http://purl.org/patternpedia#hasPatternRelation
@@ -79,7 +83,7 @@
 ###  http://purl.org/patternpedia#PatternPedia
 :PatternPedia rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty :contains ;
+                                owl:onProperty :containsPatternLanguage ;
                                 owl:allValuesFrom :PatternLanguage
                               ] ,
                               [ rdf:type owl:Restriction ;
@@ -110,6 +114,7 @@
 ###  http://purl.org/patternpedia#LinkedOpenPatterns
 :LinkedOpenPatterns rdf:type owl:NamedIndividual ,
                              :PatternPedia ;
+                    :containsPatternLanguage <http://purl.org/patternpedia/cloudcomputingpatterns#CloudComputingPatterns> ;
                     :hasName "PatternPedia - Linked Open Patterns"^^xsd:string .
 
 
