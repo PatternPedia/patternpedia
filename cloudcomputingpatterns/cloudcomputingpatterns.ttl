@@ -126,6 +126,7 @@
 ###  http://purl.org/patternpedia/cloudcomputingpatterns#ElasticInfrastructure
 :ElasticInfrastructure rdf:type owl:NamedIndividual ,
                                 :CloudComputingPattern ;
+                       pp:hasName "Elastic Infrastructure"^^xsd:string ;
                        :hasContext "An application experiences Periodic Workload, Once-in-a-lifetime Workload, Unpredictable Workload, or Continuously Changing Workload, the number of IT resources, such as servers, should be adjusted dynamically. In scope of the IaaS service model, the applications’ runtime infrastructure, thus, must support dynamic provisioning and decommissioning of virtual servers, disk storage and network connectivity."^^xsd:string ;
                        :hasDrivingQuestion "How do Cloud Offerings providing infrastructure resources behave and how should they be used in applications?"^^xsd:string ;
                        :hasIcon "http://www.cloudcomputingpatterns.org/icons/elastic_infrastructure_icon.png"^^xsd:anyURI ;
@@ -137,6 +138,7 @@
 ###  http://purl.org/patternpedia/cloudcomputingpatterns#ElasticLoadBalancer
 :ElasticLoadBalancer rdf:type owl:NamedIndividual ,
                               :CloudComputingPattern ;
+                     pp:hasName "Elastic Load Balancer"^^xsd:string ;
                      :hasContext "Application components of a Distributed Application shall be scaled out automatically. Requests sent to an application shall be used as an indicator for the currently experienced workload from which the required number of components instances shall be deducted."^^xsd:string ;
                      :hasDrivingQuestion "How can the number of required application component instances be determined based on monitored synchronous accesses?"^^xsd:string ;
                      :hasIcon "http://www.cloudcomputingpatterns.org/icons/elastic_load_balancer_icon.png"^^xsd:anyURI ;
