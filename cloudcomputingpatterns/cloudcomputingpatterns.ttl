@@ -109,6 +109,7 @@
 ###  http://purl.org/patternpedia/cloudcomputingpatterns#CloudComputingPatterns
 :CloudComputingPatterns rdf:type owl:NamedIndividual ,
                                  pp:PatternLanguage ;
+                        pp:containsPattern :ElasticInfrastructure ;
                         pp:hasLogo "http://www.cloudcomputingpatterns.org/img/book.png"^^xsd:anyURI ;
                         pp:hasName "Cloud Computing Patterns"^^xsd:string .
 
