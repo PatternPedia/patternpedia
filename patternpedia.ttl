@@ -134,4 +134,4 @@
                     :hasLogo "https://avatars2.githubusercontent.com/u/26855294?s=400&u=79a17f6856ac0b53e4658f1206362634904eb8b3&v=4"^^xsd:anyURI .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/cloudcomputingpatterns#CloudComputingPatterns> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/internetofthingspatterns#InternetOfThingsPatterns> .
-<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpediatetx> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpediaTetlanguage1> .
