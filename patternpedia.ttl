@@ -8,7 +8,8 @@
 
 <http://purl.org/patternpedia> rdf:type owl:Ontology ;
                                owl:imports <http://purl.org/patternpedia/cloudcomputingpatterns> ,
-                                           <http://purl.org/patternpedia/internetofthingspatterns> .
+                                           <http://purl.org/patternpedia/internetofthingspatterns> ,
+                                           <http://purl.org/patternpedia/patternlanguages/Testlanguage1> .
 
 #################################################################
 #    Object Properties
