@@ -135,4 +135,6 @@
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/cloudcomputingpatterns#CloudComputingPatterns#Cloud Computing Patterns> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/cloudcomputingpatterns2#cloudcomputingpatterns2#Cloud Computing Patterns 2> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/internetofthingspatterns#InternetOfThingsPatterns#Internet of Things Patterns> .
-<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/MyLanguage#MyLanguage> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/Testlanguage1#Testlanguage1#Testlanguage1> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/mylanguage#mylanguage#mylanguage> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/TESTWriter#TESTWriter> .
