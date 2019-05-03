@@ -8,7 +8,7 @@
 @base <http://purl.org/patternpedia/patternlanguages/Test8> .
 
 
-<http://purl.org/patternpedia/patternlanguages/Test8#Test8> rdf:type owl:Ontology ;
+<http://purl.org/patternpedia/patternlanguages/Test8> rdf:type owl:Ontology ;
 owl:imports <http://purl.org/patternpedia> .
 
 
