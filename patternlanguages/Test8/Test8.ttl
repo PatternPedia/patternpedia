@@ -8,7 +8,7 @@
 @base <http://purl.org/patternpedia/patternlanguages/Test8> .
 
 
-<http://purl.org/patternpedia/patternlanguages/Test8> rdf:type owl:Ontology ;
+<http://purl.org/patternpedia/patternlanguages/Test8#Test8> rdf:type owl:Ontology ;
 owl:imports <http://purl.org/patternpedia> .
 
 
@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,7 +40,7 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test8
+### http://purl.org/patternpedia/patternlanguages/Test8#Test8
 :Test8 rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
@@ -70,8 +70,9 @@ owl:imports <http://purl.org/patternpedia> .
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Test8#Test8
+###  http://purl.org/patternpedia/patternlanguages/Test8#Test8#Test8
 :Test8 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/212"^^xsd:anyURI ;
 pp:hasName "Test8"^^xsd:string .
+:Test8 containsPattern <http://purl.org/patternpedia/patternlanguages/firstPattern#firstPattern> .
