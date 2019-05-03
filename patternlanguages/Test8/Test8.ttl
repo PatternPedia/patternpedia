@@ -41,7 +41,7 @@ owl:imports <http://purl.org/patternpedia> .
 # #
 # #################################################################
 ### http://purl.org/patternpedia/patternlanguages/Test8#Test8
-:Test8Pattern rdf:type owl:Class ; 
+:Test8Individual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasIcon ; 
