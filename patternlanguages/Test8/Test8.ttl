@@ -75,4 +75,3 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/212"^^xsd:anyURI ;
 pp:hasName "Test8"^^xsd:string .
-:Test8 containsPattern <http://purl.org/patternpedia/patternlanguages/firstPattern#firstPattern> .
