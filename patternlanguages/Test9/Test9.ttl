@@ -64,4 +64,4 @@ owl:imports <http://purl.org/patternpedia> .
 :Test9 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasName "Test9"^^xsd:string .
-:Test9 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/FirstPatternWithUI#FirstPatternWithUI> .
+:Test9 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/First#First> .
