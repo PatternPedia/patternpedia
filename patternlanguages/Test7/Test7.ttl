@@ -73,6 +73,5 @@ owl:imports <http://purl.org/patternpedia> .
 ###  http://purl.org/patternpedia/patternlanguages/Test7#Test7
 :Test7 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
-pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "Test7"^^xsd:string .
-:Test7 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Pattern7#Pattern7> .
+:Test7 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternFor7#PatternFor7> .
