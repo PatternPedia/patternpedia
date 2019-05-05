@@ -23,7 +23,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasIcon rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -32,7 +32,7 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test3
+### http://purl.org/patternpedia/patternlanguages/Test3#Test3
 :Test3Individual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
@@ -50,8 +50,8 @@ owl:imports <http://purl.org/patternpedia> .
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Test3
+###  http://purl.org/patternpedia/patternlanguages/Test3#Test3
 :Test3 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
-pp:hasLogo "https://placekitten.com/340/200"^^xsd:anyURI ;
 pp:hasName "Test3"^^xsd:string .
+:Test3 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Pattern3#Pattern3> .
