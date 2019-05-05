@@ -43,6 +43,5 @@ owl:imports <http://purl.org/patternpedia> .
 ###  http://purl.org/patternpedia/patternlanguages/OnlyDrivingQuestion#OnlyDrivingQuestion
 :OnlyDrivingQuestion rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
-pp:hasLogo "http://placekitten.com/150/151"^^xsd:anyURI ;
 pp:hasName "OnlyDrivingQuestion"^^xsd:string .
-:OnlyDrivingQuestion pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternDriving#PatternDriving> .
+:OnlyDrivingQuestion pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternDrive#PatternDrive> .
