@@ -19,7 +19,7 @@ owl:imports <http://purl.org/patternpedia> .
 # #################################################################
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -28,8 +28,8 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/OnlyDrivingQuestion
-:OnlyDrivingQuestion rdf:type owl:Class ; 
+### http://purl.org/patternpedia/patternlanguages/OnlyDrivingQuestion#OnlyDrivingQuestion
+:OnlyDrivingQuestionIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasDrivingQuestion ; 
@@ -45,3 +45,4 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "http://placekitten.com/150/151"^^xsd:anyURI ;
 pp:hasName "OnlyDrivingQuestion"^^xsd:string .
+:OnlyDrivingQuestion pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternDriving#PatternDriving> .
