@@ -19,20 +19,20 @@ owl:imports <http://purl.org/patternpedia> .
 # #################################################################
 
 
-### Icon
-:hasIcon rdf:type rdf:type owl:DatatypeProperty .
-
-
 ### Context
-:hasContext rdf:type rdf:type owl:DatatypeProperty .
+:hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
-:hasDrivingQuestion rdf:type rdf:type owl:DatatypeProperty .
+### Icon
+:hasIcon rdf:type owl:DatatypeProperty .
+
+
+### DrivingQuestion
+:hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
 ### Solution
-:hasSolution rdf:type rdf:type owl:DatatypeProperty .
+:hasSolution rdf:type owl:DatatypeProperty .
 
 
 # #################################################################
@@ -40,17 +40,17 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/HalloTest
-:HalloTest rdf:type owl:Class ; 
+### http://purl.org/patternpedia/patternlanguages/HalloTest#HalloTest
+:HalloTestIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
+			 owl:onProperty :hasContext ; 
 			 owl:onDataRange xsd:string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
+			 owl:onProperty :hasIcon ; 
 			 owl:onDataRange xsd:string
 				] ,
 
@@ -75,3 +75,4 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "HalloTest"^^xsd:string .
+:HalloTest pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternHalloPat#PatternHalloPat> .
