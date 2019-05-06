@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,7 +40,7 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Hello
+### http://purl.org/patternpedia/patternlanguages/Hello#Hello
 :HelloIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
@@ -70,8 +70,8 @@ owl:imports <http://purl.org/patternpedia> .
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Hello
+###  http://purl.org/patternpedia/patternlanguages/Hello#Hello
 :Hello rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
-pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "Hello"^^xsd:string .
+:Hello pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternHello#PatternHello> .
