@@ -36,7 +36,7 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/TEstB
+### http://purl.org/patternpedia/patternlanguages/TEstB#TEstB
 :TEstBIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
@@ -60,11 +60,13 @@ owl:imports <http://purl.org/patternpedia> .
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/TEstB
+###  http://purl.org/patternpedia/patternlanguages/TEstB#TEstB
 :TEstB rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "TEstB"^^xsd:string .
+:TEstB pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TEstBPatternC#PatternC> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/TEstB> owl:imports <http://purl.org/patternpedia/patternlanguages/TEstBPatternC> .
