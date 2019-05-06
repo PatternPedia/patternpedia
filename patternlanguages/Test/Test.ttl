@@ -75,4 +75,8 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/200/430"^^xsd:anyURI ;
 pp:hasName "Test"^^xsd:string .
-:Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/PatternXD#PatternXD> .
+:Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Pattern23#Pattern23> .
+#################################################################
+# Pattern Import Statements
+##############################################################
+<http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Pattern23> .
