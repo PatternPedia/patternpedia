@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -35,7 +35,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasSolution rdf:type owl:DatatypeProperty .
 
 
-### Solution Sketches
+### SolutionSketches
 :hasSolutionSketches rdf:type owl:DatatypeProperty .
 
 
@@ -44,51 +44,53 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/TestSectionType
+### http://purl.org/patternpedia/patternlanguages/TestSectionType#TestSectionType
 :TestSectionTypeIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasIcon ; 
 			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange xsd:anyURI
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#anyURI
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasContext ; 
 			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasDrivingQuestion ; 
 			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasSolution ; 
 			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasSolutionSketches ; 
-			 owl:onDataRange xsd:anyURI
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#anyURI
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/TestSectionType
+###  http://purl.org/patternpedia/patternlanguages/TestSectionType#TestSectionType
 :TestSectionType rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestSectionType"^^xsd:string .
+:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname#Patternname> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname> .
