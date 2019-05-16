@@ -142,3 +142,4 @@
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/TestAgain2#TestAgain2> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/TestSectionType#TestSectionType> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/Testlanguage0980#Testlanguage0980> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/TestLanguage0#TestLanguage0> .
