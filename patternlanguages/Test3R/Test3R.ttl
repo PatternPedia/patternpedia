@@ -64,13 +64,13 @@ owl:imports <http://purl.org/patternpedia> .
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasSolution ; 
 			 owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
-				] .
+				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasSolution ; 
 			 owl:QualifiedCardinality"3"^^xsd:nonNegativeInteger
-				] ,
+				] .
 
 
 #################################################################
