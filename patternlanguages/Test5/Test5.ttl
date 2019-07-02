@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,45 +40,19 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test5
+### http://purl.org/patternpedia/patternlanguages/Test5#Test5
 :Test5Individual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:string>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:int>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:string>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:string>
-				] .
-
-
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Test5
+###  http://purl.org/patternpedia/patternlanguages/Test5#Test5
 :Test5 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "Test5"^^xsd:string .
+:Test5 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test5/Pattern86#Pattern86> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/Test5> owl:imports <http://purl.org/patternpedia/patternlanguages/Test5/Pattern86> .
