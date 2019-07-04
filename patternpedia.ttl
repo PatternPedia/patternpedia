@@ -19,6 +19,11 @@
                  rdfs:domain :PatternLanguage ;
                  rdfs:range :Pattern .
 
+ ###  http://purl.org/patternpedia#containsPattern
+ :containsPatternRelationDescriptors rdf:type owl:ObjectProperty ;
+                  rdfs:domain :PatternLanguage ;
+                  rdfs:range :Pattern .
+
 ###  http://purl.org/patternpedia#containsPatternGraph
 :containsPatternGraph rdf:type owl:ObjectProperty ;
                          rdfs:domain :PatternPedia ;
@@ -140,5 +145,6 @@
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/Test3R#Test3R> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/Test3RR#Test3RR> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/Test44#Test44> .
-<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/kjwre#kjwre> .
 <http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/Tetghfhtf#Tetghfhtf> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/kjwre#kjwre> .
+<http://purl.org/patternpedia#LinkedOpenPatterns> <http://purl.org/patternpedia#containsPatternGraph> <http://purl.org/patternpedia/patternlanguages/hallo#hallo> .
