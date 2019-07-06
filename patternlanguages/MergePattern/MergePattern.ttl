@@ -27,54 +27,22 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
 ### Solution
 :hasSolution rdf:type owl:DatatypeProperty .
-
-
-# #################################################################
-# #
-# #    Restrictions / Classes
-# #
-# #################################################################
-### http://purl.org/patternpedia/patternlanguages/MergePattern
-:MergePatternIndividual rdf:type owl:Class ; 
- rdfs:subClassOf pp:Pattern ,
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:allValuesFrom xsd:string
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
-				] .
-
-
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/MergePattern
+###  http://purl.org/patternpedia/patternlanguages/MergePattern#MergePattern
 :MergePattern rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "http://www.kmart.com.au/wcsstore/Kmart/images/ncatalog/f/8/42269878-1-f.jpg"^^xsd:anyURI ;
 pp:hasName "MergePattern"^^xsd:string .
+:MergePattern pp:containsPattern <http://purl.org/patternpedia/patternlanguages/MergePattern/SwimingDuck#SwimingDuck> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/MergePattern> owl:imports <http://purl.org/patternpedia/patternlanguages/MergePattern/SwimingDuck> .
