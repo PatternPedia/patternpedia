@@ -45,25 +45,25 @@ owl:imports <http://purl.org/patternpedia> .
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestTEst#hasIcon> ; 
-			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#anyURI
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#anyURI>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestTEst#hasContext> ; 
-			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#string
+			 owl:someValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestTEst#hasDrivingQuestion> ; 
-			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#positiveInteger
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#positiveInteger>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestTEst#hasSolution> ; 
-			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
