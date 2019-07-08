@@ -1,0 +1,167 @@
+# Definition of prefixes
+@prefix : <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+
+# The ontology of the patternlanguage
+<http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/filetransfer> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/shareddatabase> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/remoteprocedureinvocation> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messaging> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagechannel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/message> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/pipesandfilters> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagerouter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagetranslator> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messageendpoint> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/point-to-pointchannel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/publish-subscribechannel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/datatypechannel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/invalidmessagechannel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/deadletterchannel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/guaranteeddelivery> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/channeladapter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagingbridge> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagebus> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/commandmessage> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/documentmessage> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/eventmessage> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/request-reply> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/returnaddress> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/correlationidentifier> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagesequence> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messageexpiration> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/formatindicator> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/content-basedrouter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagefilter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/dynamicrouter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/recipientlist> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/splitter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/aggregator> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/resequencer> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/composedmessageprocessor> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/scatter-gather> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/routingslip> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/processmanager> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagebroker> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/envelopewrapper> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/contentenricher> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/contentfilter> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/claimcheck> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/normalizer> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/canonicaldatamodel> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messaginggateway> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagingmapper> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/transactionalclient> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/pollingconsumer> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/event-drivenconsumer> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/competingconsumers> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagedispatcher> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/selectiveconsumer> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/durablesubscriber> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/idempotentreceiver> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/serviceactivator> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/controlbus> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/detour> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/wiretap> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagehistory> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagestore> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/smartproxy> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/testmessage> ,
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/channelpurger> , 
+        <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/links> .
+
+# Data Properties
+:hasDescription rdf:type owl:DataProperty .
+:hasPattern rdf:type owl:DataProperty .
+:hasLabel rdf:type owl:DataProperty .
+
+
+# Class definitions
+:EnterpriseIntegrationPattern
+    rdf:type owl:Class ;
+    rdfs:subClassOf pp:Pattern ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasDescription ;
+          owl:allValuesFrom xsd:string
+        ] .
+
+# Individuals
+:EnterpriseIntegrationPatterns
+    rdf:type owl:NamedIndividual, pp:PatternLanguage ;
+    pp:hasLogo "https://www.enterpriseintegrationpatterns.com/img/0321200683.gif"^^xsd:anyURI ;
+    pp:hasName "Enterprise Integration Patterns"^^xsd:string ;
+    pp:containsPattern <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/filetransfer#FileTransfer> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/shareddatabase#SharedDatabase> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/remoteprocedureinvocation#RemoteProcedureInvocation> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messaging#Messaging> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagechannel#MessageChannel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/message#Message> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/pipesandfilters#PipesandFilters> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagerouter#MessageRouter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagetranslator#MessageTranslator> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messageendpoint#MessageEndpoint> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/point-to-pointchannel#Point-to-PointChannel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/publish-subscribechannel#Publish-SubscribeChannel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/datatypechannel#DatatypeChannel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/invalidmessagechannel#InvalidMessageChannel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/deadletterchannel#DeadLetterChannel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/guaranteeddelivery#GuaranteedDelivery> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/channeladapter#ChannelAdapter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagingbridge#MessagingBridge> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagebus#MessageBus> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/commandmessage#CommandMessage> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/documentmessage#DocumentMessage> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/eventmessage#EventMessage> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/request-reply#Request-Reply> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/returnaddress#ReturnAddress> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/correlationidentifier#CorrelationIdentifier> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagesequence#MessageSequence> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messageexpiration#MessageExpiration> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/formatindicator#FormatIndicator> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/content-basedrouter#Content-BasedRouter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagefilter#MessageFilter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/dynamicrouter#DynamicRouter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/recipientlist#RecipientList> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/splitter#Splitter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/aggregator#Aggregator> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/resequencer#Resequencer> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/composedmessageprocessor#ComposedMessageProcessor> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/scatter-gather#Scatter-Gather> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/routingslip#RoutingSlip> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/processmanager#ProcessManager> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagebroker#MessageBroker> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/envelopewrapper#EnvelopeWrapper> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/contentenricher#ContentEnricher> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/contentfilter#ContentFilter> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/claimcheck#ClaimCheck> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/normalizer#Normalizer> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/canonicaldatamodel#CanonicalDataModel> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messaginggateway#MessagingGateway> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagingmapper#MessagingMapper> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/transactionalclient#TransactionalClient> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/pollingconsumer#PollingConsumer> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/event-drivenconsumer#Event-DrivenConsumer> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/competingconsumers#CompetingConsumers> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagedispatcher#MessageDispatcher> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/selectiveconsumer#SelectiveConsumer> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/durablesubscriber#DurableSubscriber> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/idempotentreceiver#IdempotentReceiver> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/serviceactivator#ServiceActivator> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/controlbus#ControlBus> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/detour#Detour> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/wiretap#WireTap> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagehistory#MessageHistory> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/messagestore#MessageStore> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/smartproxy#SmartProxy> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/testmessage#TestMessage> ,
+        <http://purl.com/patternpedia/patternlanguages/enterpriseintegrationpatterns/channelpurger#ChannelPurger> .
+
