@@ -56,7 +56,7 @@ owl:imports <http://purl.org/patternpedia> .
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty http://purl.org/patternpedia/patternlanguages/TestTEst#hasDrivingQuestion> ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestTEst#hasDrivingQuestion> ; 
 			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#positiveInteger>
 				] ,
 
