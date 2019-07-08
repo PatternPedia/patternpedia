@@ -37,50 +37,6 @@ owl:imports <http://purl.org/patternpedia> .
 
 ### SolutionSketches
 :hasSolutionSketches rdf:type owl:DatatypeProperty .
-
-
-# #################################################################
-# #
-# #    Restrictions / Classes
-# #
-# #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test#Test
-:TestIndividual rdf:type owl:Class ; 
- rdfs:subClassOf pp:Pattern ,
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:anyURI>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:string>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:string>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; 
-			 owl:onDataRange <xsd:string>
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolutionSketches ; 
-			 owl:onDataRange <xsd:anyURI>
-				] .
-
-
 #################################################################
 # Individuals
 ##############################################################
@@ -92,13 +48,15 @@ pp:hasName "Test"^^xsd:string .
 :Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Pattern2#Pattern2> .
 :Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Pattern3#Pattern3> .
 :Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Pattern4#Pattern4> .
-:Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Patternname#Patternname> .
 :Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Pattern565#Pattern565> .
+:Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Patternname#Patternname> .
+:Test pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test/Pattern0909#Pattern0909> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Pattern2> .
 <http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Pattern3> .
 <http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Pattern4> .
-<http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Patternname> .
 <http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Pattern565> .
+<http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Patternname> .
+<http://purl.org/patternpedia/patternlanguages/Test> owl:imports <http://purl.org/patternpedia/patternlanguages/Test/Pattern0909> .
