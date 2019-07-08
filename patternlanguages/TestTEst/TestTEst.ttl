@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,41 +40,43 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/TestTEst
+### http://purl.org/patternpedia/patternlanguages/TestTEst#TestTEst
 :TestTEstIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:anyURI
+			 owl:onProperty :hashttp://purl.org/patternpedia/patternlanguages/TestTEst#hasIcon ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#anyURI
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:someValuesFrom xsd:string
+			 owl:onProperty :hashttp://purl.org/patternpedia/patternlanguages/TestTEst#hasContext ; 
+			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:allValuesFrom xsd:positiveInteger
+			 owl:onProperty :hashttp://purl.org/patternpedia/patternlanguages/TestTEst#hasDrivingQuestion ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#positiveInteger
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty :hashttp://purl.org/patternpedia/patternlanguages/TestTEst#hasSolution ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/TestTEst
+###  http://purl.org/patternpedia/patternlanguages/TestTEst#TestTEst
 :TestTEst rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestTEst"^^xsd:string .
+:TestTEst pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestTEst/TestUpdate#TestUpdate> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/TestTEst> owl:imports <http://purl.org/patternpedia/patternlanguages/TestTEst/TestUpdate> .
