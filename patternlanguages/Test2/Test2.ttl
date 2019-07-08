@@ -27,55 +27,22 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
 ### Solution
 :hasSolution rdf:type owl:DatatypeProperty .
-
-
-# #################################################################
-# #
-# #    Restrictions / Classes
-# #
-# #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test2
-:Test2Individual rdf:type owl:Class ; 
- rdfs:subClassOf pp:Pattern ,
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:anyURI
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:QualifiedCardinality"2"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
-				] .
-
-
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Test2
+###  http://purl.org/patternpedia/patternlanguages/Test2#Test2
 :Test2 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "Test2"^^xsd:string .
+:Test2 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test2/Pattern1#Pattern1> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/Test2> owl:imports <http://purl.org/patternpedia/patternlanguages/Test2/Pattern1> .
