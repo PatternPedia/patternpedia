@@ -58,7 +58,7 @@ owl:imports <http://purl.org/patternpedia> .
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty :hasDrivingQuestion ; 
 			 owl:QualifiedCardinality"2"^^xsd:nonNegativeInteger;
-			 owl:onDataRange [object Object]
+			 owl:onDataRange xsd:string
 				] ,
 
 
