@@ -2568,6 +2568,62 @@
 
 
 # Group Links (i.e. Hyperedges containing patterns that form a group)
+:MessagingEndpoints
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
+    pl:hasLabel "Messaging Endpoints"^^xsd:string ;
+    pl:hasPattern <messaginggateway#MessagingGateway> ,
+        <messagingmapper#MessagingMapper> ,
+        <transactionalclient#TransactionalClient> ,
+        <pollingconsumer#PollingConsumer> ,
+        <event-drivenconsumer#Event-DrivenConsumer> ,
+        <competingconsumers#CompetingConsumers> ,
+        <messagedispatcher#MessageDispatcher> ,
+        <selectiveconsumer#SelectiveConsumer> ,
+        <durablesubscriber#DurableSubscriber> ,
+        <idempotentreceiver#IdempotentReceiver> ,
+        <serviceactivator#ServiceActivator> .
+
+:IntegrationStyles
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
+    pl:hasLabel "Integration Styles"^^xsd:string ;
+    pl:hasPattern <filetransfer#FileTransfer> ,
+        <shareddatabase#SharedDatabase> ,
+        <remoteprocedureinvocation#RemoteProcedureInvocation> ,
+        <messaging#Messaging> .
+
+:MessagingChannels
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
+    pl:hasLabel "Messaging Channels"^^xsd:string ;
+    pl:hasPattern <point-to-pointchannel#Point-to-PointChannel> ,
+        <publish-subscribechannel#Publish-SubscribeChannel> ,
+        <datatypechannel#DatatypeChannel> ,
+        <invalidmessagechannel#InvalidMessageChannel> ,
+        <deadletterchannel#DeadLetterChannel> ,
+        <guaranteeddelivery#GuaranteedDelivery> ,
+        <channeladapter#ChannelAdapter> ,
+        <messagingbridge#MessagingBridge> ,
+        <messagebus#MessageBus> .
+
+:MessageTransformation
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
+    pl:hasLabel "Message Transformation"^^xsd:string ;
+    pl:hasPattern <envelopewrapper#EnvelopeWrapper> ,
+        <contentenricher#ContentEnricher> ,
+        <contentfilter#ContentFilter> ,
+        <claimcheck#ClaimCheck> ,
+        <normalizer#Normalizer> ,
+        <canonicaldatamodel#CanonicalDataModel> .
+
+:MessagingSystems
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
+    pl:hasLabel "Messaging Systems"^^xsd:string ;
+    pl:hasPattern <messagechannel#MessageChannel> ,
+        <message#Message> ,
+        <pipesandfilters#PipesandFilters> ,
+        <messagerouter#MessageRouter> ,
+        <messagetranslator#MessageTranslator> ,
+        <messageendpoint#MessageEndpoint> .
+
 :MessageRouting
     rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
     pl:hasLabel "Message Routing"^^xsd:string ;
@@ -2584,40 +2640,17 @@
         <processmanager#ProcessManager> ,
         <messagebroker#MessageBroker> .
 
-:MessagingEndpoints
+:SystemManagement
     rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
-    pl:hasLabel "Messaging Endpoints"^^xsd:string ;
-    pl:hasPattern <messaginggateway#MessagingGateway> ,
-        <messagingmapper#MessagingMapper> ,
-        <transactionalclient#TransactionalClient> ,
-        <pollingconsumer#PollingConsumer> ,
-        <event-drivenconsumer#Event-DrivenConsumer> ,
-        <competingconsumers#CompetingConsumers> ,
-        <messagedispatcher#MessageDispatcher> ,
-        <selectiveconsumer#SelectiveConsumer> ,
-        <durablesubscriber#DurableSubscriber> ,
-        <idempotentreceiver#IdempotentReceiver> ,
-        <serviceactivator#ServiceActivator> .
-
-:MessagingSystems
-    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
-    pl:hasLabel "Messaging Systems"^^xsd:string ;
-    pl:hasPattern <messagechannel#MessageChannel> ,
-        <message#Message> ,
-        <pipesandfilters#PipesandFilters> ,
-        <messagerouter#MessageRouter> ,
-        <messagetranslator#MessageTranslator> ,
-        <messageendpoint#MessageEndpoint> .
-
-:MessageTransformation
-    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
-    pl:hasLabel "Message Transformation"^^xsd:string ;
-    pl:hasPattern <envelopewrapper#EnvelopeWrapper> ,
-        <contentenricher#ContentEnricher> ,
-        <contentfilter#ContentFilter> ,
-        <claimcheck#ClaimCheck> ,
-        <normalizer#Normalizer> ,
-        <canonicaldatamodel#CanonicalDataModel> .
+    pl:hasLabel "System Management"^^xsd:string ;
+    pl:hasPattern <controlbus#ControlBus> ,
+        <detour#Detour> ,
+        <wiretap#WireTap> ,
+        <messagehistory#MessageHistory> ,
+        <messagestore#MessageStore> ,
+        <smartproxy#SmartProxy> ,
+        <testmessage#TestMessage> ,
+        <channelpurger#ChannelPurger> .
 
 :MessageConstruction
     rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
@@ -2631,37 +2664,4 @@
         <messagesequence#MessageSequence> ,
         <messageexpiration#MessageExpiration> ,
         <formatindicator#FormatIndicator> .
-
-:SystemManagement
-    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
-    pl:hasLabel "System Management"^^xsd:string ;
-    pl:hasPattern <controlbus#ControlBus> ,
-        <detour#Detour> ,
-        <wiretap#WireTap> ,
-        <messagehistory#MessageHistory> ,
-        <messagestore#MessageStore> ,
-        <smartproxy#SmartProxy> ,
-        <testmessage#TestMessage> ,
-        <channelpurger#ChannelPurger> .
-
-:MessagingChannels
-    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
-    pl:hasLabel "Messaging Channels"^^xsd:string ;
-    pl:hasPattern <point-to-pointchannel#Point-to-PointChannel> ,
-        <publish-subscribechannel#Publish-SubscribeChannel> ,
-        <datatypechannel#DatatypeChannel> ,
-        <invalidmessagechannel#InvalidMessageChannel> ,
-        <deadletterchannel#DeadLetterChannel> ,
-        <guaranteeddelivery#GuaranteedDelivery> ,
-        <channeladapter#ChannelAdapter> ,
-        <messagingbridge#MessagingBridge> ,
-        <messagebus#MessageBus> .
-
-:IntegrationStyles
-    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternRelationDescriptor ;
-    pl:hasLabel "Integration Styles"^^xsd:string ;
-    pl:hasPattern <filetransfer#FileTransfer> ,
-        <shareddatabase#SharedDatabase> ,
-        <remoteprocedureinvocation#RemoteProcedureInvocation> ,
-        <messaging#Messaging> .
 
