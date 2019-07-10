@@ -1,0 +1,26 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/testRedirect/PatRedirect#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/testRedirect/PatRedirect> .
+#################################################################
+# Individuals
+##############################################################
+
+
+
+###  http://purl.org/patternpedia/patternlanguages/testRedirect/PatRedirect#PatRedirect
+:PatRedirect rdf:type owl:NamedIndividual ,
+<http://purl.org/patternpedia/patternlanguages/testRedirect/testRedirectIndividual> ;
+<http://purl.org/patternpedia/patternlanguages/testRedirect/PatRedirect#hasName> "PatRedirect" ;
+<http://purl.org/patternpedia/patternlanguages/testRedirect#hasIcon>
+       "Enter your text for this section here." ;
+<http://purl.org/patternpedia/patternlanguages/testRedirect#hasContext>
+       "<Enter/your/URI/or/URL>" ;
+<http://purl.org/patternpedia/patternlanguages/testRedirect#hasDrivingQuestion>
+       "Enter your text for this section here." ;
+<http://purl.org/patternpedia/patternlanguages/testRedirect#hasSolution>
+       "Enter your text for this section here." .
