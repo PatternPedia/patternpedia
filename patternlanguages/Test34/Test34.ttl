@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,43 +40,43 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test34
+### http://purl.org/patternpedia/patternlanguages/Test34#Test34
 :Test34Individual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test34#hasIcon> ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test34#hasContext> ; 
 			 owl:maxCardinality "1"^^xsd:nonNegativeInteger;
 			 owl:onDataRange <xsd:anyURI>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:someValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test34#hasDrivingQuestion> ; 
+			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:QualifiedCardinality"2"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test34#hasSolution> ; 
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Test34
+###  http://purl.org/patternpedia/patternlanguages/Test34#Test34
 :Test34 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "Test34"^^xsd:string .
+:Test34 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test34/Pattern1#Pattern1> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/Test34> owl:imports <http://purl.org/patternpedia/patternlanguages/Test34/Pattern1> .
