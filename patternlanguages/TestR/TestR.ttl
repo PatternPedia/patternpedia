@@ -1,0 +1,93 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/TestR#> .
+@base <http://purl.org/patternpedia/patternlanguages/TestR> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix xml: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://purl.org/patternpedia/patternlanguages/TestR> rdf:type owl:Ontology ;
+owl:imports <http://purl.org/patternpedia> .
+
+
+# #################################################################
+# #
+# #    Sections / Data Properties
+# #
+# #################################################################
+
+
+### Icon
+:hasIcon rdf:type owl:DatatypeProperty .
+
+
+### Context
+:hasContext rdf:type owl:DatatypeProperty .
+
+
+### Driving Question
+:hasDrivingQuestion rdf:type owl:DatatypeProperty .
+
+
+### Solution
+:hasSolution rdf:type owl:DatatypeProperty .
+
+
+### Solution Sketches
+:hasSolutionSketches rdf:type owl:DatatypeProperty .
+
+
+# #################################################################
+# #
+# #    Restrictions / Classes
+# #
+# #################################################################
+### http://purl.org/patternpedia/patternlanguages/TestR
+:TestRIndividual rdf:type owl:Class ; 
+ rdfs:subClassOf pp:Pattern ,
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasIcon ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasContext ; 
+			 owl:someValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:QualifiedCardinality"1"^^xsd:nonNegativeInteger;
+			 owl:onDataRange xsd:anyURI
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasSolution ; 
+			 owl:minCardinality "1"^^xsd:nonNegativeInteger;
+			 owl:onDataRange xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasSolutionSketches ; 
+			 owl:maxCardinality "1"^^xsd:nonNegativeInteger;
+			 owl:onDataRange xsd:positiveInteger
+				] .
+
+
+#################################################################
+# Individuals
+##############################################################
+###  http://purl.org/patternpedia/patternlanguages/TestR
+:TestR rdf:type owl:NamedIndividual ,
+pp:PatternLanguage ;
+pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
+pp:hasName "TestR"^^xsd:string .
+#################################################################
+# Pattern Import Statements
+##############################################################
