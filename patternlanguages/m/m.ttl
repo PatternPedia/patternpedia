@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,50 +40,50 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/m
+### http://purl.org/patternpedia/patternlanguages/m#m
 :mIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:someValuesFrom xsd:anyURI
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/m#hasIcon> ; 
+			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#anyURI
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/m#hasContext> ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/m#hasDrivingQuestion> ; 
 			 owl:minCardinality "0"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/m#hasSolution> ; 
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/m#hasSolution> ; 
 			 owl:maxCardinality "1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
-				] ,
-
-
-			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:QualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/m
+###  http://purl.org/patternpedia/patternlanguages/m#m
 :m rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "m"^^xsd:string .
+:m pp:containsPattern <http://purl.org/patternpedia/patternlanguages/m/Pat#Pat> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/m> owl:imports <http://purl.org/patternpedia/patternlanguages/m/Pat> .
