@@ -45,7 +45,7 @@ owl:imports <http://purl.org/patternpedia> .
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test34#hasIcon> ; 
-			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
@@ -58,7 +58,7 @@ owl:imports <http://purl.org/patternpedia> .
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test34#hasDrivingQuestion> ; 
-			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#string
+			 owl:someValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
