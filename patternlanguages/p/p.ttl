@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,42 +40,44 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/p
+### http://purl.org/patternpedia/patternlanguages/p#p
 :pIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/p#hasIcon> ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:someValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/p#hasContext> ; 
+			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/p#hasDrivingQuestion> ; 
 			 owl:minCardinality "0"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/p#hasSolution> ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/p
+###  http://purl.org/patternpedia/patternlanguages/p#p
 :p rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "p"^^xsd:string .
+:p pp:containsPattern <http://purl.org/patternpedia/patternlanguages/p/Patter#Patter> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/p> owl:imports <http://purl.org/patternpedia/patternlanguages/p/Patter> .
