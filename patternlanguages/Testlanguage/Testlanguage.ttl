@@ -77,7 +77,9 @@ pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "Testlanguage"^^xsd:string .
 :Testlanguage pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Testlanguage/Pat#Pat> .
+:Testlanguage pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Testlanguage/Pat2#Pat2> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/Testlanguage> owl:imports <http://purl.org/patternpedia/patternlanguages/Testlanguage/Pat> .
+<http://purl.org/patternpedia/patternlanguages/Testlanguage> owl:imports <http://purl.org/patternpedia/patternlanguages/Testlanguage/Pat2> .
