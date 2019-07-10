@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,42 +40,44 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Testlanguage
+### http://purl.org/patternpedia/patternlanguages/Testlanguage#Testlanguage
 :TestlanguageIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Testlanguage#hasIcon> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Testlanguage#hasContext> ; 
 			 owl:minCardinality "0"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:someValuesFrom xsd:anyURI
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Testlanguage#hasDrivingQuestion> ; 
+			 owl:someValuesFrom <http://www.w3.org/2001/XMLSchema#anyURI>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Testlanguage#hasSolution> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Testlanguage
+###  http://purl.org/patternpedia/patternlanguages/Testlanguage#Testlanguage
 :Testlanguage rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "Testlanguage"^^xsd:string .
+:Testlanguage pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Testlanguage/Pat#Pat> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/Testlanguage> owl:imports <http://purl.org/patternpedia/patternlanguages/Testlanguage/Pat> .
