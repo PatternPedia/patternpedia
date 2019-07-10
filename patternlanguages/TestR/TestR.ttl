@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -35,7 +35,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasSolution rdf:type owl:DatatypeProperty .
 
 
-### Solution Sketches
+### SolutionSketches
 :hasSolutionSketches rdf:type owl:DatatypeProperty .
 
 
@@ -44,50 +44,50 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/TestR
+### http://purl.org/patternpedia/patternlanguages/TestR#TestR
 :TestRIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestR#hasIcon> ; 
+			 owl:allValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:someValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestR#hasContext> ; 
+			 owl:someValuesFrom http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:QualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:anyURI
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestR#hasDrivingQuestion> ; 
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestR#hasSolution> ; 
 			 owl:minCardinality "1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#string
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolutionSketches ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestR#hasSolutionSketches> ; 
 			 owl:maxCardinality "1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:positiveInteger
+			 owl:onDataRange http://www.w3.org/2001/XMLSchema#positiveInteger
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/TestR
+###  http://purl.org/patternpedia/patternlanguages/TestR#TestR
 :TestR rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestR"^^xsd:string .
+:TestR pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestR/Pat#Pat> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/TestR> owl:imports <http://purl.org/patternpedia/patternlanguages/TestR/Pat> .
