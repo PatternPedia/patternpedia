@@ -27,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -40,41 +40,43 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/testRedirect
+### http://purl.org/patternpedia/patternlanguages/testRedirect#testRedirect
 :testRedirectIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:someValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/testRedirect#hasIcon> ; 
+			 owl:someValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:anyURI
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/testRedirect#hasContext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#anyURI>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/testRedirect#hasDrivingQuestion> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/testRedirect#hasSolution> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/testRedirect
+###  http://purl.org/patternpedia/patternlanguages/testRedirect#testRedirect
 :testRedirect rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "testRedirect"^^xsd:string .
+:testRedirect pp:containsPattern <http://purl.org/patternpedia/patternlanguages/testRedirect/PatRedirect#PatRedirect> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/testRedirect> owl:imports <http://purl.org/patternpedia/patternlanguages/testRedirect/PatRedirect> .
