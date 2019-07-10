@@ -57,7 +57,7 @@ owl:imports <http://purl.org/patternpedia> .
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDriving Question ; 
+			 owl:onProperty :hasDrivingQuestion ; 
 			 owl:someValuesFrom xsd:string
 				] ,
 
