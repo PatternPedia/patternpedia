@@ -2390,6 +2390,8 @@
     rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternDirectedRelationDescriptor ;
     pp:hasSource <smartproxy#SmartProxy> ;
     pp:hasTarget <correlationidentifier#CorrelationIdentifier> .
+    pl:hasDescription "This is a dummy description of why Smart Proxy is linked to Correlation Identifier."^^xsd:string ,
+        "The link has its origins in the literature."^^xsd:string .
 
 :SmartProxy-to-MessageRouter
     rdf:type owl:NamedIndividual , :EnterpriseIntegrationPatternDirectedRelationDescriptor ;
