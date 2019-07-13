@@ -6,7 +6,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dctype: <http://purl.org/dc/dcmitype/> .
 
 
 <http://purl.org/patternpedia/patternlanguages/Test2> rdf:type owl:Ontology ;
@@ -28,7 +27,7 @@ owl:imports <http://purl.org/patternpedia> .
 :hasContext rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
+### DrivingQuestion
 :hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
@@ -41,41 +40,43 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/Test2
+### http://purl.org/patternpedia/patternlanguages/Test2#Test2
 :Test2Individual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test2#hasIcon> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test2#hasContext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test2#hasDrivingQuestion> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/Test2#hasSolution> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/Test2
+###  http://purl.org/patternpedia/patternlanguages/Test2#Test2
 :Test2 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "Test2"^^xsd:string .
+:Test2 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test2/Patternname#Patternname> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/Test2> owl:imports <http://purl.org/patternpedia/patternlanguages/Test2/Patternname> .
