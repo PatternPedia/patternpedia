@@ -9,7 +9,7 @@
 	owl:imports <http://purl.org/patternpedia/patternlanguages/internetofthingspatterns> .
 
 # #################################################################
-# #
+# #git
 # #    Individuals
 # #
 # #################################################################
