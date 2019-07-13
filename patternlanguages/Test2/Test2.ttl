@@ -75,10 +75,12 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "Test2"^^xsd:string .
-:Test2 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test2/Patternname#Patternname> .
 :Test2 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test2/Pattern2#Pattern2> .
+:Test2 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test2/Patternname#Patternname> .
+:Test2 pp:containsPattern <http://purl.org/patternpedia/patternlanguages/Test2/Pat#Pat> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
-<http://purl.org/patternpedia/patternlanguages/Test2> owl:imports <http://purl.org/patternpedia/patternlanguages/Test2/Patternname> .
 <http://purl.org/patternpedia/patternlanguages/Test2> owl:imports <http://purl.org/patternpedia/patternlanguages/Test2/Pattern2> .
+<http://purl.org/patternpedia/patternlanguages/Test2> owl:imports <http://purl.org/patternpedia/patternlanguages/Test2/Patternname> .
+<http://purl.org/patternpedia/patternlanguages/Test2> owl:imports <http://purl.org/patternpedia/patternlanguages/Test2/Pat> .
