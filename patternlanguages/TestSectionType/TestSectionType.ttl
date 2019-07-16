@@ -55,8 +55,6 @@ owl:imports <http://purl.org/patternpedia> .
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestSectionType#hasContext> ; 
-				    owl:QualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
 				] ,
 
 
@@ -87,10 +85,12 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestSectionType"^^xsd:string .
-:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname#Patternname> .
 :TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern2#Pattern2> .
+:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname#Patternname> .
+:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern3#Pattern3> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
-<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname> .
 <http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern2> .
+<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname> .
+<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern3> .
