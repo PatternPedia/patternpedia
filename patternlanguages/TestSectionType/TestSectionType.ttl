@@ -55,6 +55,8 @@ owl:imports <http://purl.org/patternpedia> .
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestSectionType#hasContext> ; 
+				    owl:QualifiedCardinality"1"^^xsd:nonNegativeInteger;
+			 owl:onDataRange xsd:string
 				] ,
 
 
