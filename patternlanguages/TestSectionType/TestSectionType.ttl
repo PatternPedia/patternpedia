@@ -87,16 +87,18 @@ pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestSectionType"^^xsd:string .
 :TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat#Pat> .
 :TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat5#Pat5> .
+:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat7#Pat7> .
 :TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern2#Pattern2> .
 :TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern3#Pattern3> .
 :TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname#Patternname> .
-:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat7#Pat7> .
+:TestSectionType pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname#Patternname> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat> .
 <http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat5> .
+<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat7> .
 <http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern2> .
 <http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pattern3> .
 <http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname> .
-<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Pat7> .
+<http://purl.org/patternpedia/patternlanguages/TestSectionType> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSectionType/Patternname> .
