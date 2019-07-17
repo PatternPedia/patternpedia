@@ -85,4 +85,3 @@ pp:hasName "TestRenderer"^^xsd:string .
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat2> .
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat3> .
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Patternname> .
-<http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_1> .
