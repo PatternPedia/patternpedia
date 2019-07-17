@@ -20,19 +20,19 @@ owl:imports <http://purl.org/patternpedia> .
 
 
 ### http://purl.org/patternpedia/patternlanguages/TestRenderer#hasIcon
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasIcon rdf:type owl:DatatypeProperty .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasIcon> rdf:type owl:DatatypeProperty .
 
 
 ### http://purl.org/patternpedia/patternlanguages/TestRenderer#hasNumericalScore
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasNumericalScore rdf:type owl:DatatypeProperty .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasNumericalScore> rdf:type owl:DatatypeProperty .
 
 
 ### http://purl.org/patternpedia/patternlanguages/TestRenderer#hasSolutionDescription
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasSolutionDescription rdf:type owl:DatatypeProperty .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasSolutionDescription> rdf:type owl:DatatypeProperty .
 
 
 ### http://purl.org/patternpedia/patternlanguages/TestRenderer#hasPublicationDate
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasPublicationDate rdf:type owl:DatatypeProperty .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasPublicationDate> rdf:type owl:DatatypeProperty .
 
 
 # #################################################################
