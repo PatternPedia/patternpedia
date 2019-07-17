@@ -16,11 +16,11 @@
 :Pat_x rdf:type owl:NamedIndividual ,
 <http://purl.org/patternpedia/patternlanguages/TestRenderer/TestRendererIndividual> ;
 <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_x#hasName> "Pat_x" ;
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasIcon
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasIcon>
        "http://placekitten.com/200/200" ;
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasNumericalScore
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasNumericalScore>
        "4" ;
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasSolutionDescription
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasSolutionDescription>
        "Enter your text for this section here." ;
-http://purl.org/patternpedia/patternlanguages/TestRenderer#hasPublicationDate
+<http://purl.org/patternpedia/patternlanguages/TestRenderer#hasPublicationDate>
        "17.07.2019" .
