@@ -76,7 +76,9 @@ pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestRenderer"^^xsd:string .
 :TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Patternname#Patternname> .
+:TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat2#Pat2> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Patternname> .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat2> .
