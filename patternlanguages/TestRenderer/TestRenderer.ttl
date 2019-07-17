@@ -1,0 +1,81 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/TestRenderer#> .
+@base <http://purl.org/patternpedia/patternlanguages/TestRenderer> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix xml: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+
+
+<http://purl.org/patternpedia/patternlanguages/TestRenderer> rdf:type owl:Ontology ;
+owl:imports <http://purl.org/patternpedia> .
+
+
+# #################################################################
+# #
+# #    Sections / Data Properties
+# #
+# #################################################################
+
+
+### Icon
+:hasIcon rdf:type owl:DatatypeProperty .
+
+
+### Numerical Score
+:hasNumericalScore rdf:type owl:DatatypeProperty .
+
+
+### SolutionDescription
+:hasSolutionDescription rdf:type owl:DatatypeProperty .
+
+
+### Publication Date
+:hasPublicationDate rdf:type owl:DatatypeProperty .
+
+
+# #################################################################
+# #
+# #    Restrictions / Classes
+# #
+# #################################################################
+### http://purl.org/patternpedia/patternlanguages/TestRenderer
+:TestRendererIndividual rdf:type owl:Class ; 
+ rdfs:subClassOf pp:Pattern ,
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasIcon ; 
+			 owl:allValuesFrom dctype:Image
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasNumericalScore ; 
+			 owl:allValuesFrom xsd:integer
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasSolutionDescription ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasPublicationDate ; 
+			 owl:allValuesFrom xsd:date
+				] .
+
+
+#################################################################
+# Individuals
+##############################################################
+###  http://purl.org/patternpedia/patternlanguages/TestRenderer
+:TestRenderer rdf:type owl:NamedIndividual ,
+pp:PatternLanguage ;
+pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
+pp:hasName "TestRenderer"^^xsd:string .
+#################################################################
+# Pattern Import Statements
+##############################################################
