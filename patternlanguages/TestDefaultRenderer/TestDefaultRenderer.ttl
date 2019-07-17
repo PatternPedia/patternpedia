@@ -19,28 +19,28 @@ owl:imports <http://purl.org/patternpedia> .
 # #################################################################
 
 
-### Icon
-:hasIcon rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasIcon
+:hashttp://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasIcon rdf:type owl:DatatypeProperty .
 
 
-### Context
-:hasContext rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasContext
+:hashttp://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasContext rdf:type owl:DatatypeProperty .
 
 
-### DrivingQuestion
-:hasDrivingQuestion rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasDrivingQuestion
+:hashttp://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasDrivingQuestion rdf:type owl:DatatypeProperty .
 
 
-### Solution
-:hasSolution rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasSolution
+:hashttp://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasSolution rdf:type owl:DatatypeProperty .
 
 
-### SolutionSketches
-:hasSolutionSketches rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasSolutionSketches
+:hashttp://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasSolutionSketches rdf:type owl:DatatypeProperty .
 
 
-### ImportanceScore
-:hasImportanceScore rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasImportanceScore
+:hashttp://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasImportanceScore rdf:type owl:DatatypeProperty .
 
 
 # #################################################################
@@ -59,8 +59,6 @@ owl:imports <http://purl.org/patternpedia> .
 
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer#hasContext> ; 
-			 owl:maxCardinality "2"^^xsd:nonNegativeInteger;
-			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
@@ -97,7 +95,9 @@ pp:PatternLanguage ;
 pp:hasLogo "http://placekitten.com/150/151"^^xsd:anyURI ;
 pp:hasName "TestDefaultRenderer"^^xsd:string .
 :TestDefaultRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer/PatternForRenderer#PatternForRenderer> .
+:TestDefaultRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer/Pat1#Pat1> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer/PatternForRenderer> .
+<http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestDefaultRenderer/Pat1> .
