@@ -6,7 +6,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dctype: <http://purl.org/dc/dcmitype/> .
 
 
 <http://purl.org/patternpedia/patternlanguages/TestSections> rdf:type owl:Ontology ;
@@ -20,20 +19,20 @@ owl:imports <http://purl.org/patternpedia> .
 # #################################################################
 
 
-### Icon
-:hasIcon rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestSections#hasIcon
+<http://purl.org/patternpedia/patternlanguages/TestSections#hasIcon> rdf:type owl:DatatypeProperty .
 
 
-### Context
-:hasContext rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestSections#hasContext
+<http://purl.org/patternpedia/patternlanguages/TestSections#hasContext> rdf:type owl:DatatypeProperty .
 
 
-### Score
-:hasScore rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestSections#hasScore
+<http://purl.org/patternpedia/patternlanguages/TestSections#hasScore> rdf:type owl:DatatypeProperty .
 
 
-### Publication Date
-:hasPublicationDate rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestSections#hasPublicationDate
+<http://purl.org/patternpedia/patternlanguages/TestSections#hasPublicationDate> rdf:type owl:DatatypeProperty .
 
 
 # #################################################################
@@ -45,26 +44,26 @@ owl:imports <http://purl.org/patternpedia> .
 :TestSectionsIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom dctype:Image
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestSections#hasIcon> ; 
+			 owl:allValuesFrom <http://purl.org/dc/dcmitype/Image>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestSections#hasContext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasScore ; 
-			 owl:allValuesFrom xsd:integer
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestSections#hasScore> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#integer>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasPublicationDate ; 
-			 owl:allValuesFrom xsd:date
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestSections#hasPublicationDate> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#date>
 				] .
 
 
@@ -76,6 +75,8 @@ owl:imports <http://purl.org/patternpedia> .
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/204"^^xsd:anyURI ;
 pp:hasName "TestSections"^^xsd:string .
+:TestSections pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestSections/Pattern#Pattern> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/TestSections> owl:imports <http://purl.org/patternpedia/patternlanguages/TestSections/Pattern> .
