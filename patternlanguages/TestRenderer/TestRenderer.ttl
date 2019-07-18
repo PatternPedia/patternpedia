@@ -77,14 +77,16 @@ pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
 pp:hasName "TestRenderer"^^xsd:string .
 :TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat2#Pat2> .
 :TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat3#Pat3> .
+:TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_Uri#Pat_Uri> .
 :TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_x#Pat_x> .
 :TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Patternname#Patternname> .
-:TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_Uri#Pat_Uri> .
+:TestRenderer pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_12#Pat_12> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat2> .
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat3> .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_Uri> .
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_x> .
 <http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Patternname> .
-<http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_Uri> .
+<http://purl.org/patternpedia/patternlanguages/TestRenderer> owl:imports <http://purl.org/patternpedia/patternlanguages/TestRenderer/Pat_12> .
