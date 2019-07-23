@@ -110,7 +110,9 @@ pp:PatternLanguage ;
 pp:hasLogo "https://via.placeholder.com/150"^^xsd:anyURI ;
 pp:hasName "TestlanguageWithRestrictions"^^xsd:string .
 :TestlanguageWithRestrictions pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#DemonstratePatternrenderer> .
+:TestlanguageWithRestrictions pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/Demonstration2(withlessinfo)#Demonstration2(withlessinfo)> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions> owl:imports <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer> .
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions> owl:imports <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/Demonstration2(withlessinfo)> .
