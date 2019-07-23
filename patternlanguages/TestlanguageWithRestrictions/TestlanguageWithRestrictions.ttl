@@ -6,7 +6,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dctype: <http://purl.org/dc/dcmitype/> .
 
 
 <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions> rdf:type owl:Ontology ;
@@ -20,32 +19,32 @@ owl:imports <http://purl.org/patternpedia> .
 # #################################################################
 
 
-### Icon
-:hasIcon rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon> rdf:type owl:DatatypeProperty .
 
 
-### Context
-:hasContext rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> rdf:type owl:DatatypeProperty .
 
 
-### Driving Question
-:hasDrivingQuestion rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasDrivingQuestion
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasDrivingQuestion> rdf:type owl:DatatypeProperty .
 
 
-### Solution
-:hasSolution rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> rdf:type owl:DatatypeProperty .
 
 
-### Score
-:hasScore rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasScore
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasScore> rdf:type owl:DatatypeProperty .
 
 
-### Publication Date
-:hasPublicationDate rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasPublicationDate
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasPublicationDate> rdf:type owl:DatatypeProperty .
 
 
-### Helpful Websitelinks
-:hasHelpfulWebsitelinks rdf:type owl:DatatypeProperty .
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks> rdf:type owl:DatatypeProperty .
 
 
 # #################################################################
@@ -53,63 +52,65 @@ owl:imports <http://purl.org/patternpedia> .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions
+### http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#TestlanguageWithRestrictions
 :TestlanguageWithRestrictionsIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom dctype:Image
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon> ; 
+			 owl:allValuesFrom <http://purl.org/dc/dcmitype/Image>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasDrivingQuestion> ; 
 			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> ; 
 			 owl:maxCardinality "3"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasScore ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasScore> ; 
 			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:integer
+			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#integer>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasPublicationDate ; 
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasPublicationDate> ; 
 			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:date
+			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#date>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasHelpfulWebsitelinks ; 
-			 owl:allValuesFrom xsd:anyURI
+			 owl:onProperty <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#anyURI>
 				] .
 
 
 #################################################################
 # Individuals
 ##############################################################
-###  http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions
+###  http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#TestlanguageWithRestrictions
 :TestlanguageWithRestrictions rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://via.placeholder.com/150"^^xsd:anyURI ;
 pp:hasName "TestlanguageWithRestrictions"^^xsd:string .
+:TestlanguageWithRestrictions pp:containsPattern <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#DemonstratePatternrenderer> .
 #################################################################
 # Pattern Import Statements
 ##############################################################
+<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions> owl:imports <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer> .
