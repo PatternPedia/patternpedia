@@ -115,4 +115,3 @@ pp:hasName "TestlanguageWithRestrictions"^^xsd:string .
 # Pattern Import Statements
 ##############################################################
 <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions> owl:imports <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer> .
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions> owl:imports <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/Demonstration2(withlessinfo)> .
