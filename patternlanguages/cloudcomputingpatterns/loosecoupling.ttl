@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<loosecoupling>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<loosecoupling#LooseCoupling>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Loose Coupling"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/loose_coupling_icon.png"^^xsd:anyURI ;
+    :hasContext "Information exchange between applications and their individual components as well as associated management tasks, such as scaling, failure handling, or update management can be simplified significantly if application components can be treated individually and the dependencies among them are kept to a minimum."^^xsd:string ;
+    :hasDrivingQuestion "How can dependencies between Distributed Applications and between individual components of these applications be reduced?"^^xsd:string ;
+    :hasIntent "A communication intermediary separates application functionality from concerns of communication partners regarding their location, implementation platform, the time of communication, and the used data format."^^xsd:string ;
+    :hasSolution "Communicating components and multiple integrated applications are decoupled from each other by interacting through a broker. This broker encapsulates the assumptions that communication partners would otherwise have to make about one other and, thus, ensures separation of concerns."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/loose_coupling_sketch.png"^^xsd:anyURI .
+

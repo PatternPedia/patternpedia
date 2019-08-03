@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<messagemover>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<messagemover#MessageMover>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Message Mover"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/message_mover_icon.png"^^xsd:anyURI ;
+    :hasContext "The application components comprising a Distributed Application often exchange data using messages. If used message queues reside in different cloud environments that form a Hybrid Cloud accessibility to queues of one environment may be restricted for application components that are deployed in another environment."^^xsd:string ;
+    :hasDrivingQuestion "How can message queues of different providers be integrated without an impact on the application components using them?"^^xsd:string ;
+    :hasIntent "Messages are moved automatically between different cloud providers to provide unified access to application components using messaging."^^xsd:string ;
+    :hasSolution "A Message Mover is used to integrate message queues hosted in different environments by receiving messages from one queue and transferring it to a queue in other environments."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/message_mover_sketch.png"^^xsd:anyURI .
+

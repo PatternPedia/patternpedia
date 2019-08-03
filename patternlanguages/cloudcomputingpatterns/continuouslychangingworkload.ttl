@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<continuouslychangingworkload>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<continuouslychangingworkload#ContinuouslyChangingWorkload>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Continuously Changing Workload"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/continuously_changing_workload_icon.png"^^xsd:anyURI ;
+    :hasContext "Many applications experience a long term change in workload."^^xsd:string ;
+    :hasDrivingQuestion "How can a continuous growth or decline in utilization be characterized and how can applications experiencing this workload benefit from cloud computing?"^^xsd:string ;
+    :hasIntent "IT resources with a utilization that grows or shrinks constantly over time experience Continuously Changing Workload."^^xsd:string ;
+    :hasSolution "Continuously Changing Workload is characterized by an ongoing continuous growth or decline of the utilization. Elasticity of clouds enables applications experiencing Continuously Changing Workload to provision or decommission resources with the same rate as the workload changes."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/continuously_changing_workload_sketch.png"^^xsd:anyURI .
+

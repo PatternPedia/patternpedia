@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<updatetransitionprocess>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<updatetransitionprocess#UpdateTransitionProcess>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Update Transition Process"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/update_transition_process_icon.png"^^xsd:anyURI ;
+    :hasContext "During the runtime of a Distributed Application, new versions of used middleware, operating systems, or application components may become available. A seamless switch from the old to the new version of application components shall be enabled."^^xsd:string ;
+    :hasDrivingQuestion "How can application components of a Distributed Application be updated seamlessly?"^^xsd:string ;
+    :hasIntent "When a new application component version, middleware versions etc. become available, running application components are updated seamlessly."^^xsd:string ;
+    :hasSolution "The new component version is created. Additional application component instances of the new version are provisioned. These components are executed simultaneously with the application components of the old version. If necessary, load balancing is then switched to the component instances of the new version. If the application components access a queue, this step is unnecessary. Finally, the old application component instances are decommissioned."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/update_transition_process_sketch.png"^^xsd:anyURI .
+

@@ -1,0 +1,26 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<tenant-isolatedcomponent-to-sharedcomponent>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> ,
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/tenant-isolatedcomponent> , 
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/sharedcomponent> . 
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<tenant-isolatedcomponent-to-sharedcomponent#Tenant-isolatedComponent-to-SharedComponent>
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource <tenant-isolatedcomponent#Tenant-isolatedComponent> ; 
+    pp:hasTarget <sharedcomponent#SharedComponent> . 
+

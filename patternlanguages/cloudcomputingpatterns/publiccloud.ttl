@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<publiccloud>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<publiccloud#PublicCloud>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Public Cloud"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/public_cloud_icon.png"^^xsd:anyURI ;
+    :hasContext "A provider offering IT resources according to IaaS, PaaS, or SaaS has to maintain physical data centers. IT resources, nevertheless, shall be made accessible dynamically."^^xsd:string ;
+    :hasDrivingQuestion "How can the cloud properties – on demand self-service, broad network access, pay-per-use, resource pooling, and rapid elasticity – be provided to a large customer group?"^^xsd:string ;
+    :hasIntent "IT resources are provided as a service to a very large customer group in order to enable elastic use of a static resource pool."^^xsd:string ;
+    :hasSolution "The hosting environment is shared between many customers possibly reducing the costs for an individual customer. Leveraging economies of scale enables a dynamic use of resources, because workload peaks of some customers occur during times of low workload of other customers."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/public_cloud_sketch.png"^^xsd:anyURI .
+

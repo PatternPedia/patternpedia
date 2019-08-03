@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<hybridmultimediawebapplication>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<hybridmultimediawebapplication#HybridMultimediaWebApplication>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Hybrid Multimedia Web Application"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/hybrid_multimedia_web_application_icon.png"^^xsd:anyURI ;
+    :hasContext "A Distributed Application provides a website accessed by a large globally distributed user group. While most of the website is comprised of static content, there is also a significant amount of multimedia content, such as videos or music that has to be streamed to users."^^xsd:string ;
+    :hasDrivingQuestion "How can non-cacheable content be integrated efficiently in a website that is accessed by a large globally distributed user group?"^^xsd:string ;
+    :hasIntent "Website content is largely provided from a static environment. Multimedia files that cannot be cached efficiently are provided from a large distributed elastic environment for high-performance access."^^xsd:string ;
+    :hasSolution "Static website content is hosted in a static environment from where it is accessed by users. The streaming content is provided by an elastic cloud environment where it is accessed from the application’s User Interface Component. The static content is provided to users’ client software and in this static content, the multimedia content is referenced. Retrieval of this streaming content is often handled directly by the users’ browser software."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/hybrid_multimedia_web_application_sketch.png"^^xsd:anyURI .
+

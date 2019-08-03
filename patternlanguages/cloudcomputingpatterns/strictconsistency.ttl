@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<strictconsistency>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<strictconsistency#StrictConsistency>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Strict Consistency"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/strict_consistency_icon.png"^^xsd:anyURI ;
+    :hasContext "To ensure failure tolerance, a storage offering duplicates data among multiple replicas. These replicas store the same set of data, so in case any of these replicas is lost, data may still be obtained and recovered from the other replicas."^^xsd:string ;
+    :hasDrivingQuestion "How can data be distributed among replicas to increase availability, while ensuring data consistency at all times?"^^xsd:string ;
+    :hasIntent "Data is stored at different locations (replicas) to improve response time and to avoid data loss in case of failures while consistency of replicas is ensured at all times."^^xsd:string ;
+    :hasSolution "Data is duplicated among several replicas to increase availability. A subset of data replicas is accessed by read and write operations. The ratio of the number of replicas accessed during read (r) and write (w) operations guarantees consistency: n < r + w"^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/strict_consistency_sketch.png"^^xsd:anyURI .
+

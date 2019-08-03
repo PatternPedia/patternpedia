@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<virtualnetworking>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<virtualnetworking#VirtualNetworking>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Virtual Networking"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/virtual_networking_icon.png"^^xsd:anyURI ;
+    :hasContext "Application components deployed on Elastic Infrastructures and Elastic Platforms rely on physical network hardware to communicate with each other and the outside world. On this networking layer, different customers shall be isolated from each."^^xsd:string ;
+    :hasDrivingQuestion "How can network connectivity between IT resources hosted in a cloud be configured dynamically and on-demand?"^^xsd:string ;
+    :hasIntent "Networking resources are virtualized to empower customers to configure networks, firewalls, and remote access using a self-service interface."^^xsd:string ;
+    :hasSolution "Physical networking resources, such as networking interface cards, switches, routers etc. are abstracted to virtualized ones. These Virtual Networking resources may share the same physical networking resources. Configuration is handled by customers through self-service interfaces."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/virtual_networking_sketch.png"^^xsd:anyURI .
+

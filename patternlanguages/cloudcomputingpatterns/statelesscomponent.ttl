@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<statelesscomponent>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<statelesscomponent#StatelessComponent>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Stateless Component"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/stateless_component_icon.png"^^xsd:anyURI ;
+    :hasContext "The components of a Distributed Application are deployed among multiple cloud resources to benefit from this distributed runtime environment through scaling out.The most significant factor complicating addition and removal of component instances in this scope is the internal state maintained by them. In case of failure, this information may even be lost."^^xsd:string ;
+    :hasDrivingQuestion "How can elasticity and robustness of an application component be increased?"^^xsd:string ;
+    :hasIntent "State is handled external of application components to ease their scaling-out and to make the application more tolerant to component failures."^^xsd:string ;
+    :hasSolution "Application components are implemented in a fashion that they do not have an internal state. Instead, their state and configuration is stored externally in Storage Offerings or provided to the component with each request."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/stateless_component_sketch.png"^^xsd:anyURI .
+

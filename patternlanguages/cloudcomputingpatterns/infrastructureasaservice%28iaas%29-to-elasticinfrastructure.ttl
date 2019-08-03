@@ -1,0 +1,26 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<infrastructureasaservice%28iaas%29-to-elasticinfrastructure>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> ,
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/infrastructureasaservice%28iaas%29> , 
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/elasticinfrastructure> . 
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<infrastructureasaservice%28iaas%29-to-elasticinfrastructure#InfrastructureasaService%28IaaS%29-to-ElasticInfrastructure>
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource <infrastructureasaservice%28iaas%29#InfrastructureasaService%28IaaS%29> ; 
+    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+

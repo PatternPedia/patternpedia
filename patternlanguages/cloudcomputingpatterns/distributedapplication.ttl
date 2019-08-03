@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<distributedapplication>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<distributedapplication#DistributedApplication>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Distributed Application"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/distributed_application_icon.png"^^xsd:anyURI ;
+    :hasContext "Applications have to respect the distribution and the scaling-out support of cloud environments in their architecture to efficiently benefit from it. Cloud applications, therefore, should to rely on multiple, possibly redundant IT resources. This can especially be the case if the cloud provider assures Environment-based Availability – the availability of the complete environment and not of single IT resources hosted in it."^^xsd:string ;
+    :hasDrivingQuestion "How can application functionality be decomposed to be handled by separate application components?"^^xsd:string ;
+    :hasIntent "A cloud application divides provided functionality among multiple application components that can be scaled out independently."^^xsd:string ;
+    :hasSolution "The functionality of the application is divided into multiple independent components that provide a certain function. This componentization of application functionality introduces a logical decomposition of the application. These logical components are subsumed to multiple tiers to denote that they shall be deployed together physically, i.e., on one server (cluster)."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/distributed_application_sketch_1.png"^^xsd:anyURI .
+

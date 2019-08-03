@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<unpredictableworkload>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<unpredictableworkload#UnpredictableWorkload>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Unpredictable Workload"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/unpredictable_workload_icon.png"^^xsd:anyURI ;
+    :hasContext "Random workloads are a generalization of Periodic Workloads as they require elasticity but are not predictable. Such workloads occur quite often in the real world."^^xsd:string ;
+    :hasDrivingQuestion "How can random and unforeseeable utilization be characterized and how can applications experiencing this workload benefit from cloud computing?"^^xsd:string ;
+    :hasIntent "IT resources with a random and unforeseeable utilization over time experience unpredictable workload."^^xsd:string ;
+    :hasSolution "Unplanned provisioning and decommissioning of IT resources is required. The necessary provisioning and decommissioning of IT resources is, therefore, automated to align the resource numbers to changing workload."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/unpredictable_workload_sketch.png"^^xsd:anyURI .
+

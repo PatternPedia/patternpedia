@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<batchprocessingcomponent>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<batchprocessingcomponent#BatchProcessingComponent>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Batch Processing Component"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/batch_processing_component_icon.png"^^xsd:anyURI ;
+    :hasContext "Distributed Applications assing processing functionality to different components to them independently. If such Processing Components are accessed asynchronously, certain conditions may make it unfeasible to process the requests immediately: seldom accesses to processing functionality, powerful Processing Component instances accessed continuously, and environmental conditions, such as resource costs."^^xsd:string ;
+    :hasDrivingQuestion "How can asynchronous processing requests be delayed to be handled when conditions for their processing are optimal?"^^xsd:string ;
+    :hasIntent "Requests are delayed until environmental conditions make their processing feasible."^^xsd:string ;
+    :hasSolution "Asynchronous processing requests are accepted at all times, but stored them until conditions are optimal for their processing. Based on the number of stored requests, environmental conditions, and custom rules, components are instantiated to handle the requests. Requests are only processed under non-optimal conditions if they cannot be delayed any longer."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/batch_processing_component_sketch.png"^^xsd:anyURI .
+

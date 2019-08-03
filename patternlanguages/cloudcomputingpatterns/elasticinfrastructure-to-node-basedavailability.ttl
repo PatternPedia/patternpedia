@@ -1,0 +1,26 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<elasticinfrastructure-to-node-basedavailability>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> ,
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/elasticinfrastructure> , 
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/node-basedavailability> . 
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<elasticinfrastructure-to-node-basedavailability#ElasticInfrastructure-to-Node-basedAvailability>
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
+    pp:hasTarget <node-basedavailability#Node-basedAvailability> . 
+

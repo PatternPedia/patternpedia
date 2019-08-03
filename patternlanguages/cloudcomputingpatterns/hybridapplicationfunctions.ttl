@@ -1,0 +1,31 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<hybridapplicationfunctions>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<hybridapplicationfunctions#HybridApplicationFunctions>
+    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <http://purl.org/patternpedia#hasName> "Hybrid Application Functions"^^xsd:string ;
+    :hasIcon "http://www.cloudcomputingpatterns.org/icons/hybrid_application_functions_icon.png"^^xsd:anyURI ;
+    :hasContext "Application components comprising a Distributed Application experience varying workloads on all layers of the application stack: User Interface Components, Processing Components, and Data Access Components. All of these components provide functionality to the user group of the application, but this user group accesses functionality differently. In addition to the workload requirements other issues, such as legal and corporate regulations or requirements on security, privacy, and trust may limit the environments to which an application component may be provisioned."^^xsd:string ;
+    :hasDrivingQuestion "How can arbitrary functionality of an application be distributed among static data centers and elastic clouds best matching its requirements?"^^xsd:string ;
+    :hasIntent "Some application functionality provided by user interfaces, processing, and data handling is experiencing varying workload and is hosted in an elastic cloud while other application functionality of the same type is hosted in a static environment."^^xsd:string ;
+    :hasSolution "Application components are grouped regarding similar requirements and are deployed into best fitting environments. Interdependencies between the components are reduced by exchanging data using asynchronous messaging to ensure Loose Coupling. Depending on the accessed function, a load balancer redirects user accesses to the different environments seamlessly."^^xsd:string ;
+    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/hybrid_application_functions_sketch.png"^^xsd:anyURI .
+

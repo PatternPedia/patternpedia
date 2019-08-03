@@ -1,0 +1,26 @@
+@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix pp: <http://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<softwareasaservice%28saas%29-to-dedicatedcomponent>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> ,
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/softwareasaservice%28saas%29> , 
+        <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/dedicatedcomponent> . 
+
+
+#################################################################
+#    Individual
+#################################################################
+
+<softwareasaservice%28saas%29-to-dedicatedcomponent#SoftwareasaService%28SaaS%29-to-DedicatedComponent>
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource <softwareasaservice%28saas%29#SoftwareasaService%28SaaS%29> ; 
+    pp:hasTarget <dedicatedcomponent#DedicatedComponent> . 
+
