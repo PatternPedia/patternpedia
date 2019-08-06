@@ -495,6 +495,7 @@
     pp:hasLogo "http://www.cloudcomputingpatterns.org/img/book.png"^^xsd:anyURI ;
     pp:hasName "Cloud Computing Patterns"^^xsd:string ;
     pp:containsPattern <staticworkload#StaticWorkload> ,
+        :ElasticLoadBalancer ,
         <periodicworkload#PeriodicWorkload> ,
         <once-in-a-lifetimeworkload#Once-in-a-lifetimeWorkload> ,
         <unpredictableworkload#UnpredictableWorkload> ,
