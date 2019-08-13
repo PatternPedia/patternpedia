@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <elasticitymanagementprocess>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <elasticitymanagementprocess#ElasticityManagementProcess>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Elasticity Management Process"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/elasticity_management_process_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Elasticity Management Process"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/elasticity_management_process_icon.png"^^xsd:anyURI ;
     :hasContext "A Distributed Application uses Elasticity Managers, Elastic Queues, or Elastic Load Balancers to ensure an elastic scaling of application components. To handle this task adequately, the current resource demand has to be obtained automatically from the application and has to be reflected in provisioning and decommissioning of cloud resources."^^xsd:string ;
     :hasDrivingQuestion "How can the number of resources to which application components are scaled-out be adjusted efficiently to the currently experienced workload and anticipated future workload?"^^xsd:string ;
     :hasIntent "Application component instances are added automatically to an application to cope with increasing workload. If the workload decreases application component instances are removed respectively."^^xsd:string ;
     :hasSolution "An Elasticity Management Process analyzes the utilization of application component instances in intervals, when a system manager requests it, or if certain conditions are observed by the monitoring component. Based on this information, the current workload of the application is computed and reflected by adjusting used resources."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/elasticity_management_process_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/elasticity_management_process_sketch.png"^^xsd:anyURI .
 

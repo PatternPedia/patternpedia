@@ -3,15 +3,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
 
 <messagechannel>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
 
 <messagechannel#MessageChannel>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
-    <http://purl.org/patternpedia#hasName> "Message Channel"^^xsd:string ;
-    <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Connect the applications using a Message Channel, where *one application writes* information to the channel and the *other one reads* that information from the channel"^^xsd:string .
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
+    <https://purl.org/patternpedia#hasName> "Message Channel"^^xsd:string ;
+    <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Connect the applications using a Message Channel, where *one application writes* information to the channel and the *other one reads* that information from the channel"^^xsd:string .
 
 

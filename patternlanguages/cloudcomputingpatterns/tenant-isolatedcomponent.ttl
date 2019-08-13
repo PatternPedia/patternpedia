@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <tenant-isolatedcomponent>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <tenant-isolatedcomponent#Tenant-isolatedComponent>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Tenant-isolated Component"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/tenant_isolated_component_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Tenant-isolated Component"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/tenant_isolated_component_icon.png"^^xsd:anyURI ;
     :hasContext "A Distributed Application is offered to multiple tenants. These tenants share IT resources required by applications provided to them. However, the sharing of application components is hindered by three factors. First, tenants may have unique requirements and, thus, expect application components to be configurable to their individual needs. Second, tenants may not trust each other. Third, tenants expect an application to behave as if a single tenant was the only one accessing it."^^xsd:string ;
     :hasDrivingQuestion "How can an application component be shared between multiple tenants enabling individual configuration and tenant-isolation regarding performance, data volume, and access privileges?"^^xsd:string ;
     :hasIntent "A component shared between tenants avoids influences between tenants regarding assured performance, available storage capacity, and accessibility of functionality and data."^^xsd:string ;
     :hasSolution "Components on all layers of the application stack are specifically developed to be used by different tenants. Especially, they ensure isolation between tenants by controlling tenant access, processing performance used, and separation of stored data."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/tenant_isolated_component_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/tenant_isolated_component_sketch.png"^^xsd:anyURI .
 

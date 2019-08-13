@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <watchdog>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <watchdog#Watchdog>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Watchdog"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/watchdog_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Watchdog"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/watchdog_icon.png"^^xsd:anyURI ;
     :hasContext "If a Distributed Application is comprised of many application components it is dependent on the availability of all component instances. To enable high availability under such conditions, applications have to rely on redundant application component instances and the failure of these instances has to be detected and coped with automatically."^^xsd:string ;
     :hasDrivingQuestion "How can applications automatically detect failing application components and handle their replacement?"^^xsd:string ;
     :hasIntent "Applications cope with failures automatically by monitoring and replacing application component instances if the provider-assured availability is insufficient."^^xsd:string ;
     :hasSolution "Individual application components rely on external state information by implementing the Stateless Component pattern. Components are scaled out and multiple instances of them are deployed to redundant resources. The component instances are monitored by a separate Watchdog component and replaced in case of failures."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/watchdog_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/watchdog_sketch.png"^^xsd:anyURI .
 

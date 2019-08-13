@@ -1,20 +1,20 @@
 # Definition of prefixes
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
-@prefix pp: <http://purl.org/patternpedia#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix pp: <https://purl.org/patternpedia#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    The ontology of the patternlanguage
 #################################################################
 
-<http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns>
+<https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia> ,
+    owl:imports <https://purl.org/patternpedia> ,
         <staticworkload> ,
         <periodicworkload> ,
         <once-in-a-lifetimeworkload> ,
@@ -492,7 +492,7 @@
 
 :CloudComputingPatterns
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
-    pp:hasLogo "http://www.cloudcomputingpatterns.org/img/book.png"^^xsd:anyURI ;
+    pp:hasLogo "https://www.cloudcomputingpatterns.org/img/book.png"^^xsd:anyURI ;
     pp:hasName "Cloud Computing Patterns"^^xsd:string ;
     pp:containsPattern <staticworkload#StaticWorkload> ,
         :ElasticLoadBalancer ,
@@ -898,13 +898,13 @@
         <hybriddevelopmentenvironment-to-hybriddata#HybridDevelopmentEnvironment-to-HybridData> ,
         <hybriddevelopmentenvironment-to-applicationcomponentproxy#HybridDevelopmentEnvironment-to-ApplicationComponentProxy> .
 
-###  http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#ElasticLoadBalancer
+###  https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#ElasticLoadBalancer
 :ElasticLoadBalancer rdf:type owl:NamedIndividual ,
                               :CloudComputingPattern ;
                      pp:hasName "Elastic Load Balancer"^^xsd:string ;
                      :hasContext "Application components of a Distributed Application shall be scaled out automatically. Requests sent to an application shall be used as an indicator for the currently experienced workload from which the required number of components instances shall be deducted."^^xsd:string ;
                      :hasDrivingQuestion "How can the number of required application component instances be determined based on monitored synchronous accesses?"^^xsd:string ;
-                     :hasIcon "http://www.cloudcomputingpatterns.org/icons/elastic_load_balancer_icon.png"^^xsd:anyURI ;
+                     :hasIcon "https://www.cloudcomputingpatterns.org/icons/elastic_load_balancer_icon.png"^^xsd:anyURI ;
                      :hasIntent "The number of synchronous accesses to an elastically scaled-out application is used to determine the number of required application component instances."^^xsd:string ;
                      :hasSolution "Based on the number of synchronous requests handled by a load balancer and possibly other utilization information, the required number of required component instances is determined."^^xsd:string ;
-                     :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/elastic_load_balancer_sketch.png"^^xsd:anyURI .
+                     :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/elastic_load_balancer_sketch.png"^^xsd:anyURI .

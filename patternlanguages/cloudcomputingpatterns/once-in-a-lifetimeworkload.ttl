@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <once-in-a-lifetimeworkload>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <once-in-a-lifetimeworkload#Once-in-a-lifetimeWorkload>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Once-in-a-lifetime Workload"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/once_in_a_lifetime_workload_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Once-in-a-lifetime Workload"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/once_in_a_lifetime_workload_icon.png"^^xsd:anyURI ;
     :hasContext "As a special case of Periodic Workload, the peaks of periodic utilization can occur only once in a very long timeframe. Often, this peak is known in advance as it correlates to a certain event or task."^^xsd:string ;
     :hasDrivingQuestion "How can equal utilization with a one-time peak be characterized and how can applications experiencing this workload benefit from cloud computing?"^^xsd:string ;
     :hasIntent "IT resources with an equal utilization over time disturbed by a strong peak occurring only once experience Once-in-a-lifetime Workload."^^xsd:string ;
     :hasSolution "The elasticity of a cloud is used to obtain IT resources necessary. The provisioning and decommissioning of IT resources can often be realized as a manual task, because it is performed at a known point in time."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/once_in_a_lifetime_workload_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/once_in_a_lifetime_workload_sketch.png"^^xsd:anyURI .
 

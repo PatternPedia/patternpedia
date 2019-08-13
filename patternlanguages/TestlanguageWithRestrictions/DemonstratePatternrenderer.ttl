@@ -1,32 +1,32 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#> .
-@prefix pp: <http://purl.org/patternpedia#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#> .
+@prefix pp: <https://purl.org/patternpedia#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer> .
+@base <https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer> .
 #################################################################
 # Individuals
 ##############################################################
 
 
 
-###  http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#DemonstratePatternrenderer
+###  https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#DemonstratePatternrenderer
 :DemonstratePatternrenderer rdf:type owl:NamedIndividual ,
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/TestlanguageWithRestrictionsIndividual> ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#hasName> "Demonstrate Patternrenderer" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon> "http://via.placeholder.com/150" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon> "http://via.placeholder.com/100/100" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "Context information: We would like to demonstrate our default renderer while having multiple restrictions on our language." ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "This should include rendering pictures (enter as many icon pictures as you like by clicking on the icon button " ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "Take a look at 'Driving Question': We're only allowed to have only one" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "Try to manipulate the sections: you'll be corrected after a few seconds" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasDrivingQuestion> "Can we demonstrate the default pattern renderer with one pattern?" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> "This is the solution" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> "This is the second solution" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> "This is a third solution and we're not allowed to have any more, you'll get an error message if you try" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasScore> "5" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasPublicationDate> "05/11/2011" ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks> <http://github.com> ;
-<http://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks> <http://purl.org> .
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/TestlanguageWithRestrictionsIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions/DemonstratePatternrenderer#hasName> "Demonstrate Patternrenderer" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon> "http://via.placeholder.com/150" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasIcon> "http://via.placeholder.com/100/100" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "Context information: We would like to demonstrate our default renderer while having multiple restrictions on our language." ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "This should include rendering pictures (enter as many icon pictures as you like by clicking on the icon button " ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "Take a look at 'Driving Question': We're only allowed to have only one" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasContext> "Try to manipulate the sections: you'll be corrected after a few seconds" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasDrivingQuestion> "Can we demonstrate the default pattern renderer with one pattern?" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> "This is the solution" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> "This is the second solution" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasSolution> "This is a third solution and we're not allowed to have any more, you'll get an error message if you try" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasScore> "5" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasPublicationDate> "05/11/2011" ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks> <http://github.com> ;
+<https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#hasHelpfulWebsitelinks> <https://purl.org> .

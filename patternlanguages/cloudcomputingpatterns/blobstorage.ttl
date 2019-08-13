@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <blobstorage>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <blobstorage#BlobStorage>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Blob Storage"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/blob_storage_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Blob Storage"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/blob_storage_icon.png"^^xsd:anyURI ;
     :hasContext "Distributed cloud applications often need to handle large data elements, also referred to as binary large objects (blob). Examples are virtual server images managed in an Elastic Infrastructure, pictures, or videos."^^xsd:string ;
     :hasDrivingQuestion "How can large files be stored, organized and made available over a network?"^^xsd:string ;
     :hasIntent "Data is provided in form of large files that are made available in a file system-like fashion by Storage Offerings that provides elasticity."^^xsd:string ;
     :hasSolution "Data elements are organized in a folder hierarchy similar to a local file system. Each data element is given a unique identifier comprised of its location in the folder hierarchy and a file name. This unique identifier is passed to the storage offerings to retrieve a file over a network."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/blob_storage_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/blob_storage_sketch.png"^^xsd:anyURI .
 

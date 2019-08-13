@@ -3,15 +3,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
 
 <routingslip>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
 
 <routingslip#RoutingSlip>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
-    <http://purl.org/patternpedia#hasName> "Routing Slip"^^xsd:string ;
-    <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Attach a Routing Slip to each message, *specifying the sequence of processing steps*. Wrap *each component with a special message router* that reads the Routing Slip and routes the message to the next component in the list"^^xsd:string .
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
+    <https://purl.org/patternpedia#hasName> "Routing Slip"^^xsd:string ;
+    <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Attach a Routing Slip to each message, *specifying the sequence of processing steps*. Wrap *each component with a special message router* that reads the Routing Slip and routes the message to the next component in the list"^^xsd:string .
 
 

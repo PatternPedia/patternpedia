@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <at-least-oncedelivery>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <at-least-oncedelivery#At-least-onceDelivery>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "At-least-once Delivery"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/at_least_once_delivery_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "At-least-once Delivery"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/at_least_once_delivery_icon.png"^^xsd:anyURI ;
     :hasContext "Sometimes, message duplicity can be coped with by the application using a Message-oriented Middleware. Therefore, for scenarios where message duplicates are uncritical, it shall still be ensured that messages are received."^^xsd:string ;
     :hasDrivingQuestion "How can communication partners or a Message-oriented Middleware ensure that messages are received successfully?"^^xsd:string ;
     :hasIntent "In case of failures that lead to message loss or take too long to recover from, messages are retransmitted to assure they are delivered at least once."^^xsd:string ;
     :hasSolution "For each message retrieved by a receiver an acknowledgement is sent back to the message sender. In case this acknowledgement is not received after a certain time frame, the message is resend."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/at_least_once_delivery_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/at_least_once_delivery_sketch.png"^^xsd:anyURI .
 

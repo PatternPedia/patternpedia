@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <environment-basedavailability>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <environment-basedavailability#Environment-basedAvailability>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Environment-based Availability"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/environment_based_availability_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Environment-based Availability"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/environment_based_availability_icon.png"^^xsd:anyURI ;
     :hasContext "A cloud provider offers an Elastic Infrastructure or an Elastic Platform on which customers may deploy application components. The availability of this environment has to be expressed so that customers may match their requirements."^^xsd:string ;
     :hasDrivingQuestion "How can providers express availability in an environmental-centric fashion, so that customers may estimate the availability of hosted applications?"^^xsd:string ;
     :hasIntent "A cloud provider guarantees the availability of the environment hosting individual nodes, such as virtual servers or hosted application components."^^xsd:string ;
     :hasSolution "The provider assures availability for the provided environment, thus, for the availability of the Elastic Platform or the Elastic Infrastructure as a whole, for example, the availability for at-least-once provisioned component or virtual server and the availability to provision replacements in case of failures is assured. There is no notion of availability for individual application components or virtual servers deployed in this environment."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/environment_based_availability_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/environment_based_availability_sketch.png"^^xsd:anyURI .
 

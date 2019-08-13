@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <hybriddevelopmentenvironment>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <hybriddevelopmentenvironment#HybridDevelopmentEnvironment>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Hybrid Development Environment"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/hybrid_development_environment_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Hybrid Development Environment"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/hybrid_development_environment_icon.png"^^xsd:anyURI ;
     :hasContext "Applications have different requirements on the runtime environment during their development, test, and production phase. During development, hardware requirements are often uncertain, so hardware resources should be flexible to extend resources if necessary. During the test phase, diverse test systems may be needed to verify the proper functioning of the application on different operating systems or when being accessed using different client software, i.e., different browsers. Large numbers of resources may also be required to perform load tests. During the productive use other factors, such as security and availability may be of greater importance than resource flexibility."^^xsd:string ;
     :hasDrivingQuestion "How can an application use different computing environments during its development, test, and production stages?"^^xsd:string ;
     :hasIntent "A production runtime environment is replicated and mocked in an elastic environment where new applications can be developed and tested."^^xsd:string ;
     :hasSolution "The production environment of the application is simulated in the development and test environment through the use of equivalent addressing, similar mocking data, and equivalent functionality provided by the environment. Migration of developed applications is ensured through transformation of application components or compatibility of runtimes. Some testing resources are provided exclusively in the development environment to verify the application behavior under different circumstances."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/hybrid_development_environment_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/hybrid_development_environment_sketch.png"^^xsd:anyURI .
 

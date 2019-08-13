@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <relationaldatabase>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <relationaldatabase#RelationalDatabase>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Relational Database"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/relational_database_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Relational Database"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/relational_database_icon.png"^^xsd:anyURI ;
     :hasContext "Handled data is often comprised of large numbers of similar data elements. These data elements have certain dependencies among each other. If such structured data is queried, clients make certain assumptions about the data structure and the consistency of relations between the retrieved data elements."^^xsd:string ;
     :hasDrivingQuestion "How can data elements be stored so that relations between them can be expressed and expressive queries are enabled to retrieve required information effectively?"^^xsd:string ;
     :hasIntent "Data is structured according to a schema that is enforced during data manipulation and enables expressive queries of handled data."^^xsd:string ;
     :hasSolution "Data elements are stored in tables where each column represents an attribute of a data element. Table columns may have dependencies in the way that entries in one table column must also be present in a corresponding column of a different table. These dependencies are enforced during data manipulations."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/relational_database_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/relational_database_sketch.png"^^xsd:anyURI .
 

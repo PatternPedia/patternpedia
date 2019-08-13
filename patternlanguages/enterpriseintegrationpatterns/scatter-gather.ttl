@@ -3,15 +3,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
 
 <scatter-gather>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
 
 <scatter-gather#Scatter-Gather>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
-    <http://purl.org/patternpedia#hasName> "Scatter-Gather"^^xsd:string ;
-    <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Use a Scatter-Gather that *broadcasts* a message *to multiple recipients and re-aggregates the responses back* into a single message"^^xsd:string .
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
+    <https://purl.org/patternpedia#hasName> "Scatter-Gather"^^xsd:string ;
+    <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Use a Scatter-Gather that *broadcasts* a message *to multiple recipients and re-aggregates the responses back* into a single message"^^xsd:string .
 
 

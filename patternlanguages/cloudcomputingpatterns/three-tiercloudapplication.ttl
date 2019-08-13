@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <three-tiercloudapplication>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <three-tiercloudapplication#Three-TierCloudApplication>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Three-Tier Cloud Application"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/three_tier_cloud_application_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Three-Tier Cloud Application"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/three_tier_cloud_application_icon.png"^^xsd:anyURI ;
     :hasContext "A Distributed Application is decomposed into application components to scale individual application functions independently. There can be many differentiating factors of application tiers. For example, if Processing Components are more computation intensive or are used less frequently than User Interface Components, aligning the elastic scaling of these two components by summarizing their implementation in one tier can be inefficient. This issue arises every time components experiences different Application Workloads. The number of provisioned component instances cannot be aligned well to the different workloads if they are summarized to coarse grained tiers."^^xsd:string ;
     :hasDrivingQuestion "How can presentation logic, business logic, and data handling be decomposed into separate tiers that are scaled independently?"^^xsd:string ;
     :hasIntent "The presentation, business logic, and data handling is realized as separate tiers to scale stateless presentation and compute-intensive processing independently of the data tier, which is harder to scale and often handled by the cloud provider."^^xsd:string ;
     :hasSolution "The application is decomposed into three tiers, where each tier is elastically scaled independently. The presentation tier is comprised of a load balancer and an application component that implements the Stateless Component pattern and User Interface Component pattern. The business logic tier is comprised of an application component implementing the Stateless Component pattern in addition to the Processing Component pattern."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/three_tier_cloud_application_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/three_tier_cloud_application_sketch.png"^^xsd:anyURI .
 

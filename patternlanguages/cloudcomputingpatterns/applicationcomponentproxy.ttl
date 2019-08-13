@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <applicationcomponentproxy>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <applicationcomponentproxy#ApplicationComponentProxy>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Application Component Proxy"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/application_component_proxy_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Application Component Proxy"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/application_component_proxy_icon.png"^^xsd:anyURI ;
     :hasContext "Application components of a Distributed Application are deployed in different Cloud Environments that form a Hybrid Cloud. These environments often have different privacy, security, and trust properties. The communication between environments is often restricted through the use of firewalls. However, application components hosted in unrestricted environments may have to access application components hosted in a restricted environment."^^xsd:string ;
     :hasDrivingQuestion "How can an application component be accessed if direct access to its hosting environment is restricted?"^^xsd:string ;
     :hasIntent "An application component is made available in an environment from where it cannot be accessed directly by deploying an Application Component Proxy. The communication between this proxy and the application component is initiated and maintained from the environment where communication is unrestricted."^^xsd:string ;
     :hasSolution "The interface of a restricted application component is duplicated to form a proxy component. Synchronous and asynchronous communication with this proxy component is initiated and maintained from the restricted environment that may access the unrestricted environment directly."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/application_component_proxy_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/application_component_proxy_sketch.png"^^xsd:anyURI .
 

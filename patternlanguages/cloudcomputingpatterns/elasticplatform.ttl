@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <elasticplatform>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <elasticplatform#ElasticPlatform>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Elastic Platform"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/elastic_platform_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Elastic Platform"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/elastic_platform_icon.png"^^xsd:anyURI ;
     :hasContext "One of the fundamental cloud properties is the sharing of resources among a large number of customers to leverage economy of scale. Extending resource sharing between customers to the operating systems and middleware increases the beneficial effects of economies of scale as the utilization of these resources can be increased."^^xsd:string ;
     :hasDrivingQuestion "How do Cloud Offerings providing Execution Environments behave and how should they be used in applications?"^^xsd:string ;
     :hasIntent "Middleware for the execution of custom applications, their communication, and data storage is offered via a self-service interface over a network."^^xsd:string ;
     :hasSolution "Application components of different customers are hosted on shared middleware provided and maintained by the provider. Customers may deploy custom application components to this middleware using a self-service interface. This unification enables resource sharing and an automation of certain management tasks on the provider side, for example, provisioning of applications, update management."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/elastic_platform_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/elastic_platform_sketch.png"^^xsd:anyURI .
 

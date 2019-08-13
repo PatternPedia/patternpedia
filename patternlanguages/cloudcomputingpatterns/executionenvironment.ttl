@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <executionenvironment>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <executionenvironment#ExecutionEnvironment>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Execution Environment"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/execution_environment_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Execution Environment"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/execution_environment_icon.png"^^xsd:anyURI ;
     :hasContext "Applications often use similar functions, for example, to access networking interfaces, display user interfaces, access storage of the server etc. In this case, each application implements similar components that could be shared with other applications. Sharing such common functionality between applications would also result in a better utilization of the environment."^^xsd:string ;
     :hasDrivingQuestion "How can multiple application components share a hosting environment efficiently?"^^xsd:string ;
     :hasIntent "To avoid duplicate implementation of functionality, application components are deployed to a hosting environment providing middleware services as well as often used functionality."^^xsd:string ;
     :hasSolution "Common functionality is summarized in an Execution Environment providing functionality in platform libraries to be used in custom application implementations and in the form of the middleware. The environment, thus, executes custom application components and provides common functionality for data storages, communication etc."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/execution_environment_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/execution_environment_sketch.png"^^xsd:anyURI .
 

@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <timeout-baseddelivery>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <timeout-baseddelivery#Timeout-basedDelivery>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Timeout-based Delivery"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/timeout_based_delivery_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Timeout-based Delivery"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/timeout_based_delivery_icon.png"^^xsd:anyURI ;
     :hasContext "In addition to ensuring that messages are not lost while they are traversing a Message-oriented Middleware it may, thus, also be required to assure that they are actually received by a client before they are deleted from a message queue."^^xsd:string ;
     :hasDrivingQuestion "How can it be ensured that messages are only deleted from a message queue if they have been received successfully at least once?"^^xsd:string ;
     :hasIntent "Clients acknowledge message receptions to ensure that messages are received properly."^^xsd:string ;
     :hasSolution "To assure that a message is properly received, it is not deleted immediately after it has been read by a client, but is only marked as being invisible. In this state a message may not be read by another client. After a client has successfully read a message, it sends an acknowledgement to the message queue upon which reception the message is deleted."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/timeout_based_delivery_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/timeout_based_delivery_sketch.png"^^xsd:anyURI .
 

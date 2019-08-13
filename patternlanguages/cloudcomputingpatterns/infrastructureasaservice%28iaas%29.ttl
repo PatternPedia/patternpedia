@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <infrastructureasaservice%28iaas%29>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <infrastructureasaservice%28iaas%29#InfrastructureasaService%28IaaS%29>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Infrastructure as a Service (IaaS)"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/infrastructure_as_a_service_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Infrastructure as a Service (IaaS)"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/infrastructure_as_a_service_icon.png"^^xsd:anyURI ;
     :hasContext "In the scope of Periodic Workloads with reoccurring peaks and the special case of Once-in-a-lifetime Workloads with one dramatic increase in workload, IT resources have to be provisioned flexibly."^^xsd:string ;
     :hasDrivingQuestion "How can different customers share a physical hosting environment so that it can be used on-demand with a pay-per-use pricing model?"^^xsd:string ;
     :hasIntent "Providers share physical and virtual hardware IT resources between customers to enable self-service, rapid elasticity, and pay-per-use pricing."^^xsd:string ;
     :hasSolution "A provider offers physical and virtual hardware, such as servers, storage and networking infrastructure that can be provisioned and decommissioned quickly through a self-service interface."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/infrastructure_as_a_service_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/infrastructure_as_a_service_sketch.png"^^xsd:anyURI .
 

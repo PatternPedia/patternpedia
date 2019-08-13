@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <transaction-baseddelivery>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <transaction-baseddelivery#Transaction-basedDelivery>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Transaction-based Delivery"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/transaction_based_delivery_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Transaction-based Delivery"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/transaction_based_delivery_icon.png"^^xsd:anyURI ;
     :hasContext "While a Message-oriented Middleware can control traversing messages, it may be necessary to assure that messages are actually received successfully from a message queue by the client."^^xsd:string ;
     :hasDrivingQuestion "How can it be ensured that messages are only deleted from a message queue if they have been received successfully?"^^xsd:string ;
     :hasIntent "Clients retrieve messages under a transactional context to ensure that messages are received by a handling component."^^xsd:string ;
     :hasSolution "The Message-oriented Middleware and the client reading a message from a queue participate in a transaction. All operations involved in the reception of a message are, therefore, performed under one transactional context guaranteeing ACID behavior."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/transaction_based_delivery_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/transaction_based_delivery_sketch.png"^^xsd:anyURI .
 

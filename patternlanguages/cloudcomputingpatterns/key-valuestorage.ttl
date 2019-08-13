@@ -1,10 +1,10 @@
-@prefix : <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix : <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/> .
 
 #################################################################
 #    Ontology
@@ -12,7 +12,7 @@
 
 <key-valuestorage>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> .
 
 
 #################################################################
@@ -20,12 +20,12 @@
 #################################################################
 
 <key-valuestorage#Key-ValueStorage>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
-    <http://purl.org/patternpedia#hasName> "Key-Value Storage"^^xsd:string ;
-    :hasIcon "http://www.cloudcomputingpatterns.org/icons/key_value_storage_icon.png"^^xsd:anyURI ;
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPattern> ;
+    <https://purl.org/patternpedia#hasName> "Key-Value Storage"^^xsd:string ;
+    :hasIcon "https://www.cloudcomputingpatterns.org/icons/key_value_storage_icon.png"^^xsd:anyURI ;
     :hasContext "To ensure availability and performance, a data storage offering shall be distributed among different IT resources and locations. Furthermore, changes of requirements or the fact that customers share a storage offering and have different requirements, raises the demand for a flexible data structure. as data structure validation during queries requires high-performance connectivity between distributed resources storing the data elements."^^xsd:string ;
     :hasDrivingQuestion "How can key-value elements be stored to support scale out and an adjustable data structure?"^^xsd:string ;
     :hasIntent "Semi-structured or unstructured data is stored with limited querying support but high-performance, availability, and flexibility."^^xsd:string ;
     :hasSolution "Pairs of identifiers (key) and associated data (value) are stored. No database schema or only a very limited one are supported to enforce a data structure. The expressiveness of queries is reduced significantly in favor of scalability and configurability: semi-structured on unstructured data can be scaled out among many IT resources without the need to access many of them for the evaluation of expressive queries."^^xsd:string ;
-    :hasSolutionSketch "http://www.cloudcomputingpatterns.org/sketches/key_value_storage_sketch.png"^^xsd:anyURI .
+    :hasSolutionSketch "https://www.cloudcomputingpatterns.org/sketches/key_value_storage_sketch.png"^^xsd:anyURI .
 

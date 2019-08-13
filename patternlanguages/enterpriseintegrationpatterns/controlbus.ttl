@@ -3,15 +3,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
 
 <controlbus>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
 
 <controlbus#ControlBus>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
-    <http://purl.org/patternpedia#hasName> "Control Bus"^^xsd:string ;
-    <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Use a Control Bus to manage an enterprise integration system. The Control Bus uses the same messaging mechanism used by the application data, but *uses separate channels* to *transmit data that is relevant to the management of components* involved in the message flow"^^xsd:string .
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
+    <https://purl.org/patternpedia#hasName> "Control Bus"^^xsd:string ;
+    <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Use a Control Bus to manage an enterprise integration system. The Control Bus uses the same messaging mechanism used by the application data, but *uses separate channels* to *transmit data that is relevant to the management of components* involved in the message flow"^^xsd:string .
 
 

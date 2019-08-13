@@ -3,15 +3,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
 
 <testmessage>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
+    owl:imports <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> .
 
 <testmessage#TestMessage>
-    rdf:type owl:NamedIndividual , <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
-    <http://purl.org/patternpedia#hasName> "Test Message"^^xsd:string ;
-    <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Therefore, use Test Message to assure the health of message processing components"^^xsd:string, "consists of Test Data Generator, Test Message Injector, Test Data Verifier, and Test Message Separator"^^xsd:string .
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPattern> ;
+    <https://purl.org/patternpedia#hasName> "Test Message"^^xsd:string ;
+    <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#hasDescription> "Therefore, use Test Message to assure the health of message processing components"^^xsd:string, "consists of Test Data Generator, Test Message Injector, Test Data Verifier, and Test Message Separator"^^xsd:string .
 
 
