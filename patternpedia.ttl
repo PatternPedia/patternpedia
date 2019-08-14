@@ -142,3 +142,4 @@
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestlanguageWithRestrictions#TestlanguageWithRestrictions> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/NewTest#NewTest> .
 Y Y Y .
+A A A .
