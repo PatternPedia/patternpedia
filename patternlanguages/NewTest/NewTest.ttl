@@ -66,4 +66,9 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
+:NewTest rdf:type owl:NamedIndividual ,
+pp:PatternLanguage ;
+pp:hasLogo "https://cdn3.volusion.com/kapts.nrbqf/v/vspfiles/photos/PEKINDUCKBREASTBONELESS16-2.jpg?1496409148"^^xsd:anyURI ;
+pp:hasName "NewTest"^^xsd:string .
+
 
