@@ -9,7 +9,7 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/TestAgain> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia> .
+owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Patterns>.
 
 
 # #################################################################
@@ -75,4 +75,4 @@ pp:hasName "TestAgain"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
-:TestAgain pp:containsPattern <https://purl.org/patternpedia/patternlanguages/TestAgain/Patternname#Patternname> .
+:TestAgain pp:containsPattern <https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern1#Pattern1> .
