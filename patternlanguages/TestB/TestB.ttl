@@ -1,0 +1,78 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/TestB#> .
+@base <https://purl.org/patternpedia/patternlanguages/TestB> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix xml: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dctype: <https://purl.org/dc/dcmitype/> .
+
+
+<https://purl.org/patternpedia/patternlanguages/TestB> rdf:type owl:Ontology ;
+owl:imports <https://purl.org/patternpedia> .
+
+
+# #################################################################
+# #
+# #    Sections / Data Properties
+# #
+# #################################################################
+
+
+### Icon
+:hasIcon rdf:type owl:DatatypeProperty .
+
+
+### Context
+:hasContext rdf:type owl:DatatypeProperty .
+
+
+### Driving Question
+:hasDrivingQuestion rdf:type owl:DatatypeProperty .
+
+
+### Solution
+:hasSolution rdf:type owl:DatatypeProperty .
+
+
+# #################################################################
+# #
+# #    Restrictions / Classes
+# #
+# #################################################################
+### https://purl.org/patternpedia/patternlanguages/TestB
+:TestBIndividual rdf:type owl:Class ; 
+ rdfs:subClassOf pp:Pattern ,
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasIcon ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasContext ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasSolution ; 
+			 owl:allValuesFrom xsd:string
+				] .
+
+
+###  https://purl.org/patternpedia/patternlanguages/TestB
+:TestB rdf:type owl:NamedIndividual ,
+pp:PatternLanguage ;
+pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
+pp:hasName "TestB"^^xsd:string .
+#################################################################
+# Individuals
+##############################################################
