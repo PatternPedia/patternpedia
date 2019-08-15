@@ -15,7 +15,7 @@
 <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns>
     rdf:type owl:Ontology ;
     owl:imports <https://purl.org/patternpedia> ,
-        <staticworkload> ,
+        <cloudcomputingpatterns-Patterns> ,
         <periodicworkload> ,
         <once-in-a-lifetimeworkload> ,
         <unpredictableworkload> ,
@@ -494,8 +494,7 @@
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "https://www.cloudcomputingpatterns.org/img/book.png"^^xsd:anyURI ;
     pp:hasName "Cloud Computing Patterns"^^xsd:string ;
-    pp:containsPattern <staticworkload#StaticWorkload> ,
-        :ElasticLoadBalancer ,
+    pp:containsPattern 
         <periodicworkload#PeriodicWorkload> ,
         <once-in-a-lifetimeworkload#Once-in-a-lifetimeWorkload> ,
         <unpredictableworkload#UnpredictableWorkload> ,
