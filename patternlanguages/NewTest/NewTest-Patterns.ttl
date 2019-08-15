@@ -13,10 +13,24 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanges/NewTest>.
 
 #################################################################
+# Language contains Individuals
+############################################################## 
+:NewTest pp:containsPattern :NewPattern .
+
+
+#################################################################
 # Individuals
 ##############################################################
-###  https://purl.org/patternpedia/patternlanguages/NewTest#NewTest
-:NewTest rdf:type owl:NamedIndividual ,
-pp:PatternLanguage ;
-pp:hasLogo "https://cdn3.volusion.com/kapts.nrbqf/v/vspfiles/photos/PEKINDUCKBREASTBONELESS16-2.jpg?1496409148"^^xsd:anyURI ;
-pp:hasName "NewTest"^^xsd:string .
+
+
+
+###  https://purl.org/patternpedia/patternlanguages/NewTest/NewPattern#NewPattern
+:NewPattern rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/NewTest/NewTestIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/NewTest/NewPattern#hasName> "New Pattern" ;
+<https://purl.org/patternpedia/patternlanguages/NewTest#hasIcon> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/NewTest#hasContext> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/NewTest#hasDrivingQuestion> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/NewTest#hasSolution> "Enter your input for this section here." .
+
+
