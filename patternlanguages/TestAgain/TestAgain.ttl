@@ -76,4 +76,4 @@ pp:hasName "TestAgain"^^xsd:string .
 # Individuals
 ##############################################################
 :TestAgain pp:containsPattern <https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern1#Pattern1> .
-:TestAgain pp:containsPattern <https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern2#Pattern2> .
+:TestAgain pp:containsPattern <https://purl.org/patternpedia/patternlanguages/TestAgain/Pat3#Pat3> .
