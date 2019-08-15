@@ -9,7 +9,7 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/NewTest> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanges/NewTest/NewTest-Patterns>.
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/NewTest/NewTest-Patterns>.
 
 
 # #################################################################
