@@ -9,7 +9,7 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/NewTest> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanges/NewTestPatterns>.
 
 
 # #################################################################
@@ -67,16 +67,3 @@ owl:imports <https://purl.org/patternpedia> .
 				] .
 
 
-#################################################################
-# Individuals
-##############################################################
-###  https://purl.org/patternpedia/patternlanguages/NewTest#NewTest
-:NewTest rdf:type owl:NamedIndividual ,
-pp:PatternLanguage ;
-pp:hasLogo "https://cdn3.volusion.com/kapts.nrbqf/v/vspfiles/photos/PEKINDUCKBREASTBONELESS16-2.jpg?1496409148"^^xsd:anyURI ;
-pp:hasName "NewTest"^^xsd:string .
-:NewTest pp:containsPattern <https://purl.org/patternpedia/patternlanguages/NewTest/NewPattern#NewPattern> .
-#################################################################
-# Pattern Import Statements
-##############################################################
-<https://purl.org/patternpedia/patternlanguages/NewTest> owl:imports <https://purl.org/patternpedia/patternlanguages/NewTest/NewPattern> .
