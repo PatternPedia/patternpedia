@@ -1,0 +1,400 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/> .
+
+:FileTransfer
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "File Transfer"^^xsd:string ;
+    :hasDescription "Have each application *produce files containing information* that other applications need to consume. *Integrators take the responsibility of transforming files* into different formats. Produce the files at regular intervals according to the nature of the business"^^xsd:string .
+
+
+:SharedDatabase
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Shared Database"^^xsd:string ;
+    :hasDescription "Integrate applications by having them *store their data in a single Shared Database*"^^xsd:string .
+
+
+:RemoteProcedureInvocation
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Remote Procedure Invocation"^^xsd:string ;
+    :hasDescription "Develop each application as a *large-scale object or component with encapsulated data*. *Provide an interface to allow other applications to interact* with the running application"^^xsd:string .
+
+
+:Messaging
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Messaging"^^xsd:string ;
+    :hasDescription "Use Messaging to transfer packets of data *frequently, immediately, reliably, and asynchronously*, using customizable formats"^^xsd:string .
+
+
+:MessageChannel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Channel"^^xsd:string ;
+    :hasDescription "Connect the applications using a Message Channel, where *one application writes* information to the channel and the *other one reads* that information from the channel"^^xsd:string .
+
+
+:Message
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message"^^xsd:string ;
+    :hasDescription "Package the information into a Message, *a data record that the messaging system can transmit* through a message channel"^^xsd:string .
+
+
+:PipesandFilters
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Pipes and Filters"^^xsd:string ;
+    :hasDescription "Use the Pipes and Filters *architectural style* to divide a *larger processing task into a sequence of smaller, independent processing steps* (Filters) that are connected by channels (Pipes)"^^xsd:string .
+
+
+:MessageRouter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Router"^^xsd:string ;
+    :hasDescription "Insert a special filter, a Message Router, which consumes a Message from one Message Channel and republishes it to a *different Message Channel channel depending on a set of conditions*"^^xsd:string .
+
+
+:MessageTranslator
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Translator"^^xsd:string ;
+    :hasDescription "Use a special filter, a Message Translator, between other filters or applications to *translate one data format into another*"^^xsd:string .
+
+
+:MessageEndpoint
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Endpoint"^^xsd:string ;
+    :hasDescription "*Connect an application to a messaging channel* using a Message Endpoint, a client of the messaging system that the application can then use *to send or receive messages*"^^xsd:string .
+
+
+:Point-to-PointChannel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Point-to-Point Channel"^^xsd:string ;
+    :hasDescription "Send the message on a Point-to-Point Channel, which ensures that *only one receiver will receive* a particular message"^^xsd:string .
+
+
+:Publish-SubscribeChannel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Publish-Subscribe Channel"^^xsd:string ;
+    :hasDescription "Send the event on a Publish-Subscribe Channel, which delivers a *copy of a particular event to each receiver*"^^xsd:string .
+
+
+:DatatypeChannel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Datatype Channel"^^xsd:string ;
+    :hasDescription "Use a *separate Datatype Channel for each data type*, so that all data on a particular channel is of the same type"^^xsd:string .
+
+
+:InvalidMessageChannel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Invalid Message Channel"^^xsd:string ;
+    :hasDescription "The receiver should move the improper message to an Invalid Message Channel, a special channel *for messages that could not be processed by their receivers*"^^xsd:string .
+
+
+:DeadLetterChannel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Dead Letter Channel"^^xsd:string ;
+    :hasDescription "When a messaging system determines that it *cannot or should not deliver a message*, it may elect to move the message to a Dead Letter Channel"^^xsd:string .
+
+
+:GuaranteedDelivery
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Guaranteed Delivery"^^xsd:string ;
+    :hasDescription "Use Guaranteed Delivery to make messages *persistent* so that they are *not lost* even if the messaging system crashes"^^xsd:string .
+
+
+:ChannelAdapter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Channel Adapter"^^xsd:string ;
+    :hasDescription "Use a Channel Adapter that can *access the application's API or data* and publish messages on a channel based on this data, and that likewise can receive messages and *invoke functionality inside the application*"^^xsd:string .
+
+
+:MessagingBridge
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Messaging Bridge"^^xsd:string ;
+    :hasDescription "Use a Messaging Bridge, a *connection between messaging systems*, to replicate messages between systems"^^xsd:string .
+
+
+:MessageBus
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Bus"^^xsd:string ;
+    :hasDescription "Structure the connecting middleware between these applications as a Message Bus that enables them to *work together using messaging*"^^xsd:string .
+
+
+:CommandMessage
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Command Message"^^xsd:string ;
+    :hasDescription "Use a Command Message to reliably *invoke a procedure in another application*"^^xsd:string .
+
+
+:DocumentMessage
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Document Message"^^xsd:string ;
+    :hasDescription "Use a Document Message to reliably *transfer a data structure* between applications"^^xsd:string .
+
+
+:EventMessage
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Event Message"^^xsd:string ;
+    :hasDescription "Use an Event Message for reliable, *asynchronous event notification* between applications"^^xsd:string .
+
+
+:Request-Reply
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Request-Reply"^^xsd:string ;
+    :hasDescription "Send a pair of Request-Reply messages, each on its own channel"^^xsd:string .
+
+
+:ReturnAddress
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Return Address"^^xsd:string ;
+    :hasDescription "The request message should contain a Return Address that indicates *where to send the reply message*"^^xsd:string .
+
+
+:CorrelationIdentifier
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Correlation Identifier"^^xsd:string ;
+    :hasDescription "Each reply message should contain a Correlation Identifier, a unique identifier that indicates *which request message this reply is for*"^^xsd:string .
+
+
+:MessageSequence
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Sequence"^^xsd:string ;
+    :hasDescription "Whenever a large set of data may need to be *broken into message-size chunks*, send the data as a Message Sequence and mark *each message with sequence identification fields*"^^xsd:string .
+
+
+:MessageExpiration
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Expiration"^^xsd:string ;
+    :hasDescription "Set the Message Expiration to specify a *time limit how long the message is viable*"^^xsd:string .
+
+
+:FormatIndicator
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Format Indicator"^^xsd:string ;
+    :hasDescription "Design a data format that includes a Format Indicator, so that the message *specifies what format it is using*"^^xsd:string .
+
+
+:Content-BasedRouter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Content-Based Router"^^xsd:string ;
+    :hasDescription "Use a Content-Based Router to *route each message to the correct recipient based on message content*"^^xsd:string .
+
+
+:MessageFilter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Filter"^^xsd:string ;
+    :hasDescription "Use a special kind of Message Router, a Message Filter, to *eliminate undesired messages from a channel* based on a set of criteria"^^xsd:string .
+
+
+:DynamicRouter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Dynamic Router"^^xsd:string ;
+    :hasDescription "Use a Dynamic Router, a Router that can *self-configure based on special configuration messages* from participating destinations"^^xsd:string .
+
+
+:RecipientList
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Recipient List"^^xsd:string ;
+    :hasDescription "Define a *channel for each recipient*. Then use a Recipient List to inspect an incoming message, *determine the list of desired recipients*, and forward the message to all channels associated with the recipients in the list"^^xsd:string .
+
+
+:Splitter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Splitter"^^xsd:string ;
+    :hasDescription "Use a Splitter to break out the *composite message into a series of individual messages*, each containing data related to one item"^^xsd:string .
+
+
+:Aggregator
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Aggregator"^^xsd:string ;
+    :hasDescription "Use a stateful filter, an Aggregator, to *collect and store individual messages until a complete set of related messages* has been received. Then, the Aggregator publishes a single message distilled from the individual messages"^^xsd:string .
+
+
+:Resequencer
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Resequencer"^^xsd:string ;
+    :hasDescription "Use a stateful filter, a Resequencer, to *collect and re-order messages* so that they can be published to the output channel *in a specified order*"^^xsd:string .
+
+
+:ComposedMessageProcessor
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Composed Message Processor"^^xsd:string ;
+    :hasDescription "Use Composed Message Processor to process a composite message. The Composed Message Processor *splits the message up, routes the sub-messages to the appropriate destinations and re-aggregates the responses back into a single message*"^^xsd:string, "combination of Splitter, Router, and Aggregator"^^xsd:string .
+
+
+:Scatter-Gather
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Scatter-Gather"^^xsd:string ;
+    :hasDescription "Use a Scatter-Gather that *broadcasts* a message *to multiple recipients and re-aggregates the responses back* into a single message"^^xsd:string .
+
+
+:RoutingSlip
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Routing Slip"^^xsd:string ;
+    :hasDescription "Attach a Routing Slip to each message, *specifying the sequence of processing steps*. Wrap *each component with a special message router* that reads the Routing Slip and routes the message to the next component in the list"^^xsd:string .
+
+
+:ProcessManager
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Process Manager"^^xsd:string ;
+    :hasDescription "Use a central processing unit, a Process Manager, to *maintain the state of the sequence and determine the next processing step based on intermediate results*"^^xsd:string, "Business Process Management (separate topic or even pattern language)"^^xsd:string .
+
+
+:MessageBroker
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Broker"^^xsd:string ;
+    :hasDescription "Use a central Message Broker that can *receive messages from multiple destinations*, determine the correct destination and route the message to the correct channel"^^xsd:string, "hub-and-spoke architectural style"^^xsd:string .
+
+
+:EnvelopeWrapper
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Envelope Wrapper"^^xsd:string ;
+    :hasDescription "Use a Envelope Wrapper to *wrap application data* inside an envelope that is compliant with the messaging infrastructure. *Unwrap the message* when it arrives at the destination"^^xsd:string .
+
+
+:ContentEnricher
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Content Enricher"^^xsd:string ;
+    :hasDescription "Use a specialized transformer, a Content Enricher, to access an external data source in order to *augment a message with missing information*"^^xsd:string .
+
+
+:ContentFilter
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Content Filter"^^xsd:string ;
+    :hasDescription "Use a Content Filter to *remove unimportant data items* from a message leaving only important items"^^xsd:string .
+
+
+:ClaimCheck
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Claim Check"^^xsd:string ;
+    :hasDescription "Store message data in a *persistent store and pass a Claim Check* to subsequent components. These components can *use the Claim Check to retrieve the stored information*"^^xsd:string .
+
+
+:Normalizer
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Normalizer"^^xsd:string ;
+    :hasDescription "Use a Normalizer to route each message type through a custom Message Translator so that the resulting *messages match a common format*"^^xsd:string .
+
+
+:CanonicalDataModel
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Canonical Data Model"^^xsd:string ;
+    :hasDescription "Therefore, design a Canonical Data Model that is *independent from any specific application*. Require each application to produce and consume messages in this common format"^^xsd:string .
+
+
+:MessagingGateway
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Messaging Gateway"^^xsd:string ;
+    :hasDescription "Use a Messaging Gateway, a class than *wraps messaging-specific method calls* and *exposes domain-specific methods* to the application"^^xsd:string .
+
+
+:MessagingMapper
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Messaging Mapper"^^xsd:string ;
+    :hasDescription "Create a separate Messaging Mapper that contains the *mapping logic between the messaging infrastructure and the domain objects*. Neither the objects nor the infrastructure have knowledge of the Messaging Mapper's existence"^^xsd:string .
+
+
+:TransactionalClient
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Transactional Client"^^xsd:string ;
+    :hasDescription "Use a Transactional Client—make the client’s session with the messaging system transactional so that the *client can specify transaction boundaries*"^^xsd:string .
+
+
+:PollingConsumer
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Polling Consumer"^^xsd:string ;
+    :hasDescription "The application should use a Polling Consumer, one that *explicitly makes a call when it wants to receive a message*"^^xsd:string .
+
+
+:Event-DrivenConsumer
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Event-Driven Consumer"^^xsd:string ;
+    :hasDescription "The application should use an Event-Driven Consumer, one that is *automatically handed messages* as they’re delivered on the channel"^^xsd:string .
+
+
+:CompetingConsumers
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Competing Consumers"^^xsd:string ;
+    :hasDescription "Create *multiple Competing Consumers on a single channel* so that the consumers can *process multiple messages concurrently*"^^xsd:string .
+
+
+:MessageDispatcher
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Dispatcher"^^xsd:string ;
+    :hasDescription "Create a Message Dispatcher on a channel that will *consume messages from a channel and distribute them to performers*"^^xsd:string .
+
+
+:SelectiveConsumer
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Selective Consumer"^^xsd:string ;
+    :hasDescription "Make the consumer a Selective Consumer, one that filteres the messages delivered by its channel so that it *only receives the ones that match its criteria*"^^xsd:string .
+
+
+:DurableSubscriber
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Durable Subscriber"^^xsd:string ;
+    :hasDescription "Use a Durable Subscriber to make the messaging system *save messages published while the subscriber is disconnected*"^^xsd:string .
+
+
+:IdempotentReceiver
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Idempotent Receiver"^^xsd:string ;
+    :hasDescription "Design a receiver to be an Idempotent Receiver--one that can safely receive the *same message multiple times*"^^xsd:string .
+
+
+:ServiceActivator
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Service Activator"^^xsd:string ;
+    :hasDescription "Design a Service Activator that *connects the messages on the channel to the service being accessed*"^^xsd:string .
+
+
+:ControlBus
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Control Bus"^^xsd:string ;
+    :hasDescription "Use a Control Bus to manage an enterprise integration system. The Control Bus uses the same messaging mechanism used by the application data, but *uses separate channels* to *transmit data that is relevant to the management of components* involved in the message flow"^^xsd:string .
+
+
+:Detour
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Detour"^^xsd:string ;
+    :hasDescription "Construct a Detour with a *context-based router controlled via the Control Bus*. In one state the router *routes incoming messages through additional steps* while in the other it routes messages directly to the destination channel"^^xsd:string .
+
+
+:WireTap
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Wire Tap"^^xsd:string ;
+    :hasDescription "Insert a simple Recipient List into the channel that publishes each incoming message to the main channel *and a secondary channel*"^^xsd:string .
+
+
+:MessageHistory
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message History"^^xsd:string ;
+    :hasDescription "Therefore, attach a Message History to the message. The Message History is a *list of all applications that the message passed through since its origination*"^^xsd:string .
+
+
+:MessageStore
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Message Store"^^xsd:string ;
+    :hasDescription "Use a Message Store to capture information about each message in a *central location*"^^xsd:string .
+
+
+:SmartProxy
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Smart Proxy"^^xsd:string ;
+    :hasDescription "Use a Smart Proxy to store the Return Address supplied by the original requestor and replace it with the address of the Smart Proxy. When the service sends the reply message route it to the original Return Address"^^xsd:string, "Proxy for return address"^^xsd:string .
+
+
+:TestMessage
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Test Message"^^xsd:string ;
+    :hasDescription "Therefore, use Test Message to assure the health of message processing components"^^xsd:string, "consists of Test Data Generator, Test Message Injector, Test Data Verifier, and Test Message Separator"^^xsd:string .
+
+
+:ChannelPurger
+    rdf:type owl:NamedIndividual , :EnterpriseIntegrationPattern ;
+    pp:hasName "Channel Purger"^^xsd:string ;
+    :hasDescription "Use a Channel Purger to remove unwanted messages from a channel"^^xsd:string .
+
+
