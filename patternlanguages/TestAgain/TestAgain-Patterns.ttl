@@ -17,14 +17,7 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pat33" .
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern5
-:P rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "P" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternX
-:P rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "P" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternL#PatternL
+
 :PatternL rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternL" ;
