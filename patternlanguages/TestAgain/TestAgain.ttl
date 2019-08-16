@@ -75,6 +75,4 @@ pp:hasName "TestAgain"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
-:TestAgain pp:containsPattern :PatMat .
-:TestAgain pp:containsPattern :PatternL .
 :TestAgain pp:containsPattern :PatP .
