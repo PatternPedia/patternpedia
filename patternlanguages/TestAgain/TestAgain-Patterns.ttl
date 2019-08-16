@@ -12,35 +12,8 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-@prefix : <https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern1#> .
-@prefix pp: <https://purl.org/patternpedia#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern1> .
-
-
-
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern1#Pattern1
-:P rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern1#hasName> "P" ;
-@prefix : <https://purl.org/patternpedia/patternlanguages/TestAgain/Pat4#> .
-@prefix pp: <https://purl.org/patternpedia#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://purl.org/patternpedia/patternlanguages/TestAgain/Pat4> .
-
-
-
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain/Pat4#Pat4
-:Pat4 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+:Pat4 rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain/Pat4#hasName> "Pat4" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
