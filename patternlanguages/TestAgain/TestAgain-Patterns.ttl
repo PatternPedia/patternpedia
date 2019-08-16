@@ -12,10 +12,14 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatP#PatP
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatP
 :PatP rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatP" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatP" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatM#PatM
+:PatM rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatM" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
