@@ -13,14 +13,17 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 
 
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pat33
-:Pat33 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pat33" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern5
-
 :PatternL rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternL" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternL" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternL
+:PatternL rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternL" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatMat#PatMat
+:PatMat rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatMat" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
