@@ -11,15 +11,6 @@
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Patterns> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
-
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pat989
-:Pat989 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pat989" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatM
-:Pat989 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pat989" .
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternTest#PatternTest
 :PatternTest rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
