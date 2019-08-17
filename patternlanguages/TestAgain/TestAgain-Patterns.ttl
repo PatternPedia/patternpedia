@@ -12,25 +12,7 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternA
-:PatternBB rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternBB" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternBB" .
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternBB
-:PatternBB rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternBB" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "BB: Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternBB" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternC#PatternC
 :PatternC rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternC" ;
@@ -38,3 +20,21 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "C: Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "C: Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "C: Enter your input for this section here." .
+
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternC
+:PatternC rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternC" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "C: Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "C: Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "C: Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "C: Enter your input for this section here." .
+
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternD#PatternD
+:PatternD rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternD" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "D:  Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "D: Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "D: Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "D: Enter your input for this section here." .
