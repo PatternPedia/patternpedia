@@ -21,24 +21,7 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "A" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "A." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternA" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern98
-:PatternA rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternA" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "IconA" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "ContentA" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "A" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "A." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternA" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternA
-:PatternA rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternA" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "IconA" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "ContentA" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "A" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "A." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternA" .
+
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternBB#PatternBB
 :PatternBB rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
