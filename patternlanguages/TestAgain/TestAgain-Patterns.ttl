@@ -12,31 +12,29 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern11
-:Pattern98 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern98" ;
-<http://www.w3.org/2002/07/owl#imports> "https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern98" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern98
-:Pattern98 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern98" ;
-<http://www.w3.org/2002/07/owl#imports> "https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern98" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern56#Pattern56
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern56
 :Pattern56 rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern56" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." .
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern56" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern98
+:Pattern56 rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern56" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern56" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternA#PatternA
+:PatternA rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternA" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "IconA" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "ContentA" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "A" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "A." .
