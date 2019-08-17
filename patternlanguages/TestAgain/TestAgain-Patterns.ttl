@@ -13,17 +13,17 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 
 
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern1
-:Pattern1 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern1" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern5
-:Pattern1 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern1" .
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern8#Pattern8
 :Pattern8 rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern8" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern8" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#Pattern8
+:Pattern8 rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern8" .
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/Pattern98#Pattern98
+:Pattern98 rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pattern98" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
