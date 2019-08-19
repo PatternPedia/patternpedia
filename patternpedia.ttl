@@ -63,6 +63,10 @@
 ###  https://purl.org/patternpedia#hasName
 :hasName rdf:type owl:DatatypeProperty .
 
+###  https://purl.org/patternpedia#hasListIndex	
+:hasListIndex rdf:type owl:DatatypeProperty .
+
+
 
 # description of of a relation
 ###  http://purl.org/patternpedia#hasDescription
