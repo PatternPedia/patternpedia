@@ -20,23 +20,19 @@ owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/pat
 
 
 ### https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> rdf:type pp:DatatypePropertyListItem  .
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> pp:hasListIndex "0"^^xsd:integer .
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> rdf:type owl:DatatypeProperty .
 
 
 ### https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> rdf:type pp:DatatypePropertyListItem  .
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> pp:hasListIndex "1"^^xsd:integer .
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> rdf:type owl:DatatypeProperty .
 
 
 ### https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> rdf:type pp:DatatypePropertyListItem  .
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> pp:hasListIndex "2"^^xsd:integer .
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> rdf:type owl:DatatypeProperty .
 
 
 ### https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> rdf:type pp:DatatypePropertyListItem  .
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> pp:hasListIndex "3"^^xsd:integer .
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> rdf:type owl:DatatypeProperty .
 
 
 # #################################################################
@@ -87,3 +83,4 @@ pp:hasName "TestAgain"^^xsd:string .
 :TestAgain pp:containsPattern :PatternWW .
 :TestAgain pp:containsPattern :PatternXX .
 :TestAgain pp:containsPattern :Patternname .
+:TestAgain pp:containsPattern :ManyEntries .
