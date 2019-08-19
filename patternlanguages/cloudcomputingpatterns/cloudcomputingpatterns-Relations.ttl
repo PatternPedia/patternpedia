@@ -10,1641 +10,1736 @@
 
 :StaticWorkload-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :PublicCloud . 
 
 :StaticWorkload-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :PrivateCloud . 
 
 :StaticWorkload-to-HybridCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <hybridcloud#HybridCloud> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :HybridCloud . 
 
 :StaticWorkload-to-CommunityCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <communitycloud#CommunityCloud> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :CommunityCloud . 
 
 :StaticWorkload-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :StaticWorkload-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :Watchdog . 
 
 :StaticWorkload-to-UpdateTransitionProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <staticworkload#StaticWorkload> ; 
-    pp:hasTarget <updatetransitionprocess#UpdateTransitionProcess> . 
+    pp:hasSource :StaticWorkload ; 
+    pp:hasTarget :UpdateTransitionProcess . 
 
 :PeriodicWorkload-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <periodicworkload#PeriodicWorkload> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :PeriodicWorkload ; 
+    pp:hasTarget :PublicCloud . 
 
 :PeriodicWorkload-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <periodicworkload#PeriodicWorkload> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :PeriodicWorkload ; 
+    pp:hasTarget :PrivateCloud . 
 
 :Once-in-a-lifetimeWorkload-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <once-in-a-lifetimeworkload#Once-in-a-lifetimeWorkload> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :Once-in-a-lifetimeWorkload ; 
+    pp:hasTarget :PublicCloud . 
 
 :Once-in-a-lifetimeWorkload-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <once-in-a-lifetimeworkload#Once-in-a-lifetimeWorkload> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :Once-in-a-lifetimeWorkload ; 
+    pp:hasTarget :PrivateCloud . 
 
 :Once-in-a-lifetimeWorkload-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <once-in-a-lifetimeworkload#Once-in-a-lifetimeWorkload> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :Once-in-a-lifetimeWorkload ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :UnpredictableWorkload-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <unpredictableworkload#UnpredictableWorkload> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :UnpredictableWorkload ; 
+    pp:hasTarget :PublicCloud . 
 
 :UnpredictableWorkload-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <unpredictableworkload#UnpredictableWorkload> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :UnpredictableWorkload ; 
+    pp:hasTarget :PrivateCloud . 
 
 :UnpredictableWorkload-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <unpredictableworkload#UnpredictableWorkload> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :UnpredictableWorkload ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :UnpredictableWorkload-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <unpredictableworkload#UnpredictableWorkload> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :UnpredictableWorkload ; 
+    pp:hasTarget :ElasticityManager . 
 
 :UnpredictableWorkload-to-FeatureFlagManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <unpredictableworkload#UnpredictableWorkload> ; 
-    pp:hasTarget <featureflagmanagementprocess#FeatureFlagManagementProcess> . 
+    pp:hasSource :UnpredictableWorkload ; 
+    pp:hasTarget :FeatureFlagManagementProcess . 
 
 :ContinuouslyChangingWorkload-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <continuouslychangingworkload#ContinuouslyChangingWorkload> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :ContinuouslyChangingWorkload ; 
+    pp:hasTarget :PublicCloud . 
 
 :ContinuouslyChangingWorkload-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <continuouslychangingworkload#ContinuouslyChangingWorkload> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :ContinuouslyChangingWorkload ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :ContinuouslyChangingWorkload-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <continuouslychangingworkload#ContinuouslyChangingWorkload> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :ContinuouslyChangingWorkload ; 
+    pp:hasTarget :ElasticityManager . 
 
 :InfrastructureasaService-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <infrastructureasaservice#InfrastructureasaService> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :InfrastructureasaService ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :InfrastructureasaService-to-Hypervisor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <infrastructureasaservice#InfrastructureasaService> ; 
-    pp:hasTarget <hypervisor#Hypervisor> . 
+    pp:hasSource :InfrastructureasaService ; 
+    pp:hasTarget :Hypervisor . 
 
 :InfrastructureasaService-to-BlockStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <infrastructureasaservice#InfrastructureasaService> ; 
-    pp:hasTarget <blockstorage#BlockStorage> . 
+    pp:hasSource :InfrastructureasaService ; 
+    pp:hasTarget :BlockStorage . 
 
 :InfrastructureasaService-to-VirtualNetworking
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <infrastructureasaservice#InfrastructureasaService> ; 
-    pp:hasTarget <virtualnetworking#VirtualNetworking> . 
+    pp:hasSource :InfrastructureasaService ; 
+    pp:hasTarget :VirtualNetworking . 
 
 :PlatformasaService-to-ElasticPlatform
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <platformasaservice#PlatformasaService> ; 
-    pp:hasTarget <elasticplatform#ElasticPlatform> . 
+    pp:hasSource :PlatformasaService ; 
+    pp:hasTarget :ElasticPlatform . 
 
 :PlatformasaService-to-ExecutionEnvironment
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <platformasaservice#PlatformasaService> ; 
-    pp:hasTarget <executionenvironment#ExecutionEnvironment> . 
+    pp:hasSource :PlatformasaService ; 
+    pp:hasTarget :ExecutionEnvironment . 
 
 :PlatformasaService-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <platformasaservice#PlatformasaService> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :PlatformasaService ; 
+    pp:hasTarget :BlobStorage . 
 
 :PlatformasaService-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <platformasaservice#PlatformasaService> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :PlatformasaService ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :SoftwareasaService-to-DistributedApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <softwareasaservice#SoftwareasaService> ; 
-    pp:hasTarget <distributedapplication#DistributedApplication> . 
+    pp:hasSource :SoftwareasaService ; 
+    pp:hasTarget :DistributedApplication . 
 
 :SoftwareasaService-to-StatefulComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <softwareasaservice#SoftwareasaService> ; 
-    pp:hasTarget <statefulcomponent#StatefulComponent> . 
+    pp:hasSource :SoftwareasaService ; 
+    pp:hasTarget :StatefulComponent . 
 
 :SoftwareasaService-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <softwareasaservice#SoftwareasaService> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :SoftwareasaService ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :SoftwareasaService-to-SharedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <softwareasaservice#SoftwareasaService> ; 
-    pp:hasTarget <sharedcomponent#SharedComponent> . 
+    pp:hasSource :SoftwareasaService ; 
+    pp:hasTarget :SharedComponent . 
 
 :SoftwareasaService-to-Tenant-isolatedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <softwareasaservice#SoftwareasaService> ; 
-    pp:hasTarget <tenant-isolatedcomponent#Tenant-isolatedComponent> . 
+    pp:hasSource :SoftwareasaService ; 
+    pp:hasTarget :Tenant-isolatedComponent . 
 
 :SoftwareasaService-to-DedicatedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <softwareasaservice#SoftwareasaService> ; 
-    pp:hasTarget <dedicatedcomponent#DedicatedComponent> . 
+    pp:hasSource :SoftwareasaService ; 
+    pp:hasTarget :DedicatedComponent . 
 
 :PublicCloud-to-InfrastructureasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <publiccloud#PublicCloud> ; 
-    pp:hasTarget <infrastructureasaservice#InfrastructureasaService> . 
+    pp:hasSource :PublicCloud ; 
+    pp:hasTarget :InfrastructureasaService . 
 
 :PublicCloud-to-PlatformasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <publiccloud#PublicCloud> ; 
-    pp:hasTarget <platformasaservice#PlatformasaService> . 
+    pp:hasSource :PublicCloud ; 
+    pp:hasTarget :PlatformasaService . 
 
 :PublicCloud-to-SoftwareasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <publiccloud#PublicCloud> ; 
-    pp:hasTarget <softwareasaservice#SoftwareasaService> . 
+    pp:hasSource :PublicCloud ; 
+    pp:hasTarget :SoftwareasaService . 
 
 :PrivateCloud-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <privatecloud#PrivateCloud> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :PrivateCloud ; 
+    pp:hasTarget :PublicCloud . 
 
 :PrivateCloud-to-InfrastructureasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <privatecloud#PrivateCloud> ; 
-    pp:hasTarget <infrastructureasaservice#InfrastructureasaService> . 
+    pp:hasSource :PrivateCloud ; 
+    pp:hasTarget :InfrastructureasaService . 
 
 :PrivateCloud-to-PlatformasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <privatecloud#PrivateCloud> ; 
-    pp:hasTarget <platformasaservice#PlatformasaService> . 
+    pp:hasSource :PrivateCloud ; 
+    pp:hasTarget :PlatformasaService . 
 
 :PrivateCloud-to-SoftwareasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <privatecloud#PrivateCloud> ; 
-    pp:hasTarget <softwareasaservice#SoftwareasaService> . 
+    pp:hasSource :PrivateCloud ; 
+    pp:hasTarget :SoftwareasaService . 
 
 :PrivateCloud-to-BatchProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <privatecloud#PrivateCloud> ; 
-    pp:hasTarget <batchprocessingcomponent#BatchProcessingComponent> . 
+    pp:hasSource :PrivateCloud ; 
+    pp:hasTarget :BatchProcessingComponent . 
 
 :CommunityCloud-to-InfrastructureasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <communitycloud#CommunityCloud> ; 
-    pp:hasTarget <infrastructureasaservice#InfrastructureasaService> . 
+    pp:hasSource :CommunityCloud ; 
+    pp:hasTarget :InfrastructureasaService . 
 
 :CommunityCloud-to-PlatformasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <communitycloud#CommunityCloud> ; 
-    pp:hasTarget <platformasaservice#PlatformasaService> . 
+    pp:hasSource :CommunityCloud ; 
+    pp:hasTarget :PlatformasaService . 
 
 :CommunityCloud-to-SoftwareasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <communitycloud#CommunityCloud> ; 
-    pp:hasTarget <softwareasaservice#SoftwareasaService> . 
+    pp:hasSource :CommunityCloud ; 
+    pp:hasTarget :SoftwareasaService . 
 
 :CommunityCloud-to-BatchProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <communitycloud#CommunityCloud> ; 
-    pp:hasTarget <batchprocessingcomponent#BatchProcessingComponent> . 
+    pp:hasSource :CommunityCloud ; 
+    pp:hasTarget :BatchProcessingComponent . 
 
 :HybridCloud-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridcloud#HybridCloud> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :HybridCloud ; 
+    pp:hasTarget :PrivateCloud . 
 
 :HybridCloud-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridcloud#HybridCloud> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :HybridCloud ; 
+    pp:hasTarget :PublicCloud . 
 
 :HybridCloud-to-CommunityCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridcloud#HybridCloud> ; 
-    pp:hasTarget <communitycloud#CommunityCloud> . 
+    pp:hasSource :HybridCloud ; 
+    pp:hasTarget :CommunityCloud . 
 
 :HybridCloud-to-InfrastructureasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridcloud#HybridCloud> ; 
-    pp:hasTarget <infrastructureasaservice#InfrastructureasaService> . 
+    pp:hasSource :HybridCloud ; 
+    pp:hasTarget :InfrastructureasaService . 
 
 :HybridCloud-to-PlatformasaService
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridcloud#HybridCloud> ; 
-    pp:hasTarget <platformasaservice#PlatformasaService> . 
+    pp:hasSource :HybridCloud ; 
+    pp:hasTarget :PlatformasaService . 
 
 :ElasticInfrastructure-to-Hypervisor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <hypervisor#Hypervisor> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :Hypervisor . 
 
 :ElasticInfrastructure-to-BlockStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <blockstorage#BlockStorage> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :BlockStorage . 
 
 :ElasticInfrastructure-to-VirtualNetworking
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <virtualnetworking#VirtualNetworking> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :VirtualNetworking . 
 
 :ElasticInfrastructure-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :BlobStorage . 
 
 :ElasticInfrastructure-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :Watchdog . 
 
 :ElasticInfrastructure-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :ElasticityManager . 
 
 :ElasticInfrastructure-to-Node-basedAvailability
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <node-basedavailability#Node-basedAvailability> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :Node-basedAvailability . 
 
 :ElasticInfrastructure-to-Environment-basedAvailability
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticinfrastructure#ElasticInfrastructure> ; 
-    pp:hasTarget <environment-basedavailability#Environment-basedAvailability> . 
+    pp:hasSource :ElasticInfrastructure ; 
+    pp:hasTarget :Environment-basedAvailability . 
 
 :ElasticPlatform-to-ExecutionEnvironment
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <executionenvironment#ExecutionEnvironment> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :ExecutionEnvironment . 
 
 :ElasticPlatform-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :ElasticPlatform-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :BlobStorage . 
 
 :ElasticPlatform-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :ElasticPlatform-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :ElasticPlatform-to-DistributedApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <distributedapplication#DistributedApplication> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :DistributedApplication . 
 
 :ElasticPlatform-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :StatelessComponent . 
 
 :ElasticPlatform-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :ElasticPlatform-to-Node-basedAvailability
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <node-basedavailability#Node-basedAvailability> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :Node-basedAvailability . 
 
 :ElasticPlatform-to-Environment-basedAvailability
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <environment-basedavailability#Environment-basedAvailability> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :Environment-basedAvailability . 
 
 :ElasticPlatform-to-MapReduce
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <mapreduce#MapReduce> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :MapReduce . 
 
 :ElasticPlatform-to-ExecutionEnvironment
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticplatform#ElasticPlatform> ; 
-    pp:hasTarget <executionenvironment#ExecutionEnvironment> . 
+    pp:hasSource :ElasticPlatform ; 
+    pp:hasTarget :ExecutionEnvironment . 
 
 :Node-basedAvailability-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <node-basedavailability#Node-basedAvailability> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :Node-basedAvailability ; 
+    pp:hasTarget :Watchdog . 
 
 :Node-basedAvailability-to-ResiliencyManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <node-basedavailability#Node-basedAvailability> ; 
-    pp:hasTarget <resiliencymanagementprocess#ResiliencyManagementProcess> . 
+    pp:hasSource :Node-basedAvailability ; 
+    pp:hasTarget :ResiliencyManagementProcess . 
 
 :Environment-basedAvailability-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <environment-basedavailability#Environment-basedAvailability> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :Environment-basedAvailability ; 
+    pp:hasTarget :PublicCloud . 
 
 :Environment-basedAvailability-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <environment-basedavailability#Environment-basedAvailability> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :Environment-basedAvailability ; 
+    pp:hasTarget :Watchdog . 
 
 :Environment-basedAvailability-to-ResiliencyManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <environment-basedavailability#Environment-basedAvailability> ; 
-    pp:hasTarget <resiliencymanagementprocess#ResiliencyManagementProcess> . 
+    pp:hasSource :Environment-basedAvailability ; 
+    pp:hasTarget :ResiliencyManagementProcess . 
 
 :Hypervisor-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hypervisor#Hypervisor> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :Hypervisor ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :Hypervisor-to-ElasticPlatform
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hypervisor#Hypervisor> ; 
-    pp:hasTarget <elasticplatform#ElasticPlatform> . 
+    pp:hasSource :Hypervisor ; 
+    pp:hasTarget :ElasticPlatform . 
 
 :ExecutionEnvironment-to-ElasticPlatform
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <executionenvironment#ExecutionEnvironment> ; 
-    pp:hasTarget <elasticplatform#ElasticPlatform> . 
+    pp:hasSource :ExecutionEnvironment ; 
+    pp:hasTarget :ElasticPlatform . 
 
 :ExecutionEnvironment-to-Hypervisor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <executionenvironment#ExecutionEnvironment> ; 
-    pp:hasTarget <hypervisor#Hypervisor> . 
+    pp:hasSource :ExecutionEnvironment ; 
+    pp:hasTarget :Hypervisor . 
 
 :MapReduce-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <mapreduce#MapReduce> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :MapReduce ; 
+    pp:hasTarget :Watchdog . 
 
 :MapReduce-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <mapreduce#MapReduce> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :MapReduce ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :MapReduce-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <mapreduce#MapReduce> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :MapReduce ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :BlockStorage-to-Environment-basedAvailability
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blockstorage#BlockStorage> ; 
-    pp:hasTarget <environment-basedavailability#Environment-basedAvailability> . 
+    pp:hasSource :BlockStorage ; 
+    pp:hasTarget :Environment-basedAvailability . 
 
 :BlockStorage-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blockstorage#BlockStorage> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :BlockStorage ; 
+    pp:hasTarget :BlobStorage . 
 
 :BlockStorage-to-StrictConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blockstorage#BlockStorage> ; 
-    pp:hasTarget <strictconsistency#StrictConsistency> . 
+    pp:hasSource :BlockStorage ; 
+    pp:hasTarget :StrictConsistency . 
 
 :BlockStorage-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blockstorage#BlockStorage> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :BlockStorage ; 
+    pp:hasTarget :EventualConsistency . 
 
 :BlobStorage-to-BlockStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blobstorage#BlobStorage> ; 
-    pp:hasTarget <blockstorage#BlockStorage> . 
+    pp:hasSource :BlobStorage ; 
+    pp:hasTarget :BlockStorage . 
 
 :BlobStorage-to-ProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blobstorage#BlobStorage> ; 
-    pp:hasTarget <processingcomponent#ProcessingComponent> . 
+    pp:hasSource :BlobStorage ; 
+    pp:hasTarget :ProcessingComponent . 
 
 :BlobStorage-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blobstorage#BlobStorage> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :BlobStorage ; 
+    pp:hasTarget :StatelessComponent . 
 
 :BlobStorage-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blobstorage#BlobStorage> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :BlobStorage ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :BlobStorage-to-StrictConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blobstorage#BlobStorage> ; 
-    pp:hasTarget <strictconsistency#StrictConsistency> . 
+    pp:hasSource :BlobStorage ; 
+    pp:hasTarget :StrictConsistency . 
 
 :BlobStorage-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <blobstorage#BlobStorage> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :BlobStorage ; 
+    pp:hasTarget :EventualConsistency . 
 
 :RelationalDatabase-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <relationaldatabase#RelationalDatabase> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :RelationalDatabase ; 
+    pp:hasTarget :StatelessComponent . 
 
 :RelationalDatabase-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <relationaldatabase#RelationalDatabase> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :RelationalDatabase ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :RelationalDatabase-to-StrictConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <relationaldatabase#RelationalDatabase> ; 
-    pp:hasTarget <strictconsistency#StrictConsistency> . 
+    pp:hasSource :RelationalDatabase ; 
+    pp:hasTarget :StrictConsistency . 
 
 :RelationalDatabase-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <relationaldatabase#RelationalDatabase> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :RelationalDatabase ; 
+    pp:hasTarget :EventualConsistency . 
 
 :Key-ValueStorage-to-MapReduce
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <key-valuestorage#Key-ValueStorage> ; 
-    pp:hasTarget <mapreduce#MapReduce> . 
+    pp:hasSource :Key-ValueStorage ; 
+    pp:hasTarget :MapReduce . 
 
 :Key-ValueStorage-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <key-valuestorage#Key-ValueStorage> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :Key-ValueStorage ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :Key-ValueStorage-to-StrictConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <key-valuestorage#Key-ValueStorage> ; 
-    pp:hasTarget <strictconsistency#StrictConsistency> . 
+    pp:hasSource :Key-ValueStorage ; 
+    pp:hasTarget :StrictConsistency . 
 
 :Key-ValueStorage-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <key-valuestorage#Key-ValueStorage> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :Key-ValueStorage ; 
+    pp:hasTarget :EventualConsistency . 
 
 :StrictConsistency-to-BlockStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <strictconsistency#StrictConsistency> ; 
-    pp:hasTarget <blockstorage#BlockStorage> . 
+    pp:hasSource :StrictConsistency ; 
+    pp:hasTarget :BlockStorage . 
 
 :StrictConsistency-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <strictconsistency#StrictConsistency> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :StrictConsistency ; 
+    pp:hasTarget :BlobStorage . 
 
 :StrictConsistency-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <strictconsistency#StrictConsistency> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :StrictConsistency ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :StrictConsistency-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <strictconsistency#StrictConsistency> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :StrictConsistency ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :EventualConsistency-to-BlockStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <eventualconsistency#EventualConsistency> ; 
-    pp:hasTarget <blockstorage#BlockStorage> . 
+    pp:hasSource :EventualConsistency ; 
+    pp:hasTarget :BlockStorage . 
 
 :EventualConsistency-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <eventualconsistency#EventualConsistency> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :EventualConsistency ; 
+    pp:hasTarget :BlobStorage . 
 
 :EventualConsistency-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <eventualconsistency#EventualConsistency> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :EventualConsistency ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :EventualConsistency-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <eventualconsistency#EventualConsistency> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :EventualConsistency ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :VirtualNetworking-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <virtualnetworking#VirtualNetworking> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :VirtualNetworking ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :VirtualNetworking-to-Hypervisor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <virtualnetworking#VirtualNetworking> ; 
-    pp:hasTarget <hypervisor#Hypervisor> . 
+    pp:hasSource :VirtualNetworking ; 
+    pp:hasTarget :Hypervisor . 
 
 :Message-orientedMiddleware-to-At-least-onceDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <message-orientedmiddleware#Message-orientedMiddleware> ; 
-    pp:hasTarget <at-least-oncedelivery#At-least-onceDelivery> . 
+    pp:hasSource :Message-orientedMiddleware ; 
+    pp:hasTarget :At-least-onceDelivery . 
 
 :Message-orientedMiddleware-to-Exactly-onceDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <message-orientedmiddleware#Message-orientedMiddleware> ; 
-    pp:hasTarget <exactly-oncedelivery#Exactly-onceDelivery> . 
+    pp:hasSource :Message-orientedMiddleware ; 
+    pp:hasTarget :Exactly-onceDelivery . 
 
 :Message-orientedMiddleware-to-Transaction-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <message-orientedmiddleware#Message-orientedMiddleware> ; 
-    pp:hasTarget <transaction-baseddelivery#Transaction-basedDelivery> . 
+    pp:hasSource :Message-orientedMiddleware ; 
+    pp:hasTarget :Transaction-basedDelivery . 
 
 :Message-orientedMiddleware-to-Timeout-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <message-orientedmiddleware#Message-orientedMiddleware> ; 
-    pp:hasTarget <timeout-baseddelivery#Timeout-basedDelivery> . 
+    pp:hasSource :Message-orientedMiddleware ; 
+    pp:hasTarget :Timeout-basedDelivery . 
 
 :Exactly-onceDelivery-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <exactly-oncedelivery#Exactly-onceDelivery> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :Exactly-onceDelivery ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :Exactly-onceDelivery-to-Transaction-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <exactly-oncedelivery#Exactly-onceDelivery> ; 
-    pp:hasTarget <transaction-baseddelivery#Transaction-basedDelivery> . 
+    pp:hasSource :Exactly-onceDelivery ; 
+    pp:hasTarget :Transaction-basedDelivery . 
 
 :At-least-onceDelivery-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <at-least-oncedelivery#At-least-onceDelivery> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :At-least-onceDelivery ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :At-least-onceDelivery-to-Timeout-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <at-least-oncedelivery#At-least-onceDelivery> ; 
-    pp:hasTarget <timeout-baseddelivery#Timeout-basedDelivery> . 
+    pp:hasSource :At-least-onceDelivery ; 
+    pp:hasTarget :Timeout-basedDelivery . 
 
 :Transaction-basedDelivery-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <transaction-baseddelivery#Transaction-basedDelivery> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :Transaction-basedDelivery ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :Transaction-basedDelivery-to-Exactly-onceDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <transaction-baseddelivery#Transaction-basedDelivery> ; 
-    pp:hasTarget <exactly-oncedelivery#Exactly-onceDelivery> . 
+    pp:hasSource :Transaction-basedDelivery ; 
+    pp:hasTarget :Exactly-onceDelivery . 
 
 :Timeout-basedDelivery-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <timeout-baseddelivery#Timeout-basedDelivery> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :Timeout-basedDelivery ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :LooseCoupling-to-DistributedApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <loosecoupling#LooseCoupling> ; 
-    pp:hasTarget <distributedapplication#DistributedApplication> . 
+    pp:hasSource :LooseCoupling ; 
+    pp:hasTarget :DistributedApplication . 
 
 :LooseCoupling-to-Two-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <loosecoupling#LooseCoupling> ; 
-    pp:hasTarget <two-tiercloudapplication#Two-TierCloudApplication> . 
+    pp:hasSource :LooseCoupling ; 
+    pp:hasTarget :Two-TierCloudApplication . 
 
 :LooseCoupling-to-Hypervisor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <loosecoupling#LooseCoupling> ; 
-    pp:hasTarget <hypervisor#Hypervisor> . 
+    pp:hasSource :LooseCoupling ; 
+    pp:hasTarget :Hypervisor . 
 
 :LooseCoupling-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <loosecoupling#LooseCoupling> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :LooseCoupling ; 
+    pp:hasTarget :EventualConsistency . 
 
 :LooseCoupling-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <loosecoupling#LooseCoupling> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :LooseCoupling ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :LooseCoupling-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <loosecoupling#LooseCoupling> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :LooseCoupling ; 
+    pp:hasTarget :Watchdog . 
 
 :DistributedApplication-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :PublicCloud . 
 
 :DistributedApplication-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :PrivateCloud . 
 
 :DistributedApplication-to-HybridCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <hybridcloud#HybridCloud> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :HybridCloud . 
 
 :DistributedApplication-to-CommunityCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <communitycloud#CommunityCloud> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :CommunityCloud . 
 
 :DistributedApplication-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :DistributedApplication-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :Watchdog . 
 
 :DistributedApplication-to-UpdateTransitionProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <distributedapplication#DistributedApplication> ; 
-    pp:hasTarget <updatetransitionprocess#UpdateTransitionProcess> . 
+    pp:hasSource :DistributedApplication ; 
+    pp:hasTarget :UpdateTransitionProcess . 
 
 :StatefulComponent-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statefulcomponent#StatefulComponent> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :StatefulComponent ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :StatefulComponent-to-StrictConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statefulcomponent#StatefulComponent> ; 
-    pp:hasTarget <strictconsistency#StrictConsistency> . 
+    pp:hasSource :StatefulComponent ; 
+    pp:hasTarget :StrictConsistency . 
 
 :StatefulComponent-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statefulcomponent#StatefulComponent> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :StatefulComponent ; 
+    pp:hasTarget :EventualConsistency . 
 
 :StatelessComponent-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statelesscomponent#StatelessComponent> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :StatelessComponent ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :StatelessComponent-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statelesscomponent#StatelessComponent> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :StatelessComponent ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :StatelessComponent-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statelesscomponent#StatelessComponent> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :StatelessComponent ; 
+    pp:hasTarget :BlobStorage . 
 
 :StatelessComponent-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <statelesscomponent#StatelessComponent> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :StatelessComponent ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :UserInterfaceComponent-to-ElasticLoadBalancer
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <elasticloadbalancer#ElasticLoadBalancer> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :ElasticLoadBalancer . 
 
 :UserInterfaceComponent-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :UserInterfaceComponent-to-DataAbstractor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <dataabstractor#DataAbstractor> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :DataAbstractor . 
 
 :UserInterfaceComponent-to-ProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <processingcomponent#ProcessingComponent> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :ProcessingComponent . 
 
 :UserInterfaceComponent-to-Multi-ComponentImage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <multi-componentimage#Multi-ComponentImage> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :Multi-ComponentImage . 
 
 :UserInterfaceComponent-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :UserInterfaceComponent-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :UserInterfaceComponent-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <userinterfacecomponent#UserInterfaceComponent> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :UserInterfaceComponent ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :ProcessingComponent-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :BlobStorage . 
 
 :ProcessingComponent-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :ProcessingComponent-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :ProcessingComponent-to-UserInterfaceComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <userinterfacecomponent#UserInterfaceComponent> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :UserInterfaceComponent . 
 
 :ProcessingComponent-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :ProcessingComponent-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :ProcessingComponent-to-BatchProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <batchprocessingcomponent#BatchProcessingComponent> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :BatchProcessingComponent . 
 
 :ProcessingComponent-to-Multi-ComponentImage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <multi-componentimage#Multi-ComponentImage> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :Multi-ComponentImage . 
 
 :ProcessingComponent-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :ProcessingComponent-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :ProcessingComponent-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <processingcomponent#ProcessingComponent> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :ProcessingComponent ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :BatchProcessingComponent-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <batchprocessingcomponent#BatchProcessingComponent> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :BatchProcessingComponent ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :BatchProcessingComponent-to-ElasticQueue
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <batchprocessingcomponent#BatchProcessingComponent> ; 
-    pp:hasTarget <elasticqueue#ElasticQueue> . 
+    pp:hasSource :BatchProcessingComponent ; 
+    pp:hasTarget :ElasticQueue . 
 
 :BatchProcessingComponent-to-Multi-ComponentImage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <batchprocessingcomponent#BatchProcessingComponent> ; 
-    pp:hasTarget <multi-componentimage#Multi-ComponentImage> . 
+    pp:hasSource :BatchProcessingComponent ; 
+    pp:hasTarget :Multi-ComponentImage . 
 
 :BatchProcessingComponent-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <batchprocessingcomponent#BatchProcessingComponent> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :BatchProcessingComponent ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :BatchProcessingComponent-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <batchprocessingcomponent#BatchProcessingComponent> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :BatchProcessingComponent ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :BatchProcessingComponent-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <batchprocessingcomponent#BatchProcessingComponent> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :BatchProcessingComponent ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :DataAccessComponent-to-RestrictedDataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <restricteddataaccesscomponent#RestrictedDataAccessComponent> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :RestrictedDataAccessComponent . 
 
 :DataAccessComponent-to-DataAbstractor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <dataabstractor#DataAbstractor> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :DataAbstractor . 
 
 :DataAccessComponent-to-ProviderAdapter
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <provideradapter#ProviderAdapter> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :ProviderAdapter . 
 
 :DataAccessComponent-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :BlobStorage . 
 
 :DataAccessComponent-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :DataAccessComponent-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :DataAccessComponent-to-CompliantDataReplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataaccesscomponent#DataAccessComponent> ; 
-    pp:hasTarget <compliantdatareplication#CompliantDataReplication> . 
+    pp:hasSource :DataAccessComponent ; 
+    pp:hasTarget :CompliantDataReplication . 
 
 :DataAbstractor-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataabstractor#DataAbstractor> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :DataAbstractor ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :DataAbstractor-to-LooseCoupling
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataabstractor#DataAbstractor> ; 
-    pp:hasTarget <loosecoupling#LooseCoupling> . 
+    pp:hasSource :DataAbstractor ; 
+    pp:hasTarget :LooseCoupling . 
 
 :DataAbstractor-to-StatefulComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataabstractor#DataAbstractor> ; 
-    pp:hasTarget <statefulcomponent#StatefulComponent> . 
+    pp:hasSource :DataAbstractor ; 
+    pp:hasTarget :StatefulComponent . 
 
 :DataAbstractor-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dataabstractor#DataAbstractor> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :DataAbstractor ; 
+    pp:hasTarget :StatelessComponent . 
 
 :IdempotentProcessor-to-Exactly-onceDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <idempotentprocessor#IdempotentProcessor> ; 
-    pp:hasTarget <exactly-oncedelivery#Exactly-onceDelivery> . 
+    pp:hasSource :IdempotentProcessor ; 
+    pp:hasTarget :Exactly-onceDelivery . 
 
 :IdempotentProcessor-to-Timeout-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <idempotentprocessor#IdempotentProcessor> ; 
-    pp:hasTarget <timeout-baseddelivery#Timeout-basedDelivery> . 
+    pp:hasSource :IdempotentProcessor ; 
+    pp:hasTarget :Timeout-basedDelivery . 
 
 :IdempotentProcessor-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <idempotentprocessor#IdempotentProcessor> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :IdempotentProcessor ; 
+    pp:hasTarget :EventualConsistency . 
 
 :IdempotentProcessor-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <idempotentprocessor#IdempotentProcessor> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :IdempotentProcessor ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :Transaction-basedProcessor-to-Transaction-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <transaction-basedprocessor#Transaction-basedProcessor> ; 
-    pp:hasTarget <transaction-baseddelivery#Transaction-basedDelivery> . 
+    pp:hasSource :Transaction-basedProcessor ; 
+    pp:hasTarget :Transaction-basedDelivery . 
 
 :Transaction-basedProcessor-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <transaction-basedprocessor#Transaction-basedProcessor> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :Transaction-basedProcessor ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :Transaction-basedProcessor-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <transaction-basedprocessor#Transaction-basedProcessor> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :Transaction-basedProcessor ; 
+    pp:hasTarget :Watchdog . 
 
 :Transaction-basedProcessor-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <transaction-basedprocessor#Transaction-basedProcessor> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :Transaction-basedProcessor ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :Timeout-basedMessageProcessor-to-Timeout-basedDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> ; 
-    pp:hasTarget <timeout-baseddelivery#Timeout-basedDelivery> . 
+    pp:hasSource :Timeout-basedMessageProcessor ; 
+    pp:hasTarget :Timeout-basedDelivery . 
 
 :Timeout-basedMessageProcessor-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :Timeout-basedMessageProcessor ; 
+    pp:hasTarget :Watchdog . 
 
 :Timeout-basedMessageProcessor-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :Timeout-basedMessageProcessor ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :Multi-ComponentImage-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <multi-componentimage#Multi-ComponentImage> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :Multi-ComponentImage ; 
+    pp:hasTarget :ElasticityManager . 
 
 :Multi-ComponentImage-to-FeatureFlagManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <multi-componentimage#Multi-ComponentImage> ; 
-    pp:hasTarget <featureflagmanagementprocess#FeatureFlagManagementProcess> . 
+    pp:hasSource :Multi-ComponentImage ; 
+    pp:hasTarget :FeatureFlagManagementProcess . 
 
 :Multi-ComponentImage-to-ResiliencyManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <multi-componentimage#Multi-ComponentImage> ; 
-    pp:hasTarget <resiliencymanagementprocess#ResiliencyManagementProcess> . 
+    pp:hasSource :Multi-ComponentImage ; 
+    pp:hasTarget :ResiliencyManagementProcess . 
 
 :Multi-ComponentImage-to-StandbyPoolingProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <multi-componentimage#Multi-ComponentImage> ; 
-    pp:hasTarget <standbypoolingprocess#StandbyPoolingProcess> . 
+    pp:hasSource :Multi-ComponentImage ; 
+    pp:hasTarget :StandbyPoolingProcess . 
 
 :SharedComponent-to-Tenant-isolatedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <sharedcomponent#SharedComponent> ; 
-    pp:hasTarget <tenant-isolatedcomponent#Tenant-isolatedComponent> . 
+    pp:hasSource :SharedComponent ; 
+    pp:hasTarget :Tenant-isolatedComponent . 
 
 :SharedComponent-to-DedicatedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <sharedcomponent#SharedComponent> ; 
-    pp:hasTarget <dedicatedcomponent#DedicatedComponent> . 
+    pp:hasSource :SharedComponent ; 
+    pp:hasTarget :DedicatedComponent . 
 
 :Tenant-isolatedComponent-to-SharedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <tenant-isolatedcomponent#Tenant-isolatedComponent> ; 
-    pp:hasTarget <sharedcomponent#SharedComponent> . 
+    pp:hasSource :Tenant-isolatedComponent ; 
+    pp:hasTarget :SharedComponent . 
 
 :Tenant-isolatedComponent-to-DedicatedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <tenant-isolatedcomponent#Tenant-isolatedComponent> ; 
-    pp:hasTarget <dedicatedcomponent#DedicatedComponent> . 
+    pp:hasSource :Tenant-isolatedComponent ; 
+    pp:hasTarget :DedicatedComponent . 
 
 :DedicatedComponent-to-SharedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dedicatedcomponent#DedicatedComponent> ; 
-    pp:hasTarget <sharedcomponent#SharedComponent> . 
+    pp:hasSource :DedicatedComponent ; 
+    pp:hasTarget :SharedComponent . 
 
 :DedicatedComponent-to-Tenant-isolatedComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <dedicatedcomponent#DedicatedComponent> ; 
-    pp:hasTarget <tenant-isolatedcomponent#Tenant-isolatedComponent> . 
+    pp:hasSource :DedicatedComponent ; 
+    pp:hasTarget :Tenant-isolatedComponent . 
 
 :RestrictedDataAccessComponent-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <restricteddataaccesscomponent#RestrictedDataAccessComponent> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :RestrictedDataAccessComponent ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :RestrictedDataAccessComponent-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <restricteddataaccesscomponent#RestrictedDataAccessComponent> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :RestrictedDataAccessComponent ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :RestrictedDataAccessComponent-to-ApplicationComponentProxy
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <restricteddataaccesscomponent#RestrictedDataAccessComponent> ; 
-    pp:hasTarget <applicationcomponentproxy#ApplicationComponentProxy> . 
+    pp:hasSource :RestrictedDataAccessComponent ; 
+    pp:hasTarget :ApplicationComponentProxy . 
 
 :MessageMover-to-PublicCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <publiccloud#PublicCloud> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :PublicCloud . 
 
 :MessageMover-to-PrivateCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <privatecloud#PrivateCloud> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :PrivateCloud . 
 
 :MessageMover-to-HybridCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <hybridcloud#HybridCloud> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :HybridCloud . 
 
 :MessageMover-to-CommunityCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <communitycloud#CommunityCloud> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :CommunityCloud . 
 
 :MessageMover-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :MessageMover-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :Watchdog . 
 
 :MessageMover-to-UpdateTransitionProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <messagemover#MessageMover> ; 
-    pp:hasTarget <updatetransitionprocess#UpdateTransitionProcess> . 
+    pp:hasSource :MessageMover ; 
+    pp:hasTarget :UpdateTransitionProcess . 
 
 :ApplicationComponentProxy-to-MessageMover
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <applicationcomponentproxy#ApplicationComponentProxy> ; 
-    pp:hasTarget <messagemover#MessageMover> . 
+    pp:hasSource :ApplicationComponentProxy ; 
+    pp:hasTarget :MessageMover . 
 
 :ApplicationComponentProxy-to-DistributedApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <applicationcomponentproxy#ApplicationComponentProxy> ; 
-    pp:hasTarget <distributedapplication#DistributedApplication> . 
+    pp:hasSource :ApplicationComponentProxy ; 
+    pp:hasTarget :DistributedApplication . 
 
 :ApplicationComponentProxy-to-HybridCloud
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <applicationcomponentproxy#ApplicationComponentProxy> ; 
-    pp:hasTarget <hybridcloud#HybridCloud> . 
+    pp:hasSource :ApplicationComponentProxy ; 
+    pp:hasTarget :HybridCloud . 
 
 :CompliantDataReplication-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <compliantdatareplication#CompliantDataReplication> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :CompliantDataReplication ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :CompliantDataReplication-to-HybridBackend
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <compliantdatareplication#CompliantDataReplication> ; 
-    pp:hasTarget <hybridbackend#HybridBackend> . 
+    pp:hasSource :CompliantDataReplication ; 
+    pp:hasTarget :HybridBackend . 
 
 :CompliantDataReplication-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <compliantdatareplication#CompliantDataReplication> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :CompliantDataReplication ; 
+    pp:hasTarget :EventualConsistency . 
 
 :CompliantDataReplication-to-At-least-onceDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <compliantdatareplication#CompliantDataReplication> ; 
-    pp:hasTarget <at-least-oncedelivery#At-least-onceDelivery> . 
+    pp:hasSource :CompliantDataReplication ; 
+    pp:hasTarget :At-least-onceDelivery . 
 
 :CompliantDataReplication-to-Exactly-onceDelivery
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <compliantdatareplication#CompliantDataReplication> ; 
-    pp:hasTarget <exactly-oncedelivery#Exactly-onceDelivery> . 
+    pp:hasSource :CompliantDataReplication ; 
+    pp:hasTarget :Exactly-onceDelivery . 
 
 :IntegrationProvider-to-HybridProcessing
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <hybridprocessing#HybridProcessing> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :HybridProcessing . 
 
 :IntegrationProvider-to-HybridBackend
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <hybridbackend#HybridBackend> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :HybridBackend . 
 
 :IntegrationProvider-to-HybridData
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <hybriddata#HybridData> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :HybridData . 
 
 :IntegrationProvider-to-RestrictedDataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <restricteddataaccesscomponent#RestrictedDataAccessComponent> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :RestrictedDataAccessComponent . 
 
 :IntegrationProvider-to-ApplicationComponentProxy
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <applicationcomponentproxy#ApplicationComponentProxy> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :ApplicationComponentProxy . 
 
 :IntegrationProvider-to-MessageMover
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <messagemover#MessageMover> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :MessageMover . 
 
 :IntegrationProvider-to-CompliantDataReplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <integrationprovider#IntegrationProvider> ; 
-    pp:hasTarget <compliantdatareplication#CompliantDataReplication> . 
+    pp:hasSource :IntegrationProvider ; 
+    pp:hasTarget :CompliantDataReplication . 
 
 :ProviderAdapter-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :ProviderAdapter-to-Multi-ComponentImage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <multi-componentimage#Multi-ComponentImage> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :Multi-ComponentImage . 
 
 :ProviderAdapter-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :ProviderAdapter-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :ElasticityManager . 
 
 :ProviderAdapter-to-ElasticLoadBalancer
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <elasticloadbalancer#ElasticLoadBalancer> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :ElasticLoadBalancer . 
 
 :ProviderAdapter-to-ElasticQueue
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <elasticqueue#ElasticQueue> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :ElasticQueue . 
 
 :ProviderAdapter-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <provideradapter#ProviderAdapter> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :ProviderAdapter ; 
+    pp:hasTarget :Watchdog . 
 
 :ManagedConfiguration-to-BlobStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <blobstorage#BlobStorage> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :BlobStorage . 
 
 :ManagedConfiguration-to-RelationalDatabase
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <relationaldatabase#RelationalDatabase> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :RelationalDatabase . 
 
 :ManagedConfiguration-to-Key-ValueStorage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <key-valuestorage#Key-ValueStorage> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :Key-ValueStorage . 
 
 :ManagedConfiguration-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :ManagedConfiguration-to-ProviderAdapter
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <provideradapter#ProviderAdapter> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :ProviderAdapter . 
 
 :ManagedConfiguration-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :ElasticityManager . 
 
 :ManagedConfiguration-to-ElasticLoadBalancer
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <elasticloadbalancer#ElasticLoadBalancer> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :ElasticLoadBalancer . 
 
 :ManagedConfiguration-to-ElasticQueue
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <elasticqueue#ElasticQueue> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :ElasticQueue . 
 
 :ManagedConfiguration-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <managedconfiguration#ManagedConfiguration> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :ManagedConfiguration ; 
+    pp:hasTarget :Watchdog . 
 
 :ElasticityManager-to-ElasticLoadBalancer
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <elasticloadbalancer#ElasticLoadBalancer> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :ElasticLoadBalancer . 
 
 :ElasticityManager-to-ElasticQueue
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <elasticqueue#ElasticQueue> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :ElasticQueue . 
 
 :ElasticityManager-to-ElasticityManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <elasticitymanagementprocess#ElasticityManagementProcess> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :ElasticityManagementProcess . 
 
 :ElasticityManager-to-ProviderAdapter
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <provideradapter#ProviderAdapter> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :ProviderAdapter . 
 
 :ElasticityManager-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :StatelessComponent . 
 
 :ElasticityManager-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :ElasticityManager-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanager#ElasticityManager> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :ElasticityManager ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :ElasticLoadBalancer-to-ElasticityManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticloadbalancer#ElasticLoadBalancer> ; 
-    pp:hasTarget <elasticitymanagementprocess#ElasticityManagementProcess> . 
+    pp:hasSource :ElasticLoadBalancer ; 
+    pp:hasTarget :ElasticityManagementProcess . 
 
 :ElasticLoadBalancer-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticloadbalancer#ElasticLoadBalancer> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :ElasticLoadBalancer ; 
+    pp:hasTarget :StatelessComponent . 
 
 :ElasticLoadBalancer-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticloadbalancer#ElasticLoadBalancer> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :ElasticLoadBalancer ; 
+    pp:hasTarget :Watchdog . 
 
 :ElasticLoadBalancer-to-ProviderAdapter
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticloadbalancer#ElasticLoadBalancer> ; 
-    pp:hasTarget <provideradapter#ProviderAdapter> . 
+    pp:hasSource :ElasticLoadBalancer ; 
+    pp:hasTarget :ProviderAdapter . 
 
 :ElasticQueue-to-ElasticityManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticqueue#ElasticQueue> ; 
-    pp:hasTarget <elasticitymanagementprocess#ElasticityManagementProcess> . 
+    pp:hasSource :ElasticQueue ; 
+    pp:hasTarget :ElasticityManagementProcess . 
 
 :ElasticQueue-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticqueue#ElasticQueue> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :ElasticQueue ; 
+    pp:hasTarget :StatelessComponent . 
 
 :ElasticQueue-to-Watchdog
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticqueue#ElasticQueue> ; 
-    pp:hasTarget <watchdog#Watchdog> . 
+    pp:hasSource :ElasticQueue ; 
+    pp:hasTarget :Watchdog . 
 
 :ElasticQueue-to-ProviderAdapter
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticqueue#ElasticQueue> ; 
-    pp:hasTarget <provideradapter#ProviderAdapter> . 
+    pp:hasSource :ElasticQueue ; 
+    pp:hasTarget :ProviderAdapter . 
 
 :Watchdog-to-ElasticityManager
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <watchdog#Watchdog> ; 
-    pp:hasTarget <elasticitymanager#ElasticityManager> . 
+    pp:hasSource :Watchdog ; 
+    pp:hasTarget :ElasticityManager . 
 
 :Watchdog-to-ElasticLoadBalancer
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <watchdog#Watchdog> ; 
-    pp:hasTarget <elasticloadbalancer#ElasticLoadBalancer> . 
+    pp:hasSource :Watchdog ; 
+    pp:hasTarget :ElasticLoadBalancer . 
 
 :Watchdog-to-ResiliencyManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <watchdog#Watchdog> ; 
-    pp:hasTarget <resiliencymanagementprocess#ResiliencyManagementProcess> . 
+    pp:hasSource :Watchdog ; 
+    pp:hasTarget :ResiliencyManagementProcess . 
 
 :Watchdog-to-Transaction-basedProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <watchdog#Watchdog> ; 
-    pp:hasTarget <transaction-basedprocessor#Transaction-basedProcessor> . 
+    pp:hasSource :Watchdog ; 
+    pp:hasTarget :Transaction-basedProcessor . 
 
 :Watchdog-to-Timeout-basedMessageProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <watchdog#Watchdog> ; 
-    pp:hasTarget <timeout-basedmessageprocessor#Timeout-basedMessageProcessor> . 
+    pp:hasSource :Watchdog ; 
+    pp:hasTarget :Timeout-basedMessageProcessor . 
 
 :Watchdog-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <watchdog#Watchdog> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :Watchdog ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :ElasticityManagementProcess-to-StandbyPoolingProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanagementprocess#ElasticityManagementProcess> ; 
-    pp:hasTarget <standbypoolingprocess#StandbyPoolingProcess> . 
+    pp:hasSource :ElasticityManagementProcess ; 
+    pp:hasTarget :StandbyPoolingProcess . 
 
 :ElasticityManagementProcess-to-FeatureFlagManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanagementprocess#ElasticityManagementProcess> ; 
-    pp:hasTarget <featureflagmanagementprocess#FeatureFlagManagementProcess> . 
+    pp:hasSource :ElasticityManagementProcess ; 
+    pp:hasTarget :FeatureFlagManagementProcess . 
 
 :ElasticityManagementProcess-to-UpdateTransitionProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanagementprocess#ElasticityManagementProcess> ; 
-    pp:hasTarget <updatetransitionprocess#UpdateTransitionProcess> . 
+    pp:hasSource :ElasticityManagementProcess ; 
+    pp:hasTarget :UpdateTransitionProcess . 
 
 :ElasticityManagementProcess-to-ElasticInfrastructure
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanagementprocess#ElasticityManagementProcess> ; 
-    pp:hasTarget <elasticinfrastructure#ElasticInfrastructure> . 
+    pp:hasSource :ElasticityManagementProcess ; 
+    pp:hasTarget :ElasticInfrastructure . 
 
 :ElasticityManagementProcess-to-ElasticPlatform
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanagementprocess#ElasticityManagementProcess> ; 
-    pp:hasTarget <elasticplatform#ElasticPlatform> . 
+    pp:hasSource :ElasticityManagementProcess ; 
+    pp:hasTarget :ElasticPlatform . 
 
 :ElasticityManagementProcess-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <elasticitymanagementprocess#ElasticityManagementProcess> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :ElasticityManagementProcess ; 
+    pp:hasTarget :StatelessComponent . 
 
 :FeatureFlagManagementProcess-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <featureflagmanagementprocess#FeatureFlagManagementProcess> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :FeatureFlagManagementProcess ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :FeatureFlagManagementProcess-to-Multi-ComponentImage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <featureflagmanagementprocess#FeatureFlagManagementProcess> ; 
-    pp:hasTarget <multi-componentimage#Multi-ComponentImage> . 
+    pp:hasSource :FeatureFlagManagementProcess ; 
+    pp:hasTarget :Multi-ComponentImage . 
 
 :FeatureFlagManagementProcess-to-StandbyPoolingProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <featureflagmanagementprocess#FeatureFlagManagementProcess> ; 
-    pp:hasTarget <standbypoolingprocess#StandbyPoolingProcess> . 
+    pp:hasSource :FeatureFlagManagementProcess ; 
+    pp:hasTarget :StandbyPoolingProcess . 
 
 :UpdateTransitionProcess-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <updatetransitionprocess#UpdateTransitionProcess> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :UpdateTransitionProcess ; 
+    pp:hasTarget :StatelessComponent . 
 
 :UpdateTransitionProcess-to-LooseCoupling
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <updatetransitionprocess#UpdateTransitionProcess> ; 
-    pp:hasTarget <loosecoupling#LooseCoupling> . 
+    pp:hasSource :UpdateTransitionProcess ; 
+    pp:hasTarget :LooseCoupling . 
 
 :UpdateTransitionProcess-to-ManagedConfiguration
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <updatetransitionprocess#UpdateTransitionProcess> ; 
-    pp:hasTarget <managedconfiguration#ManagedConfiguration> . 
+    pp:hasSource :UpdateTransitionProcess ; 
+    pp:hasTarget :ManagedConfiguration . 
 
 :StandbyPoolingProcess-to-Multi-ComponentImage
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <standbypoolingprocess#StandbyPoolingProcess> ; 
-    pp:hasTarget <multi-componentimage#Multi-ComponentImage> . 
+    pp:hasSource :StandbyPoolingProcess ; 
+    pp:hasTarget :Multi-ComponentImage . 
 
 :StandbyPoolingProcess-to-ResiliencyManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <standbypoolingprocess#StandbyPoolingProcess> ; 
-    pp:hasTarget <resiliencymanagementprocess#ResiliencyManagementProcess> . 
+    pp:hasSource :StandbyPoolingProcess ; 
+    pp:hasTarget :ResiliencyManagementProcess . 
 
 :StandbyPoolingProcess-to-FeatureFlagManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <standbypoolingprocess#StandbyPoolingProcess> ; 
-    pp:hasTarget <featureflagmanagementprocess#FeatureFlagManagementProcess> . 
+    pp:hasSource :StandbyPoolingProcess ; 
+    pp:hasTarget :FeatureFlagManagementProcess . 
 
 :ResiliencyManagementProcess-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <resiliencymanagementprocess#ResiliencyManagementProcess> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :ResiliencyManagementProcess ; 
+    pp:hasTarget :StatelessComponent . 
 
 :ResiliencyManagementProcess-to-ElasticityManagementProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <resiliencymanagementprocess#ResiliencyManagementProcess> ; 
-    pp:hasTarget <elasticitymanagementprocess#ElasticityManagementProcess> . 
+    pp:hasSource :ResiliencyManagementProcess ; 
+    pp:hasTarget :ElasticityManagementProcess . 
 
 :ResiliencyManagementProcess-to-StandbyPoolingProcess
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <resiliencymanagementprocess#ResiliencyManagementProcess> ; 
-    pp:hasTarget <standbypoolingprocess#StandbyPoolingProcess> . 
+    pp:hasSource :ResiliencyManagementProcess ; 
+    pp:hasTarget :StandbyPoolingProcess . 
 
 :Two-TierCloudApplication-to-Three-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <two-tiercloudapplication#Two-TierCloudApplication> ; 
-    pp:hasTarget <three-tiercloudapplication#Three-TierCloudApplication> . 
+    pp:hasSource :Two-TierCloudApplication ; 
+    pp:hasTarget :Three-TierCloudApplication . 
 
 :Two-TierCloudApplication-to-ContentDistributionNetwork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <two-tiercloudapplication#Two-TierCloudApplication> ; 
-    pp:hasTarget <contentdistributionnetwork#ContentDistributionNetwork> . 
+    pp:hasSource :Two-TierCloudApplication ; 
+    pp:hasTarget :ContentDistributionNetwork . 
 
 :Two-TierCloudApplication-to-HybridData
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <two-tiercloudapplication#Two-TierCloudApplication> ; 
-    pp:hasTarget <hybriddata#HybridData> . 
+    pp:hasSource :Two-TierCloudApplication ; 
+    pp:hasTarget :HybridData . 
 
 :Two-TierCloudApplication-to-HybridBackup
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <two-tiercloudapplication#Two-TierCloudApplication> ; 
-    pp:hasTarget <hybridbackup#HybridBackup> . 
+    pp:hasSource :Two-TierCloudApplication ; 
+    pp:hasTarget :HybridBackup . 
 
 :Two-TierCloudApplication-to-HybridApplicationFunctions
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <two-tiercloudapplication#Two-TierCloudApplication> ; 
-    pp:hasTarget <hybridapplicationfunctions#HybridApplicationFunctions> . 
+    pp:hasSource :Two-TierCloudApplication ; 
+    pp:hasTarget :HybridApplicationFunctions . 
 
 :Two-TierCloudApplication-to-HybridDevelopmentEnvironment
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <two-tiercloudapplication#Two-TierCloudApplication> ; 
-    pp:hasTarget <hybriddevelopmentenvironment#HybridDevelopmentEnvironment> . 
+    pp:hasSource :Two-TierCloudApplication ; 
+    pp:hasTarget :HybridDevelopmentEnvironment . 
 
 :Three-TierCloudApplication-to-Two-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <three-tiercloudapplication#Three-TierCloudApplication> ; 
-    pp:hasTarget <two-tiercloudapplication#Two-TierCloudApplication> . 
+    pp:hasSource :Three-TierCloudApplication ; 
+    pp:hasTarget :Two-TierCloudApplication . 
 
 :Three-TierCloudApplication-to-ContentDistributionNetwork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <three-tiercloudapplication#Three-TierCloudApplication> ; 
-    pp:hasTarget <contentdistributionnetwork#ContentDistributionNetwork> . 
+    pp:hasSource :Three-TierCloudApplication ; 
+    pp:hasTarget :ContentDistributionNetwork . 
 
 :ContentDistributionNetwork-to-StrictConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <contentdistributionnetwork#ContentDistributionNetwork> ; 
-    pp:hasTarget <strictconsistency#StrictConsistency> . 
+    pp:hasSource :ContentDistributionNetwork ; 
+    pp:hasTarget :StrictConsistency . 
 
 :ContentDistributionNetwork-to-EventualConsistency
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <contentdistributionnetwork#ContentDistributionNetwork> ; 
-    pp:hasTarget <eventualconsistency#EventualConsistency> . 
+    pp:hasSource :ContentDistributionNetwork ; 
+    pp:hasTarget :EventualConsistency . 
 
 :HybridUserInterface-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriduserinterface#HybridUserInterface> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :HybridUserInterface ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :HybridUserInterface-to-HybridProcessing
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriduserinterface#HybridUserInterface> ; 
-    pp:hasTarget <hybridprocessing#HybridProcessing> . 
+    pp:hasSource :HybridUserInterface ; 
+    pp:hasTarget :HybridProcessing . 
 
 :HybridUserInterface-to-HybridBackend
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriduserinterface#HybridUserInterface> ; 
-    pp:hasTarget <hybridbackend#HybridBackend> . 
+    pp:hasSource :HybridUserInterface ; 
+    pp:hasTarget :HybridBackend . 
 
 :HybridUserInterface-to-HybridApplicationFunctions
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriduserinterface#HybridUserInterface> ; 
-    pp:hasTarget <hybridapplicationfunctions#HybridApplicationFunctions> . 
+    pp:hasSource :HybridUserInterface ; 
+    pp:hasTarget :HybridApplicationFunctions . 
 
 :HybridUserInterface-to-StatelessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriduserinterface#HybridUserInterface> ; 
-    pp:hasTarget <statelesscomponent#StatelessComponent> . 
+    pp:hasSource :HybridUserInterface ; 
+    pp:hasTarget :StatelessComponent . 
 
 :HybridUserInterface-to-Three-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriduserinterface#HybridUserInterface> ; 
-    pp:hasTarget <three-tiercloudapplication#Three-TierCloudApplication> . 
+    pp:hasSource :HybridUserInterface ; 
+    pp:hasTarget :Three-TierCloudApplication . 
 
 :HybridProcessing-to-HybridBackend
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridprocessing#HybridProcessing> ; 
-    pp:hasTarget <hybridbackend#HybridBackend> . 
+    pp:hasSource :HybridProcessing ; 
+    pp:hasTarget :HybridBackend . 
 
 :HybridProcessing-to-IdempotentProcessor
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridprocessing#HybridProcessing> ; 
-    pp:hasTarget <idempotentprocessor#IdempotentProcessor> . 
+    pp:hasSource :HybridProcessing ; 
+    pp:hasTarget :IdempotentProcessor . 
 
 :HybridProcessing-to-Three-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridprocessing#HybridProcessing> ; 
-    pp:hasTarget <three-tiercloudapplication#Three-TierCloudApplication> . 
+    pp:hasSource :HybridProcessing ; 
+    pp:hasTarget :Three-TierCloudApplication . 
 
 :HybridProcessing-to-ProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridprocessing#HybridProcessing> ; 
-    pp:hasTarget <processingcomponent#ProcessingComponent> . 
+    pp:hasSource :HybridProcessing ; 
+    pp:hasTarget :ProcessingComponent . 
 
 :HybridProcessing-to-HybridBackend
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridprocessing#HybridProcessing> ; 
-    pp:hasTarget <hybridbackend#HybridBackend> . 
+    pp:hasSource :HybridProcessing ; 
+    pp:hasTarget :HybridBackend . 
 
 :HybridData-to-HybridBackend
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddata#HybridData> ; 
-    pp:hasTarget <hybridbackend#HybridBackend> . 
+    pp:hasSource :HybridData ; 
+    pp:hasTarget :HybridBackend . 
 
 :HybridData-to-ContentDistributionNetwork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddata#HybridData> ; 
-    pp:hasTarget <contentdistributionnetwork#ContentDistributionNetwork> . 
+    pp:hasSource :HybridData ; 
+    pp:hasTarget :ContentDistributionNetwork . 
 
 :HybridData-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddata#HybridData> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :HybridData ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :HybridData-to-HybridMultimediaWebApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddata#HybridData> ; 
-    pp:hasTarget <hybridmultimediawebapplication#HybridMultimediaWebApplication> . 
+    pp:hasSource :HybridData ; 
+    pp:hasTarget :HybridMultimediaWebApplication . 
 
 :HybridData-to-HybridBackup
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddata#HybridData> ; 
-    pp:hasTarget <hybridbackup#HybridBackup> . 
+    pp:hasSource :HybridData ; 
+    pp:hasTarget :HybridBackup . 
 
 :HybridBackup-to-HybridData
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackup#HybridBackup> ; 
-    pp:hasTarget <hybriddata#HybridData> . 
+    pp:hasSource :HybridBackup ; 
+    pp:hasTarget :HybridData . 
 
 :HybridBackup-to-CompliantDataReplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackup#HybridBackup> ; 
-    pp:hasTarget <compliantdatareplication#CompliantDataReplication> . 
+    pp:hasSource :HybridBackup ; 
+    pp:hasTarget :CompliantDataReplication . 
 
 :HybridBackend-to-CompliantDataReplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackend#HybridBackend> ; 
-    pp:hasTarget <compliantdatareplication#CompliantDataReplication> . 
+    pp:hasSource :HybridBackend ; 
+    pp:hasTarget :CompliantDataReplication . 
 
 :HybridBackend-to-HybridProcessing
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackend#HybridBackend> ; 
-    pp:hasTarget <hybridprocessing#HybridProcessing> . 
+    pp:hasSource :HybridBackend ; 
+    pp:hasTarget :HybridProcessing . 
 
 :HybridBackend-to-BatchProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackend#HybridBackend> ; 
-    pp:hasTarget <batchprocessingcomponent#BatchProcessingComponent> . 
+    pp:hasSource :HybridBackend ; 
+    pp:hasTarget :BatchProcessingComponent . 
 
 :HybridBackend-to-Three-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackend#HybridBackend> ; 
-    pp:hasTarget <three-tiercloudapplication#Three-TierCloudApplication> . 
+    pp:hasSource :HybridBackend ; 
+    pp:hasTarget :Three-TierCloudApplication . 
 
 :HybridBackend-to-Two-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridbackend#HybridBackend> ; 
-    pp:hasTarget <two-tiercloudapplication#Two-TierCloudApplication> . 
+    pp:hasSource :HybridBackend ; 
+    pp:hasTarget :Two-TierCloudApplication . 
 
 :HybridApplicationFunctions-to-Message-orientedMiddleware
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <message-orientedmiddleware#Message-orientedMiddleware> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :Message-orientedMiddleware . 
 
 :HybridApplicationFunctions-to-HybridProcessing
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <hybridprocessing#HybridProcessing> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :HybridProcessing . 
 
 :HybridApplicationFunctions-to-HybridData
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <hybriddata#HybridData> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :HybridData . 
 
 :HybridApplicationFunctions-to-CompliantDataReplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <compliantdatareplication#CompliantDataReplication> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :CompliantDataReplication . 
 
 :HybridApplicationFunctions-to-UserInterfaceComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <userinterfacecomponent#UserInterfaceComponent> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :UserInterfaceComponent . 
 
 :HybridApplicationFunctions-to-ProcessingComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <processingcomponent#ProcessingComponent> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :ProcessingComponent . 
 
 :HybridApplicationFunctions-to-DataAccessComponent
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridapplicationfunctions#HybridApplicationFunctions> ; 
-    pp:hasTarget <dataaccesscomponent#DataAccessComponent> . 
+    pp:hasSource :HybridApplicationFunctions ; 
+    pp:hasTarget :DataAccessComponent . 
 
 :HybridMultimediaWebApplication-to-ContentDistributionNetwork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridmultimediawebapplication#HybridMultimediaWebApplication> ; 
-    pp:hasTarget <contentdistributionnetwork#ContentDistributionNetwork> . 
+    pp:hasSource :HybridMultimediaWebApplication ; 
+    pp:hasTarget :ContentDistributionNetwork . 
 
 :HybridMultimediaWebApplication-to-HybridApplicationFunctions
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridmultimediawebapplication#HybridMultimediaWebApplication> ; 
-    pp:hasTarget <hybridapplicationfunctions#HybridApplicationFunctions> . 
+    pp:hasSource :HybridMultimediaWebApplication ; 
+    pp:hasTarget :HybridApplicationFunctions . 
 
 :HybridMultimediaWebApplication-to-Three-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridmultimediawebapplication#HybridMultimediaWebApplication> ; 
-    pp:hasTarget <three-tiercloudapplication#Three-TierCloudApplication> . 
+    pp:hasSource :HybridMultimediaWebApplication ; 
+    pp:hasTarget :Three-TierCloudApplication . 
 
 :HybridMultimediaWebApplication-to-Two-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybridmultimediawebapplication#HybridMultimediaWebApplication> ; 
-    pp:hasTarget <two-tiercloudapplication#Two-TierCloudApplication> . 
+    pp:hasSource :HybridMultimediaWebApplication ; 
+    pp:hasTarget :Two-TierCloudApplication . 
 
 :HybridDevelopmentEnvironment-to-Two-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddevelopmentenvironment#HybridDevelopmentEnvironment> ; 
-    pp:hasTarget <two-tiercloudapplication#Two-TierCloudApplication> . 
+    pp:hasSource :HybridDevelopmentEnvironment ; 
+    pp:hasTarget :Two-TierCloudApplication . 
 
 :HybridDevelopmentEnvironment-to-Three-TierCloudApplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddevelopmentenvironment#HybridDevelopmentEnvironment> ; 
-    pp:hasTarget <three-tiercloudapplication#Three-TierCloudApplication> . 
+    pp:hasSource :HybridDevelopmentEnvironment ; 
+    pp:hasTarget :Three-TierCloudApplication . 
 
 :HybridDevelopmentEnvironment-to-CompliantDataReplication
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddevelopmentenvironment#HybridDevelopmentEnvironment> ; 
-    pp:hasTarget <compliantdatareplication#CompliantDataReplication> . 
+    pp:hasSource :HybridDevelopmentEnvironment ; 
+    pp:hasTarget :CompliantDataReplication . 
 
 :HybridDevelopmentEnvironment-to-HybridData
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddevelopmentenvironment#HybridDevelopmentEnvironment> ; 
-    pp:hasTarget <hybriddata#HybridData> . 
+    pp:hasSource :HybridDevelopmentEnvironment ; 
+    pp:hasTarget :HybridData . 
 
 :HybridDevelopmentEnvironment-to-ApplicationComponentProxy
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource <hybriddevelopmentenvironment#HybridDevelopmentEnvironment> ; 
-    pp:hasTarget <applicationcomponentproxy#ApplicationComponentProxy> . 
+    pp:hasSource :HybridDevelopmentEnvironment ; 
+    pp:hasTarget :ApplicationComponentProxy . 
 
+
+# Group Links (i.e. Hyperedges containing patterns that form a group)
+:CloudApplicationArchitectures
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Cloud Application Architectures"^^xsd:string ;
+    pp:hasPattern :LooseCoupling ,
+        :DistributedApplication ,
+        :StatefulComponent ,
+        :StatelessComponent ,
+        :UserInterfaceComponent ,
+        :ProcessingComponent ,
+        :BatchProcessingComponent ,
+        :DataAccessComponent ,
+        :DataAbstractor ,
+        :IdempotentProcessor ,
+        :Transaction-basedProcessor ,
+        :Timeout-basedMessageProcessor ,
+        :Multi-ComponentImage ,
+        :SharedComponent ,
+        :Tenant-isolatedComponent ,
+        :DedicatedComponent ,
+        :RestrictedDataAccessComponent ,
+        :MessageMover ,
+        :ApplicationComponentProxy ,
+        :CompliantDataReplication ,
+        :IntegrationProvider .
+
+:CloudOfferings
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Cloud Offerings"^^xsd:string ;
+    pp:hasPattern :ElasticInfrastructure ,
+        :ElasticPlatform ,
+        :Node-basedAvailability ,
+        :Environment-basedAvailability ,
+        :Hypervisor ,
+        :ExecutionEnvironment ,
+        :MapReduce ,
+        :BlockStorage ,
+        :BlobStorage ,
+        :RelationalDatabase ,
+        :Key-ValueStorage ,
+        :StrictConsistency ,
+        :EventualConsistency ,
+        :VirtualNetworking ,
+        :Message-orientedMiddleware ,
+        :Exactly-onceDelivery ,
+        :At-least-onceDelivery ,
+        :Transaction-basedDelivery ,
+        :Timeout-basedDelivery .
+
+:CompositeCloudApplication
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Composite Cloud Application"^^xsd:string ;
+    pp:hasPattern :Two-TierCloudApplication ,
+        :Three-TierCloudApplication ,
+        :ContentDistributionNetwork ,
+        :HybridUserInterface ,
+        :HybridProcessing ,
+        :HybridData ,
+        :HybridBackup ,
+        :HybridBackend ,
+        :HybridApplicationFunctions ,
+        :HybridMultimediaWebApplication ,
+        :HybridDevelopmentEnvironment .
+
+:CloudComputingFundamentals
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Cloud Computing Fundamentals"^^xsd:string ;
+    pp:hasPattern :StaticWorkload ,
+        :PeriodicWorkload ,
+        :Once-in-a-lifetimeWorkload ,
+        :UnpredictableWorkload ,
+        :ContinuouslyChangingWorkload ,
+        :InfrastructureasaService ,
+        :PlatformasaService ,
+        :SoftwareasaService ,
+        :PublicCloud ,
+        :PrivateCloud ,
+        :CommunityCloud ,
+        :HybridCloud .
+
+:CloudApplicationManagement
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Cloud Application Management"^^xsd:string ;
+    pp:hasPattern :ProviderAdapter ,
+        :ManagedConfiguration ,
+        :ElasticityManager ,
+        :ElasticLoadBalancer ,
+        :ElasticQueue ,
+        :Watchdog ,
+        :ElasticityManagementProcess ,
+        :FeatureFlagManagementProcess ,
+        :UpdateTransitionProcess ,
+        :StandbyPoolingProcess ,
+        :ResiliencyManagementProcess .
