@@ -16,9 +16,9 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 :ManyEntries rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "ManyEntries" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "ManyEntries 2" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "ManyEntries 3" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "ManyEntries Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "ManyEntries 2" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "ManyEntries 4" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "ManyEntries: Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "ManyEntries: 2" ;
@@ -98,3 +98,11 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." .
 
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/TestSectionOrder#TestSectionOrder
+:TestSectionOrder rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "TestSectionOrder" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." .
