@@ -98,11 +98,3 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." .
 
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternTestSectionOrder#PatternTestSectionOrder
-:PatternTestSectionOrder rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternTestSectionOrder" ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." .
