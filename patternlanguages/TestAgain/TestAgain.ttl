@@ -9,7 +9,7 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/TestAgain> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Patterns>.
+owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Patterns>, <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Links> .
 
 
 # #################################################################
