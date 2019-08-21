@@ -1,0 +1,185 @@
+@prefix : <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix ccp: <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix eip: <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#> .
+
+
+:Messaging-to-InfrastructureasaService
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Messaging ;
+    pp:hasTarget ccp:InfrastructureasaService ;
+    pp:hasDescription "A messaging system uses a message-oriented middleware at its core. This is software similar to an application server. Instead of applications, queues and topics are hosted on this middleware. An operating system can be set up under a Infrastructure as a Service. The message-oriented middleware is then set up on this operating system. Some operating systems already contain such middleware, such as Windows, with the Microsoft Messaging Queue (MSMQ). A messaging system can therefore be implemented at IaaS."^^xsd:string .
+
+
+:Messaging-to-PlatformasaService
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Messaging ;
+    pp:hasTarget ccp:PlatformasaService;
+    pp:hasDescription "Same reasoning as in Infrastructure as a Service. The difference, however, is that no extra operating system needs to be installed. The PaaS can provide a messaging system without explicit installation. Example can be found in the Amazon Web Services with the Simple Queue Service https://aws.amazon.com/de/sqs/."^^xsd:string .
+
+
+:MapReduce-to-Scatter-Gather
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:MapReduce ;
+    pp:hasTarget eip:Scatter-Gather ;
+    pp:hasDescription "Fehling et al. refer to the Scatter-Gather pattern of the Enterprise Integration Patterns. This pattern works similar to Map Reduce. A message is sent to multiple recipients. The replies of the recipients are gathered to determine the best response. The best response is then returned. \nIn a pure Scatter-Gather solution, all the data will be sent to each processing component. A filter ensures that the component only has to process a part. The filters would have to communicate with each other to divide the data correctly. Due to the overhead of sending the whole data and the interrogation of the individual filters, the use of a pure Scatter-Gather is not recommended."^^xsd:string .
+
+
+:MapReduce-to-ComposedMessageProcessor
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:MapReduce ;
+    pp:hasTarget eip:ComposedMessageProcessor ;
+    pp:hasDescription "A combination of Scatter-Gather and Composed Message Processor is recommended. A large message containing multiple pieces of data is split and sent to processing components in the form of a message. This corresponds to the map process. Processing executes a query on the partial data and sends the result to an Aggregator. The aggregator consolidates the partial results to an overall result, which corresponds to the Reduce."^^xsd:string .
+
+
+:Message-orientedMiddleware-to-Messaging
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:Message-orientedMiddleware ;
+    pp:hasTarget eip:Messaging ;
+    pp:hasDescription "With Message-oriented Middleware we have a connection to all messaging relevant patterns of Hohpe and Woolf. Through asynchronous communication, not all participants need to be ready at the same time. In the messaging context we have the Pipes and Filters architecture pattern. Components can process incoming messages at their own pace, i.e. when they are ready. Guaranteed Delivery ensures that messages arrive safely at their destination and are not lost on the way."^^xsd:string .
+
+
+:Exactly-onceDelivery-to-MessageFilter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:Exactly-onceDelivery ;
+    pp:hasTarget eip:MessageFilter ;
+    pp:hasDescription "The Message Filter pattern of the EIP can filter duplicates on the way from the sender to the receiver. The messaging system will assign an ID to each message. If a message arrives at the Message Filter, the ID is checked for already received messages. If the ID already exists, the message is not forwarded and removed from the message path. The filter can either be implemented as Stateful Component or use an external data storage for storing the IDs."^^xsd:string .
+
+
+:Exactly-onceDelivery-to-IdempotentReceiver
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:Exactly-onceDelivery ;
+    pp:hasTarget eip:IdempotentReceiver ;
+    pp:hasDescription "Idempotent Receiver from the EIP are components which can receive duplicates without problems. A connection to Exactly-Once Delivery is recommended. It is important that with Exactly-Once Delivery the message should only be delivered once. The elimination of duplicates happens on the way of the message by itself. With Idempotent Receiver the message can be read several times, which suggests that the message had to be sent several times. A Idempotent Receiver can remove duplicates by de-duping, similar to Message Filter. Duplicates are therefore only eliminated at the component itself. With both patterns, the message is only present once."^^xsd:string .
+
+
+:Transaction-basedDelivery-to-TransactionalClient
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:Transaction-basedDelivery ;
+    pp:hasTarget eip:TransactionalClient ;
+    pp:hasDescription "Fehling et al. refer to the Transactional Client pattern of Hohpe and Woolf. A Transactional Client can set the transaction boundaries itself, so it can also cover the Transaction-Based Delivery. On the recipient side, the message is confirmed if it has been read successfully."^^xsd:string . 
+
+
+:LooseCoupling-to-Messaging
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:LooseCoupling ;
+    pp:hasTarget eip:Messaging ;
+    pp:hasDescription "If we are in the context of messaging and use a message-oriented middleware as a broker, Fehling et al. link to the Enterprise Integration Patterns. In this context, all messaging patterns can be referenced because they deal with the loose coupling of application components."^^xsd:string .
+
+
+:DistributedApplication-to-PipesandFilters
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DistributedApplication ;
+    pp:hasTarget eip:PipesandFilters ;
+    pp:hasDescription "Pipes and Filters is an architecture pattern from EIP that describes exactly this, which is why Fehling et al. refer to it. Components are filters that can accept an input and deliver an output. The filters are connected to each other via pipes."^^xsd:string .
+
+
+:DistributedApplication-to-ProcessManager
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DistributedApplication ;
+    pp:hasTarget eip:ProcessManager ;
+    pp:hasDescription "The distribution of an application according to the processes can also be found in the Process Manager Pattern of the EIP. A Process Manager serves as the central unit that controls the flow of a message. Processes, i.e. a sequence of processing steps, can be defined in this. In a hub-and-spoke manner, components are called and, based on the return, a decision is made as to where the message is to go next."^^xsd:string .
+
+
+:Aggregator-to-StatefulComponent
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Aggregator ;
+    pp:hasTarget ccp:StatefulComponent ;
+    pp:hasDescription "The Enterprise Integration Patterns comprise several patterns that are also stateful components. An example would be the Aggregator Pattern. This is a stateful filter. The aggregator must store incoming messages so that it can assemble the messages and therefore has a state. The reply cannot be created until all messages that belong together are available to the aggregator."^^xsd:string .
+
+
+:Resequencer-to-StatefulComponent
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Resequencer ;
+    pp:hasTarget ccp:StatefulComponent ;
+    pp:hasDescription "The resequencer is also a state-oriented filter. In order to restore the order of messages, later messages must be kept until earlier messages arrive. Earlier messages are then sent followed by later messages. Earlier and later messages mean the original order of messages. An earlier message is a message that was originally sent earlier than another. However, it does not have to arrive earlier at the resequencer."^^xsd:string . 
+
+
+:ProcessingComponent-to-PipesandFilters
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ProcessingComponent ;
+    pp:hasTarget eip:PipesandFilters ;
+    pp:hasDescription "How the processing components are implemented depends on the specific Distributed Application. The division of the application into individual components varies depending on the architectural style. Within the Pipes and Filters pattern, the filters are the individual processing components. For this style we have a link to the Processing Component Pattern."^^xsd:string .
+
+
+:ProcessingComponent-to-CompetingConsumers
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ProcessingComponent ;
+    pp:hasTarget eip:CompetingConsumers ;
+    pp:hasDescription "If several Processing Component messages of the same queue are processed, Fehling et al. refer to Competing Consumer of the EIP. The fact that the components themselves determine when they receive the messages results in load balancing. Only components that are free take the messages out of the queue and process them."^^xsd:string .
+
+
+:IdempotentProcessor-to-MessageFilter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:IdempotentProcessor ;
+    pp:hasTarget eip:MessageFilter ;
+    pp:hasDescription "Message filters can filter duplicates in the message path, therefore the reference from Fehling et al. Incoming messages are checked for their ID, already seen messages are sorted out. This issue has already been examined under the Exacly-Once Delivery Pattern. In addition, however, the inconsistent data is considered, which will be discussed in more detail below. In the case of requests for a datastore with contingent consistency during the propagation of the changes, it can happen that obsolete data is read, i.e. data that is currently being updated. Data gets a version identifier, which indicates which version of the data it is. If data is processed, the version identifier changes. The Message Filter compares the version identifiers of the data and ensures that no old data is forwarded."^^xsd:string .
+
+
+:IdempotentProcessor-to-IdempotentReceiver
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:IdempotentProcessor ;
+    pp:hasTarget eip:IdempotentReceiver ;
+    pp:hasDescription "Fehling et al. refer to the Idempotent Receiver Pattern in the messaging context. However, this handles message duplicates and not the consistency of data from datastores. The Idempotent Processor thus extends the concepts of the Idempotent Receiver."^^xsd:string . 
+
+
+:IdempotentProcessor-to-Resequencer
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:IdempotentProcessor ;
+    pp:hasTarget eip:Resequencer ;
+    pp:hasDescription "Another variant of the Idempotent Processor is to design the component so that it can process duplicates without problems. In mathematics, a function is idempotent iff f(f(x)) = f(x). Repeated execution of the function with the same input results in the same output. An example of such a function can be found in setter methods of objects. setValue(10) can be executed any number of times. The value of the variable value is in the end always 10. However, the order of the messages is decisive. For example, if we have first setValue(10) and then setValue(20), the value of value should be at the end of 20. In messaging systems, the sequence of messages is not guaranteed. For this reason, Fehling et al. refer to the resequencer of the EIP, which ensures that the messages arrive in the correct order."^^xsd:string .
+
+
+:MessageMover-to-MessagingBridge
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:MessageMover ;
+    pp:hasTarget eip:MessagingBridge ;
+    pp:hasDescription "A messaging bridge from the EIP connects several messaging systems with each other. This gives us a direct connection to Message Mover, which describes the same problem. The Messaging Bridge copies messages from one channel to the corresponding channels of the other messaging systems."^^xsd:string . 
+
+
+:MessageMover-to-MessageTranslator
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:MessageMover ;
+    pp:hasTarget eip:MessageTranslator ;
+    pp:hasDescription "Fehling et al. also specifically address the possible differences in message formats. In the Hohpe and Woolf Patterns there are several patterns which deal with this problem. The differences in message formats are due to the use of multiple messaging systems, which were originally used independently and are merged by the message mover."^^xsd:string . 
+
+
+:CompliantDataReplication-to-ContentFilter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:CompliantDataReplication ;
+    pp:hasTarget eip:ContentFilter ;
+    pp:hasDescription "Since this is about removing and adding data, Fehling et al. refer to the Message Filter and Message Enricher patterns from the EIP. More precisely, these are the Pattern Content Filters and Content Enricher. The Content Filter filters the content of a message according to rules that have been set. The filtered part is stored in a datastore so that it can be added later in the message. The reduced message can then be sent to the insecure environment. If the message arrives from the insecure environment back into the secure one, filtered data must return into the message. The Content Enricher takes the corresponding partial data from the datastore and adds it to the message."^^xsd:string .
+
+
+:CompliantDataReplication-to-ContentEnricher
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:CompliantDataReplication ;
+    pp:hasTarget eip:ContentEnricher ;
+    pp:hasDescription "Since this is about removing and adding data, Fehling et al. refer to the Message Filter and Message Enricher patterns from the EIP. More precisely, these are the Pattern Content Filters and Content Enricher. The Content Filter filters the content of a message according to rules that have been set. The filtered part is stored in a datastore so that it can be added later in the message. The reduced message can then be sent to the insecure environment. If the message arrives from the insecure environment back into the secure one, filtered data must return into the message. The Content Enricher takes the corresponding partial data from the datastore and adds it to the message."^^xsd:string .
+
+
+:ManagedConfiguration-to-Publish-SubscribeChannel
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ManagedConfiguration ;
+    pp:hasTarget eip:Publish-SubscribeChannel ;
+    pp:hasDescription "The Configuration Manager can send the changes to interested components. This function can be implemented via a publish-subscribe channel of the EIP, according to Fehling et al. The components subscribe to the channel and then receive the changes via event messages."^^xsd:string . 
+
+
+:Watchdog-to-TestMessage
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:Watchdog ;
+    pp:hasTarget eip:TestMessage ;
+    pp:hasDescription ""^^xsd:string .
+
+
+:ResiliencyManagementProcess-to-TestMessage
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ResiliencyManagementProcess ;
+    pp:hasTarget eip:TestMessage ;
+    pp:hasDescription ""^^xsd:string .

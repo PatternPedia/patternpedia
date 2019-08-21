@@ -11,7 +11,10 @@
 # The ontology of the patternlanguage
 <http://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns>
     rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/patternpedia> .
+    owl:imports <http://purl.org/patternpedia> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Relations> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view> .
 
 
 # Datatype Properties
@@ -32,6 +35,7 @@
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "https://www.enterpriseintegrationpatterns.com/img/0321200683.gif"^^xsd:anyURI ;
     pp:hasName "Enterprise Integration Patterns"^^xsd:string ;
+    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view#CloudComputingPatterns-EnterpriseIntegrationPatterns-View> ;
     pp:containsPattern :FileTransfer ,
         :SharedDatabase ,
         :RemoteProcedureInvocation ,
