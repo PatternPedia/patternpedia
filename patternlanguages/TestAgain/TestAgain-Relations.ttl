@@ -14,3 +14,9 @@
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :PatternE ; 
     pp:hasTarget :PatternF . 
+
+:PatternF-to-PatternG
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PatternF ; 
+    pp:hasTarget :PatternG ; 
+    pp:hasDescription "This is my description for PatternF -> PatternG."^^xsd:string .
