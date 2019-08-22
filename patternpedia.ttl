@@ -207,6 +207,7 @@
                     :hasLogo "https://avatars2.githubusercontent.com/u/26855294?s=400&u=79a17f6856ac0b53e4658f1206362634904eb8b3&v=4"^^xsd:anyURI .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> .
+<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/Test1#Test1> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestRelationFileCreation#TestRelationFileCreation> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/Test1#Test1> .
+<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/Test33#Test33> .
