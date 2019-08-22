@@ -15,7 +15,7 @@
         <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/cloudcomputingpatterns-Relations> ,
         <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> ,
         <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Patterns> ,
-        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Relations> 
+        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Relations> ,
         <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view/cloudcomputingpatterns-enterpriseintegrationpatterns-view-Relations> .
 
 
