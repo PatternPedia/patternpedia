@@ -10,13 +10,3 @@
 
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
-
-
-:PatternE-to-PatternF
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :{this.source.name} ; 
-pp:hasTarget :{this.target.name} 
-:PatternE-to-PatternG
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :{this.source.name} ; 
-pp:hasTarget :{this.target.name} 
