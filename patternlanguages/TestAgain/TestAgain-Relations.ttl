@@ -16,3 +16,8 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternE ; 
 pp:hasTarget :PatternE .
+:PatternE-to-PatternF
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternE ; 
+pp:hasTarget :PatternF ; 
+ pp:hasDescription "This is my description for E->F."^^xsd:string . 
