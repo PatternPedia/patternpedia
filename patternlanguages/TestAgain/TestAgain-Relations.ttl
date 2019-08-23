@@ -2,21 +2,21 @@
 @prefix pp: <https://purl.org/patternpedia#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> .
 
 
-#################################################################
-#    Individuals
-#################################################################
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> rdf:type owl:Ontology ;
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
+
 
 :PatternE-to-PatternF
-    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :PatternE ; 
-    pp:hasTarget :PatternF . 
-
-:PatternF-to-PatternG
-    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :PatternF ; 
-    pp:hasTarget :PatternG ; 
-    pp:hasDescription "This is my description for PatternF -> PatternG."^^xsd:string .
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :{this.source.name} ; 
+pp:hasTarget :{this.target.name} 
+:PatternE-to-PatternG
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :{this.source.name} ; 
+pp:hasTarget :{this.target.name} 
