@@ -513,10 +513,10 @@
     pp:hasTarget :SerializedLOB  ;
     pp:hasDescription "as alternative for more complex structures"^^xsd:string .
 
-:SingleTableInheritance-to-InheritanceMapper
+:SingleTableInheritance-to-InheritanceMappers
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :SingleTableInheritance ; 
-    pp:hasTarget :InheritanceMapper  .
+    pp:hasTarget :InheritanceMappers  .
 
 :SingleTableInheritance-to-ClassTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -530,10 +530,10 @@
     pp:hasTarget :ConcreteTableInheritance  ;
     pp:hasDescription "alternative"^^xsd:string .
 
-:ClassTableInheritance-to-InheritanceMapper
+:ClassTableInheritance-to-InheritanceMappers
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ClassTableInheritance ; 
-    pp:hasTarget :InheritanceMapper  .
+    pp:hasTarget :InheritanceMappers  .
 
 :ClassTableInheritance-to-SingleTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -547,10 +547,10 @@
     pp:hasTarget :ConcreteTableInheritance  ;
     pp:hasDescription "alternative"^^xsd:string .
 
-:ConcreteTableInheritance-to-InheritanceMapper
+:ConcreteTableInheritance-to-InheritanceMappers
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ConcreteTableInheritance ; 
-    pp:hasTarget :InheritanceMapper  .
+    pp:hasTarget :InheritanceMappers  .
 
 :ConcreteTableInheritance-to-IdentityField
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -569,24 +569,24 @@
     pp:hasTarget :ClassTableInheritance  ;
     pp:hasDescription "alternative"^^xsd:string .
 
-:InheritanceMapper-to-SingleTableInheritance
+:InheritanceMappers-to-SingleTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMapper ; 
+    pp:hasSource :InheritanceMappers ; 
     pp:hasTarget :SingleTableInheritance  .
 
-:InheritanceMapper-to-ClassTableInheritance
+:InheritanceMappers-to-ClassTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMapper ; 
+    pp:hasSource :InheritanceMappers ; 
     pp:hasTarget :ClassTableInheritance  .
 
-:InheritanceMapper-to-ConcreteTableInheritance
+:InheritanceMappers-to-ConcreteTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMapper ; 
+    pp:hasSource :InheritanceMappers ; 
     pp:hasTarget :ConcreteTableInheritance  .
 
-:InheritanceMapper-to-LayerSupertype
+:InheritanceMappers-to-LayerSupertype
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMapper ; 
+    pp:hasSource :InheritanceMappers ; 
     pp:hasTarget :LayerSupertype  .
 
 :MetadataMapping-to-LayerSupertype
@@ -1027,7 +1027,7 @@
         :SingleTableInheritance ,
         :ClassTableInheritance ,
         :ConcreteTableInheritance ,
-        :InheritanceMapper .
+        :InheritanceMappers .
 
 
 :DomainLogicPatterns
