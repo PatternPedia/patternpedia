@@ -14,7 +14,11 @@
     owl:imports <http://purl.org/patternpedia> ,
         <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Patterns> ,
         <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns/enterpriseintegrationpatterns-Relations> ,
-        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view> .
+        # views
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-enterpriseintegrationpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-gangoffourpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-internetofthingspatterns-view> .
 
 
 # Datatype Properties

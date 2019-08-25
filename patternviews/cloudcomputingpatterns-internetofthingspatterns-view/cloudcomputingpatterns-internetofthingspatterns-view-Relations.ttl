@@ -1,0 +1,20 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix ccp: <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix iot: <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#> .
+
+
+:DeviceGateway-to-Watchdog
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource iot:DeviceGateway ;
+    pp:hasTarget ccp:Watchdog ;
+    pp:hasDescription "The Device Gateway can detect and replace defective devices that are connected to it. From this fact we have a relation to the watchdog pattern of Fehling et al., according to Reinfurt et al."^^xsd:string .
+
+

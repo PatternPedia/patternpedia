@@ -1,0 +1,30 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view> 
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia> ,
+        <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns> ,
+        <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns-Relations> ,
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns> ,
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns-Relations> .
+
+
+:CloudComputingPatterns-PatternorientedSoftwareArchitecturePatterns-View
+    rdf:type owl:NamedIndividual, pp:PatternView ;
+    pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> ,
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternorientedSoftwareArchitecturePatterns> ;
+    pp:containsPatternRelationDescriptors :LooseCoupling-to-Broker ,
+        :DistributedApplication-to-PipesandFilters ,
+        :DistributedApplication-to-Layers ,
+        :DataAccessComponent-to-Proxy ,
+        :DataAccessComponent-to-Proxy .

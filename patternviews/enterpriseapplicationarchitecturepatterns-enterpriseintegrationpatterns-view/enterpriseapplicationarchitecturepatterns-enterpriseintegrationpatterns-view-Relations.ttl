@@ -1,0 +1,83 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-enterpriseintegrationpatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix eaa: <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#> .
+@prefix eip: <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#> .
+
+
+:Resequencer-to-IdentityField
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Resequencer ;
+    pp:hasTarget eaa:IdentityField ;
+    pp:hasDescription "Links can be found in the Identity Field of the Patterns of Enterprise Application Architecture. This is used as the sequence number for each message."^^xsd:string .
+
+
+:MessagingGateway-to-Gateway
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingGateway ;
+    pp:hasTarget eaa:Gateway ;
+    pp:hasDescription "Hohpe and Woolf mention that Messaging Gateway is a variant of Folwer et al.'s Gateway Pattern. Essentially, a gateway comprises one or more components and regulates access to them. Instead of accessing the components directly, this is now done via the gateway."^^xsd:string .
+
+
+:MessagingGateway-to-ServiceStub
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingGateway ;
+    pp:hasTarget eaa:ServiceStub ;
+    pp:hasDescription "Hohpe and Woolf refer to the Service Stub Pattern by Folwer et al. which enables testing. The Messaging Gateway provides an interface to the outside world so that components can make enquiries. In the background we have two implementations of this interface: the real component and a dummy or mock. If we want to test our system, we switch to the mock implementation and can test it accordingly."^^xsd:string .
+
+
+:MessagingMapper-to-Mapper
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingMapper ;
+    pp:hasTarget eaa:Mapper ;
+    pp:hasDescription "The Messaging Mapper is based on the Mapper Pattern by Fowler et al., which is why Hohpe and Woolf refer to it. A mapper generally ensures that two components can communicate with each other even though their objects are incompatible. The components remain independent of each other and are not aware of the mapper."^^xsd:string .
+
+
+:MessagingMapper-to-DataMapper
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingMapper ;
+    pp:hasTarget eaa:DataMapper ;
+    pp:hasDescription "The mapping between object and message has similarities to object-relational mapping. For the latter, there are several patterns by Fowler et al. that deal with this problem. These include for example the Data Mapper Pattern."^^xsd:string .
+
+
+:MessagingMapper-to-DataTransferObject
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingMapper ;
+    pp:hasTarget eaa:DataTransferObject ;
+    pp:hasDescription "As described above, one-to-one mapping of message and domain object is not always the best solution. In some scenarios, it is recommended, for example, to bundle several smaller objects in one message. The messaging mapper ensures that the data is placed in the corresponding objects or that the correct objects are packed into a message. This procedure can be found in the Data Transfer Object from the patterns by Fowler et al. Because of this similarity, Hohpe and Woolf refer to this pattern."^^xsd:string .
+
+
+:ServiceActivator-to-ServiceLayer
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:ServiceActivator ;
+    pp:hasTarget eaa:ServiceLayer ;
+    pp:hasDescription "Hohpe and Woolf refer to the Service Layer Pattern by Fowler et al. A service layer is an abstraction layer of an application and provides a clear API. A service provided by an application corresponds to an operation in a service layer. The Service Activator ensures that the operations can be called via messages."^^xsd:string .
+
+
+:ClaimCheck-to-IdentityField
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:ClaimCheck ;
+    pp:hasTarget eaa:IdentityField ;
+    pp:hasDescription "In the Enterprise Integration Patterns claim check pattern, data is swapped out to reduce the message size. An identifier in the form of the claim check is stored in the message so that the data can be removed again later. An identity field could be used as an identifier. Transferred data is entered into the database, the primary key is stored in the Identity Field and added to the message."^^xsd:string .
+
+
+:MessagingMapper-to-MetadataMapping
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingMapper ;
+    pp:hasTarget eaa:MetadataMapping ;
+    pp:hasDescription "Metadata mapping can be used to generate messages in the context of messaging. The actual use of this pattern is in databases, but the associated mechanics can also be used for messaging. A Messaging Mapper of the Enterprise Integration Patterns generates a message from an object based on the metadata and vice versa. For example, if XML is selected as the message type, the table and column names are XML tags or attributes. Object fields are mapped with these tags and attributes."^^xsd:string .
+
+
+:TransformView-to-MessageTranslator
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:TransformView ;
+    pp:hasTarget eip:MessageTranslator ;
+    pp:hasDescription "With this pattern we have similarities to the Message Translator pattern of Hohpe and Woolf. We have two systems in this construction. On the one hand we have the website, which expects the data in HTML format. On the other side is the model. The Transform View serves as a translator and converts the model data into HTML format. The big difference is that we are not in the context of messaging. It is only about the conversion into a target format. It can be transferred to messaging if the two systems are remote systems and communication is via messaging."^^xsd:string .
+
+

@@ -1,0 +1,48 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-gangoffourpatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix eip: <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#> .
+@prefix gof: <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#> .
+
+
+:MessageTranslator-to-Adapter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessageTranslator ;
+    pp:hasTarget gof:Adapter ;
+    pp:hasDescription "Hohpe and Woolf refer here to the adapter pattern of the Gang of Four. This also ensures that two different interfaces are compatible with each other."^^xsd:string .
+
+
+:Publish-SubscribeChannel-to-Observer
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Publish-SubscribeChannel ;
+    pp:hasTarget gof:Observer ;
+    pp:hasDescription "Publish Subscribe Channels extend the Observer Pattern of the Gang of Four. In the Observer Pattern we have subjects who announce changes to their state and Observers who are interested in these changes. The number of Observers does not matter, i.e. no Observer can be aware of changes in the state of a subject. In the Observer pattern, subject and observer are in the same application, which is why the information about local method calls is implemented. For distributed applications in the context of messaging we can use Publish-Subscribe Channel. Subjects get a message gateway that propagates changes of the subject from Notify() to the channel. Observers also get message gateways that read the propagated changes via the channel and forward them to the underlying observers. Observers register by subscribing to the Publish Subscribe Channel."^^xsd:string .
+
+
+:CommandMessage-to-Command
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:CommandMessage ;
+    pp:hasTarget gof:Command ;
+    pp:hasDescription "This pattern is a message variant of the command pattern of the Gang of Four, so Hohpe and Woolf. A command or request is stored in an object and can therefore be passed on. It contains all the information necessary to execute the command."^^xsd:string .
+
+
+:RoutingSlip-to-ChainofResponsibility
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:RoutingSlip ;
+    pp:hasTarget gof:ChainofResponsibility ;
+    pp:hasDescription "Routing slip is a modification of the Chain of Responsibility of the Gang of Four, according to Hohpe and Woolf. We define a static chain of responsibility that includes objects or components that can handle a request. A request passes through this chain until it is processed by an object. Each component decides according to the list one after the other whether it wants to handle the request or pass it on."^^xsd:string .
+
+
+:MessagingMapper-to-Mediator
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:MessagingMapper ;
+    pp:hasTarget gof:Mediator ;
+    pp:hasDescription "The intention of the Messaging Mapper can also be found in the Mediator Pattern of the GoF. A lot of components communicate with each other through a mediator, the Mediator, which coordinates their interactions. In the mediator, the objects involved have a reference to the mediator instead of references to the corresponding components. The big difference to the Messaging Mapper, however, is that the components involved do not know the Mapper or take no notice of it."^^xsd:string .
+
+

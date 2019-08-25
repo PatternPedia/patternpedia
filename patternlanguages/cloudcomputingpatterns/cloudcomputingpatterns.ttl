@@ -17,7 +17,12 @@
     owl:imports <https://purl.org/patternpedia> ,
         <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/cloudcomputingpatterns-Patterns> ,
         <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns/cloudcomputingpatterns-Relations> ,
-        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view> .
+        # views
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseapplicationarchitecturepatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-gangoffourpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view> .
 
 
 #################################################################

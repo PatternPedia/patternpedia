@@ -1,0 +1,20 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/gangoffourpatterns-internetofthingspatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix gof: <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#> .
+@prefix iot: <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#> .
+
+
+:DeviceGateway-to-Adapter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource iot:DeviceGateway ;
+    pp:hasTarget gof:Adapter ;
+    pp:hasDescription "Reinfurt et al. refer to the Adapter Pattern by Gamma et al. Since the device gateway is a real device, it corresponds to a physical implementation or variant of the adapter pattern."^^xsd:string .
+
+

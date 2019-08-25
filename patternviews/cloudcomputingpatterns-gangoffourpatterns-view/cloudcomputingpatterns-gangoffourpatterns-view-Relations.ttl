@@ -1,0 +1,55 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-gangoffourpatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix ccp: <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix gof: <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#> .
+
+
+:DataAccessComponent-to-Adapter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DataAccessComponent ;
+    pp:hasTarget gof:Adapter ;
+    pp:hasDescription "The Data Access Component isolates complexity and provides unified access to data. To enable uniform access, the Data Access Component must be able to cope with different interfaces. One component that bridges the incompatibility of interfaces is an adapter. The adapter pattern of the GoF implements the interface that a client expects and executes the functions of the target component in the background. In this case, the client is any component that accesses the Data Access Component. The data access component acts as an adapter and the target component is the underlying datastore on which the data is stored."^^xsd:string .
+
+
+:DataAccessComponent-to-Adapter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DataAccessComponent ;
+    pp:hasTarget gof:Adapter ;
+    pp:hasDescription "Same concepts as in Data Access Component."^^xsd:string .
+
+
+:ApplicationComponentProxy-to-Proxy
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ApplicationComponentProxy ;
+    pp:hasTarget gof:Proxy ;
+    pp:hasDescription "The similarity to the Proxy Pattern and the Facade Pattern of the GoF is explained by Fehling et al. at this point. Instead of interacting directly with a component, a proxy is used which provides the same interface as the desired component. A facade simplifies interfaces by bundling the individual components under a single interface. This reduces dependency on multiple components, as communication now takes place via the facade. In the context of a facade, an Application Component Proxy can therefore be the interface for several underlying components. The proxy pattern can also be found in Buschmann et al. Patterns. However, this is the same pattern that has already been described by the GoF."^^xsd:string .
+
+
+:ApplicationComponentProxy-to-Facade
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ApplicationComponentProxy ;
+    pp:hasTarget gof:Facade ;
+    pp:hasDescription "The similarity to the Proxy Pattern and the Facade Pattern of the GoF is explained by Fehling et al. at this point. Instead of interacting directly with a component, a proxy is used which provides the same interface as the desired component. A facade simplifies interfaces by bundling the individual components under a single interface. This reduces dependency on multiple components, as communication now takes place via the facade. In the context of a facade, an Application Component Proxy can therefore be the interface for several underlying components. The proxy pattern can also be found in Buschmann et al. Patterns. However, this is the same pattern that has already been described by the GoF."^^xsd:string .
+
+
+:ProviderAdapter-to-Adapter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ProviderAdapter ;
+    pp:hasTarget gof:Adapter ;
+    pp:hasDescription "A provider adapter is an abstraction layer of the system and provides interfaces. Fehling et al. refer to concepts of the Adapter and Facade Pattern of the GoF. The Proxy Pattern by Buschmann et al. also describes concepts that can be applied here."^^xsd:string .
+
+
+:ProviderAdapter-to-Facade
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:ProviderAdapter ;
+    pp:hasTarget gof:Facade ;
+    pp:hasDescription "A provider adapter is an abstraction layer of the system and provides interfaces. Fehling et al. refer to concepts of the Adapter and Facade Pattern of the GoF. The Proxy Pattern by Buschmann et al. also describes concepts that can be applied here."^^xsd:string .
+
+

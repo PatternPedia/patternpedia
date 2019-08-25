@@ -1,0 +1,69 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-gangoffourpatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix eaa: <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#> .
+@prefix gof: <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#> .
+
+
+:TransactionScript-to-Command
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:TransactionScript ;
+    pp:hasTarget gof:Command ;
+    pp:hasDescription "Multiple Transaction Scripts can either all be found in one class or we have one class per procedure. The second variant is an implementation of the command pattern of the GoF, which is why Fowler refers to it. We create a superclass that provides a method for implementing the functionality of the transaction script. Subclasses implement their concrete functions into this method."^^xsd:string .
+
+
+:LazyLoad-to-Proxy
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:LazyLoad ;
+    pp:hasTarget gof:Proxy ;
+    pp:hasDescription "With Lazy Load via Lazy Initialization, the object fields are checked for zero before use. If a field is null, it is now loaded and returned so that it can be used. This procedure corresponds to the Virtual Proxy Pattern of the GoF, which is why Fowler refers to it. The Virtual Proxy is a variant of the Proxy Pattern. This only generates the objects behind the proxy when the methods are called. However, the proxy itself has the same interface as the objects."^^xsd:string .
+
+
+:SerializedLOB-to-Memento
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:SerializedLOB ;
+    pp:hasTarget gof:Memento ;
+    pp:hasDescription "Fowler refers to the memento pattern of the GoF. Memento takes a snapshot of an object. The snapshot contains the complete inner state of an object. This includes the values of the individual fields. The memento can be saved serialized and thus becomes a Serialized LOB."^^xsd:string .
+
+
+:RemoteFacade-to-Facade
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:RemoteFacade ;
+    pp:hasTarget gof:Facade ;
+    pp:hasDescription "Fowler points out that this pattern is a variation of the Facade pattern of the GoF. The Facade Pattern bundles interfaces of several components. This means that there is one interface, the Facade, which allows central access to these components. The Remote Facade has the same function, but it is specially designed for remote components, i.e. remote components that are addressed via the network."^^xsd:string .
+
+
+:Gateway-to-Facade
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:Gateway ;
+    pp:hasTarget gof:Facade ;
+    pp:hasDescription "Links can be found in the Gang of Four Pattern Facade and Adapter. Fowler distinguishes its Gateway Pattern from the above as follows: A Facade simplifies an API, Gateway however adapts the API to its own needs. An adapter, on the other hand, adapts two different interfaces so that they can work together, while Gateway can use adapters as part of its implementation."^^xsd:string .
+
+
+:Gateway-to-Adapter
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:Gateway ;
+    pp:hasTarget gof:Adapter ;
+    pp:hasDescription "Links can be found in the Gang of Four Pattern Facade and Adapter. Fowler distinguishes its Gateway Pattern from the above as follows: A Facade simplifies an API, Gateway however adapts the API to its own needs. An adapter, on the other hand, adapts two different interfaces so that they can work together, while Gateway can use adapters as part of its implementation."^^xsd:string .
+
+
+:Mapper-to-Observer
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:Mapper ;
+    pp:hasTarget gof:Observer ;
+    pp:hasDescription "The challenge of these patterns is to call the mapper, because the subsystems should not know it. One possibility is the Observer pattern of the GoF, which is why Fowler refers to it. The mapper acts as observer for one of the systems and is triggered at events, i.e. called without this system explicitly knowing the mapper. From its point of view, it is merely a listener in its list."^^xsd:string .
+
+
+:Mapper-to-Mediator
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eaa:Mapper ;
+    pp:hasTarget gof:Mediator ;
+    pp:hasDescription "Fowler references the similarity to the Mediator Pattern of the GoF, which also decouples systems. The big difference, however, is that the systems know the mediator, which is not the case with the mapper. Systems can therefore explicitly call the mediator."^^xsd:string .
+
+

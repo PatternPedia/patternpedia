@@ -1,0 +1,48 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix ccp: <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
+@prefix posa: <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#> .
+
+
+:LooseCoupling-to-Broker
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:LooseCoupling ;
+    pp:hasTarget posa:Broker ;
+    pp:hasDescription "Fehling et al. refer to the broker pattern of Buschmann et al. In a distributed system, the Broker Pattern takes care of the communication of individual components. Components can log on or off via the broker at runtime. If components need services from other components, they can access these functions via the broker."^^xsd:string .
+
+
+:DistributedApplication-to-PipesandFilters
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DistributedApplication ;
+    pp:hasTarget posa:PipesandFilters ;
+    pp:hasDescription "The Pipes and Filters pattern is also found in the Pattern-Oriented Software Architecture Pattern. It is important to note that this variation does not refer to messaging. The data exchange takes place e.g. via files and not via concrete messages as in the EIP version. Furthermore, there are no router components that could influence the processing path. This means that the processing of the data always follows the same path and is independent of the concrete data."^^xsd:string .
+
+
+:DistributedApplication-to-Layers
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DistributedApplication ;
+    pp:hasTarget posa:Layers ;
+    pp:hasDescription "The division of an application into layers is part of the layer pattern by Buschmann et al. Components that have similar tasks are grouped in a layer. The layers are sorted according to their functionalities. High-level functions can be found in the top layer and low-level functions in the bottom layer. For example, UI counts as a high-level, while low-level functions include the data. A layer can only communicate with its upper and lower layers in order to keep the dependencies between the layers as low as possible."^^xsd:string .
+
+
+:DataAccessComponent-to-Proxy
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DataAccessComponent ;
+    pp:hasTarget posa:Proxy ;
+    pp:hasDescription "The Proxy Pattern from Buschmann et al. defines that clients communicate via a deputy instead of working directly on the component. Reasons for this are, for example, that changes to the components should have no influence on the clients. Furthermore for security reasons: A client should not be able to work directly on the component in order to prevent possible attacks on the system. Both reasons can also be found in the Data Access Component, which is why Fehling et al. refer to the Proxy Pattern."^^xsd:string .
+
+
+:DataAccessComponent-to-Proxy
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource ccp:DataAccessComponent ;
+    pp:hasTarget posa:Proxy ;
+    pp:hasDescription "Same concepts as in Data Access Component."^^xsd:string .
+
+

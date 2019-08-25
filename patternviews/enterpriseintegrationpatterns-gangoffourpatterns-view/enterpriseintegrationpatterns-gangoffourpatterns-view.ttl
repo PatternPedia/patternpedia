@@ -1,0 +1,30 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-gangoffourpatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-gangoffourpatterns-view> 
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns-Relations> ,
+        <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns> ,
+        <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns-Relations> .
+
+
+:EnterpriseIntegrationPatterns-GangofFourPatterns-View
+    rdf:type owl:NamedIndividual, pp:PatternView ;
+    pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> ,
+        <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> ;
+    pp:containsPatternRelationDescriptors :MessageTranslator-to-Adapter ,
+        :Publish-SubscribeChannel-to-Observer ,
+        :CommandMessage-to-Command ,
+        :RoutingSlip-to-ChainofResponsibility ,
+        :MessagingMapper-to-Mediator .

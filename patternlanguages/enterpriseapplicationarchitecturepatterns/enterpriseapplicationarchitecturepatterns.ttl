@@ -1,0 +1,316 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns/> .
+
+#################################################################
+#    The ontology of the patternlanguage
+#################################################################
+
+<https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns>
+    rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/patternpedia> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns/enterpriseapplicationarchitecturepatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns/enterpriseapplicationarchitecturepatterns-Relations> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseapplicationarchitecturepatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-enterpriseintegrationpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-gangoffourpatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-internetofthingspatterns-view> .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+# sums up the pattern in a sentence or two
+:hasIntent rdf:type owl:DataProperty .
+
+# visual representation of the pattern, e.g. in UML
+:hasSketch rdf:type owl:DataProperty .
+
+# a problem, why you should use this pattern
+:hasMotivation rdf:type owl:DataProperty .
+
+
+
+#################################################################
+#    Class definitions
+#################################################################
+
+:EnterpriseApplicationArchitecturePattern
+    rdf:type owl:Class ;
+    rdfs:subClassOf pp:Pattern ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty <http://purl.org/patternpedia#hasName> ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasIntent ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasSketch ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:anyURI
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasMotivation ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:EnterpriseApplicationArchitecturePatterns
+    rdf:type owl:NamedIndividual, pp:PatternLanguage ;
+    pp:hasLogo "https://martinfowler.com/books/eaa.jpg"^^xsd:anyURI ;
+    pp:hasName "Enterprise Appplication Architecture Patterns"^^xsd:string ;
+    pp:containsPattern :TransactionScript ,
+        :DomainModel ,
+        :TableModule ,
+        :ServiceLayer ,
+        :TableDataGateway ,
+        :RowDataGateway ,
+        :ActiveRecord ,
+        :DataMapper ,
+        :UnitofWork ,
+        :IdentityMap ,
+        :LazyLoad ,
+        :IdentityField ,
+        :ForeignKeyMapping ,
+        :AssociationTableMapping ,
+        :DependentMapping ,
+        :EmbeddedValue ,
+        :SerializedLOB ,
+        :SingleTableInheritance ,
+        :ClassTableInheritance ,
+        :ConcreteTableInheritance ,
+        :InheritanceMappers ,
+        :MetadataMapping ,
+        :QueryObject ,
+        :Repository ,
+        :ModelViewController ,
+        :PageController ,
+        :FrontController ,
+        :TemplateView ,
+        :TransformView ,
+        :TwoStepView ,
+        :ApplicationController ,
+        :RemoteFacade ,
+        :DataTransferObject ,
+        :OptimisticOfflineLock ,
+        :PessimisticOfflineLock ,
+        :Coarse-GrainedLock ,
+        :ImplicitLock ,
+        :ClientSessionState ,
+        :ServerSessionState ,
+        :DatabaseSessionState ,
+        :Gateway ,
+        :Mapper ,
+        :LayerSupertype ,
+        :SeparatedInterface ,
+        :Registry ,
+        :ValueObject ,
+        :Money ,
+        :SpecialCase ,
+        :Plugin ,
+        :ServiceStub ,
+        :RecordSet ;
+    pp:containsPatternRelationDescriptor :TransactionScript-to-DomainModel ,
+        :TransactionScript-to-TableDataGateway ,
+        :DomainModel-to-ActiveRecord ,
+        :DomainModel-to-DataMapper ,
+        :DomainModel-to-TransactionScript ,
+        :DomainModel-to-ServiceLayer ,
+        :TableModule-to-DomainModel ,
+        :TableModule-to-RecordSet ,
+        :TableModule-to-TableDataGateway ,
+        :ServiceLayer-to-TransactionScript ,
+        :ServiceLayer-to-DomainModel ,
+        :ServiceLayer-to-LayerSupertype ,
+        :ServiceLayer-to-DataTransferObjects ,
+        :ServiceLayer-to-RemoteFacades ,
+        :ServiceLayer-to-Gateways ,
+        :TableDataGateway-to-Gateways ,
+        :TableDataGateway-to-DataTransferObject ,
+        :TableDataGateway-to-RecordSet ,
+        :TableDataGateway-to-TableModule ,
+        :TableDataGateway-to-RowDataGateway ,
+        :TableDataGateway-to-TransactionScripts ,
+        :TableDataGateway-to-DomainModel ,
+        :TableDataGateway-to-DataMappers ,
+        :RowDataGateway-to-Gateways ,
+        :RowDataGateway-to-TransactionScripts ,
+        :RowDataGateway-to-ActiveRecord ,
+        :RowDataGateway-to-MetadataMapping ,
+        :RowDataGateway-to-TableDataGateway ,
+        :ActiveRecord-to-DomainModel ,
+        :ActiveRecord-to-TransactionScripts ,
+        :ActiveRecord-to-ForeignKeyMapping ,
+        :ActiveRecord-to-IdentityField ,
+        :ActiveRecord-to-RowDataGateway ,
+        :ActiveRecord-to-DataMapper ,
+        :DataMapper-to-Mappers ,
+        :DataMapper-to-IdentityMap ,
+        :DataMapper-to-UnityofWork ,
+        :DataMapper-to-LazyLoad ,
+        :DataMapper-to-MetadataMapping ,
+        :DataMapper-to-Registry ,
+        :DataMapper-to-DomainModel ,
+        :DataMapper-to-ActiveRecord ,
+        :UnitofWork-to-PessimisticOfflineLock ,
+        :UnitofWork-to-OptimisticOfflineLock ,
+        :UnitofWork-to-TransactionScript ,
+        :UnitofWork-to-DomainModel ,
+        :UnitofWork-to-IdentityMap ,
+        :UnitofWork-to-DataMapper ,
+        :UnitofWork-to-LayerSupertype ,
+        :UnitofWork-to-FrontController ,
+        :IdentityMap-to-OptimisticOfflineLock ,
+        :IdentityMap-to-PessimisticOfflineLock ,
+        :IdentityMap-to-Registry ,
+        :IdentityMap-to-IdentityField ,
+        :IdentityMap-to-DataMappers ,
+        :IdentityMap-to-UnitofWork ,
+        :IdentityMap-to-Registry ,
+        :IdentityMap-to-ValueObjects ,
+        :IdentityMap-to-DependentMapping ,
+        :LazyLoad-to-SpecialCase ,
+        :LazyLoad-to-ActiveRecord ,
+        :LazyLoad-to-TableDataGateway ,
+        :LazyLoad-to-RowDataGateway ,
+        :LazyLoad-to-DataMapper ,
+        :LazyLoad-to-ValueObjects ,
+        :LazyLoad-to-IdentityMap ,
+        :LazyLoad-to-SerializedLOB ,
+        :IdentityField-to-IdentityMap ,
+        :IdentityField-to-LayerSupertype ,
+        :IdentityField-to-DomainModel ,
+        :IdentityField-to-RowDataGateway ,
+        :IdentityField-to-TransactionScript ,
+        :IdentityField-to-TableModule ,
+        :IdentityField-to-TableDataGateway ,
+        :IdentityField-to-EmbeddedValue ,
+        :IdentityField-to-SerializedLOB ,
+        :ForeignKeyMapping-to-IdentityField ,
+        :ForeignKeyMapping-to-DependentMappings ,
+        :ForeignKeyMapping-to-OptimisticOfflineLock ,
+        :ForeignKeyMapping-to-UnitofWork ,
+        :ForeignKeyMapping-to-LazyLoad ,
+        :ForeignKeyMapping-to-IdentityMap ,
+        :ForeignKeyMapping-to-AssociationTableMapping ,
+        :ForeignKeyMapping-to-EmbeddedValue ,
+        :AssociationTableMapping-to-DependentMapping ,
+        :AssociationTableMapping-to-IdentityMap ,
+        :DependentMapping-to-ActiveRecord ,
+        :DependentMapping-to-RowDataGateway ,
+        :DependentMapping-to-DataMapper ,
+        :DependentMapping-to-TableDataGateway ,
+        :DependentMapping-to-LazyLoad ,
+        :DependentMapping-to-ValueObjects ,
+        :DependentMapping-to-UnitofWork ,
+        :EmbeddedValue-to-DependentMapping ,
+        :EmbeddedValue-to-ValueObjects ,
+        :EmbeddedValue-to-SerializedLOB ,
+        :SingleTableInheritance-to-InheritanceMappers ,
+        :SingleTableInheritance-to-ClassTableInheritance ,
+        :SingleTableInheritance-to-ConcreteTableInheritance ,
+        :ClassTableInheritance-to-InheritanceMappers ,
+        :ClassTableInheritance-to-SingleTableInheritance ,
+        :ClassTableInheritance-to-ConcreteTableInheritance ,
+        :ConcreteTableInheritance-to-InheritanceMappers ,
+        :ConcreteTableInheritance-to-IdentityField ,
+        :ConcreteTableInheritance-to-SingleTableInheritance ,
+        :ConcreteTableInheritance-to-ClassTableInheritance ,
+        :InheritanceMappers-to-SingleTableInheritance ,
+        :InheritanceMappers-to-ClassTableInheritance ,
+        :InheritanceMappers-to-ConcreteTableInheritance ,
+        :InheritanceMappers-to-LayerSupertype ,
+        :MetadataMapping-to-LayerSupertype ,
+        :MetadataMapping-to-QueryObject ,
+        :QueryObject-to-MetadataMapping ,
+        :QueryObject-to-IdentityMap ,
+        :QueryObject-to-DomainModel ,
+        :QueryObject-to-DataMapper ,
+        :Repository-to-DataMapper ,
+        :Repository-to-QueryObject ,
+        :Repository-to-MetadataMapping ,
+        :ModelViewController-to-DomainModel ,
+        :ModelViewController-to-TransactionScript ,
+        :ModelViewController-to-ApplicationController ,
+        :PageController-to-TemplateView ,
+        :PageController-to-FrontController ,
+        :FrontController-to-PageController ,
+        :TemplateView-to-ModelViewController ,
+        :TemplateView-to-TransformView ,
+        :TemplateView-to-TwoStepView ,
+        :TransformView-to-ModelViewController ,
+        :TransformView-to-TemplateView ,
+        :TransformView-to-DataTransferObject ,
+        :TransformView-to-TransactionScript ,
+        :TransformView-to-TwoStepView ,
+        :TransformView-to-FrontController ,
+        :TwoStepView-to-TemplateView ,
+        :TwoStepView-to-TransformView ,
+        :TwoStepView-to-TransferObject ,
+        :ApplicationController-to-ModelViewController ,
+        :ApplicationController-to-TransactionScript ,
+        :ApplicationController-to-DomainModel ,
+        :RemoteFacade-to-DataTransferObject ,
+        :RemoteFacade-to-ClientSessionState ,
+        :RemoteFacade-to-DatabaseSessionState ,
+        :RemoteFacade-to-ServerSessionState ,
+        :RemoteFacade-to-TransactionScript ,
+        :RemoteFacade-to-ServiceLayer ,
+        :RemoteFacade-to-DomainModel ,
+        :DataTransferObject-to-RemoteFacade ,
+        :DataTransferObject-to-DomainModel ,
+        :DataTransferObject-to-RecordSet ,
+        :DataTransferObject-to-TableModule ,
+        :DataTransferObject-to-LazyLoad ,
+        :OptimisticOfflineLock-to-PessimisticLock ,
+        :OptimisticOfflineLock-to-Coarse-GrainedLock ,
+        :PessimisticOfflineLock-to-OptimisticOfflineLock ,
+        :PessimisticOfflineLock-to-Coarse-GrainedLock ,
+        :Coarse-GrainedLock-to-OptimisticOfflineLock ,
+        :Coarse-GrainedLock-to-PessimisticOfflineLock ,
+        :Coarse-GrainedLock-to-LazyLoad ,
+        :ImplicitLock-to-LayerSupertype ,
+        :ImplicitLock-to-OptimisticOfflineLock ,
+        :ImplicitLock-to-PessimisticOfflineLock ,
+        :ClientSessionState-to-DataTransferObject ,
+        :ServerSessionState-to-SerializedLOB ,
+        :ServerSessionState-to-DatabaseSessionState ,
+        :DatabaseSessionState-to-SerializedLOB ,
+        :DatabaseSessionState-to-ServerSessionState ,
+        :DatabaseSessionState-to-ClientSessionState ,
+        :Gateway-to-ServiceStub ,
+        :Gateway-to-Mapper ,
+        :Gateway-to-Plugin ,
+        :Mapper-to-DataMapper ,
+        :Mapper-to-Gateway ,
+        :SeparatedInterface-to-Gateway ,
+        :SeparatedInterface-to-Plugin ,
+        :Registry-to-Plugin ,
+        :ValueObject-to-EmbeddedValue ,
+        :ValueObject-to-SerializedLOB ,
+        :ValueObject-to-Money ,
+        :Money-to-ValueObject ,
+        :Plugin-to-SeparatedInterface ,
+        :ServiceStub-to-Gateway ,
+        :ServiceStub-to-SeparatedInterface ,
+        :ServiceStub-to-Plugin ,
+        :RecordSet-to-DataTransferObject ,
+        :RecordSet-to-UnitofWork ,
+        :RecordSet-to-OptimisticOfflineLock ,
+        :RecordSet-to-TableModule .
+

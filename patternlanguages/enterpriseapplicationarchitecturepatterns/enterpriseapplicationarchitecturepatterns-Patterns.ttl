@@ -1,0 +1,411 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:TransactionScript
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Transaction Script"^^xsd:string ;
+    :hasIntent "Organizes business logic by procedures where each procedure handles a single request from the presentation."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/transactionScriptSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Most business applications can be thought of as a series of transactions. A transaction may view some information as organized in a particular way, another will make changes to it. Each interaction between a client system and a server system contains a certain amount of logic. In some cases this can be as simple as displaying information in the database. In others it may involve many steps of validations and calculations. A Transaction Script organizes all this logic primarily as a single procedure, making calls directly to the database or through a thin database wrapper. Each transaction will have its own Transaction Script, although common subtasks can be broken into subprocedures."^^xsd:string .
+
+
+:DomainModel
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Domain Model"^^xsd:string ;
+    :hasIntent "An object model of the domain that incorporates both behavior and data."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/domainModelSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "At its worst business logic can be very complex. Rules and logic describe many different cases and slants of behavior, and it's this complexity that objects were designed to work with. A Domain Model creates a web of interconnected objects, where each object represents some meaningful individual, whether as large as a corporation or as small as a single line on an order form."^^xsd:string .
+
+
+:TableModule
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Table Module"^^xsd:string ;
+    :hasIntent "A single instance that handles the business logic for all rows in a database table or view."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/tableModuleSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "One of the key messages of object orientation is bundling the data with the behavior that uses it. The traditional object-oriented approach is based on objects with identity, along the lines of Domain Model (116). Thus, if we have an Employee class, any instance of it corresponds to a particular employee. This scheme works well because once we have a reference to an employee, we can execute operations, follow relationships, and gather data on him. One of the problems with Domain Model is the interface with relational databases. In many ways this approach treats the relational database like a crazy aunt who's shut up in an attic and whom nobody wants to talk about. As a result you often need considerable programmatic gymnastics to pull data in and out of the database, transforming between two different representations of the data. A Table Module organizes domain logic with one class per table in the data-base, and a single instance of a class contains the various procedures that will act on the data. The primary distinction with Domain Model (116) is that, if you have many orders, a Domain Model will have one order object per order while a Table Module will have one object to handle all orders."^^xsd:string .
+
+
+:ServiceLayer
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Service Layer"^^xsd:string ;
+    :hasIntent "Defines an application's boundary with a layer of services that establishes a set of available operations and coordinates the application's response in each operation."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/ServiceLayerSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Enterprise applications typically require different kinds of interfaces to the data they store and the logic they implement: data loaders, user interfaces, integration gateways, and others. Despite their different purposes, these interfaces often need common interactions with the application to access and manipulate its data and invoke its business logic. The interactions may be complex, involv-ing transactions across multiple resources and the coordination of several responses to an action. Encoding the logic of the interactions separately in each interface causes a lot of duplication. A Service Layer defines an application's boundary and its set of available operations from the perspective of interfacing client layers. It encapsulates the application's business logic, controlling transactions and coor-dinating responses in the implementation of its operations."^^xsd:string .
+
+
+:TableDataGateway
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Table Data Gateway"^^xsd:string ;
+    :hasIntent "An object that acts as a Gateway (466) to a database table. One instance handles all the rows in the table."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/dbgateTable.gif"^^xsd:anyURI ;
+    :hasMotivation "Mixing SQL in application logic can cause several problems. Many developers aren't comfortable with SQL, and many who are comfortable may not write it well. Database administrators need to be able to find SQL easily so they can figure out how to tune and evolve the database. A Table Data Gateway holds all the SQL for accessing a single table or view: selects, inserts, updates, and deletes. Other code calls its methods for all interaction with the database."^^xsd:string .
+
+
+:RowDataGateway
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Row Data Gateway"^^xsd:string ;
+    :hasIntent "An object that acts as a Gateway (466) to a single record in a data source. There is one instance per row."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/dbgateRow.gif"^^xsd:anyURI ;
+    :hasMotivation "Embedding database access code in in-memory objects can leave you with a few disadvantages. For a start, if your in-memory objects have business logic of their own, adding the database manipulation code increases complexity. Testing is awkward too since, if your in-memory objects are tied to a database, tests are slower to run because of all the database access. You may have to access multiple databases with all those annoying little variations on their SQL. A Row Data Gateway gives you objects that look exactly like the record in your record structure but can be accessed with the regular mechanisms of your programming language. All details of data source access are hidden behind this interface."^^xsd:string .
+
+
+:ActiveRecord
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Active Record"^^xsd:string ;
+    :hasIntent "An object that wraps a row in a database table or view, encapsulates the database access, and adds domain logic on that data."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/activeRecordSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "An object carries both data and behavior. Much of this data is persistent and needs to be stored in a database. Active Record uses the most obvious approach, putting data access logic in the domain object. This way all people know how to read and write their data to and from the database."^^xsd:string .
+
+
+:DataMapper
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Data Mapper"^^xsd:string ;
+    :hasIntent "A layer of Mappers (473) that moves data between objects and a database while keeping them independent of each other and the mapper itself."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/databaseMapperSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Objects and relational databases have different mechanisms for structuring data. Many parts of an object, such as collections and inheritance, aren't present in relational databases. When you build an object model with a lot of business logic it's valuable to use these mechanisms to better organize the data and the behavior that goes with it. Doing so leads to variant schemas; that is, the object schema and the relational schema don't match up. You still need to transfer data between the two schemas, and this data transfer becomes a complexity in its own right. If the in-memory objects know about the relational database structure, changes in one tend to ripple to the other. The Data Mapper is a layer of software that separates the in-memory objects from the database. Its responsibility is to transfer data between the two and also to isolate them from each other. With Data Mapper the in-memory objects needn't know even that there's a database present; they need no SQL interface code, and certainly no knowledge of the database schema. (The database schema is always ignorant of the objects that use it.) Since it's a form of Mapper, Data Mapper itself is even unknown to the domain layer."^^xsd:string .
+
+
+:UnitofWork
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Unit of Work"^^xsd:string ;
+    :hasIntent "Maintains a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/unitOfWorkInterface.gif"^^xsd:anyURI ;
+    :hasMotivation "When you're pulling data in and out of a database, it's important to keep track of what you've changed; otherwise, that data won't be written back into the database. Similarly you have to insert new objects you create and remove any objects you delete. You can change the database with each change to your object model, but this can lead to lots of very small database calls, which ends up being very slow. Furthermore it requires you to have a transaction open for the whole interaction, which is impractical if you have a business transaction that spans multiple requests. The situation is even worse if you need to keep track of the objects you've read so you can avoid inconsistent reads. A Unit of Work keeps track of everything you do during a business transaction that can affect the database. When you're done, it figures out everything that needs to be done to alter the database as a result of your work."^^xsd:string .
+
+
+:IdentityMap
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Identity Map"^^xsd:string ;
+    :hasIntent "Ensures that each object gets loaded only once by keeping every loaded object in a map. Looks up objects using the map when referring to them."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/idMapperSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "An old proverb says that a man with two watches never knows what time it is. If two watches are confusing, you can get in an even bigger mess with loading objects from a database. If you aren't careful you can load the data from the same database record into two different objects. Then, when you update them both you'll have an interesting time writing the changes out to the database correctly. Related to this is an obvious performance problem. If you load the same data more than once you're incurring an expensive cost in remote calls. Thus, not loading the same data twice doesn't just help correctness, but can also speed up your application. An Identity Map keeps a record of all objects that have been read from the database in a single business transaction. Whenever you want an object, you check the Identity Map first to see if you already have it."^^xsd:string .
+
+
+:LazyLoad
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Lazy Load"^^xsd:string ;
+    :hasIntent "An object that doesn't contain all of the data you need but knows how to get it."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/lazyLoadSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "For loading data from a database into memory it's handy to design things so that as you load an object of interest you also load the objects that are related to it. This makes loading easier on the developer using the object, who otherwise has to load all the objects he needs explicitly. However, if you take this to its logical conclusion, you reach the point where loading one object can have the effect of loading a huge number of related objects - something that hurts performance when only a few of the objects are actually needed. A Lazy Load interrupts this loading process for the moment, leaving a marker in the object structure so that if the data is needed it can be loaded only when it is used. As many people know, if you're lazy about doing things you'll win when it turns out you don't need to do them at all."^^xsd:string .
+
+
+:IdentityField
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Identity Field"^^xsd:string ;
+    :hasIntent "Saves a database ID field in an object to maintain identity between an in-memory object and a database row."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/idFieldSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Relational databases tell one row from another by using key - in particular, the primary key. However, in-memory objects don't need such a key, as the object system ensures the correct identity under the covers (or in C++'s case with raw memory locations). Reading data from a database is all very well, but in order to write data back you need to tie the database to the in-memory object system. In essence, Identity Field is mind-numbingly simple. All you do is store the primary key of the relational database table in the object's fields."^^xsd:string .
+
+
+:ForeignKeyMapping
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Foreign Key Mapping"^^xsd:string ;
+    :hasIntent "Maps an association between objects to a foreign key reference between tables."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/foreignKeyMappingSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Objects can refer to each other directly by object references. Even the simplest object-oriented system will contain a bevy of objects connected to each other in all sorts of interesting ways. To save these objects to a database, it's vital to save these references. However, since the data in them is specific to the specific instance of the running program, you can't just save raw data values. Further complicating things is the fact that objects can easily hold collections of refer-ences to other objects. Such a structure violates the first normal form of rela-tional databases. A Foreign Key Mapping maps an object reference to a foreign key in the database."^^xsd:string .
+
+
+:AssociationTableMapping
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Association Table Mapping"^^xsd:string ;
+    :hasIntent "Saves an association as a table with foreign keys to the tables that are linked by the association."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/associationTableSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Objects can handle multivalued fields quite easily by using collections as field values. Relational databases don't have this feature and are constrained to sin-gle- valued fields only. When you're mapping a one-to-many association you can handle this using Foreign Key Mapping (236), essentially using a foreign key for the single-valued end of the association. But a many-to-many association can't do this because there is no single-valued end to hold the foreign key. The answer is the classic resolution that's been used by relational data people for decades: create an extra table to record the relationship. Then use Associa-tion Table Mapping to map the multivalued field to this link table."^^xsd:string .
+
+
+:DependentMapping
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Dependent Mapping"^^xsd:string ;
+    :hasIntent "Has one class perform the database mapping for a child class."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/dependentObjectSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Some objects naturally appear in the context of other objects. Tracks on an album may be loaded or saved whenever the underlying album is loaded or saved. If they aren't referenced to by any other table in the database, you can simplify the mapping procedure by having the album mapper perform the map-ping for the tracks as well - treating this mapping as a dependent mapping."^^xsd:string .
+
+
+:EmbeddedValue
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Embedded Value"^^xsd:string ;
+    :hasIntent "Maps an object into several fields of another object's table."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/aggregateMappingSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Many small objects make sense in an OO system that don't make sense as tables in a database. Examples include currency-aware money objects and date ranges. Although the default thinking is to save an object as a table, no sane person would want a table of money values. An Embedded Value maps the values of an object to fields in the record of the object's owner. In the sketch we have an employment object with links to a date range object and a money object. In the resulting table the fields in those objects map to fields in the employment table rather than make new records themselves."^^xsd:string .
+
+
+:SerializedLOB
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Serialized LOB"^^xsd:string ;
+    :hasIntent "Saves a graph of objects by serializing them into a single large object (LOB), which it stores in a database field."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/serializedLobSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Object models often contain complicated graphs of small objects. Much of the information in these structures isn't in the objects but in the links between them. Consider storing the organization hierarchy for all your customers. An object model quite naturally shows the composition pattern to represent orga-nizational hierarchies, and you can easily add methods that allow you to get ancestors, siblings, descendents, and other common relationships. Not so easy is putting all this into a relational schema. The basic schema is simple - an organization table with a parent foreign key, however, its manipula-tion of the schema requires many joins, which are both slow and awkward. Objects don't have to be persisted as table rows related to each other. Another form of persistence is serialization, where a whole graph of objects is written out as a single large object (LOB) in a table this Serialized LOB then becomes a form of memento [Gang of Four]."^^xsd:string .
+
+
+:SingleTableInheritance
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Single Table Inheritance"^^xsd:string ;
+    :hasIntent "Represents an inheritance hierarchy of classes as a single table that has columns for all the fields of the various classes."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/singleInheritanceTableSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Relational databases don't support inheritance, so when mapping from objects to databases we have to consider how to represent our nice inheritance struc-tures in relational tables. When mapping to a relational database, we try to minimize the joins that can quickly mount up when processing an inheritance structure in multiple tables. Single Table Inheritance maps all fields of all classes of an inheritance structure into a single table."^^xsd:string .
+
+
+:ClassTableInheritance
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Class Table Inheritance"^^xsd:string ;
+    :hasIntent "Represents an inheritance hierarchy of classes with one table for each class."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/classInheritanceTableSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "A very visible aspect of the object-relational mismatch is the fact that relational databases don't support inheritance. You want database structures that map clearly to the objects and allow links anywhere in the inheritance structure. Class Table Inheritance supports this by using one database table per class in the inheritance structure."^^xsd:string .
+
+
+:ConcreteTableInheritance
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Concrete Table Inheritance"^^xsd:string ;
+    :hasIntent "Represents an inheritance hierarchy of classes with one table per concrete class in the hierarchy."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/leafInheritanceTableSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "As any object purist will tell you, relational databases don't support inheritance - a fact that complicates object-relational mapping. Thinking of tables from an object instance point of view, a sensible route is to take each object in memory and map it to a single database row. This implies Concrete Table Inher-itance, where there's a table for each concrete class in the inheritance hierarchy. I'll confess to having had some difficulty naming this pattern. Most people think of it as leaf oriented since you usually have one table per leaf class in a hierarchy. Following that logic, I could call this pattern leaf table inheritance, and the term \"leaf\" is often used for this pattern. Strictly, however, a concrete class that isn't a leaf usually gets a table as well, so I decided to go with the more correct, if less intuitive term."^^xsd:string .
+
+
+:InheritanceMappers
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Inheritance Mappers"^^xsd:string ;
+    :hasIntent "A structure to organize database mappers that handle inheritance hierarchies."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/inheritanceMappersSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "When you map from an object-oriented inheritance hierarchy in memory to a relational database you have to minimize the amount of code needed to save and load the data to the database. You also want to provide both abstract and concrete mapping behavior that allows you to save or load a superclass or a subclass. Although the details of this behavior vary with your inheritance mapping scheme (Single Table Inheritance (278), Class Table Inheritance (285), and Concrete Table Inheritance (293)) the general structure works the same for all of them."^^xsd:string .
+
+
+:MetadataMapping
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Metadata Mapping"^^xsd:string ;
+    :hasIntent "Holds details of object-relational mapping in metadata."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/metaMapperSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Much of the code that deals with object-relational mapping describes how fields in the database correspond to fields in in-memory objects. The resulting code tends to be tedious and repetitive to write. A Metadata Mapping allows developers to define the mappings in a simple tabular form, which can then be processed by generic code to carry out the details of reading, inserting, and updating the data."^^xsd:string .
+
+
+:QueryObject
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Query Object"^^xsd:string ;
+    :hasIntent "An object that represents a database query."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/queryObjectSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "SQL can be an involved language, and many developers aren't particularly familiar with it. Furthermore, you need to know what the database schema looks like to form queries. You can avoid this by creating specialized finder methods that hide the SQL inside parameterized methods, but that makes it dif-ficult to form more ad hoc queries. It also leads to duplication in the SQL state-ments should the database schema change. A Query Object is an interpreter, that is, a structure of objects that can form itself into a SQL query. You can create this query by refer-ring to classes and fields rather than tables and columns. In this way those who write the queries can do so independently of the database schema and changes to the schema can be localized in a single place."^^xsd:string .
+
+
+:Repository
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Repository"^^xsd:string ;
+    :hasIntent "Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects."^^xsd:string ;
+    :hasSketch "https://www.martinfowler.com/eaaCatalog/repositorySketch.gif"^^xsd:anyURI ;
+    :hasMotivation "A system with a complex domain model often benefits from a layer, such as the one provided by Data Mapper, that isolates domain objects from details of the database access code. In such systems it can be worthwhile to build another layer of abstraction over the mapping layer where query construction code is concentrated. This becomes more important when there are a large number of domain classes or heavy querying. In these cases particularly, adding this layer helps minimize duplicate query logic. A Repository mediates between the domain and data mapping layers, acting like an in-memory domain object collection. Client objects construct query specifications declaratively and submit them to Repository for satisfaction. Objects can be added to and removed from the Repository, as they can from a simple collection of objects, and the mapping code encapsulated by the Repository will carry out the appropriate operations behind the scenes. Conceptually, a Repository encapsulates the set of objects persisted in a data store and the operations performed over them, providing a more object-oriented view of the persistence layer. Repository also supports the objective of achieving a clean separation and one-way dependency between the domain and data mapping layers. You can also find a good write-up of this pattern in Domain Driven Design."^^xsd:string .
+
+
+:ModelViewController
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Model View Controller"^^xsd:string ;
+    :hasIntent "Splits user interface interaction into three distinct roles."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/mvc-sketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Controller Model View Controller (MVC) is one of the most quoted (and most misquoted) patterns around. It started as a framework developed by Trygve Reenskaug for the Smalltalk platform in the late 1970s. Since then it has played an influential role in most UI frameworks and in the thinking about UI design."^^xsd:string .
+
+
+:PageController
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Page Controller"^^xsd:string ;
+    :hasIntent "An object that handles a request for a specific page or action on a Web site."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/actionController-sketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Most people's basic Web experience is with static HTML pages. When you request static HTML you pass to the Web server the name and path for a HTML document stored on it. The key notion is that each page on the Web site is a separate document on the server. With dynamic pages things can get much more interesting since there's a much more complex relationship between path names and the file that responds. However, the approach of one path leading to one file that handles the request is a simple model to understand. As a result, Page Controller has one input controller for each logical page of the Web site. That controller may be the page itself, as it often is in server page environments, or it may be a separate object that corresponds to that page."^^xsd:string .
+
+
+:FrontController
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Front Controller"^^xsd:string ;
+    :hasIntent "A controller that handles all requests for a Web site."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/frontController-sketch.gif"^^xsd:anyURI ;
+    :hasMotivation "In a complex Web site there are many similar things you need to do when handling a request. These things include security, internationalization, and providing particular views for certain users. If the input controller behavior is scattered across multiple objects, much of this behavior can end up duplicated. Also, it's difficult to change behavior at runtime. The Front Controller consolidates all request handling by channeling requests through a single handler object. This object can carry out common behavior, which can be modified at runtime with decorators. The handler then dispatches to command objects for behavior particular to a request."^^xsd:string .
+
+
+:TemplateView
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Template View"^^xsd:string ;
+    :hasIntent "Renders information into HTML by embedding markers in an HTML page."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/templateViewSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Writing a program that spits out HTML is often more difficult than you might imagine. Although programming languages are better at creating text than they used to be (some of us remember character handling in Fortran and stan-dard Pascal), creating and concatenating string constructs is still painful. If there isn't much to do, it isn't too bad, but a whole HTML page is a lot of text manipulation. With static HTML pages - those that don't change from request to request - you can use nice WYSIWG editors. Even those of us who like raw text editors find it easier to just type in the text and tags rather than fiddle with string con-catenation in a programming language. Of course the issue is with dynamic Web pages - those that take the results of something like database queries and embed them into the HTML. The page looks different with each result, and as a result regular HTML editors aren't up to the job. The best way to work is to compose the dynamic Web page as you do a static page but put in markers that can be resolved into calls to gather dynamic information. Since the static part of the page acts as a template for the particular response, I call this a Template View."^^xsd:string .
+
+
+:TransformView
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Transform View"^^xsd:string ;
+    :hasIntent "A view that processes domain data element by element and transforms it into HTML."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/transformViewSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Transform When you issue requests for data to the domain and data source layers, you get back all the data you need to satisfy them, but without the formatting you need to make a proper Web page. The role of the view in Model View Controller (330) is to render this data into a Web page. Using Transform View means thinking of this as a transformation where you have the model's data as input and its HTML as output."^^xsd:string .
+
+
+:TwoStepView
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Two Step View"^^xsd:string ;
+    :hasIntent "Turns domain data into HTML in two steps: first by forming some kind of logical page, then rendering the logical page into HTML."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/twoStageViewSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "If you have a Web application with many pages, you often want a consistent look and organization to the site. If every page looks different, you end up with a site that users find confusing. You may also want to make global changes to the appearance of the site easily, but common approaches using Template View (350) or Transform View (361) make this difficult because presentation decisions are often duplicated across multiple pages or transform modules. A global change can force you to change several files. Two Step View deals with this problem by splitting the transformation into two stages. The first transforms the model data into a logical presentation without any specific formatting; the second converts that logical presentation with the actual formatting needed. This way you can make a global change by altering the second stage, or you can support multiple output looks and feels with one second stage each."^^xsd:string .
+
+
+:ApplicationController
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Application Controller"^^xsd:string ;
+    :hasIntent "A centralized point for handling screen navigation and the flow of an application."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/appControllerSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Some applications contain a significant amount of logic about the screens to use at different points, which may involve invoking certain screens at certain times in an application. This is the wizard style of interaction, where the user is led through a series of screens in a certain order. In other cases we may see screens that are only brought in under certain conditions, or choices between different screens that depend on earlier input. To some degree the various Model View Controller input controllers can make some of these decisions, but as an application gets more complex this can lead to duplicated code as several controllers for different screens need to know what to do in a certain situation. You can remove this duplication by placing all the flow logic in an Applica-tion Controller. Input controllers then ask the Application Controller for the appropriate commands for execution against a model and the correct view to use depending on the application context."^^xsd:string .
+
+
+:RemoteFacade
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Remote Facade"^^xsd:string ;
+    :hasIntent "Provides a coarse-grained facade on fine-grained objects to improve efficiency over a network."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/distributedFacadeSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Remote Facade In an object-oriented model, you do best with small objects that have small methods. This gives you lots of opportunity for control and substitution of behavior, and to use good intention revealing naming to make an application easier to understand. One of the consequences of such fine-grained behavior is that there's usually a great deal of interaction between objects, and that interac-tion usually requires lots of method invocations. Within a single address space fine-grained interaction works well, but this happy state does not exist when you make calls between processes. Remote calls are much more expensive because there's a lot more to do: Data may have to be marshaled, security may need to be checked, packets may need to be routed through switches. If the two processes are running on machines on opposite sides of the globe, the speed of light may be a factor. The brutal truth is that any inter-process call is orders of magnitude more expensive than an in-process call - even if both processes are on the same machine. Such a perfor-mance effect cannot be ignored, even for believers in lazy optimization. As a result any object that's intended to be used as a remote objects needs a coarse-grained interface that minimizes the number of calls needed to get some-thing done. Not only does this affect your method calls, it also affects your objects. Rather than ask for an order and its order lines individually, you need to access and update the order and order lines in a single call. This affects your entire object structure. You give up the clear intention and fine-grained control you get with small objects and small methods. Programming becomes more dif-ficult and your productivity slows. A Remote Facade is a coarse-grained facade over a web of fine-grained objects. None of the fine-grained objects have a remote interface, and the Remote Facade contains no domain logic. All the Remote Facade does is translate coarse-grained methods onto the underlying fine-grained objects."^^xsd:string .
+
+
+:DataTransferObject
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Data Transfer Object"^^xsd:string ;
+    :hasIntent "An object that carries data between processes in order to reduce the number of method calls."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/dtoSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "When you're working with a remote interface, such as Remote Facade, each call to it is expensive. As a result you need to reduce the number of calls, and that means that you need to transfer more data with each call. One way to do this is to use lots of parameters. However, this is often awkward to program - indeed, it's often impossible with languages such as Java that return only a single value. The solution is to create a Data Transfer Object that can hold all the data for the call. It needs to be serializable to go across the connection. Usually an assembler is used on the server side to transfer data between the DTO and any domain objects. Many people in the Sun community use the term \"Value Object\" for this pattern. I use it to mean something else. See the discussion on page 487. Although the main reason for using a Data Transfer Object is to batch up what would be multiple remote calls into a single call, it's worth mentioning that another advantage is to encapsulate the serialization mechanism for transferring data over the wire. By encapsulating the serialization like this, the DTOs keep this logic out of the rest of the code and also provide a clear point to change serialization should you wish. The Sun/Java community's use of terminology has changed since the book was published. They switched to using \"Transfer Object\" as the name for this pattern. Consequently \"Value Object\" became regularly used in the way that I describe in this book."^^xsd:string .
+
+
+:OptimisticOfflineLock
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Optimistic Offline Lock"^^xsd:string ;
+    :hasIntent "Prevents conflicts between concurrent business transactions by detecting a conflict and rolling back the transaction."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/OptimisticSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Often a business transaction executes across a series of system transactions. Once outside the confines of a single system transaction, we can't depend on our database manager alone to ensure that the business transaction will leave the record data in a consistent state. Data integrity is at risk once two sessions begin to work on the same records and lost updates are quite possible. Also, with one session editing data that another is reading an inconsistent read becomes likely. Optimistic Offline Lock solves this problem by validating that the changes about to be committed by one session don't conflict with the changes of another session. A successful pre-commit validation is, in a sense, obtaining a lock indi-cating it's okay to go ahead with the changes to the record data. So long as the validation and the updates occur within a single system transaction the business transaction will display consistency. Whereas Pessimistic Offline Lock assumes that the chance of session conflict is high and therefore limits the system's concurrency, Optimistic Offline Lock assumes that the chance of conflict is low. The expectation that session con-flict isn't likely allows multiple users to work with the same data at the same time."^^xsd:string .
+
+
+:PessimisticOfflineLock
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Pessimistic Offline Lock"^^xsd:string ;
+    :hasIntent "Prevents conflicts between concurrent business transactions by allowing only one business transaction at a time to access data."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/PessimisticSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Since offline concurrency involves manipulating data for a business transaction that spans multiple requests, the simplest approach would seem to be having a system transaction open for the whole business transaction. Sadly, however, this doesn't always work well because transaction systems aren't geared to work with long transactions. For that reason you have to use multiple system transactions, at which point you're left to your own devices to manage concurrent access to your data. The first approach to try is Optimistic Offline Lock. However, that pattern has its problems. If several people access the same data within a busi-ness transaction, one of them will commit easily but the others will conflict and fail. Since the conflict is only detected at the end of the business transac-tion, the victims will do all the transaction work only to find at the last minute that the whole thing will fail and their time will have been wasted. If this hap-pens a lot on lengthy business transactions the system will soon become very unpopular. Pessimistic Offline Lock prevents conflicts by avoiding them altogether. It forces a business transaction to acquire a lock on a piece of data before it starts to use it, so that, most of the time, once you begin a business transaction you can be pretty sure you'll complete it without being bounced by concurrency control."^^xsd:string .
+
+
+:Coarse-GrainedLock
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Coarse-Grained Lock"^^xsd:string ;
+    :hasIntent "Locks a set of related objects with a single lock."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/coarseGrainedLockSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Objects can often be edited as a group. Perhaps you have a customer and its set of addresses. If so, when using the application it makes sense to lock all of these items if you want to lock any one of them. Having a separate lock for individual objects presents a number of challenges. First, anyone manipulating them has to write code that can find them all in order to lock them. This is easy enough for a customer and its addresses, but it gets tricky as you get more locking groups. And what if the groups get complicated? Where is this behavior when your framework is managing lock acquisition? If your locking strategy requires that an object be loaded in order to be locked, such as with Optimistic Offline Lock (416), locking a large group affects performance. And with Pessimistic Offline Lock a large lock set is a management headache and increases lock table contention. A Coarse-Grained Lock is a single lock that covers many objects. It not only simplifies the locking action itself but also frees you from having to load all the members of a group in order to lock them."^^xsd:string .
+
+
+:ImplicitLock
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Implicit Lock"^^xsd:string ;
+    :hasIntent "Allows framework or layer supertype code to acquire offline locks."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/ImplicitLockSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "The key to any locking scheme is that there are no gaps in its use. Forgetting to write a single line of code that acquires a lock can render an entire offline lock-ing scheme useless. Failing to retrieve a read lock where other transactions use write locks means you might not get up-to-date session data; failing to use a version count properly can result in unknowingly writing over someone's changes. Generally, if an item might be locked anywhere it must be locked everywhere. Ignoring its application's locking strategy allows a business trans-action to create inconsistent data. Not releasing locks won't corrupt your record data, but it will eventually bring productivity to a halt. Because offline concurrency management is difficult to test, such errors might go undetected by all of your test suites. One solution is to not allow developers to make such a mistake. Locking tasks that cannot be overlooked should be handled not explicitly by developers but implicitly by the application. The fact that most enterprise applications make use of some combination of framework, Layer Supertypes (475), and code generation provides us with ample opportunity to facilitate Implicit Lock."^^xsd:string .
+
+
+:ClientSessionState
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Client Session State"^^xsd:string ;
+    :hasIntent "Stores session state on the client."^^xsd:string .
+
+
+:ServerSessionState
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Server Session State"^^xsd:string ;
+    :hasIntent "Keeps the session state on a server system in a serialized form"^^xsd:string .
+
+
+:DatabaseSessionState
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Database Session State"^^xsd:string ;
+    :hasIntent "Stores session data as committed data in the database."^^xsd:string .
+
+
+:Gateway
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Gateway"^^xsd:string ;
+    :hasIntent "An object that encapsulates access to an external system or resource."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/gatewaySketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Interesting software rarely lives in isolation. Even the purest object-oriented system often has to deal with things that aren't objects, such as relational data-base tables, CICS transactions, and XML data structures. When accessing external resources like this, you'll usually get APIs for them. However, these APIs are naturally going to be somewhat complicated because they take the nature of the resource into account. Anyone who needs to under-stand a resource needs to understand its API - whether JDBC and SQL for rela-tional databases or W3C or JDOM for XML. Not only does this make the software harder to understand, it also makes it much harder to change should you shift some data from a relational database to an XML message at some point in the future. The answer is so common that it's hardly worth stating. Wrap all the special API code into a class whose interface looks like a regular object. Other objects access the resource through this Gateway, which translates the simple method calls into the appropriate specialized API."^^xsd:string .
+
+
+:Mapper
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Mapper"^^xsd:string ;
+    :hasIntent "An object that sets up a communication between two independent objects."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/mapperSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Sometimes you need to set up communications between two subsystems that still need to stay ignorant of each other. This may be because you can't modify them or you can but you don't want to create dependencies between the two or even between them and the isolating element."^^xsd:string .
+
+
+:LayerSupertype
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Layer Supertype"^^xsd:string ;
+    :hasIntent "A type that acts as the supertype for all types in its layer."^^xsd:string ;
+    :hasMotivation "It's not uncommon for all the objects in a layer to have methods you don't want to have duplicated throughout the system. You can move all of this behavior into a common Layer Supertype."^^xsd:string .
+
+
+:SeparatedInterface
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Separated Interface"^^xsd:string ;
+    :hasIntent "Defines an interface in a separate package from its implementation."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/separatedInterfaceSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "As you develop a system, you can improve the quality of its design by reducing the coupling between the system's parts. A good way to do this is to group the classes into packages and control the dependencies between them.You can then follow rules about how classes in one package can call classes in another - for example, one that says that classes in the domain layer may not call classes in the presentation package. However, you might need to invoke methods that contradict the general dependency structure. If so, use Separated Interface to define an interface in one package but implement it in another. This way a client that needs the dependency to the interface can be completely unaware of the implementation. The Separated Interface provides a good plug point for Gateway."^^xsd:string .
+
+
+:Registry
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Registry"^^xsd:string ;
+    :hasIntent "A well-known object that other objects can use to find common objects and services."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/registrySketch.gif"^^xsd:anyURI ;
+    :hasMotivation "When you want to find an object you usually start with another object that has an association to it, and use the association to navigate to it. Thus, if you want to find all the orders for a customer, you start with the customer object and use a method on it to get the orders. However, in some cases you won't have an appropriate object to start with. You may know the customer's ID number but not have a reference. In this case you need some kind of lookup method - a finder - but the question remains: How do you get to the finder? A Registry is essentially a global object, or at least it looks like one - even if it isn't as global as it may appear."^^xsd:string .
+
+
+:ValueObject
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Value Object"^^xsd:string ;
+    :hasIntent "A small simple object, like money or a date range, whose equality isn't based on identity."^^xsd:string ;
+    :hasMotivation "With object systems of various kinds, I've found it useful to distinguish between reference objects and Value Objects. Of the two a Value Object is usually the smaller; it's similar to the primitive types present in many languages that aren't purely object-oriented."^^xsd:string .
+
+
+:Money
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Money"^^xsd:string ;
+    :hasIntent "Represents a monetary value."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/moneySketch.gif"^^xsd:anyURI ;
+    :hasMotivation "A large proportion of the computers in this world manipulate money, so it's always puzzled me that money isn't actually a first class data type in any mainstream programming language. The lack of a type causes problems, the most obvious surrounding currencies. If all your calculations are done in a single currency, this isn't a huge problem, but once you involve multiple currencies you want to avoid adding your dollars to your yen without taking the currency differences into account. The more subtle problem is with rounding. Monetary calculations are often rounded to the smallest currency unit. When you do this it's easy to lose pennies (or your local equivalent) because of rounding errors. The good thing about object-oriented programming is that you can fix these problems by creating a Money class that handles them. Of course, it's still surprising that none of the mainstream base class libraries actually do this."^^xsd:string .
+
+
+:SpecialCase
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Special Case"^^xsd:string ;
+    :hasIntent "A subclass that provides special behavior for particular cases."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/specialCaseSketch.gif"^^xsd:anyURI .
+
+
+:Plugin
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Plugin"^^xsd:string ;
+    :hasIntent "Links classes during configuration rather than compilation."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/pluginsSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Separated Interface is often used when application code runs in multiple runtime environments, each requiring different implementations of particular behavior. Most developers supply the correct implementation by writing a fac-tory method. Suppose you define your primary key generator with a Separated Interface (476) so that you can use a simple in-memory counter for unit testing but a database-managed sequence for production. Your factory method will most likely contain a conditional statement that looks at a local environment variable, determines if the system is in test mode, and returns the correct key generator. Once you have a few factories you have a mess on your hands. Establishing a new deployment configuration - say \"execute unit tests against in-memory database without transaction control\" or \"execute in production mode against DB2 database with full transaction control\" - requires editing conditional statements in a number of factories, rebuilding, and redeploying. Configuration shouldn't be scattered throughout your application, nor should it require a rebuild or redeployment. Plugin solves both problems by providing centralized, runtime configuration."^^xsd:string .
+
+
+:ServiceStub
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Service Stub"^^xsd:string ;
+    :hasIntent "Removes dependence upon problematic services during testing."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/serviceStubSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "Enterprise systems often depend on access to third-party services such as credit scoring, tax rate lookups, and pricing engines. Any developer who has built such a system can speak to the frustration of being dependent on resources completely out of his control. Feature delivery is unpredictable, and as these services are often remote reliability and performance can suffer as well. At the very least these problems slow the development process. Developers sit around waiting for the service to come back on line or maybe put some hacks into the code to compensate for yet to be delivered features. Much worse, and quite likely, such dependencies will lead to times when tests can't execute. When tests can't run the development process is broken. Replacing the service during testing with a Service Stub that runs locally, fast, and in memory improves your development experience."^^xsd:string .
+
+
+:RecordSet
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePattern> ;
+    <https://purl.org/patternpedia#hasName> "Record Set"^^xsd:string ;
+    :hasIntent "An in-memory representation of tabular data."^^xsd:string ;
+    :hasSketch "https://martinfowler.com/eaaCatalog/recordSetSketch.gif"^^xsd:anyURI ;
+    :hasMotivation "In the last twenty years, the dominant way to represent data in a database has been the tabular relational form. Backed by database companies big and small, and a fairly standard query language, almost every new development I see uses relational data. On top of this has come a wealth of tools for building UI's quickly. These data-aware UI frameworks rely on the fact that the underlying data is rela-tional, and they provide UI widgets of various kinds that make it easy to view and manipulate this data with almost no programming. The dark side of these environments is that, while they make display and simple updates ridiculously easy, they have no real facilities in which to place business logic. Any validations beyond \"is this a valid date,\" and any business rules or computations have no good place to go. Either they're jammed into the database as stored procedures or they're mingled with UI code. The idea of the Record Set is to give you your cake and let you eat it, by pro-viding an in-memory structure that looks exactly like the result of an SQL query but can be generated and manipulated by other parts of the system."^^xsd:string .
+
+
