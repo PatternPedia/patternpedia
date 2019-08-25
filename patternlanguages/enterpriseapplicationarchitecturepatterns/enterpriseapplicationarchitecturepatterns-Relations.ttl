@@ -728,10 +728,10 @@
     pp:hasSource :TwoStepView ; 
     pp:hasTarget :TransformView  .
 
-:TwoStepView-to-TransferObject
+:TwoStepView-to-DataTransferObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :TwoStepView ; 
-    pp:hasTarget :TransferObject  ;
+    pp:hasTarget :DataTransferObject  ;
     pp:hasDescription "to extract the relevant information for the screen"^^xsd:string .
 
 :ApplicationController-to-ModelViewController

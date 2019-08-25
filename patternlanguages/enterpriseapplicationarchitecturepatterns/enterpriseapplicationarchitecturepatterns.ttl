@@ -265,7 +265,7 @@
         :TransformView-to-FrontController ,
         :TwoStepView-to-TemplateView ,
         :TwoStepView-to-TransformView ,
-        :TwoStepView-to-TransferObject ,
+        :TwoStepView-to-DataTransferObject ,
         :ApplicationController-to-ModelViewController ,
         :ApplicationController-to-TransactionScript ,
         :ApplicationController-to-DomainModel ,
