@@ -1,0 +1,27 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-patternorientedsoftwarearchitecturepatterns-view#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix eip: <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#> .
+@prefix posa: <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#> .
+
+
+:Publish-SubscribeChannel-to-Publisher-Subscriber
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:Publish-SubscribeChannel ;
+    pp:hasTarget posa:Publisher-Subscriber ;
+    pp:hasDescription "Hohpe and Woolf refer to the name-like Publisher-Subscriber Pattern by Buschmann et al. This is the Observer Pattern of the GoF under a different name, which is why it is not further explained here. More interesting, however, is a variant of this pattern listed by Buschmann et al.: Event Channel. This is used in distributed systems and offers further decoupling between components. The idea is that publishers are not interested in subscribers and vice versa. Only the data of the state change are important, not from which concrete component they originate. In this variation, there is an event channel between the publisher and the subscriber over which communication takes place. This is exactly the same as in Publish-Subscribe Channel."^^xsd:string .
+
+
+:DynamicRouter-to-Content-Dispatcher-Server
+    rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource eip:DynamicRouter ;
+    pp:hasTarget posa:Content-Dispatcher-Server ;
+    pp:hasDescription "Hohpe and Woolf link Dynamic Router to the client dispatcher server Pattern by Buschmann et al. A dispatcher serves as a lookup table. Clients can request services in a distributed system using a name. The dispatcher knows the physical location of the service and establishes a connection between the client and the server offering the service. The rule base of the dynamic router is similar to the lookup table of the client dispatcher server. The difference, however, is that the dynamic router must also resolve possible conflicts."^^xsd:string .
+
+
