@@ -8,7 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 @prefix ccp: <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#> .
-@prefix eip: <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#> .
+@prefix eaa: <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#> .
 
 
 :Key-ValueStorage-to-DomainModel
