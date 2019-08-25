@@ -812,10 +812,10 @@
     pp:hasSource :DataTransferObject ; 
     pp:hasTarget :LazyLoad  .
 
-:OptimisticOfflineLock-to-PessimisticLock
+:OptimisticOfflineLock-to-PessimisticOfflineLock
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :OptimisticOfflineLock ; 
-    pp:hasTarget :PessimisticLock  ;
+    pp:hasTarget :PessimisticOfflineLock  ;
     pp:hasDescription "use Pessimistic Lock if chances of conflicts are high"^^xsd:string .
 
 :OptimisticOfflineLock-to-Coarse-GrainedLock
