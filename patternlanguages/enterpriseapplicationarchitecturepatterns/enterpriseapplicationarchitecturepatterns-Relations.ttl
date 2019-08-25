@@ -189,10 +189,10 @@
     pp:hasSource :DataMapper ; 
     pp:hasTarget :IdentityMap  .
 
-:DataMapper-to-UnityofWork
+:DataMapper-to-UnitofWork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :DataMapper ; 
-    pp:hasTarget :UnityofWork  .
+    pp:hasTarget :UnitofWork  .
 
 :DataMapper-to-LazyLoad
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
