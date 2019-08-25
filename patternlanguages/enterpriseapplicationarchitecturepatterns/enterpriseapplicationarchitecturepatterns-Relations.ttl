@@ -69,25 +69,25 @@
     pp:hasSource :ServiceLayer ; 
     pp:hasTarget :LayerSupertype  .
 
-:ServiceLayer-to-DataTransferObjects
+:ServiceLayer-to-DataTransferObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ServiceLayer ; 
-    pp:hasTarget :DataTransferObjects  .
+    pp:hasTarget :DataTransferObject  .
 
-:ServiceLayer-to-RemoteFacades
+:ServiceLayer-to-RemoteFacade
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ServiceLayer ; 
-    pp:hasTarget :RemoteFacades  .
+    pp:hasTarget :RemoteFacade  .
 
-:ServiceLayer-to-Gateways
+:ServiceLayer-to-Gateway
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ServiceLayer ; 
-    pp:hasTarget :Gateways  .
+    pp:hasTarget :Gateway  .
 
-:TableDataGateway-to-Gateways
+:TableDataGateway-to-Gateway
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :TableDataGateway ; 
-    pp:hasTarget :Gateways  .
+    pp:hasTarget :Gateway  .
 
 :TableDataGateway-to-DataTransferObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -109,30 +109,30 @@
     pp:hasSource :TableDataGateway ; 
     pp:hasTarget :RowDataGateway  .
 
-:TableDataGateway-to-TransactionScripts
+:TableDataGateway-to-TransactionScript
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :TableDataGateway ; 
-    pp:hasTarget :TransactionScripts  .
+    pp:hasTarget :TransactionScript  .
 
 :TableDataGateway-to-DomainModel
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :TableDataGateway ; 
     pp:hasTarget :DomainModel  .
 
-:TableDataGateway-to-DataMappers
+:TableDataGateway-to-DataMapper
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :TableDataGateway ; 
-    pp:hasTarget :DataMappers  .
+    pp:hasTarget :DataMapper  .
 
-:RowDataGateway-to-Gateways
+:RowDataGateway-to-Gateway
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :RowDataGateway ; 
-    pp:hasTarget :Gateways  .
+    pp:hasTarget :Gateway  .
 
-:RowDataGateway-to-TransactionScripts
+:RowDataGateway-to-TransactionScript
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :RowDataGateway ; 
-    pp:hasTarget :TransactionScripts  .
+    pp:hasTarget :TransactionScript  .
 
 :RowDataGateway-to-ActiveRecord
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -154,10 +154,10 @@
     pp:hasSource :ActiveRecord ; 
     pp:hasTarget :DomainModel  .
 
-:ActiveRecord-to-TransactionScripts
+:ActiveRecord-to-TransactionScript
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ActiveRecord ; 
-    pp:hasTarget :TransactionScripts  .
+    pp:hasTarget :TransactionScript  .
 
 :ActiveRecord-to-ForeignKeyMapping
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -179,10 +179,10 @@
     pp:hasSource :ActiveRecord ; 
     pp:hasTarget :DataMapper  .
 
-:DataMapper-to-Mappers
+:DataMapper-to-Mapper
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :DataMapper ; 
-    pp:hasTarget :Mappers  .
+    pp:hasTarget :Mapper  .
 
 :DataMapper-to-IdentityMap
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -284,10 +284,10 @@
     pp:hasSource :IdentityMap ; 
     pp:hasTarget :IdentityField  .
 
-:IdentityMap-to-DataMappers
+:IdentityMap-to-DataMapper
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :IdentityMap ; 
-    pp:hasTarget :DataMappers  .
+    pp:hasTarget :DataMapper  .
 
 :IdentityMap-to-UnitofWork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -299,10 +299,10 @@
     pp:hasSource :IdentityMap ; 
     pp:hasTarget :Registry  .
 
-:IdentityMap-to-ValueObjects
+:IdentityMap-to-ValueObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :IdentityMap ; 
-    pp:hasTarget :ValueObjects  ;
+    pp:hasTarget :ValueObject  ;
     pp:hasDescription "don't need Identity Map"^^xsd:string .
 
 :IdentityMap-to-DependentMapping
@@ -340,10 +340,10 @@
     pp:hasTarget :DataMapper  ;
     pp:hasDescription "needs additional layer"^^xsd:string .
 
-:LazyLoad-to-ValueObjects
+:LazyLoad-to-ValueObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :LazyLoad ; 
-    pp:hasTarget :ValueObjects  .
+    pp:hasTarget :ValueObject  .
 
 :LazyLoad-to-IdentityMap
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -411,10 +411,10 @@
     pp:hasSource :ForeignKeyMapping ; 
     pp:hasTarget :IdentityField  .
 
-:ForeignKeyMapping-to-DependentMappings
+:ForeignKeyMapping-to-DependentMapping
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ForeignKeyMapping ; 
-    pp:hasTarget :DependentMappings  .
+    pp:hasTarget :DependentMapping  .
 
 :ForeignKeyMapping-to-OptimisticOfflineLock
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -484,10 +484,10 @@
     pp:hasSource :DependentMapping ; 
     pp:hasTarget :LazyLoad  .
 
-:DependentMapping-to-ValueObjects
+:DependentMapping-to-ValueObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :DependentMapping ; 
-    pp:hasTarget :ValueObjects  .
+    pp:hasTarget :ValueObject  .
 
 :DependentMapping-to-UnitofWork
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -501,10 +501,10 @@
     pp:hasTarget :DependentMapping  ;
     pp:hasDescription "special case of Embedded Value"^^xsd:string .
 
-:EmbeddedValue-to-ValueObjects
+:EmbeddedValue-to-ValueObject
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :EmbeddedValue ; 
-    pp:hasTarget :ValueObjects  ;
+    pp:hasTarget :ValueObject  ;
     pp:hasDescription "should be persisted as Embedded Value"^^xsd:string .
 
 :EmbeddedValue-to-SerializedLOB
@@ -513,10 +513,10 @@
     pp:hasTarget :SerializedLOB  ;
     pp:hasDescription "as alternative for more complex structures"^^xsd:string .
 
-:SingleTableInheritance-to-InheritanceMappers
+:SingleTableInheritance-to-InheritanceMapper
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :SingleTableInheritance ; 
-    pp:hasTarget :InheritanceMappers  .
+    pp:hasTarget :InheritanceMapper  .
 
 :SingleTableInheritance-to-ClassTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -530,10 +530,10 @@
     pp:hasTarget :ConcreteTableInheritance  ;
     pp:hasDescription "alternative"^^xsd:string .
 
-:ClassTableInheritance-to-InheritanceMappers
+:ClassTableInheritance-to-InheritanceMapper
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ClassTableInheritance ; 
-    pp:hasTarget :InheritanceMappers  .
+    pp:hasTarget :InheritanceMapper  .
 
 :ClassTableInheritance-to-SingleTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -547,10 +547,10 @@
     pp:hasTarget :ConcreteTableInheritance  ;
     pp:hasDescription "alternative"^^xsd:string .
 
-:ConcreteTableInheritance-to-InheritanceMappers
+:ConcreteTableInheritance-to-InheritanceMapper
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
     pp:hasSource :ConcreteTableInheritance ; 
-    pp:hasTarget :InheritanceMappers  .
+    pp:hasTarget :InheritanceMapper  .
 
 :ConcreteTableInheritance-to-IdentityField
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -569,24 +569,24 @@
     pp:hasTarget :ClassTableInheritance  ;
     pp:hasDescription "alternative"^^xsd:string .
 
-:InheritanceMappers-to-SingleTableInheritance
+:InheritanceMapper-to-SingleTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMappers ; 
+    pp:hasSource :InheritanceMapper ; 
     pp:hasTarget :SingleTableInheritance  .
 
-:InheritanceMappers-to-ClassTableInheritance
+:InheritanceMapper-to-ClassTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMappers ; 
+    pp:hasSource :InheritanceMapper ; 
     pp:hasTarget :ClassTableInheritance  .
 
-:InheritanceMappers-to-ConcreteTableInheritance
+:InheritanceMapper-to-ConcreteTableInheritance
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMappers ; 
+    pp:hasSource :InheritanceMapper ; 
     pp:hasTarget :ConcreteTableInheritance  .
 
-:InheritanceMappers-to-LayerSupertype
+:InheritanceMapper-to-LayerSupertype
     rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-    pp:hasSource :InheritanceMappers ; 
+    pp:hasSource :InheritanceMapper ; 
     pp:hasTarget :LayerSupertype  .
 
 :MetadataMapping-to-LayerSupertype
@@ -1027,7 +1027,7 @@
         :SingleTableInheritance ,
         :ClassTableInheritance ,
         :ConcreteTableInheritance ,
-        :InheritanceMappers .
+        :InheritanceMapper .
 
 
 :DomainLogicPatterns
