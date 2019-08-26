@@ -20,9 +20,9 @@
                  rdfs:range :Pattern .
 
  ###  https://purl.org/patternpedia#containsPattern
- :containsPatternRelationDescriptors rdf:type owl:ObjectProperty ;
+ :containsPatternRelationDescriptor rdf:type owl:ObjectProperty ;
                   rdfs:domain :PatternLanguage ;
-                  rdfs:range :Pattern .
+                  rdfs:range :PatternRelationDescriptor .
 
 ###  https://purl.org/patternpedia#containsPatternGraph
 :containsPatternGraph rdf:type owl:ObjectProperty ;
@@ -31,7 +31,7 @@
 
 
 ###  https://purl.org/patternpedia#hasPatternRelation
-:hasPatternRelation rdf:type owl:ObjectProperty ;
+:hasPattern rdf:type owl:ObjectProperty ;
                     rdfs:domain :Pattern ;
                     rdfs:range :PatternRelationDescriptor .
 
