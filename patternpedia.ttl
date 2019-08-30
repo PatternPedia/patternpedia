@@ -35,6 +35,11 @@
                     rdfs:domain :Pattern ;
                     rdfs:range :PatternRelationDescriptor .
 
+###  https://purl.org/patternpedia#referredbyView
+:referredbyView rdf:type owl:ObjectProperty ;
+                    rdfs:domain :PatternView ;
+                    rdfs:range :PatternLanguage .
+
 
 ###  https://purl.org/patternpedia#hasRelatedPattern
 :hasRelatedPattern rdf:type owl:ObjectProperty .
