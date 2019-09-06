@@ -16,12 +16,12 @@
 
 ###  https://purl.org/patternpedia#containsPattern
 :containsPattern rdf:type owl:ObjectProperty ;
-                 rdfs:domain :PatternLanguage ;
+                 rdfs:domain :PatternGraph ;
                  rdfs:range :Pattern .
 
  ###  https://purl.org/patternpedia#containsPattern
  :containsPatternRelationDescriptor rdf:type owl:ObjectProperty ;
-                  rdfs:domain :PatternLanguage ;
+                  rdfs:domain :PatternGraph ;
                   rdfs:range :PatternRelationDescriptor .
 
 ###  https://purl.org/patternpedia#containsPatternGraph
@@ -141,16 +141,11 @@
 
 ###  https://purl.org/patternpedia#PatternRelationDescriptor
 :PatternRelationDescriptor rdf:type owl:Class ;
-                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty :hasSource ;
-                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                             owl:onClass :Pattern
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :hasTarget ;
-                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                             owl:onClass :Pattern
-                                           ] .
+                           rdfs:subClassOf 
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasDescription ;
+                                  owl:allValuesFrom xsd:string
+                                 ] .
 
 
 # Describes the relation between two patterns in a directed manner, i.e. with a source and a target pattern
@@ -161,9 +156,15 @@
     rdf:type owl:Class ;
     rdfs:subClassOf :PatternRelationDescriptor ,
         [ rdf:type owl:Restriction ;
-          owl:onProperty :hasDescription ;
-          owl:allValuesFrom xsd:string
-        ] .
+          owl:onProperty :hasSource ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass :Pattern
+         ] ,
+         [ rdf:type owl:Restriction ;
+           owl:onProperty :hasTarget ;
+           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+           owl:onClass :Pattern
+         ] .
 
 
 # Describes the relation between exactly two patterns without any direction.
@@ -171,15 +172,12 @@
 ###  http://purl.org/patternpedia#UndirectedPatternRelationDescriptor
 :UndirectedPatternRelationDescriptor
     rdf:type owl:Class ;
-    rdfs:subClassOf [ rdf:type owl:Restriction ;
+    rdfs:subClassOf :PatternRelationDescriptor ,
+                    [ rdf:type owl:Restriction ;
                       owl:onProperty :hasPattern ;
                       owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                       owl:onClass :Pattern
-                    ] ,
-                    [ rdf:type owl:Restriction ;
-                      owl:onProperty :hasDescription ;
-                      owl:allValuesFrom xsd:string
-                    ] .
+                     ] .
 
 
 # Hyperedges describe the relation of a set of patterns
