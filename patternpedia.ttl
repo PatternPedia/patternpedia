@@ -41,10 +41,6 @@
                     rdfs:range :PatternLanguage .
 
 
-###  https://purl.org/patternpedia#hasRelatedPattern
-:hasRelatedPattern rdf:type owl:ObjectProperty .
-
-
 ###  https://purl.org/patternpedia#hasSource
 :hasSource rdf:type owl:ObjectProperty ;
            rdfs:domain :PatternRelationDescriptor ;
