@@ -11,14 +11,3 @@
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
-
-:PatternE-to-PatternF
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternE ; 
-pp:hasTarget :PatternF ; 
- pp:hasDescription "This is my description for E->F."^^xsd:string . 
-:PatternG-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternG ; 
-pp:hasTarget :PatternE ; 
- pp:hasDescription "E -> G"^^xsd:string . 
