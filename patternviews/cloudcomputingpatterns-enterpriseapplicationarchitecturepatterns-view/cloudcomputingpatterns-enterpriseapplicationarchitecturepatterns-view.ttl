@@ -23,7 +23,7 @@
     rdf:type owl:NamedIndividual, pp:PatternView ;
     pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> ,
         <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePatterns> ;
-    pp:containsPatternRelationDescriptors :Key-ValueStorage-to-DomainModel ,
+    pp:containsPatternRelationDescriptor :Key-ValueStorage-to-DomainModel ,
         :StatefulComponent-to-ServerSessionState ,
         :StatelessComponent-to-ClientSessionState ,
         :StatelessComponent-to-DatabaseSessionState ,

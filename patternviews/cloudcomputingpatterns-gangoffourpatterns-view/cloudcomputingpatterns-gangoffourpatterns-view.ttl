@@ -23,7 +23,16 @@
     rdf:type owl:NamedIndividual, pp:PatternView ;
     pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> ,
         <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> ;
-    pp:containsPatternRelationDescriptors :DataAccessComponent-to-Adapter ,
+    pp:containsPatternRelationDescriptor :Key-ValueStorage-to-DomainModel ,
+        :StatefulComponent-to-ServerSessionState ,
+        :StatelessComponent-to-ClientSessionState ,
+        :StatelessComponent-to-DatabaseSessionState ,
+        :DataAccessComponent-to-TableDataGateway ,
+        :RestrictedDataAccessComponent-to-RemoteFacade ,
+        :RestrictedDataAccessComponent-to-TableDataGateway ,
+        :DataAccessComponent-to-IdentityMap ,
+        :DataAccessComponent-to-ImplicitLock ,
+        :DataAccessComponent-to-Adapter ,
         :DataAccessComponent-to-Adapter ,
         :ApplicationComponentProxy-to-Proxy ,
         :ApplicationComponentProxy-to-Facade ,
