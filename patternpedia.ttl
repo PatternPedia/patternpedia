@@ -27,7 +27,7 @@
 ###  https://purl.org/patternpedia#containsPatternGraph
 :containsPatternGraph rdf:type owl:ObjectProperty ;
                          rdfs:domain :PatternPedia ;
-                         rdfs:range :PatternLanguage .
+                         rdfs:range :PatternGraph .
 
 
 ###  https://purl.org/patternpedia#hasPatternRelation
@@ -213,3 +213,4 @@
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
+<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePatterns> .
