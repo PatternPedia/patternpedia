@@ -36,7 +36,8 @@
 # graphical representation of the pattern for architecture diagrams or sketches
 :hasIcon rdf:type owl:DataProperty .
 
-# core problem that is solved by this pattern independently from the domain or technology:hasProblem rdf:type owl:DataProperty .
+# core problem that is solved by this pattern independently from the domain or technology
+:hasProblem rdf:type owl:DataProperty .
 
 # circumstances in which the problem typically occurs
 :hasContext rdf:type owl:DataProperty .
