@@ -38,3 +38,9 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternW ; 
 pp:hasTarget :PatternE .
  
+:PatternXX-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternXX ; 
+pp:hasTarget :PatternE ; 
+ pp:hasDescription "test"^^xsd:string . 
+ 
