@@ -11,3 +11,8 @@
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
+
+:PatternE-to-ManyEntries
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternE ; 
+pp:hasTarget :ManyEntries .
