@@ -12,65 +12,9 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-:PatternE-to-TestSectionOrder
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternE ; 
-pp:hasTarget :TestSectionOrder .
- 
-:ManyEntries-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :ManyEntries ; 
-pp:hasTarget :PatternE .
- 
-:AnotherPattern-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :AnotherPattern ; 
-pp:hasTarget :PatternE .
- 
-:ManyListEntries-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :ManyListEntries ; 
-pp:hasTarget :PatternE ; 
- pp:hasDescription "Many -> e"^^xsd:string . 
- 
-:PatternW-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternW ; 
-pp:hasTarget :PatternE .
- 
-:PatternXX-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternXX ; 
-pp:hasTarget :PatternE ; 
- pp:hasDescription "test"^^xsd:string . 
- 
-:PatternP-to-PatternE
+:PatternP-to-AnotherPattern
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternP ; 
-pp:hasTarget :PatternE .
- 
-:PatternG-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternG ; 
-pp:hasTarget :PatternE .
- 
-:ManyEntries-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :ManyEntries ; 
-pp:hasTarget :PatternE .
- 
-:PatternF-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternF ; 
-pp:hasTarget :PatternE .
- 
-:PatternF-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternF ; 
-pp:hasTarget :PatternE .
- 
-:PatternE-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternE ; 
-pp:hasTarget :PatternE .
+pp:hasTarget :AnotherPattern ; 
+ pp:hasDescription "p -> another"^^xsd:string . 
  
