@@ -22,3 +22,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :ManyEntries ; 
 pp:hasTarget :PatternE .
  
+:AnotherPattern-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :AnotherPattern ; 
+pp:hasTarget :PatternE .
+ 
