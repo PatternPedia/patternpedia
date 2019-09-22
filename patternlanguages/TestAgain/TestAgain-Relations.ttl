@@ -11,39 +11,3 @@
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
-
-:PatternE-to-TestSectionOrder
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternE ; 
-pp:hasTarget :TestSectionOrder .
- 
-:ManyEntries-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :ManyEntries ; 
-pp:hasTarget :PatternE .
- 
-:AnotherPattern-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :AnotherPattern ; 
-pp:hasTarget :PatternE .
- 
-:ManyListEntries-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :ManyListEntries ; 
-pp:hasTarget :PatternE .
- 
-:PatternP-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternP ; 
-pp:hasTarget :PatternE .
- 
-:AnotherPattern-to-PatternG
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :AnotherPattern ; 
-pp:hasTarget :PatternG .
- 
-:ManyEntries-to-PatternG
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :ManyEntries ; 
-pp:hasTarget :PatternG .
- 
