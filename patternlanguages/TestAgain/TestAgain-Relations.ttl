@@ -17,3 +17,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternE ; 
 pp:hasTarget :AnotherPattern .
  
+:PatternF-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternF ; 
+pp:hasTarget :PatternE .
+ 
