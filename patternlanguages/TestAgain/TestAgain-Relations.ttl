@@ -12,18 +12,13 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-:TestSectionOrder-to-AnotherPattern
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :TestSectionOrder ; 
-pp:hasTarget :AnotherPattern .
- 
 :PatternE-to-TestSectionOrder
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternE ; 
 pp:hasTarget :TestSectionOrder .
  
-:TestSectionOrder-to-PatternW
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasPattern :TestSectionOrder ; 
-pp:hasPattern :TestSectionOrder .
+:PatternE-to-AnotherPattern
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :PatternE ; 
+pp:hasPattern :PatternE .
  
