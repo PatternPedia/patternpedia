@@ -18,10 +18,10 @@
         <http://purl.org/patternpedia/patternlanguages/internetofthingspatterns/internetofthingspatterns-Patterns> ,
         <http://purl.org/patternpedia/patternlanguages/internetofthingspatterns/internetofthingspatterns-Relations> ,
         # Views
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view> ,
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-internetofthingspatterns-view> ,
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-internetofthingspatterns-view> ,
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/gangoffourpatterns-internetofthingspatterns-view> .
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-internetofthingspatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-internetofthingspatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/gangoffourpatterns-internetofthingspatterns-view> .
 
 #################################################################
 #    Data Properties
@@ -125,10 +125,10 @@
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "https://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-112560-internet-of-things--default--300.jpg"^^xsd:anyURI ;
     pp:hasName "Internet of Things Patterns"^^xsd:string ;
-    pp:referredByView <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view#CloudComputingPatterns-InternetofThingsPatterns-View> ;
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-internetofthingspatterns-view#EnterpriseApplicationArchitecturePatterns-InternetofThingsPatterns-View> ,
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-internetofthingspatterns-view#EnterpriseIntegrationPatterns-InternetofThingsPatterns-View> ,
-        <https://purl.org/patternpedia/patternviews/https://purl.org/patternpedia/patternviews/gangoffourpatterns-internetofthingspatterns-view#GangofFourPatterns-InternetofThingsPatterns-View> ;
+    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view#CloudComputingPatterns-InternetofThingsPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-internetofthingspatterns-view#EnterpriseApplicationArchitecturePatterns-InternetofThingsPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-internetofthingspatterns-view#EnterpriseIntegrationPatterns-InternetofThingsPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/gangoffourpatterns-internetofthingspatterns-view#GangofFourPatterns-InternetofThingsPatterns-View> ;
     pp:containsPattern :DeviceGateway ,
         :DeviceShadow ,
         :RulesEngine ,
