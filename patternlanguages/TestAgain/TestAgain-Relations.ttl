@@ -44,3 +44,8 @@ pp:hasSource :PatternXX ;
 pp:hasTarget :PatternE ; 
  pp:hasDescription "test"^^xsd:string . 
  
+:PatternP-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternP ; 
+pp:hasTarget :PatternE .
+ 
