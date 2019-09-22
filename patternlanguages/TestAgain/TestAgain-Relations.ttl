@@ -12,8 +12,8 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-:PatternE-to-PatternF
+:TestSectionOrder-to-AnotherPattern
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasPattern :PatternE ; 
-pp:hasPattern :PatternE .
+pp:hasSource :TestSectionOrder ; 
+pp:hasTarget :AnotherPattern .
  
