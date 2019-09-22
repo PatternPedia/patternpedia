@@ -33,3 +33,8 @@ pp:hasSource :ManyListEntries ;
 pp:hasTarget :PatternE ; 
  pp:hasDescription "Many -> e"^^xsd:string . 
  
+:PatternW-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternW ; 
+pp:hasTarget :PatternE .
+ 
