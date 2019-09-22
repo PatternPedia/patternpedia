@@ -49,3 +49,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternP ; 
 pp:hasTarget :PatternE .
  
+:PatternG-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternG ; 
+pp:hasTarget :PatternE .
+ 
