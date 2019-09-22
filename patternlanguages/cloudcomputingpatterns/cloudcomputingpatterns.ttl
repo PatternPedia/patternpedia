@@ -100,7 +100,11 @@
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "http://www.cloudcomputingpatterns.org/img/book.png"^^xsd:anyURI ;
     pp:hasName "Cloud Computing Patterns"^^xsd:string ;
-    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view#CloudComputingPatterns-EnterpriseIntegrationPatterns-View> ;
+    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view#CloudComputingPatterns-EnterpriseIntegrationPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseapplicationarchitecturepatterns-view#CloudComputingPatterns-EnterpriseApplicationArchitecturePatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-gangoffourpatterns-view#CloudComputingPatterns-GangofFourPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-internetofthingspatterns-view#CloudComputingPatterns-InternetofThingsPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view#CloudComputingPatterns-PatternorientedSoftwareArchitecturePatterns-View> ;
     pp:containsPattern :StaticWorkload ,
         :PeriodicWorkload ,
         :Once-in-a-lifetimeWorkload ,

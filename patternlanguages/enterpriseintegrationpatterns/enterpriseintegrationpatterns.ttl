@@ -39,7 +39,10 @@
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "https://www.enterpriseintegrationpatterns.com/img/0321200683.gif"^^xsd:anyURI ;
     pp:hasName "Enterprise Integration Patterns"^^xsd:string ;
-    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view#CloudComputingPatterns-EnterpriseIntegrationPatterns-View> ;
+    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseintegrationpatterns-view#CloudComputingPatterns-EnterpriseIntegrationPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-enterpriseintegrationpatterns-view#EnterpriseApplicationArchitecturePatterns-EnterpriseIntegrationPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-gangoffourpatterns-view#EnterpriseIntegrationPatterns-GangofFourPatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-internetofthingspatterns-view#EnterpriseIntegrationPatterns-InternetofThingsPatterns-View> ;
     pp:containsPattern :FileTransfer ,
         :SharedDatabase ,
         :RemoteProcedureInvocation ,
