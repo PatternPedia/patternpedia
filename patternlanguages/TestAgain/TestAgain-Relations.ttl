@@ -22,3 +22,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternE ; 
 pp:hasTarget :TestSectionOrder .
  
+:TestSectionOrder-to-PatternW
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasPattern :TestSectionOrder ; 
+pp:hasPattern :TestSectionOrder .
+ 
