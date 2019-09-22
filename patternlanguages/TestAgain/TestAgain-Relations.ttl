@@ -23,13 +23,23 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :ManyEntries ; 
 pp:hasTarget :PatternP .
  
+:ManyEntries-to-AnotherPattern
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :ManyEntries ; 
+pp:hasTarget :AnotherPattern .
+ 
 :PatternE-to-PatternP
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :PatternE ; 
 pp:hasPattern :PatternP .
  
-:PatternP-to-ManyEntries
+:PatternE-to-PatternP
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :PatternP ; 
-pp:hasPattern :ManyEntries .
+pp:hasPattern :PatternE ; 
+pp:hasPattern :PatternP .
+ 
+:ManyEntries-to-PatternP
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :ManyEntries ; 
+pp:hasPattern :PatternP .
  
