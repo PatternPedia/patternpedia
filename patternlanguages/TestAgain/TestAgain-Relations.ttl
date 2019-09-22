@@ -17,8 +17,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternE ; 
 pp:hasTarget :TestSectionOrder .
  
-:PatternE-to-AnotherPattern
+:PatternE-to-PatternXX
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :PatternE ; 
-pp:hasPattern :PatternE .
+pp:hasPattern :PatternXX .
  
