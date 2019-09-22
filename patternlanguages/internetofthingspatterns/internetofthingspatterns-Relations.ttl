@@ -1,0 +1,519 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:RulesEngine-to-DeviceGateway
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :RulesEngine ; 
+    pp:hasTarget :DeviceGateway  ;
+    pp:hasDescription "The Rules Engine can be located on a Device Gateway to enable low latency message processing close to the devices"^^xsd:string .
+
+:RemoteLockandWipe-to-DeviceWakeupTrigger
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :RemoteLockandWipe ; 
+    pp:hasTarget :DeviceWakeupTrigger  ;
+    pp:hasDescription "A DEVICE WAKEUP TRIGGER could be used to get the device locked or wiped as soon as possible if it is currently not connected to the backend server"^^xsd:string .
+
+:PeriodEnergy-LimitedDevice-to-Energy-HarvestingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PeriodEnergy-LimitedDevice ; 
+    pp:hasTarget :Energy-HarvestingDevice  ;
+    pp:hasDescription "One way to increase the time needed between power source replacements or recharging is energy harvesting. An example is adding a small solar cell, which trickle charges the battery"^^xsd:string .
+
+:PeriodEnergy-LimitedDevice-to-Normally-SleepingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PeriodEnergy-LimitedDevice ; 
+    pp:hasTarget :Normally-SleepingDevice  ;
+    pp:hasDescription "A NORMALLYSLEEPING DEVICE saves energy when the device is not needed. This can increase the interval length between power source replacement or recharging for PERIOD ENERGY-LIMITED DEVICES"^^xsd:string .
+
+:PeriodEnergy-LimitedDevice-to-Mains-PoweredDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PeriodEnergy-LimitedDevice ; 
+    pp:hasTarget :Mains-PoweredDevice  ;
+    pp:hasDescription "A MAINS-POWERED DEVICE can also be a PERIOD ENERGY-LIMITED DEVICE if it uses a battery as a backup in case of power outage"^^xsd:string .
+
+:Energy-HarvestingDevice-to-PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Energy-HarvestingDevice ; 
+    pp:hasTarget :PeriodEnergy-LimitedDevice  ;
+    pp:hasDescription "Energy harvesting can be used to extend the intervals between recharging or replacing the energy source of a PERIOD ENERGY-LIMITED DEVICE"^^xsd:string .
+
+:Energy-HarvestingDevice-to-Normally-SleepingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Energy-HarvestingDevice ; 
+    pp:hasTarget :Normally-SleepingDevice  ;
+    pp:hasDescription "Energy harvesting may power NORMALLY-SLEEPING DEVICES if the harvested energy is only enough for short bursts of activity"^^xsd:string .
+
+:Normally-SleepingDevice-to-Energy-HarvestingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Normally-SleepingDevice ; 
+    pp:hasTarget :Energy-HarvestingDevice  ;
+    pp:hasDescription "Devices which use energy harvesting as their source of power often also are NORMALLY-SLEEPING DEVICES. They sleep until they harvested the energy they need for a short period of activity"^^xsd:string .
+
+:Normally-SleepingDevice-to-DeviceWakeupTrigger
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Normally-SleepingDevice ; 
+    pp:hasTarget :DeviceWakeupTrigger  ;
+    pp:hasDescription "In situations when it is necessary to communicate with a NORMALLYSLEEPING DEVICE outside of its regular communication windows, a DEVICE WAKEUP TRIGGER is one option. The DEVICE WAKEUP TRIGGER tells a disconnected device to reconnect at once"^^xsd:string .
+
+:Normally-SleepingDevice-to-PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Normally-SleepingDevice ; 
+    pp:hasTarget :PeriodEnergy-LimitedDevice  ;
+    pp:hasDescription "Being a NORMALLY-SLEEPING DEVICE extends the interval between replacing or recharging the power source in PERIOD ENERGY-LIMITED DEVICES"^^xsd:string .
+
+:Normally-SleepingDevice-to-LifetimeEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Normally-SleepingDevice ; 
+    pp:hasTarget :LifetimeEnergy-LimitedDevice  ;
+    pp:hasDescription "Being a NORMALLY-SLEEPING DEVICE extends the maximum lifetime of LIFETIME ENERGY-LIMITED DEVICES"^^xsd:string .
+
+:Normally-SleepingDevice-to-DeviceShadow
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Normally-SleepingDevice ; 
+    pp:hasTarget :DeviceShadow  ;
+    pp:hasDescription "Using a DEVICE SHADOW allows other communication partners to retrieve the latest known state and to send commands to a currently sleeping device"^^xsd:string .
+
+:Mains-PoweredDevice-to-LifetimeEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Mains-PoweredDevice ; 
+    pp:hasTarget :LifetimeEnergy-LimitedDevice  .
+
+:Mains-PoweredDevice-to-PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Mains-PoweredDevice ; 
+    pp:hasTarget :PeriodEnergy-LimitedDevice  .
+
+:Mains-PoweredDevice-to-Always-OnDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Mains-PoweredDevice ; 
+    pp:hasTarget :Always-OnDevice  .
+
+:LifetimeEnergy-LimitedDevice-to-Energy-HarvestingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :LifetimeEnergy-LimitedDevice ; 
+    pp:hasTarget :Energy-HarvestingDevice  .
+
+:LifetimeEnergy-LimitedDevice-to-Mains-PoweredDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :LifetimeEnergy-LimitedDevice ; 
+    pp:hasTarget :Mains-PoweredDevice  .
+
+:Always-OnDevice-to-Mains-PoweredDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Always-OnDevice ; 
+    pp:hasTarget :Mains-PoweredDevice  .
+
+:Always-OnDevice-to-PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Always-OnDevice ; 
+    pp:hasTarget :PeriodEnergy-LimitedDevice  .
+
+:Event-BasedSensing-to-Normally-SleepingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Event-BasedSensing ; 
+    pp:hasTarget :Normally-SleepingDevice  .
+
+:Event-BasedSensing-to-Schedule-BasedSensing
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Event-BasedSensing ; 
+    pp:hasTarget :Schedule-BasedSensing  .
+
+:Event-BasedSensing-to-PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Event-BasedSensing ; 
+    pp:hasTarget :PeriodEnergy-LimitedDevice  .
+
+:Event-BasedSensing-to-LifetimeEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Event-BasedSensing ; 
+    pp:hasTarget :LifetimeEnergy-LimitedDevice  .
+
+:Event-BasedSensing-to-Energy-HarvestingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Event-BasedSensing ; 
+    pp:hasTarget :Energy-HarvestingDevice  .
+
+:Schedule-BasedSensing-to-Normally-SleepingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Schedule-BasedSensing ; 
+    pp:hasTarget :Normally-SleepingDevice  .
+
+:Schedule-BasedSensing-to-Always-OnDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Schedule-BasedSensing ; 
+    pp:hasTarget :Always-OnDevice  .
+
+:Schedule-BasedSensing-to-Event-BasedSensing
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Schedule-BasedSensing ; 
+    pp:hasTarget :Event-BasedSensing  .
+
+:Medium-BasedBootstrap-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Medium-BasedBootstrap ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:Medium-BasedBootstrap-to-RemoteBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Medium-BasedBootstrap ; 
+    pp:hasTarget :RemoteBootstrap  .
+
+:Medium-BasedBootstrap-to-AutomaticServer-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Medium-BasedBootstrap ; 
+    pp:hasTarget :AutomaticServer-DrivenRegistration  .
+
+:Medium-BasedBootstrap-to-ManualUser-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Medium-BasedBootstrap ; 
+    pp:hasTarget :ManualUser-DrivenRegistration  .
+
+:RemoteBootstrap-to-Medium-BasedBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :RemoteBootstrap ; 
+    pp:hasTarget :Medium-BasedBootstrap  .
+
+:RemoteBootstrap-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :RemoteBootstrap ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:RemoteBootstrap-to-AutomaticServer-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :RemoteBootstrap ; 
+    pp:hasTarget :AutomaticServer-DrivenRegistration  .
+
+:RemoteBootstrap-to-ManualUser-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :RemoteBootstrap ; 
+    pp:hasTarget :ManualUser-DrivenRegistration  .
+
+:AutomaticClient-DrivenRegistration-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:AutomaticClient-DrivenRegistration-to-Medium-BasedBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :Medium-BasedBootstrap  .
+
+:AutomaticClient-DrivenRegistration-to-RemoteBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :RemoteBootstrap  .
+
+:AutomaticClient-DrivenRegistration-to-Server-DrivenModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :Server-DrivenModel  .
+
+:AutomaticClient-DrivenRegistration-to-Pre-DefinedDeviceModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :Pre-DefinedDeviceModel  .
+
+:AutomaticClient-DrivenRegistration-to-Device-DrivenModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :Device-DrivenModel  .
+
+:AutomaticClient-DrivenRegistration-to-DeviceRegistry
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :DeviceRegistry  .
+
+:AutomaticClient-DrivenRegistration-to-DeviceWakeupTrigger
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :AutomaticClient-DrivenRegistration ; 
+    pp:hasTarget :DeviceWakeupTrigger  .
+
+:Device-DrivenModel-to-AutomaticServer-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Device-DrivenModel ; 
+    pp:hasTarget :AutomaticServer-DrivenRegistration  .
+
+:Device-DrivenModel-to-ManualUser-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Device-DrivenModel ; 
+    pp:hasTarget :ManualUser-DrivenRegistration  .
+
+:Device-DrivenModel-to-Pre-DefinedDeviceModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Device-DrivenModel ; 
+    pp:hasTarget :Pre-DefinedDeviceModel  .
+
+:Device-DrivenModel-to-Server-DrivenModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Device-DrivenModel ; 
+    pp:hasTarget :Server-DrivenModel  .
+
+:Device-DrivenModel-to-DeviceRegistry
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Device-DrivenModel ; 
+    pp:hasTarget :DeviceRegistry  .
+
+:Device-DrivenModel-to-DeviceShadow
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Device-DrivenModel ; 
+    pp:hasTarget :DeviceShadow  .
+
+:Server-DrivenModel-to-AutomaticServer-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Server-DrivenModel ; 
+    pp:hasTarget :AutomaticServer-DrivenRegistration  .
+
+:Server-DrivenModel-to-ManualUser-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Server-DrivenModel ; 
+    pp:hasTarget :ManualUser-DrivenRegistration  .
+
+:Server-DrivenModel-to-Pre-DefinedDeviceModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Server-DrivenModel ; 
+    pp:hasTarget :Pre-DefinedDeviceModel  .
+
+:Server-DrivenModel-to-Device-DrivenModel
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Server-DrivenModel ; 
+    pp:hasTarget :Device-DrivenModel  .
+
+:Server-DrivenModel-to-DeviceRegistry
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Server-DrivenModel ; 
+    pp:hasTarget :DeviceRegistry  .
+
+:Server-DrivenModel-to-DeviceShadow
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Server-DrivenModel ; 
+    pp:hasTarget :DeviceShadow  .
+
+:TrustedCommunicationPartner-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:TrustedCommunicationPartner-to-RemoteBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :RemoteBootstrap  .
+
+:TrustedCommunicationPartner-to-Whitelist
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :Whitelist  .
+
+:TrustedCommunicationPartner-to-Outbound-Only-Connection
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :Outbound-Only-Connection  .
+
+:TrustedCommunicationPartner-to-PermissionControl
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :PermissionControl  .
+
+:TrustedCommunicationPartner-to-DeviceGateway
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :DeviceGateway  .
+
+:TrustedCommunicationPartner-to-DeviceShadow
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :TrustedCommunicationPartner ; 
+    pp:hasTarget :DeviceShadow  .
+
+:Outbound-Only-Connection-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:Outbound-Only-Connection-to-RemoteBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :RemoteBootstrap  .
+
+:Outbound-Only-Connection-to-DeviceWakeupTrigger
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :DeviceWakeupTrigger  .
+
+:Outbound-Only-Connection-to-PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :PeriodEnergy-LimitedDevice  .
+
+:Outbound-Only-Connection-to-LifetimeEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :LifetimeEnergy-LimitedDevice  .
+
+:Outbound-Only-Connection-to-Energy-HarvestingDevice
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :Energy-HarvestingDevice  .
+
+:Outbound-Only-Connection-to-TrustedCommunicationPartner
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Outbound-Only-Connection ; 
+    pp:hasTarget :TrustedCommunicationPartner  .
+
+:PermissionControl-to-AutomaticClient-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PermissionControl ; 
+    pp:hasTarget :AutomaticClient-DrivenRegistration  .
+
+:PermissionControl-to-AutomaticServer-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PermissionControl ; 
+    pp:hasTarget :AutomaticServer-DrivenRegistration  .
+
+:PermissionControl-to-ManualUser-DrivenRegistration
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PermissionControl ; 
+    pp:hasTarget :ManualUser-DrivenRegistration  .
+
+:PersonalZoneHub-to-PermissionControl
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PersonalZoneHub ; 
+    pp:hasTarget :PermissionControl  .
+
+:PersonalZoneHub-to-TrustedCommunicationPartner
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PersonalZoneHub ; 
+    pp:hasTarget :TrustedCommunicationPartner  .
+
+:PersonalZoneHub-to-DeviceGateway
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :PersonalZoneHub ; 
+    pp:hasTarget :DeviceGateway  .
+
+:Whitelist-to-Blacklist
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Whitelist ; 
+    pp:hasTarget :Blacklist  .
+
+:Whitelist-to-TrustedCommunicationPartner
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Whitelist ; 
+    pp:hasTarget :TrustedCommunicationPartner  .
+
+:Whitelist-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Whitelist ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:Whitelist-to-RemoteBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Whitelist ; 
+    pp:hasTarget :RemoteBootstrap  .
+
+:Blacklist-to-Whitelist
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Blacklist ; 
+    pp:hasTarget :Whitelist  .
+
+:Blacklist-to-FactoryBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Blacklist ; 
+    pp:hasTarget :FactoryBootstrap  .
+
+:Blacklist-to-RemoteBootstrap
+    rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+    pp:hasSource :Blacklist ; 
+    pp:hasTarget :RemoteBootstrap  .
+
+
+#################################################################
+#    Groups
+#################################################################
+
+
+:EnergySupply
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Energy Supply"^^xsd:string ;
+    pp:hasPattern :Mains-PoweredDevice ,
+        :PeriodEnergy-LimitedDevice ,
+        :LifetimeEnergy-LimitedDevice ,
+        :Energy-HarvestingDevice .
+
+
+:OperationMode
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Operation Mode"^^xsd:string ;
+    pp:hasPattern :Always-OnDevice ,
+        :Normally-Sleeping-Device .
+
+
+:Processing
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Processing"^^xsd:string ;
+    pp:hasPattern :RulesEngine .
+
+
+:Sensing
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Sensing"^^xsd:string ;
+    pp:hasPattern :Event-BasedSensing ,
+        :Schedule-BasedSensing .
+
+
+:Bootstraping
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Bootstraping"^^xsd:string ;
+    pp:hasPattern :FactoryBootstrap ,
+        :Medium-BasedBootstrap ,
+        :RemoteBootstrap .
+
+
+:Registration
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Registration"^^xsd:string ;
+    pp:hasPattern :DeviceRegistry ,
+        :ManualUser-DrivenRegistration ,
+        :AutomaticClient-DrivenRegistration ,
+        :AutomaticServer-DrivenRegistration .
+
+
+:DeviceModel
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Device Model"^^xsd:string ;
+    pp:hasPattern :Device-DrivenModel ,
+        :Pre-DefinedDevice-DrivenModel ,
+        :Server-DrivenModel .
+
+
+:Security
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Security"^^xsd:string ;
+    pp:hasPattern :TrustedCommunitcationPartner ,
+        :Outbound-Only-Connection ,
+        :PermissionControl ,
+        :PersonalZoneHub ,
+        :Whitelist ,
+        :Blacklist ,
+        :RemoteLockandWipe .
+
+
+:Communitcation
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Communitcation"^^xsd:string ;
+    pp:hasPattern :DeltaUpdate ,
+        :DeviceGateway ,
+        :DeviceShadow ,
+        :DeviceWakeupTrigger ,
+        :VisibleLightCommunication .
+
+
+:Management
+    rdf:type owl:NamedIndividual , pp:PatternSetRelationDescriptor ;
+    pp:hasLabel "Management"^^xsd:string ;
+    pp:hasPattern :RemoteDeviceManagement .

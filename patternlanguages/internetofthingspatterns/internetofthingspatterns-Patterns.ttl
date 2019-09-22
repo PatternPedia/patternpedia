@@ -1,0 +1,498 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:DeviceGateway
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Device Gateway"^^xsd:string ;
+    :hasSummary "Different devices support different connunication technologies. To allow all of them to connect to an existing network, add a Device Gateway which translates between the different communication technologies."^^xsd:string ;
+    :hasAlias "Gateway"^^xsd:string ,
+        "Field Gateway"^^xsd:string ,
+        "Intermediate Gateway"^^xsd:string ,
+        "Physical Hub"^^xsd:string ,
+        "Protocol Converter"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/device-gateway.png"^^xsd:anyURI ;
+    :hasProblem "You want to connect many different devices to an already existing network, but some of them might not support the networks communication technology or protocol."^^xsd:string ;
+    :hasContext "A number of devices have to be connected to a network. These might include Constrained Devices or Semi-Constrained Devices that are limited in their processing power and do not support the communication methods of the network. Or these might also include Unconstrained Devices from legacy systems that cannot connect to the network due to outdated technology. A backend server reachable over this network is intended to process data from these devices."^^xsd:string ;
+    :hasForce "Connectivity: Devices have to be connected to a network because you want to access their data and functionality regularly. Doing this manually is not an option."^^xsd:string ,
+        "Upgradability: Changing or building up a network so that it supports the communication technology required by the device is often not possible. You might not control the network, or the purpose of the network cannot be realized with the deviceâ€™s technology, e.g. you need a long range network but the device only supports short range communication."^^xsd:string ,
+        "Effort: Adding communication capabilities that are supported by the network to all device types would mean a high investment in time and resources, or might not be possible at all because of technological limitations."^^xsd:string ,
+        "Diversity: Other devices with different communication technology might also have to be connected to the same network and will face the same problem."^^xsd:string ,
+        "Device Numbers: Your network can only support a certain amount of simultaneous connections. The number of devices you want to connect exceeds this limit. Extending the network is not an option."^^xsd:string ;
+    :hasSolution "Connect devices to an intermediary DEVICE GATEWAY that translates the communication technology supported by the device to communication technology of the network and vice-versa."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/device-gateway.png"^^xsd:anyURI ;
+    :hasVariant "Aggregating Device Gateway: Besides translating communication technologies this gateway also aggregates the messages it receives from the devices in some meaningful way. For example, it might average the temperature readings of several devices and send it on once a minute. This is usually done to reduce the number of individual messages which have to be sent to the backend."^^xsd:string ,
+        "Local Processing Device Gateway: In addition to translating communication technologies, this gateway also contains some local processing functionality which could mirror or replace functionality located in the backend. For example, it could contain a local RULES ENGINE which decides some actions directly on the gateway. This is usually done to minimize communication with the backend and therefore reduce latency or to insulate from connection loss between gateway and backend."^^xsd:string .
+
+
+:DeviceShadow
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Device Shadow"^^xsd:string ;
+    :hasSummary "Some device are only intermittently online. To allow other components to interact with them regardless of their connection state, store a persistent virtual representation of the devices online. Use this representation for all communication and synchronize it with the device once it is back online."^^xsd:string ;
+    :hasAlias "Thing Shadow"^^xsd:string ,
+        "Virtual Device"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/device-shadow.png"^^xsd:anyURI ;
+    :hasProblem "Some devices will be only intermittently online in order to save energy or because of network outages. Other components want to interact with them but do not know when they will be reachable."^^xsd:string ;
+    :hasContext "Devices, such as Constrained Devices, Semi-Constrained Devices, and Unconstrained Devices, might operate in Normally-Off, Low-Power, or Always-On modes. Either because of their operation modes or because of external circumstances, these devices might be offline at various times."^^xsd:string ;
+    :hasForce "Availability: Sending commands to or reading state from offline devices is not possible."^^xsd:string ,
+        "Timeliness: Waiting for currently offline device to come online again to send or receive data in a synchronous fashion can lead to long idle times and should be avoided."^^xsd:string ,
+        "Consistency: Often a slightly out-of-date state is better than no state."^^xsd:string ;
+    :hasSolution "Store a persistent virtual representation of each device on some backend server. Include the latest received state from the device, as well as commands not yet sent to the device. Do all communication from and to the device through this virtual version. Synchronize the virtual representation with the actual device state when the device is online."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/device-shadow.png"^^xsd:anyURI .
+
+
+:RulesEngine
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Rules Engine"^^xsd:string ;
+    :hasSummary "You receive many different messages to which you want to react appropriately depending on the situation. Allow rules and associated actions to be defined. Compare all incoming messages against these rules and trigger the associated actions if a rule matches."^^xsd:string ;
+    :hasAlias "Action Engine"^^xsd:string ,
+        "Trigger Conditions"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/rules-engine.png"^^xsd:anyURI ;
+    :hasProblem "Throughout its operation, a system receives a wide range of messages from devices and other components. You want to react in different ways to these messages."^^xsd:string ;
+    :hasContext "A wide range of differing messages from devices and other components are received at the backend server. These might include measurements from sensors, errors, a heartbeat, registration information, etc. These messages can arrive regularly or irregularly. There are different kinds of actions that have to be executed depending on the type of the received message, its content, the time it is received, or other factors."^^xsd:string ;
+    :hasForce "Flexibility: The actions to trigger might change over time, new actions might be added, old ones removed, or you might want to temporarily test or disable an action. Hard-coding them into some software component would be possible, but is not flexible enough."^^xsd:string ,
+        "Data Sources: In some cases, additional data apart from the device message might be needed to decide if a particular action should be taken."^^xsd:string ,
+        "Diversity: The type of action to be triggered can vary significantly depending on the circumstances. In some cases, you might want to add an entry into a log file or send an email. In other cases, you might want to route a message to another service for further processing or store it in some kind of database."^^xsd:string ;
+    :hasSolution "Pass all messages received from devices through a RULES ENGINE. Allow users to define rules using a graphical user interface that evaluate the content of incoming messages or metadata about the message against a set of comparators. Also allow external data sources to be included in these comparisons. Let users associate a set of actions with these rules. Apply each rule on each message and trigger the associated actions if a rule matches."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/rules-engine.png"^^xsd:anyURI .
+
+
+:DeviceWakeupTrigger
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Device Wakeup Trigger"^^xsd:string ;
+    :hasSummary "Some devices sleep for longer periods to conserve energy. To be able to communicate with them in an instance if required, let them listen for trigger messages on a secondary low-power communication channel. Programm the device to wake up and reconnect when it receives such a message."^^xsd:string ;
+    :hasAlias "Update Trigger"^^xsd:string ,
+        "Device Triggering"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/device-wakeup-trigger.png"^^xsd:anyURI ;
+    :hasProblem "Some devices might go into a sleep mode to conserve energy and only wake up from time to time to reconnect to the network. During sleep, they are not reachable on their regular communication channels. In some instances, other components might have to contact sleeping device immediately."^^xsd:string ;
+    :hasContext "You have a Constrained Device or Semi-Constrained Device that is Lifetime Energy-Limited or Period Energy-Limited and operates in a Low-Power or Normally-Off mode. You have a backend server where the device is registered, i.e. its identity and other metadata is known to the server. From time to time you have a situation where you want to immediately contact the sleeping device. For example, this could be the case if a critical security fix has to be applied, if you need current sensor values or send commands for one-off time critical situations, or if the device has been lost or stolen and you want to use REMOTE LOCK AND WIPE immediately."^^xsd:string ;
+    :hasForce "Irregularity: You need to establish a connection at non-regular times."^^xsd:string ,
+        "Predictability: You do not know the point in time when you need to connect to the device in advance."^^xsd:string ,
+        "Timeliness: The device might reconnect on its own, but you can't wait that long."^^xsd:string ,
+        "Power Consumption: The device has to maintain low power consumption in terms of entering Low-Power or Normally-Off operation modes to save energy."^^xsd:string ;
+    :hasSolution "Implement a mechanism that allows the server to send a trigger message to the device via a low energy communication channel. Have the device listening for these triggering messages and immediately establish communication with the server when it receives such a message."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/device-wakeup-trigger.png"^^xsd:anyURI .
+
+
+:RemoteLockandWipe
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Remote Lock and Wipe"^^xsd:string ;
+    :hasSummary "You want to prevent attackers to gain access to your data or network when a device is lost or stolen. Add functionality to the device which allows you to remotely wipe the data on the device or lock some or all functionality."^^xsd:string ;
+    :hasAlias "Remote Factory Reset"^^xsd:string ,
+        "Remote Locking"^^xsd:string ,
+        "Remote Wiping"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/remote-lock-and-wipe.png"^^xsd:anyURI ;
+    :hasProblem "Some devices might be lost or stolen. You want to prevent attackers from misusing the functionality of the device, or from gaining access to the data on the device or to the network through the device."^^xsd:string ;
+    :hasContext "A device is connected to a backend server and is in danger of being lost or stolen. This might be the case because it is installed at an easily accessible public location, or a remote and unmonitored location. The device might have functionality that must not be accessed by a thief. It might also contain classified data that has to be kept protected. The data might or might not be encrypted. The device might be retrievable when it is lost or stolen, but it might also vanish forever."^^xsd:string ;
+    :hasForce "Long-term Data Security: If the device is irretrievably stolen, an attacker might have ample time to break encryptions if data on the device is encrypted."^^xsd:string ,
+        "Fine-grained Control: Depending on the situation, the type of device and the content on the device, different actions might be necessary in the case of loss or theft."^^xsd:string ,
+        "Reversibility: A lost or stolen device might eventually be returned, so any actions taken should be reversible if possible."^^xsd:string ,
+        "Remote Control: Since the device is no longer physically available, the activation of additional security mechanisms has to work remotely."^^xsd:string ;
+    :hasSolution "Make the device a managed device that can receive and execute management operations from the backend server. Allow authorized users to use the backend server to trigger functionality on the device that can delete files, folders, applications or memory areas, revoke or remove permissions, keys, and certificates, or enable additional security feature. Execute triggered functions as soon as the device receives them and provide an acknowledgment to the backend."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/remote-lock-and-wipe.png"^^xsd:anyURI .
+
+
+:PeriodEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Period Energy-Limited Device"^^xsd:string ;
+    :hasSummary "Devices which are mobile or located in remote places cannot rely on fixed infrastructure. When they require a fair amount of power, use a replaceable or rechargeable energy source and renew it regularly."^^xsd:string ;
+    :hasAlias "Rechargeable"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/period-energy-limited-device.png"^^xsd:anyURI ;
+    :hasProblem "You need to power a device which requires a fair amount of power. The device is mobile or located in a remote place. Moreover, mains-power is not available."^^xsd:string ;
+    :hasContext "You have a device, which needs a fair amount of energy to work but does not necessarily require mains power, such as a device that takes regular sensor readings, communicates, and powers actuators. Besides, your use case dictates a specific location for this device which restricts available energy sources. For example, the device has to be mobile, wearable, or in a remote location."^^xsd:string ;
+    :hasForce "Energy Needs: The device needs a fair amount of energy to work. A LIFETIME ENERGY-LIMITED DEVICE is not an option if it needs more in its lifetime than current batteries offer in a reasonable form factor. An ENERGY-HARVESTING DEVICE is not an option if the device needs more power for a cycle than the harvesting generates between cycles."^^xsd:string ,
+        "Environmental Constraints: Your use case enforces a specific location for the device. For example, the device has to be mobile or wearable, or the device location is in an area where mains power is not available. Thus, being a MAINS-POWERED DEVICE is not an option. Besides, an ENERGYHARVESTING DEVICE is not an option if no suitable form of ambient energy source is available at the device's location."^^xsd:string ,
+        "Costs: Replacing or recharging the power source is an option but has a cost associated with it, especially if the device is located in a remote or inaccessible location. For your use case, it makes economically and physically sense to do this in the time frame which allows the device to sustain its functionality."^^xsd:string ,
+        "Uptime: You want to minimize the periods where the device is not operating because of power source renewal."^^xsd:string ;
+    :hasSolution "Use a replaceable or rechargeable source of energy to power the device. Implement a notification mechanism that informs you when the power source is nearly empty. Replace or recharge the power source when needed."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/period-energy-limited-device.png"^^xsd:anyURI .
+
+
+:Energy-HarvestingDevice
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Energy-Harvesting Device"^^xsd:string ;
+    :hasSummary "Devices that are mobile or located in remote places cannot rely on fixed infrastructure. When they require a small amount of power and the environment allows it, use energy harvesting to gather its required power."^^xsd:string ;
+    :hasAlias "Ambient Energy"^^xsd:string ,
+        "Event Energy-Limited"^^xsd:string ,
+        "EventBased Harvesting"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/energy-harvesting-device.png"^^xsd:anyURI ;
+    :hasProblem "You need to power a device with very little power needs. The device is mobile or located in a remote place. Its environment is stable and predictable."^^xsd:string ;
+    :hasContext "You have a device that needs to be powered. The device needs only a small amount of energy to function. Besides, your use case dictates a specific location for this device which restricts available energy sources. For example, the device has to be mobile, wearable, or in a remote location."^^xsd:string ;
+    :hasForce "Location: The device has to be mobile or is located at a remote place. Thus, it cannot be a MAINSPOWERED DEVICE."^^xsd:string ,
+        "Effort: Replacing or recharging a battery in frequent intervals is too much effort or not possible at all. Thus, using a PERIOD ENERGY-LIMITED DEVICE is not an option."^^xsd:string ,
+        "Energy Requirements: The device needs very little energy to function."^^xsd:string ,
+        "Lifetime Energy Requirements: The device needs more energy over its lifetime than current batteries can provide in a reasonable form factor without being replaced or recharged. Thus, using a LIFETIME ENERGY-LIMITED DEVICE is not an option."^^xsd:string ;
+    :hasSolution "Integrate an energy harvesting component, such as a solar cell, into the device. Use it to turn the energy available in the deviceâ€™s surroundings into power for the device. Use components and technologies optimized for low-power usage to make the most of the harvested energy."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/energy-harvesting-device.png"^^xsd:anyURI .
+
+
+:Normally-SleepingDevice
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Normally-Sleeping Device"^^xsd:string ;
+    :hasSummary "Devices with a limited supply of energy have to use it wisely. Disable most of the components of the device for long periods of time and only enable them when required."^^xsd:string ;
+    :hasAlias "Sleepy"^^xsd:string ,
+        "Deep Sleep"^^xsd:string ,
+        "Hibernate"^^xsd:string ,
+        "Duty-cycled"^^xsd:string ,
+        "Normally-Off"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/normally-sleeping-device.png"^^xsd:anyURI ;
+    :hasProblem "You have a device with a limited energy supply. You want to minimize the power used by the device."^^xsd:string ;
+    :hasContext "You have a use case which comes with size, weight, cost, or energy restrictions. For example, this is the case when the use case needs mobility or wearability. You use devices optimized to fit these restrictions. These devices are LIFETIME ENERGY-LIMITED DEVICES, PERIOD ENERGYLIMITED DEVICES, or ENERGY-HARVESTING DEVICES."^^xsd:string ;
+    :hasForce "Limited Energy: Having an ALWAYS-ON DEVICE is not an option since the device has a limited power source."^^xsd:string ,
+        "Energy Saving: Saving energy decreases costs and is good for the environment but leads to constraints."^^xsd:string ,
+        "Component Use: The device does not use every component continuously. Turning them off when not needed saves energy. But if these components have long startup times, the responsiveness of the device suffers."^^xsd:string ,
+        "Communication: Turning of the communication module when not needed saves energy. But doing this manually takes too much effort, especially for remotely placed or large amounts of devices."^^xsd:string ;
+    :hasSolution "Program the device to disable its main components when they are not needed. Leave a small circuit powered which reactivates the components after a predefined amount of time has passed or when an event occurs."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/normally-sleeping-device.png"^^xsd:anyURI .
+
+
+:Mains-PoweredDevice
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Mains-Powered Device"^^xsd:string ;
+    :hasSummary "Some devices require a lot of power or are stationary. Power them by connecting them to mains power."^^xsd:string ;
+    :hasAlias "Mains-operated"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/mains-powered-device.png"^^xsd:anyURI ;
+    :hasProblem "You need to power a stationary device, which requires a lot of energy over its lifetime."^^xsd:string ;
+    :hasContext "You have a device that needs to be powered. It may be an Always-On Device that has to run continuously to fulfill its intended function. It may also be a device that does a lot of local processing, which requires large amounts of energy."^^xsd:string ;
+    :hasForce "Energy Requirements: The device needs a large amount of energy over its lifetime. Making it a Lifetime Energy-Limited Device is not an option because the device needs more energy over its lifetime than current batteries can provide in a reasonable form factor without being replaced or recharged. Making it an Energy-Harvesting Device is not an option because ambient energy does not deliver the required power."^^xsd:string ,
+        "Environmental Constraints: The environment of the device may have some constraints, such as not having a suitable source of ambient energy, thus making it not possible to use an Energy-Harvesting Device."^^xsd:string ,
+        "Maintenance: Making it a Period Energy-Limited Device is not an option because replacing or recharging a battery in frequent intervals is too much effort."^^xsd:string ,
+        "Mobility: The device does not have to be mobile."^^xsd:string ,
+        "Infrastructure: Mains power is available in many places, but voltages and outlet designs vary depending on location."^^xsd:string ;
+    :hasSolution "Connect the device to mains power. Transform higher voltages to a lower voltage that you can use. Convert alternating current to direct current and filter it to get smooth voltage."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/mains-powered-device.png"^^xsd:anyURI .
+
+
+:LifetimeEnergy-LimitedDevice
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Lifetime Energy-Limited Device"^^xsd:string ;
+    :hasSummary "Devices that are mobile or located in remote places cannot rely on fixed infrastructure. When they require a small amount of power and need a robust construction, use a built-in power source."^^xsd:string ;
+    :hasAlias "Non-replaceable Battery"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/lifetime-energy-limited-device.png"^^xsd:anyURI ;
+    :hasProblem "You need to power a device, which requires a small amount of power. The device is mobile or located in a remote place. You want to minimize maintenance."^^xsd:string ;
+    :hasContext "You have a device that needs to be powered. The device needs only a small amount of energy to function."^^xsd:string ;
+    :hasForce "Mobility: The device has to be mobile, thus, being a Mains-Powered Device is not an option."^^xsd:string ,
+        "Location The device may be placed in a remote location far of the grid, where common infrastructure such as powerlines are not available. Thus, being a Mains-Powered Device is not an option. The location may also provide no suitable form of ambient energy for an Energy-Harvesting Device."^^xsd:string ,
+        "Maintenance: A Period Energy-Limited Device is not an option because replacing or recharging a battery in frequent intervals is too much effort."^^xsd:string ,
+        "Energy Requirements: Being an Energy-Harvesting Device on its own is not an option, because it does not deliver the required power."^^xsd:string ,
+        "Lifetime: You know the maximum lifetime of the device."^^xsd:string ,
+        "Ruggedness: The device is intended to be used in environments where a rugged device enclosure is needed."^^xsd:string ;
+    :hasSolution "Build an energy source into the device, which will last for the entire expected lifetime of the device."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/lifetime-energy-limited-device.png"^^xsd:anyURI .
+
+
+:Always-OnDevice
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Always-On Device"^^xsd:string ;
+    :hasSummary "Some devices have to be available and responsive at all times. If the energy supply allows it, leave the device running and connected at all times."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/always-on-device.png"^^xsd:anyURI ;
+    :hasProblem "You have a device with an inexhaustible energy supply and need to have it available and responsive at all times."^^xsd:string ;
+    :hasContext "You have a Mains-Powered Device or a device that has plenty of energy available, even though it is a Period Energy-Limited Device, Lifetime Energy-Limited Device, or Energy-Harvesting Device."^^xsd:string ;
+    :hasForce "Energy Savings: Saving energy is not the top priority in your situation."^^xsd:string ,
+        "Reachability: The device has to be online and reachable all the time."^^xsd:string ,
+        "Reactivity: The device has to react to commands instantly."^^xsd:string ,
+        "Functionality: All of the deviceâ€™s functionality has to be available all the time."^^xsd:string ;
+    :hasSolution "Let the device be always on so that it is permanently connected to the network and in a state where it can receive and execute commands as soon as they arrive."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/always-on-device.png"^^xsd:anyURI .
+
+
+:Event-BasedSensing
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Event-Based Sensing"^^xsd:string ;
+    :hasSummary ""^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/event-based-sensing.png"^^xsd:anyURI ;
+    :hasProblem "You have a use case where you are interested in irregularly occurring events that are represented in sensor values. Reading the sensor in regular intervals is wasteful because those events occur rarely and the other values are of no interest to you. Besides, it is possible that you miss an event if it falls between two sensor readings."^^xsd:string ;
+    :hasContext "You have a device with sensors built into it or attached to it and you need to use these sensors to acquire measurement and react to certain events."^^xsd:string ;
+    :hasForce "Energy Requirements: Leaving sensors running all the time allows them to record detailed measurements but uses more energy."^^xsd:string ,
+        "Sampling: The events you are interested in can be of short duration but measuring them requires a high enough sampling rate."^^xsd:string ,
+        "Size: Measuring and sending many values over a long period enables detailed analysis but takes up storage space and communication bandwidth."^^xsd:string ,
+        "Knowledge: You do not always have prior knowledge about what you want to measure, but if you have, you can get better results by applying techniques specifically tailored to your use case."^^xsd:string ,
+        "Relevance: In some cases, only specific events are of relevance to you, but you do not need to collect all the other uninteresting measurements."^^xsd:string ;
+    :hasSolution "Define the events that are of interest to you in the form of sensor values. Use low-power sensors and power them continuously. Program low energy comparator circuits to read those sensors and watch for the events. Only propagate measurements to the device if a sensor value triggers such a comparator circuit."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/event-based-sensing.png"^^xsd:anyURI .
+
+
+:Schedule-BasedSensing
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Schedule-Based Sensing"^^xsd:string ;
+    :hasSummary "Some situations are not well understood or require a broad overview of measurable data points. Read the sensor based on a schedule. Turn it off between readings if the interval length allows it."^^xsd:string ;
+    :hasAlias "Survey-Based Sensing"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/schedule-based-sensing.png"^^xsd:anyURI ;
+    :hasProblem "You do not know what kinds of events you are looking for in your measurements or you need a general overview of the trend of the phenomenon that you are measuring."^^xsd:string ;
+    :hasContext "You have a device with sensors built into it or attached to it and need to use these sensors to acquire measurements over long periods."^^xsd:string ;
+    :hasForce "Energy Requirements: Leaving sensors running all the time allows them to record detailed measurements but uses more energy."^^xsd:string ,
+        "Initialization Delay: Sensors can be turned off to save energy but need some time to initialize and produce sensible values when turned on again."^^xsd:string ,
+        "Size: Measuring and sending many values over a long period enables detailed analysis but takes up storage space and communication bandwidth."^^xsd:string ,
+        "Fluctuation: Sensor measurements fluctuate but for your use case, long-term trends are more important than accurately measuring every spike."^^xsd:string ,
+        "Knowledge: With some knowledge about what you want to measure, you can get better results by applying techniques specifically tailored to your use case. However, in some cases, you do not precisely know what you are looking for."^^xsd:string ,
+        "Relevance: In some cases, only specific events are of relevance to you, but in other cases, you may be more interested in general long-term trends."^^xsd:string ;
+    :hasSolution "Define a schedule for sensor reading which fits with your use caseâ€™s requirements. Program the device to power up its sensors and read their values according to this schedule. Power down the sensors after reading."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/schedule-based-sensing.png"^^xsd:anyURI .
+
+
+:FactoryBootstrap
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Factory Bootstrap"^^xsd:string ;
+    :hasSummary "The information a device requires to create the first connection to its communication partners is placed on the device during manufacturing. A special chip or preconfigured firmware is build into the device. The device uses this information to create the first connection."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/factory-bootstrap.png"^^xsd:anyURI ;
+    :hasProblem "A device, which needs to communicate with other components, is added to an existing IoT system. It needs some basic information to be able to create connection and to start communication. It has to be robust and reliable enough to withstand harsh environments."^^xsd:string ;
+    :hasContext "You have a new device which has to communicate with other components to fulfill its purpose. The device is either connected directly to the other components, or it goes through a network and multiple intermediaries. Either way, the new device has to know how to create these connections. Besides, the device has to work reliably in harsh environments, e.g., outside in the remote wilderness, underwater, in dust and sand, or exposed to vibrations."^^xsd:string ;
+    :hasForce "Resilience: Some devices need to be built to withstand harsh conditions, but some components will decrease their ability to do so, for example, movable parts which break more easily or external ports which could let in water or dust."^^xsd:string ,
+        "Physical Access: Some devices may be hard to reach because they are set up in high places or at remote locations or rough terrain."^^xsd:string ,
+        "Planning: It may be hard to plan every detail concerning device communication before the devices are produced."^^xsd:string ,
+        "Maintenance: Depending on how the device is build, it may be hard to maintaine it once it is finished."^^xsd:string ;
+    :hasSolution "Place the information required for creating the first connection on the device during the manufacturing process. Either hard code it into onto the device or add it as part of the firmware or software which is put on the device during manufacturing."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/factory-bootstrap.png"^^xsd:anyURI .
+
+
+:Medium-BasedBootstrap
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Medium-Based Bootstrap"^^xsd:string ;
+    :hasSummary "The information a device requires to create the first connection to its communication partners is placed on the device during deployment. A storage medium, such as a USB stick, is put into the device. The device uses the information stored on this medium to create the first connection."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/medium-based-bootstrap.png"^^xsd:anyURI ;
+    :hasProblem "A new device needs some basic information to be able to create connections and to start communication. This information may change over time. How do you get this information onto the device while keeping it as independent as possible?"^^xsd:string ;
+    :hasContext "You have a new device which has to communicate with other components to fulfill its purpose. The device is either connected directly to the other components, or it goes through a network and multiple intermediaries. Either way, the new device has to know how to create these connections."^^xsd:string ;
+    :hasForce "Independence: The device should not depend on third parties for bootstrapping to avoid vendor lock-in."^^xsd:string ,
+        "Flexibility: The details needed for first communication may change with time. You possibly need to adapt the device to these changes."^^xsd:string ,
+        "Choice: You need a level of choice of how and to whom the device connects but baking this information into the device during production using Factory Bootstrap means personalizing every device. It binds the device to this choice and makes it uninteresting for parties which have other needs."^^xsd:string ,
+        "Cost: There may be solutions which offer more flexibility, but may require additional software or hardware components which could increase the overall cost of a device."^^xsd:string ,
+        "Security: Security credentials for authentication, authorization, or encryption may be needed for communication, but these credentials have to be brought onto the device without an attacker being able to eavesdrop on them or alter them."^^xsd:string ,
+        "Scalability: In some situations, large amounts of devices have to be bootstrapped, which can be a lot of work."^^xsd:string ,
+        "Physical Access: Some devices may be hard to reach because they are set up in high places or at remote locations or rough terrain."^^xsd:string ,
+        "Resilience: Some devices need to be built to withstand harsh conditions, but some components will decrease their ability to do so, for example, movable parts which break more easily or external ports which could let in water or dust."^^xsd:string ;
+    :hasSolution "Bootstrap, i.e., configure the device on-site from a replaceable storage medium, for example, a USB stick, that contains all necessary bootstrap information. When the device starts, let it read and use the information placed on this medium to start communication. Have the device copy its content for later use."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/medium-based-bootstrap.png"^^xsd:anyURI .
+
+
+:RemoteBootstrap
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Remote Bootstrap"^^xsd:string ;
+    :hasSummary "The information a device requires to create the first connection to its communication partners is remotely sent to the device by a bootstrap server."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/remote-bootstrap.png"^^xsd:anyURI ;
+    :hasProblem "A new device needs some basic information to be able to create connections and to start communication. This information is not the same for all devices and it may change from time to time. How do you get this information onto the device while retaining flexibility and allowing for a robust construction, all while the device is hard to reach?"^^xsd:string ;
+    :hasContext "You have a new device which has to communicate with other components to fulfill its purpose. The device is either connected directly to the other components, or it goes through a network and multiple intermediaries. Either way, the new device has to know how to create these connections. The device is located in a remote location where it is hard to reach for maintenance."^^xsd:string ;
+    :hasForce "Security: Security credentials for authentication, authorization, or encryption may be needed for communication but these credentials have to be brought onto the device and have to be secure themselves."^^xsd:string ,
+        "Simplicity: The device has to work without any further actions required by its owner. For example, the end-user does not have the ability to do any required setup or a company wants to install a large number of devices."^^xsd:string ,
+        "Size or Cost Constraints: The deviceâ€™s design, i.e., its form factor and the number of components, has to be small and simple because it needs to fit into size or cost limitations. Adding components just for bootstrapping, such as a memory card slot or USB connector for Medium-Based Bootstrap may not make sense."^^xsd:string ,
+        "Robustness: You intend to use the device in harsh environments and you need it to be durable. For example, you want to seal it to be water tight, or you want to put into a rugged enclosure which is intentionally hard to access to prevent any adverse effects from the outside. But this limits access to the device for legitimate maintenance purposes."^^xsd:string ,
+        "Flexibility: The details needed for first communication change with time. You need to adapt the device to these changes."^^xsd:string ,
+        "Physical Access: You want to place the device in a location that is hard to reach, which makes it difficult or dangerous to do a Medium-Based Bootstrap."^^xsd:string ,
+        "Scalability: You have to set up communication for a large number of devices, which costs time and resources if done manually."^^xsd:string ;
+    :hasSolution "Store the bootstrapping information on a bootstrap server. Provide the device with details on how to get to this server by Factory Bootstrap or Medium-Based Bootstrap or have the server informed about new devices. Download the bootstrap information from the bootstrap server onto the device. Use the bootstrap information to start communication."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/remote-bootstrap.png"^^xsd:anyURI .
+
+
+:DeviceRegistry
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Device Registry"^^xsd:string ;
+    :hasSummary "Device model instances of registered devices are permanently stored for future reference. This allows static device metadata to be retrieved even if the device is offline, and simplifies the management of registered devices."^^xsd:string ;
+    :hasAlias "Resource Directory"^^xsd:string ,
+        "Device Database"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/device-registry.png"^^xsd:anyURI ;
+    :hasProblem "The number and kind of devices that are connected to a backend server may change from moment to moment. Other components which need to know about these devices may not know about all of them or find it hard to keep up with these frequent changes."^^xsd:string ;
+    :hasContext "You have a number of heterougenous device that are connected to your backend. Each device has different attributes and functionality that might be of interest to other components."^^xsd:string ;
+    :hasForce "Management: For management purposes it might be useful to have an overview of all devices connected to a platform."^^xsd:string ,
+        "Discoverability: In some cases, a particular device might not even be known and first has to be searched or discovered based on some information."^^xsd:string ,
+        "Decoupling: If other components get information about device directly from the device, they are tightly coupled to them. If the device is not working or is offline, this will fail. Besides, getting information from every single device creates a lot of traffic and uses the devices resources."^^xsd:string ;
+    :hasSolution "Add all registered devices to a Device Registry. For the duration where their registration is valid, permanently store their device model. Make the device models accessable and queryable for other components through a standard interface."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/device-registry.png"^^xsd:anyURI .
+
+
+:ManualUser-DrivenRegistration
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Manual User-Driven Registration"^^xsd:string ;
+    :hasSummary "A user manually registers new devices using an API or GUI provided by the backend server. The user has to create a new or select an existing device model, create an instance of it and fill it with the metadata of the device. Once completed, the device can now connect to the backend server."^^xsd:string ;
+    :hasAlias "Manual Registration"^^xsd:string ,
+        "Onboarding by Owner"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/manual-user-driven-registration.png"^^xsd:anyURI ;
+    :hasProblem "Usually, many devices will be connected to one backend server, but not any device should be able to connect at will. Some information about the authorized devices has to be known to the backend in order to be able to contact and manage them. But not all devices or backends are capable of Automatic Client-Driven Registration or Automatic Server-Driven Registration or the user may want more control over the registration process."^^xsd:string ;
+    :hasContext "Some devices should be connected to a backend server. Often, the backend server has to allocate resources for each device, for example, communication queues or storage space for stored events."^^xsd:string ;
+    :hasForce "Scalability: In some cases, a large number of devices might be intended to connect to one backend server. Allocating the necessary resources and managing the registration by hand would involve a lot of work."^^xsd:string ,
+        "Control: Some cases might require a lot of user control to get all details right."^^xsd:string ,
+        "Compatibility: Not all devices or servers support automated registration. To maintain compatibility, a way to manually register devices is needed."^^xsd:string ,
+        "Simplicity: Automatically registering devices can be difficult to implement. Manually registering devices is simple and easy to implement."^^xsd:string ,
+        "Security: Automatically registering devices may lead to security issues. Manual control over the registration process can increase security."^^xsd:string ;
+    :hasSolution "Allow authorized users to manually register devices on the backend server. Provide them an API or GUI where they can enter the device details for first registration. Allow them to change these details later on if needed."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/manual-user-driven-registration.png"^^xsd:anyURI .
+
+
+:AutomaticClient-DrivenRegistration
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Automatic Client-Driven Registration"^^xsd:string ;
+    :hasSummary "To make itself known to its communication partners, a device initiates a registration process: It calls a registration API on the backend server and supplies required information about itself. From this information, a device model instance is created and stored on the backend server for future reference."^^xsd:string ;
+    :hasAlias "Self-registering Devices"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/automatic-client-driven-registration.png"^^xsd:anyURI ;
+    :hasProblem "Usually, many devices will be connected to one backend server, but for security or privacy reasons and to prevent misusage not any device should be able to connect at will. Some information about the authorized devices has to be known to the backend in order to be able to contact and manage them. How can this be done if the devices are autonomous and very dynamic?"^^xsd:string ;
+    :hasContext "Some devices should be connected to a backend server. Often, the backend server has to allocate resources for each device, for example, communication queues or storage space for stored events."^^xsd:string ;
+    :hasForce "Scalability: In some cases, a large number of devices might be intended to connect to one backend server. Allocating the necessary resources and managing the registration by hand would involve a lot of work."^^xsd:string ,
+        "Dynamics: Devices might move between locations and backend servers in a very dynamic fashion. Managing these changing associations manually would be a lot of work or even impossible in highly dynamic scenarios."^^xsd:string ,
+        "Security: Not every device should be allowed to connect to a specific platform. There have to be some rules that govern which devices are allowed."^^xsd:string ;
+    :hasSolution "Allow unknown devices to register themselves at the backend server via an API. The devices should provide at least a minimal set of metadata in the API call for successful registration. This should include the device id, details on how to communicate with the device, and some kind of authentication information, such as a token. Check the metadata to prevent illegitimate registration attempts, for example by comparing metadata against a list of allowed values or by validating the authentication information. If successful, place this metadata in a Device Registry so that the device can be identified later on."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/automatic-client-driven-registration.png"^^xsd:anyURI .
+
+
+:AutomaticServer-DrivenRegistration
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Automatic Server-Driven Registration"^^xsd:string ;
+    :hasSummary "The backend server is informed about new devices by an out-of-band mechanism and initiates a registration procedure: It requests the required information from the devices. From the responses, it creates and stores a device model instance for future reference."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/automatic-server-driven-registration.png"^^xsd:anyURI ;
+    :hasProblem "Usually, many devices will be connected to one backend server, but not any device should be able to connect at will. Some information about the authorized devices has to be known to the backend in order to be able to contact and manage them. You want to automate this process, but not all devices support Automatic Client-Driven Registration."^^xsd:string ;
+    :hasContext "Some devices should be connected to a backend server. Often, the backend server has to allocate resources for each device, for example, communication queues or storage space for stored events."^^xsd:string ;
+    :hasForce "Scalability: In some cases, a large number of devices might be intended to connect to one backend server. Allocating the necessary resources and managing the registration by hand would involve a lot of work."^^xsd:string ,
+        "Security: Automatically registering devices may lead to security issues. Manual control over the registration process can increase security."^^xsd:string ,
+        "Compatibility: Not all devices support automated registration. If compatibility with these devices is necessary and automation is needed, then automated registration has to be initiated on the server side."^^xsd:string ;
+    :hasSolution "Implement automatic registration on the server side. Inform the server of new devices through out of band communication channels or have it scan for new devices periodically. Once a new device is found, have the server establish communication with it and ask for the registration information. Add the device to the registered devices if it is able to provide the information."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/automatic-server-driven-registration.png"^^xsd:anyURI .
+
+
+:Device-DrivenModel
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Device-Driven Model"^^xsd:string ;
+    :hasSummary "Device models, which describe the attributes and functionalities of particular types of devices, are created and stored on the device itself. The device supplies this model instance to its communication partners."^^xsd:string ;
+    :hasAlias "Client-side Endpoint Profile"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/device-driven-model.png"^^xsd:anyURI ;
+    :hasProblem "Other components need to know the data and functionality which a specific device provides so that they can interact with it. But some use cases have a high diversity of devices and may work in a decentralized fashion."^^xsd:string ;
+    :hasContext "You have devices that each offer a specific set of functionality to other components, such as operations that can be invoked on them (for example, operating an actuator, or restarting the device) or information that can be retrieved from them (for example, the most recent values of a sensor). Each device is also described by a set of metadata, which could include its name, type, id, manufacturer, etc. You have other components, like other devices, a backend server, an application, etc., that need to interact with these devices."^^xsd:string ;
+    :hasForce "Compatibility: For other components to be able to interact with a device they have to somehow have a common understanding of the available functionality."^^xsd:string ,
+        "Flexibility: The abilities of a device might change through firmware updates. Other components have to be made aware of and adapt to these changes. This will be hard if changes have to be made on all other components, especially if changes have to be made by hand."^^xsd:string ,
+        "Diversity: Many different kinds of device with different functionality exist. Storing and managing descriptions of all of these devices centrally might be very hard."^^xsd:string ,
+        "Decentralization: Devices may want to communicate in a decentralized fashion, without any central component involved. Thus, using Server-Driven Models or Pre-Defined Device-Driven Models would not be possible."^^xsd:string ;
+    :hasSolution "Let the developers of a device themselves define a model of the device. The model contains the device properties that can be read or written and the device commands that can be executed. Store the model on the device and make it available to other components that want to interact with the device."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/device-driven-model.png"^^xsd:anyURI .
+
+
+:Pre-DefinedDeviceModel
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Pre-Defined Device Model"^^xsd:string ;
+    :hasSummary "Device models, which describe the attributes and functionalities of particular types of devices, are created and stored on the backend server. The devices themselves choose a model that fits them from the provided selection and fill an instance of it with their metadata."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/pre-defined-device-driven-model.png"^^xsd:anyURI ;
+    :hasProblem "Other components need to know the data and functionality which a specific device provides so that they can interact with it. Not all devices come with the ability to provide or store this information, but you need them to retain some autonomy."^^xsd:string ;
+    :hasContext "You have devices that each offer a specific set of functionality to other components, such as operations that can be invoked on them (for example, operating an actuator, or restarting the device) or information that can be retrieved from them (for example, the most recent values of a sensor). Each device is also described by a set of metadata, which could include its name, type, id, manufacturer, etc. You have other components, like other devices, a backend server, an application, etc., that need to interact with these devices."^^xsd:string ;
+    :hasForce "Compatibility: For other components to be able to interact with a device they have to somehow have a common understanding of the available functionality."^^xsd:string ,
+        "Unmodeled Devices: Not all devices will come with a Device-Driven Model or have the ability to store such a model. Especially legacy devices or very constrained devices might not be able to store such information themselves. It should be possible to also integrate these devices."^^xsd:string ,
+        "Flexibility: The abilities of a device might change through firmware updates. Other components have to be made aware of and adapt to these changes. This will be hard if changes have to be made on all other components, especially if changes have to be made by hand."^^xsd:string ,
+        "Diversity: Many different kinds of devices with different functionality exist. Storing and managing descriptions of all of these devices centrally might be very hard."^^xsd:string ,
+        "Autonomy: The devices need to retain some autonomy, so it wonâ€™t be possible to use Server-Driven Models."^^xsd:string ;
+    :hasSolution "Create a predefined set of device models. The models contains the device properties that can be read or written and the device commands that can be executed. Store the models on the backend server. Let devices choose a fitting model when they register."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/pre-defined-device-driven-model.png"^^xsd:anyURI .
+
+
+:Server-DrivenModel
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Server-Driven Model"^^xsd:string ;
+    :hasSummary "Device models, which describe the attributes and functionalities of particular types of devices, are created and stored on the backend server. The backend server also assigns instances of these models to the respective devices."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/server-driven-model.png"^^xsd:anyURI ;
+    :hasProblem "Other components need to know the data and functionality which a specific device provides so that they can interact with it. But not all devices come with the ability to provide or store this information."^^xsd:string ;
+    :hasContext "You have devices that each offer a specific set of functionality to other components, such as operations that can be invoked on them (for example, operating an actuator, or restarting the device) or information that can be retrieved from them (for example, the most recent values of a sensor). Each device is also described by a set of metadata, which could include its name, type, id, manufacturer, etc. You have other components, like other devices, a backend server, an application, etc., that need to interact with these devices."^^xsd:string ;
+    :hasForce "Compatibility: For other components to be able to interact with a device they have to somehow have a common understanding of the available functionality."^^xsd:string ,
+        "Unmodeled Devices: Not all devices will come with a Device-Driven Model or have the ability to store such a model, or a pointer to a Pre-Defined Device-Driven Model. Especially legacy devices or very constrained devices might not be able to store and provide such information themselves. It should be possible to also integrate these devices."^^xsd:string ,
+        "Flexibility: The abilities of a device might change through firmware updates. Other components have to be made aware of and adapt to these changes. This will be hard if changes have to be made on all other components, especially if changes have to be made by hand."^^xsd:string ,
+        "Diversity: Many different kinds of devices with different functionality exist. Storing and managing descriptions of all of these devices centrally might be very hard."^^xsd:string ;
+    :hasSolution "Create a device model that describes the device and its functionality. Store it in a model database on the backend server. Assign a model instance to the device on the backend server during registration. Store the deviceâ€™s model instance in a Device Registry."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/server-driven-model.png"^^xsd:anyURI .
+
+
+:TrustedCommunicationPartner
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Trusted Communication Partner"^^xsd:string ;
+    :hasSummary "IoT environments may contain all sorts of devices and other components that are not under your direct control. These may pose a security or privacy risk to your devices and data. Limit your devicesâ€™ autonomy and configure them to communicate only with trusted partners. Block and notify connection attempts from other sources."^^xsd:string ;
+    :hasAlias "Well-Known Target"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/trusted-communication-partner.png"^^xsd:anyURI ;
+    :hasProblem "In a dynamic environment there may be multiple potential communication partners available for a device. These may not be known or trusted and may pose a security risk as attackers may try to use them to get access to devices and their networks."^^xsd:string ;
+    :hasContext "In the IoT, devices may communicate with many other communication partners, such as backend servers, applications, or other devices. Some of these connections may be used regularly while others are used infrequently. Besides, the number of available communication partners may be constantly changing as new apps or services are created and devices change their location."^^xsd:string ;
+    :hasForce "Threats: Other components may pose a threat by trying to access the device or by launching a denial of service attack."^^xsd:string ,
+        "Uninvited Communication: Uninvited communication should be blocked where possible."^^xsd:string ,
+        "Functionality: The security measures should not impede normal operation and communication."^^xsd:string ,
+        "Flexibility: Some use cases are rather static and do not involve frequently changing communication partners. Others are the opposite and require interactions with frequently changing communication partners, which increases the risk of potential attacks."^^xsd:string ;
+    :hasSolution "Configure the device with a single communication partner or a list of communication partners that you trust. Only allow incoming or outgoing communication with these Trusted Communication Partners. Block other communication attempts and notify the person responsible for investigating these attempts."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/trusted-communication-partner.png"^^xsd:anyURI .
+
+
+:Outbound-Only-Connection
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Outbound-Only-Connection"^^xsd:string ;
+    :hasSummary "Attackers may send unsolicited connection requests to devices to get them to connect to an infected communication partner. To prevent this, configure devices so that only they initiate connections. Block all incoming connection requests."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/outbound-only-connection.png"^^xsd:anyURI ;
+    :hasProblem "Devices are a target for attackers who try to gain access to their network. They may send unsolicited communication requests to the devices to get them to connect to an infected communication partner or to misuse them."^^xsd:string ;
+    :hasContext "Devices and other components often have to communicate bidirectionally: Devices send data to other devices or services for monitoring, processing, analysis, or storage purposes. Devices also receive commands which control actuators attached to them or trigger functionality built into them. This communication poses a security risk as attackers might try to gain access to devices to manipulate them."^^xsd:string ;
+    :hasForce "Security: Unsolicited request must be ignored."^^xsd:string ,
+        "Functionality: The original functionality of the devices has to stay intact. They have to be able to send their data and they also have to be able to receive commands from other communication partners."^^xsd:string ,
+        "Constraints: Many IoT devices are constrained in their capabilities. This limits the viability of more sophisticated solutions for controlling communication, such as Firewalls or Packet Filters."^^xsd:string ;
+    :hasSolution "Program devices so that only they initiate connections. Deny all incoming communication requests that are not responses to a connection already created by the device."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/outbound-only-connection.png"^^xsd:anyURI .
+
+
+:PermissionControl
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Permission Control"^^xsd:string ;
+    :hasSummary "Device owners are afraid to completely hand over access to their devices and data to others. Allow device owners to choose which functionality and data a backend server or other communication partners are allowed to access when they first connect to the device. Ensure that these choices are respected and updated when something changes."^^xsd:string ;
+    :hasAlias "Explicit Choice"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/permission-control.png"^^xsd:anyURI ;
+    :hasProblem "Device owners are afraid to completely hand over access to their devices and data to third parties without any control. Often, it is unclear what data a device shares with communication partners or what others can access and control."^^xsd:string ;
+    :hasContext "In the IoT there are often multiple stakeholders involved, such as device and platform manufacturers, owners, and users. Building and using IoT solutions often requires communication between the components of these stakeholders, for example between devices and a backend server, as data and functionality are shared."^^xsd:string ;
+    :hasForce "Choice: Device owners should have a choice as to what rights they grant a particular communication partner. This may include scenarios where they do only grant limited rights with which communication partners have to work. The available choices depend on the use case and its semantics."^^xsd:string ,
+        "Granularity: Different levels of granularity may be required depending on the use case."^^xsd:string ,
+        "Enforcement: The mechanism has to protect usersâ€™ rights. If a user chooses not to allow something it has to make sure that this choice is enforced."^^xsd:string ,
+        "Simplicity: Such a mechanism has to be easy to use for end users. It will not be adopted or it will be wrongly used if it is too complicated."^^xsd:string ,
+        "Updates: Capabilities of devices and the communication partners which access them change. In such a case, the user may change his mind about previous choices or has to make new choices. The backend server and other systems have to make sure to work with the current set of choices at all times."^^xsd:string ;
+    :hasSolution "When first connecting a device to a backend server, require an explicit choice from the user regarding which functionality and data the backend and other communication partners are allowed to use. Build your backend server so that it adheres to these choices. Require the user to confirm these choices if something on the device or the backend server changes."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/permission-control.png"^^xsd:anyURI .
+
+
+:PersonalZoneHub
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Personal Zone Hub"^^xsd:string ;
+    :hasSummary "Managing the permissions, data sharing, and control of devices across multiple Device Gateways and clouds is complex. Create a Personal Zone Hub which handles such settings in a central place under the control of the device owner or a trusted third party. Allow owners to selectively provide access to their devices and data through this hub."^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/personal-zone-hub.png"^^xsd:anyURI ;
+    :hasProblem "Users have an increasing number of IoT devices. Managing the permissions, data sharing and control of these devices across multiple gateways and cloud systems is complex."^^xsd:string ;
+    :hasContext "Devices, services, applications, and the data they produce usually have an owner, such as a person or an organization. Together, these components create the personal zone of their owner. This personal zone may contain all kinds of devices, applications, and data that may allow others to identify, track, or gain insights about the owner. Thus, the owner is usually interested in controlling and restricting access to his personal zone."^^xsd:string ;
+    :hasForce "Ownership: You own all the components and data in your personal zone and thus should be in charge when it comes to granting access to them."^^xsd:string ,
+        "Manageability: Handling access to the devices in your personal zone on a per device basis may be cumbersome. Each device may have a different mechanism for handling access."^^xsd:string ,
+        "Trust: The user may not trust third parties with the management of his devices, apps, software, and data."^^xsd:string ,
+        "Decentralization: Having only one party being responsible for matters of authorization may be a disadvantage. It would concentrate these capabilities in one place and allow this party to take advantage of its position. It may also lead to vendor lock-in."^^xsd:string ;
+    :hasSolution "Create a Personal Zone Hub which unifies the management and control of all devices, services, apps, and data of one user into a single, trusted system. Make the hub permanently addressable. Allow the user to selectively share access to some or all the data and functionality encompassed by the zone."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/personal-zone-hub.png"^^xsd:anyURI .
+
+
+:Whitelist
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Whitelist"^^xsd:string ;
+    :hasSummary "Available privileges may be abused, but not all potential abusers are known beforehand. To minimize the risk of abuse, add identifiers of all trusted communication partners to a Whitelist. Block the privileges controlled by the Whitelist for those who are not on it."^^xsd:string ;
+    :hasAlias "Filter"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/whitelist.png"^^xsd:anyURI ;
+    :hasProblem "Privileges may be abused and attackers may try to overwhelm a system with requests. Using a Blacklist to block known abusive communication partners helps, but such a list is never complete. There has to be a mechanism to limit access to known communication partners to minimize the possible range of attacks."^^xsd:string ;
+    :hasContext "For IoT systems to work, communication partners need privileges to access parts of others. Some examples include devices that need access privileges on the backend server to send it their data, or applications that need privileges to access certain functionality or to be executed on a device or a server. Some privileges may be freely available by default, but others should only be made available to trusted partners. In both cases, abuse is a problem which has to be handled. This can be done by using the Authenticator pattern, which relies on cryptographic mechanisms and tokens but requires some processing power. Thus, this may not be applicable everywhere in IoT systems, where very constrained devices may not have enough resources to execute such a mechanism. Besides, tokens used by these mechanisms may be stolen and used on other devices, or devices may be stolen and used from other locations. Denial-of-service attacks might also be a problem. Such illegitimate request should be blocked to not waste too many resources on them."^^xsd:string ;
+    :hasForce "Prevention: The mechanism has to prevent future abuse where possible."^^xsd:string ,
+        "Identification: To be able to grant only certain communication partners the controlled privileges, is has to be possible to identify them reliably."^^xsd:string ,
+        "Control: The mechanism has to provide control over what communication partners or actions are deemed trustworthy. It has to allow manual adjustment if these circumstances change."^^xsd:string ,
+        "Efficiency: The mechanism has to be resource efficient. It should not have a large impact on the normal operation of an IoT system. Thus, it should be able to run on constrained devices."^^xsd:string ;
+    :hasSolution "Implement a Whitelist to which identifiers of communication partners may be added with an administrative interface. Implement checks for every privilege which the Whitelist controls. If such a privilege is requested and the requesterâ€™s identifier is on the Whitelist, allow it to proceed. If not, deny the request."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/whitelist.png"^^xsd:anyURI .
+
+
+:Blacklist
+    rdf:type owl:NamedIndividual , <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPattern> ;
+    <https://purl.org/patternpedia#hasName> "Blacklist"^^xsd:string ;
+    :hasSummary "Available privileges may be abused. To stop this, implement a Blacklist to which identifiers of abusive communication partners can be added. For each partner that requests a privilege first check this list and deny it if its identifier is found on it."^^xsd:string ;
+    :hasAlias "Filter"^^xsd:string ;
+    :hasIcon "http://internetofthingspatterns.com/images/icons/blacklist.png"^^xsd:anyURI ;
+    :hasProblem "Privileges, no matter if freely available or explicitly granted, may be abused. There has to be a mechanism to stop existing abuse and to limit potential future abuse."^^xsd:string ;
+    :hasContext "For IoT systems to work, communication partners need privileges to access parts of others. Some examples include devices that need access privileges on the backend server to send it their data, or applications that need privileges to access certain functionality or to be executed on a device or a server. Some privileges may have to be explicitly granted, others may be freely available. In the latter case, abuse is a problem which has to be handled. But even when privileges are explicitly granted, abuse is still possible, for example if a device is hijacked by a malicious intruder."^^xsd:string ;
+    :hasForce "Intervention: Abuse may already be happening. The mechanism has to be able to intervene and stop existing abuse."^^xsd:string ,
+        "Prevention: The mechanism has to prevent future abuse where possible."^^xsd:string ,
+        "Identification: To be able to prevent abuse, it must be possible to identify abusers. But identification may be imprecise or easy to forge."^^xsd:string ,
+        "Control: The mechanism has to provide control over what communication partners or actions are deemed abusive. It has to allow manual adjustment if these circumstances change."^^xsd:string ,
+        "Simplicity: The mechanism should be easy to understand and easy to use."^^xsd:string ,
+        "Efficiency: The mechanism has to be resource efficient. It should not have a large impact on the normal operation of an IoT system. It should be able to run on constrained devices."^^xsd:string ;
+    :hasSolution "Implement a Blacklist to which identifiers of abusive communication partners can be added with an administrative interface. Implement checks for every privilege that the Blacklist controls. If such a privilege is requested and the identifier of the requesting communication partner is on the Blacklist, block it. If not, allow it to proceed."^^xsd:string ;
+    :hasSolutionSketch "http://internetofthingspatterns.com/images/sketches/blacklist.png"^^xsd:anyURI .
+
+
