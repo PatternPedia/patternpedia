@@ -33,7 +33,7 @@
 ###  https://purl.org/patternpedia#hasPatternRelation
 :hasPattern rdf:type owl:ObjectProperty ;
                     rdfs:domain :Pattern ;
-                    rdfs:range :PatternRelationDescriptor .
+                    rdfs:range :UndirectedPatternRelationDescriptor .
 
 ###  https://purl.org/patternpedia#referredByView
 :referredByView rdf:type owl:ObjectProperty ;
@@ -43,13 +43,13 @@
 
 ###  https://purl.org/patternpedia#hasSource
 :hasSource rdf:type owl:ObjectProperty ;
-           rdfs:domain :PatternRelationDescriptor ;
+           rdfs:domain :DirectedPatternRelationDescriptor ;
            rdfs:range :Pattern .
 
 
 ###  https://purl.org/patternpedia#hasTarget
 :hasTarget rdf:type owl:ObjectProperty ;
-           rdfs:domain :PatternRelationDescriptor ;
+           rdfs:domain :DirectedPatternRelationDescriptor ;
            rdfs:range :Pattern .
 
 
