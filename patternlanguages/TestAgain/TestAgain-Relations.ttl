@@ -18,3 +18,8 @@ pp:hasSource :PatternP ;
 pp:hasTarget :AnotherPattern ; 
  pp:hasDescription "p -> another"^^xsd:string . 
  
+:ManyEntries-to-PatternP
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :ManyEntries ; 
+pp:hasTarget :PatternP .
+ 
