@@ -28,6 +28,11 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :ManyEntries ; 
 pp:hasTarget :AnotherPattern .
  
+:AnotherPattern-to-ManyEntries
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :AnotherPattern ; 
+pp:hasTarget :ManyEntries .
+ 
 :PatternE-to-PatternP
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :PatternE ; 
