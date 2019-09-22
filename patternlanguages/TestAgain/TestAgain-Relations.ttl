@@ -12,13 +12,24 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-:PatternE-to-ManyEntries
+:PatternE-to-TestSectionOrder
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternE ; 
-pp:hasTarget :ManyEntries .
+pp:hasTarget :TestSectionOrder .
  
-:PatternE-to-AnotherPattern
-rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :PatternE ; 
-pp:hasPattern :AnotherPattern .
+:ManyEntries-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :ManyEntries ; 
+pp:hasTarget :PatternE .
+ 
+:AnotherPattern-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :AnotherPattern ; 
+pp:hasTarget :PatternE .
+ 
+:ManyListEntries-to-PatternE
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :ManyListEntries ; 
+pp:hasTarget :PatternE ; 
+ pp:hasDescription "Many -> e"^^xsd:string . 
  
