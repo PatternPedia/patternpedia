@@ -1,0 +1,80 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:Layers
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Layers"^^xsd:string .
+
+:PipesandFilters
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Pipes and Filters"^^xsd:string .
+
+:Blackboard
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Blackboard"^^xsd:string .
+
+:Broker
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Broker"^^xsd:string .
+
+:Model-View-Controller
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Model-View-Controller"^^xsd:string .
+
+:Presentation-Abstraction-Control
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Presentation-Abstraction-Control"^^xsd:string .
+
+:Microkernel
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Microkernel"^^xsd:string .
+
+:Reflection
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Reflection"^^xsd:string .
+
+:Whole-Part
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Whole-Part"^^xsd:string .
+
+:Master-Slave
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Master-Slave"^^xsd:string .
+
+:Proxy
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Proxy"^^xsd:string .
+
+:CommandProcessor
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Command Processor"^^xsd:string .
+
+:ViewHandler
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "View Handler"^^xsd:string .
+
+:Forward-Receiver
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Forward-Receiver"^^xsd:string .
+
+:Client-Dispatcher-Server
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Client-Dispatcher-Server"^^xsd:string .
+
+:Publisher-Subscriber
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Publisher-Subscriber"^^xsd:string .
+
+:CountedPointer
+    rdf:type owl:NamedIndividual , :PatternOrientedSoftwareArchitecturePattern ;
+    <https://purl.org/patternpedia#hasName> "Counted Pointer"^^xsd:string .
+

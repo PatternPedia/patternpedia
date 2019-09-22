@@ -1,0 +1,151 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/> .
+
+#################################################################
+#    The ontology of the patternlanguage
+#################################################################
+
+<https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns>
+    rdf:type owl:Ontology ;
+    owl:imports <https://purl.org/patternpedia> .
+
+#################################################################
+#    Data Properties
+#################################################################
+
+# Other names for the pattern, if any are known
+:hasAlsoKnownAs rdf:type owl:DatatypeProperty .
+
+# A real-world example demonstrating the existence of the problem and the need for the pattern
+:hasExample rdf:type owl:DatatypeProperty .
+
+# The situation in which the pattern may apply
+:hasContext rdf:type owl:DatatypeProperty .
+
+# The problem the pattern addresses, including a discussion of its associated forces
+:hasProblem rdf:type owl:DatatypeProperty .
+
+# The fundamental solution principle underlying the pattern
+:hasSolution rdf:type owl:DatatypeProperty .
+
+# A detailed specification of the structural aspects of the pattern including CRC-cards for each participating component and an OMT class diagram
+:hasStructure rdf:type owl:DatatypeProperty .
+
+# Typical scenarios describing the run-time behaviour of the pattern
+:hasDynamics rdf:type owl:DatatypeProperty .
+
+# Guidelines for implementing the pattern
+:hasImplementation rdf:type owl:DatatypeProperty .
+
+# Discussion of any important aspects for resolving the example that are not yet covered in the Solution, Structure, Dynamics and Implementation Sections
+:hasExampleResolved rdf:type owl:DatatypeProperty .
+
+# A brief description of variants or specializations of a pattern
+:hasVariants rdf:type owl:DatatypeProperty .
+
+# Examples of the use of the pattern, taken from existing systems
+:hasKnownUses rdf:type owl:DatatypeProperty .
+
+# The benefits the pattern provides, and any potential liabilities
+:hasConsequences rdf:type owl:DatatypeProperty .
+
+#################################################################
+#    Class definitions
+#################################################################
+
+:PatternOrientedSoftwareArchitecturePattern
+    rdf:type owl:Class ;
+    rdfs:subClassOf pp:Pattern ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasAlsoKnownAs ;
+          owl:allValuesFrom xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasExample ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasContext ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasProblem ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasSolution ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasStructure ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasDynamics ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasImplementation ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasExampleResolved ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasVariants ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasKnownUses ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasConsequences ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:PatternOrientedSoftwareArchitecturePatterns
+    rdf:type owl:NamedIndividual, pp:PatternLanguage ;
+    pp:hasLogo "https://media.wiley.com/product_data/coverImage300/97/04719586/0471958697.jpg"^^xsd:anyURI ;
+    pp:hasName "Pattern Oriented Software Architecture Patterns"^^xsd:string ;
+    pp:containsPattern :Layers ,
+        :PipesandFilters ,
+        :Blackboard ,
+        :Broker ,
+        :Model-View-Controller ,
+        :Presentation-Abstraction-Control ,
+        :Microkernel ,
+        :Reflection ,
+        :Whole-Part ,
+        :Master-Slave ,
+        :Proxy ,
+        :CommandProcessor ,
+        :ViewHandler ,
+        :Forward-Receiver ,
+        :Client-Dispatcher-Server ,
+        :Publisher-Subscriber ,
+        :CountedPointer .
+
