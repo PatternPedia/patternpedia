@@ -1,0 +1,149 @@
+# Definition of prefixes
+@prefix : <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns/> .
+
+#################################################################
+#    The ontology of the patternlanguage
+#################################################################
+
+<https://purl.org/patternpedia/patternlanguages/gangoffourpatterns>
+    rdf:type owl:Ontology ;
+    owl:imports <https://purl.org/patternpedia> .
+
+#################################################################
+#    Data Properties
+#################################################################
+
+# A short statement that answers the following questions: What does the design pattern do? What is its rationale and intent? What particular design issue or problem does it address?
+:hasIntent rdf:type owl:DatatypeProperty .
+
+# Other well-known names for the pattern, if any
+:hasAlsoKnownAs rdf:type owl:DatatypeProperty .
+
+# A scenario that illustrates a design problem and how the class and object structures in the pattern solve the problem
+:hasMotivation rdf:type owl:DatatypeProperty .
+
+# What are the situations in which the design pattern can be applied?
+:hasApplicability rdf:type owl:DatatypeProperty .
+
+# A graphical representation of the classes in the pattern using a notation based on the Object Modeling Technique
+:hasStructure rdf:type owl:DatatypeProperty .
+
+# The classes and/or objects participating in the design pattern and their responsibilities
+:hasParticipant rdf:type owl:DatatypeProperty .
+
+# How the participants collaborate to carry out their responsibilities
+:hasCollaboration rdf:type owl:DatatypeProperty .
+
+# How does the pattern support its objectives?
+:hasConsequence rdf:type owl:DatatypeProperty .
+
+# What pitfalls, hints, or techniques should you be aware of when implementing the pattern?
+:hasImplementation rdf:type owl:DatatypeProperty .
+
+# Code fragments that illustrate how you might implement the pattern
+:hasSampleCode rdf:type owl:DatatypeProperty .
+
+# Examples of the pattern found in real systems
+:hasKnownUses rdf:type owl:DatatypeProperty .
+
+#################################################################
+#    Class definitions
+#################################################################
+
+:GangofFourPattern
+    rdf:type owl:Class ;
+    rdfs:subClassOf pp:Pattern ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasIntent ;
+          owl:allValuesFrom xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasAlsoKnownAs ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasMotivation ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasApplicability ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasStructure ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasParticipant ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasCollaboration ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasConsequence ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasImplementation ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasSampleCode ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasKnownUses ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:GangofFourPatterns
+    rdf:type owl:NamedIndividual, pp:PatternLanguage ;
+    pp:hasLogo "https://springframework.guru/wp-content/uploads/2015/04/9780201633610.jpg"^^xsd:anyURI ;
+    pp:hasName "Gang of Four Patterns"^^xsd:string ;
+    pp:containsPattern :AbstractFactory ,
+        :Builder ,
+        :FactoryMethod ,
+        :Prototype ,
+        :Singleton ,
+        :Adapter ,
+        :Bridge ,
+        :Composite ,
+        :Decorator ,
+        :Facade ,
+        :Flyweight ,
+        :Proxy ,
+        :ChainofResponsibility ,
+        :Command ,
+        :Interpreter ,
+        :Iterator ,
+        :Mediator ,
+        :Memento ,
+        :Observer ,
+        :State ,
+        :Strategy ,
+        :TemplateMethod ,
+        :Visitor .
+

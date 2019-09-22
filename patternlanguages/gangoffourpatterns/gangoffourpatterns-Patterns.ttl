@@ -1,0 +1,104 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:AbstractFactory
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Abstract Factory"^^xsd:string .
+
+:Builder
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Builder"^^xsd:string .
+
+:FactoryMethod
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Factory Method"^^xsd:string .
+
+:Prototype
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Prototype"^^xsd:string .
+
+:Singleton
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Singleton"^^xsd:string .
+
+:Adapter
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Adapter"^^xsd:string .
+
+:Bridge
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Bridge"^^xsd:string .
+
+:Composite
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Composite"^^xsd:string .
+
+:Decorator
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Decorator"^^xsd:string .
+
+:Facade
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Facade"^^xsd:string .
+
+:Flyweight
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Flyweight"^^xsd:string .
+
+:Proxy
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Proxy"^^xsd:string .
+
+:ChainofResponsibility
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Chain of Responsibility"^^xsd:string .
+
+:Command
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Command"^^xsd:string .
+
+:Interpreter
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Interpreter"^^xsd:string .
+
+:Iterator
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Iterator"^^xsd:string .
+
+:Mediator
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Mediator"^^xsd:string .
+
+:Memento
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Memento"^^xsd:string .
+
+:Observer
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Observer"^^xsd:string .
+
+:State
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "State"^^xsd:string .
+
+:Strategy
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Strategy"^^xsd:string .
+
+:TemplateMethod
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Template Method"^^xsd:string .
+
+:Visitor
+    rdf:type owl:NamedIndividual , :GangofFourPattern ;
+    <https://purl.org/patternpedia#hasName> "Visitor"^^xsd:string .
+
