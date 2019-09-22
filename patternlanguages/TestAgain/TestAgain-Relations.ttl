@@ -12,13 +12,8 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
 
-:PatternE-to-AnotherPattern
+:AnotherPattern-to-ManyEntries
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternE ; 
-pp:hasTarget :AnotherPattern .
- 
-:PatternF-to-PatternE
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :PatternF ; 
-pp:hasTarget :PatternE .
+pp:hasSource :AnotherPattern ; 
+pp:hasTarget :ManyEntries .
  
