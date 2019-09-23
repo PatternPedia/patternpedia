@@ -18,3 +18,8 @@ pp:hasSource :Pattern1 ;
 pp:hasTarget :Patterntest ; 
  pp:hasDescription "rwr"^^xsd:string . 
  
+:Pattern1-to-Pattern2
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :Pattern1 ; 
+pp:hasPattern :Pattern2 .
+ 
