@@ -9,7 +9,7 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/TestAgain> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Patterns>, <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> .
+owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Patterns>, <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations>.
 
 
 # #################################################################
@@ -79,15 +79,4 @@ pp:hasName "TestAgain"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
-:TestAgain pp:containsPattern :ManyEntries .
-:TestAgain pp:containsPattern :ManyListEntries .
-:TestAgain pp:containsPattern :PatternE .
-:TestAgain pp:containsPattern :PatternF .
-:TestAgain pp:containsPattern :PatternG .
-:TestAgain pp:containsPattern :PatternP .
-:TestAgain pp:containsPattern :PatternW .
-:TestAgain pp:containsPattern :PatternWW .
-:TestAgain pp:containsPattern :PatternXX .
-:TestAgain pp:containsPattern :Patternname .
-:TestAgain pp:containsPattern :TestSectionOrder .
-:TestAgain pp:containsPattern :AnotherPattern .
+:TestAgain pp:containsPattern :Patterntest .
