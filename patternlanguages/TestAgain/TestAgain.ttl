@@ -39,6 +39,11 @@ pp:hasListIndex "2"^^xsd:integer .
 pp:hasListIndex "3"^^xsd:integer .
 
 
+### https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "4"^^xsd:integer .
+
+
 # #################################################################
 # #
 # #    Restrictions / Classes
@@ -47,6 +52,12 @@ pp:hasListIndex "3"^^xsd:integer .
 ### https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain
 :TestAgainIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
+				] ,
+
+
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> ; 
 			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
@@ -68,6 +79,12 @@ pp:hasListIndex "3"^^xsd:integer .
 			[ rdf:type owl:Restriction ;
 			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> ; 
 			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
@@ -79,7 +96,8 @@ pp:hasName "TestAgain"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
+:TestAgain pp:containsPattern :ManyEntries .
 :TestAgain pp:containsPattern :Pattern1 .
 :TestAgain pp:containsPattern :Pattern2 .
 :TestAgain pp:containsPattern :Patterntest .
-:TestAgain pp:containsPattern :ManyEntries .
+:TestAgain pp:containsPattern :Pattern3 .
