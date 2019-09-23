@@ -28,34 +28,34 @@
 #################################################################
 
 # summary of the pattern
-:hasSummary rdf:type owl:DataProperty .
+:hasSummary rdf:type owl:DatatypeProperty .
 
 # other names the patterns might be known
-:hasAlias rdf:type owl:DataProperty .
+:hasAlias rdf:type owl:DatatypeProperty .
 
 # graphical representation of the pattern for architecture diagrams or sketches
-:hasIcon rdf:type owl:DataProperty .
+:hasIcon rdf:type owl:DatatypeProperty .
 
 # core problem that is solved by this pattern independently from the domain or technology
-:hasProblem rdf:type owl:DataProperty .
+:hasProblem rdf:type owl:DatatypeProperty .
 
 # circumstances in which the problem typically occurs
-:hasContext rdf:type owl:DataProperty .
+:hasContext rdf:type owl:DatatypeProperty .
 
 # things that must be taken in account when choosing a solution to a problem
-:hasForce rdf:type owl:DataProperty .
+:hasForce rdf:type owl:DatatypeProperty .
 
 # core steps to solve the problem
-:hasSolution rdf:type owl:DataProperty .
+:hasSolution rdf:type owl:DatatypeProperty .
 
 # a graphical representation of the solution
-:hasSolutionSketch rdf:type owl:DataProperty .
+:hasSolutionSketch rdf:type owl:DatatypeProperty .
 
 # solution in greater detail
-:hasResult rdf:type owl:DataProperty .
+:hasResult rdf:type owl:DatatypeProperty .
 
 # different form of the patterns
-:hasVariant rdf:type owl:DataProperty .
+:hasVariant rdf:type owl:DatatypeProperty .
 
 
 #################################################################

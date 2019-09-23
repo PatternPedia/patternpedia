@@ -28,13 +28,13 @@
 #################################################################
 
 # sums up the pattern in a sentence or two
-:hasIntent rdf:type owl:DataProperty .
+:hasIntent rdf:type owl:DatatypeProperty .
 
 # visual representation of the pattern, e.g. in UML
-:hasSketch rdf:type owl:DataProperty .
+:hasSketch rdf:type owl:DatatypeProperty .
 
 # a problem, why you should use this pattern
-:hasMotivation rdf:type owl:DataProperty .
+:hasMotivation rdf:type owl:DatatypeProperty .
 
 
 
