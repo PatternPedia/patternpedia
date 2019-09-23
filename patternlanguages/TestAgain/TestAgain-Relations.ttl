@@ -34,8 +34,13 @@ rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :Pattern1 ; 
 pp:hasPattern :Pattern2 .
  
-:Pattern1-to-PatAgain
+:PatAgain-to-Pattern1
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :Pattern1 ; 
+pp:hasPattern :PatAgain ; 
+pp:hasPattern :Pattern1 .
+ 
+:Patternname-to-PatAgain
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :Patternname ; 
 pp:hasPattern :PatAgain .
  
