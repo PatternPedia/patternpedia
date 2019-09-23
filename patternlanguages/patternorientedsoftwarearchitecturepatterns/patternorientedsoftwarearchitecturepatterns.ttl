@@ -14,7 +14,9 @@
 
 <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns>
     rdf:type owl:Ontology ;
-    owl:imports <https://purl.org/patternpedia> .
+    owl:imports <https://purl.org/patternpedia> ,
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/patternorientedsoftwarearchitecturepatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/patternorientedsoftwarearchitecturepatterns-Relations> .
 
 #################################################################
 #    Data Properties

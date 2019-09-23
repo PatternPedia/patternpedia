@@ -14,7 +14,9 @@
 
 <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns>
     rdf:type owl:Ontology ;
-    owl:imports <https://purl.org/patternpedia> .
+    owl:imports <https://purl.org/patternpedia> ,
+        <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns/gangoffourpatterns-Patterns> ,
+        <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns/gangoffourpatterns-Relations> .
 
 #################################################################
 #    Data Properties
