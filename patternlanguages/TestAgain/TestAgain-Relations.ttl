@@ -44,10 +44,16 @@ pp:hasSource :PatternE ;
 pp:hasTarget :PatternF ; 
  pp:hasDescription "E -> F"^^xsd:string . 
  
-:ManyEntries-to-PatternP
+:PatternW-to-ManyEntries
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternW ; 
+pp:hasTarget :ManyEntries ; 
+ pp:hasDescription "TEst"^^xsd:string . 
+ 
+:PatternP-to-ManyEntries
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :ManyEntries ; 
-pp:hasPattern :PatternP .
+pp:hasPattern :PatternP ; 
+pp:hasPattern :ManyEntries .
  
 :PatternE-to-PatternP
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
