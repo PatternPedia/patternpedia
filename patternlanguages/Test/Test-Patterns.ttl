@@ -9,5 +9,14 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/Test/Test-Patterns> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/Test> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/Test#Test> .
 
+
+###  https://purl.org/patternpedia/patternlanguages/Test/Patternname#Patternname
+:Patternname rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/Test/TestIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasName> "Pattern name" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "![](http://placekitten.com/200/200)" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> " Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "Enter your input for this section here." .
