@@ -84,6 +84,7 @@ pp:hasName "TestAgain"^^xsd:string .
 :TestAgain pp:containsPattern :Pattern1 .
 :TestAgain pp:containsPattern :Pattern2 .
 :TestAgain pp:containsPattern :Pattern3 .
+:TestAgain pp:containsPattern :PatternTest .
 :TestAgain pp:containsPattern :Patternname .
 :TestAgain pp:containsPattern :Patterntest .
-:TestAgain pp:containsPattern :PatternTest .
+:TestAgain pp:containsPattern :PatternRestrictionTest .
