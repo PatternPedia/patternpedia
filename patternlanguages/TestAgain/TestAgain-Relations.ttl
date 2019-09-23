@@ -18,6 +18,11 @@ pp:hasSource :Pattern1 ;
 pp:hasTarget :Patterntest ; 
  pp:hasDescription "rwr"^^xsd:string . 
  
+:PatternRestrictionTest-to-Patt5
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternRestrictionTest ; 
+pp:hasTarget :Patt5 .
+ 
 :Pattern1-to-Pattern2
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :Pattern1 ; 
