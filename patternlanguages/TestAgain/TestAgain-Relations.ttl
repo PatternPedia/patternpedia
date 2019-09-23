@@ -39,6 +39,17 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternTest ; 
 pp:hasTarget :ManyEntries .
  
+:Patterntest-to-PatAgain
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :Patterntest ; 
+pp:hasTarget :PatAgain ; 
+ pp:hasDescription "Again"^^xsd:string . 
+ 
+:PatAgain-to-Pattern1
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :PatAgain ; 
+pp:hasPattern :Pattern1 .
+ 
 :PatAgain-to-Patternname
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :PatAgain ; 
@@ -48,9 +59,4 @@ pp:hasPattern :Patternname .
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :Pattern1 ; 
 pp:hasPattern :Pattern2 .
- 
-:PatAgain-to-Pattern1
-rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :PatAgain ; 
-pp:hasPattern :Pattern1 .
  
