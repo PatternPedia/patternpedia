@@ -80,7 +80,7 @@ pp:hasName "Test"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
-:Test pp:containsPattern :Patternname .
-:Test pp:containsPattern :Patternname .
 :Test pp:containsPattern :PatternTest3 .
 :Test pp:containsPattern :PatternTest323 .
+:Test pp:containsPattern :Patternname .
+:Test pp:containsPattern :ManyEntries .
