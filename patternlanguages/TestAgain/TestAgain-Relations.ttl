@@ -60,3 +60,9 @@ rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :PatternE ; 
 pp:hasPattern :PatternP .
  
+:PatternW-to-ManyListEntries
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :PatternW ; 
+pp:hasPattern :ManyListEntries ; 
+ pp:hasDescription "Description"^^xsd:string . 
+ 
