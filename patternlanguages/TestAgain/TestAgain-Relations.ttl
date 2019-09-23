@@ -26,11 +26,16 @@ pp:hasTarget :Patt5 .
 :PatternPat-to-PatAgain
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternPat ; 
-pp:hasTarget :PatAgain ; 
+pp:hasTarget :Pat Again ; 
  pp:hasDescription "pet!"^^xsd:string . 
  
 :Pattern1-to-Pattern2
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :Pattern1 ; 
 pp:hasPattern :Pattern2 .
+ 
+:Pattern1-to-PatAgain
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :Pattern1 ; 
+pp:hasPattern :PatAgain .
  
