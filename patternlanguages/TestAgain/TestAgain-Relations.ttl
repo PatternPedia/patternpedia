@@ -11,4 +11,10 @@
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgain-Relations> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestAgain#TestAgain> .
 
+
+:Pattern1-to-Patterntest
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :Pattern1 ; 
+pp:hasTarget :Patterntest ; 
+ pp:hasDescription "rwr"^^xsd:string . 
  
