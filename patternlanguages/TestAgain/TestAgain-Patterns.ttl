@@ -58,6 +58,15 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Pattern3 Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Pattern3 Enter your input for this section here." .
 
+###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternRestrictionTest
+:PatternRestrictionTest rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternRestrictionTest" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Enter your input for this section here." .
+
 ###  https://purl.org/patternpedia/patternlanguages/TestAgain#PatternTest
 :PatternTest rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
@@ -85,10 +94,10 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Patterntest Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasSolution> "Patterntest Enter your input for this section here." .
 
-###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatternRestrictionTest#PatternRestrictionTest
-:PatternRestrictionTest rdf:type owl:NamedIndividual ,
+###  https://purl.org/patternpedia/patternlanguages/TestAgain/PatAgain#PatAgain
+:PatAgain rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/TestAgain/TestAgainIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "PatternRestrictionTest" ;
+<https://purl.org/patternpedia/patternlanguages/TestAgain#hasName> "Pat Again" ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasIcon> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasContext> "Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/TestAgain#hasDrivingQuestion> "Enter your input for this section here." ;
