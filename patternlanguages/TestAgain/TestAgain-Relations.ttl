@@ -23,6 +23,12 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :PatternRestrictionTest ; 
 pp:hasTarget :Patt5 .
  
+:PatternPat-to-Pat Again
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternPat ; 
+pp:hasTarget :Pat Again ; 
+ pp:hasDescription "pet!"^^xsd:string . 
+ 
 :Pattern1-to-Pattern2
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :Pattern1 ; 
