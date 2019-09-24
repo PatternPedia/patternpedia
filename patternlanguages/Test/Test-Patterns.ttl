@@ -23,13 +23,25 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> " Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Enter your input for this section here." .
 
+###  https://purl.org/patternpedia/patternlanguages/Test#ManyEntries2
+:ManyEntries2 rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/Test/TestIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasName> "ManyEntries2" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/200/300)" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/200/200)" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Enter your input for this section here.
+* Test 2" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> " Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Solution 2" .
+
 ###  https://purl.org/patternpedia/patternlanguages/Test#PatternTest3
 :PatternTest3 rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/Test/TestIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasName> "PatternTest3" ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/400/200)" ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> " Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Enter your input for this section here." .
 
 ###  https://purl.org/patternpedia/patternlanguages/Test#PatternTest323
@@ -52,15 +64,3 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> " Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "Enter your input for this section here." .
-
-###  https://purl.org/patternpedia/patternlanguages/Test/ManyEntries2#ManyEntries2
-:ManyEntries2 rdf:type owl:NamedIndividual ,
-<https://purl.org/patternpedia/patternlanguages/Test/TestIndividual> ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasName> "ManyEntries2" ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/200/300)" ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/200/200)" ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Test 2" ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> " Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Enter your input for this section here." ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Solution 2" .
