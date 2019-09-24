@@ -16,7 +16,10 @@
     rdf:type owl:Ontology ;
     owl:imports <https://purl.org/patternpedia> ,
         <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/patternorientedsoftwarearchitecturepatterns-Patterns> ,
-        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/patternorientedsoftwarearchitecturepatterns-Relations> .
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns/patternorientedsoftwarearchitecturepatterns-Relations> ,
+        #views 
+        <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-patternorientedsoftwarearchitecturepatterns-view> .
 
 #################################################################
 #    Data Properties
@@ -133,6 +136,8 @@
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "https://media.wiley.com/product_data/coverImage300/97/04719586/0471958697.jpg"^^xsd:anyURI ;
     pp:hasName "Pattern Oriented Software Architecture Patterns"^^xsd:string ;
+    pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-patternorientedsoftwarearchitecturepatterns-view#CloudComputingPatterns-PatternorientedSoftwareArchitecturePatterns-View> ,
+        <https://purl.org/patternpedia/patternviews/enterpriseintegrationpatterns-patternorientedsoftwarearchitecturepatterns-view#EnterpriseIntegrationPatterns-PatternorientedSoftwareArchitecturePatterns-View> ;
     pp:containsPattern :Layers ,
         :PipesandFilters ,
         :Blackboard ,

@@ -22,7 +22,7 @@
 :CloudComputingPatterns-PatternorientedSoftwareArchitecturePatterns-View
     rdf:type owl:NamedIndividual, pp:PatternView ;
     pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> ,
-        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternorientedSoftwareArchitecturePatterns> ;
+        <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> ;
     pp:containsPatternRelationDescriptor :LooseCoupling-to-Broker ,
         :DistributedApplication-to-PipesandFilters ,
         :DistributedApplication-to-Layers ,
