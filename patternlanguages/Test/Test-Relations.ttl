@@ -9,5 +9,12 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/Test/Test-Relations> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/Test> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/Test#Test> .
 
+
+:ManyEntries2-to-ManyEntries
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :ManyEntries2 ; 
+pp:hasTarget :ManyEntries ; 
+ pp:hasDescription "test"^^xsd:string . 
+ 
