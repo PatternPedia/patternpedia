@@ -29,10 +29,10 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 <https://purl.org/patternpedia/patternlanguages/Test#hasName> "ManyEntries2" ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/200/300)" ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasIcon> "* ![](http://placekitten.com/200/200)" ;
-<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Enter Test!" ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasDrivingQuestion> "My Driving Question" ;
 <https://purl.org/patternpedia/patternlanguages/Test#hasSolution> "* Solution 1
-* Solution 2" .
+* Solution 2" ;
+<https://purl.org/patternpedia/patternlanguages/Test#hasContext> "* Enter Test :)" .
 
 ###  https://purl.org/patternpedia/patternlanguages/Test#PatternTest3
 :PatternTest3 rdf:type owl:NamedIndividual ,
