@@ -18,8 +18,13 @@ pp:hasSource :ManyEntries2 ;
 pp:hasTarget :ManyEntries ; 
  pp:hasDescription "test"^^xsd:string . 
  
-:ManyEntries2-to-ManyEntries
+:PatternTest3-to-ManyEntries
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :PatternTest3 ; 
+pp:hasTarget :ManyEntries .
+ 
+:ManyEntries-to-ManyEntries2
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :ManyEntries2 ; 
-pp:hasPattern :ManyEntries .
+pp:hasPattern :ManyEntries ; 
+pp:hasPattern :ManyEntries2 .
  
