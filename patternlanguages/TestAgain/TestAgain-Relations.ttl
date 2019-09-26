@@ -45,6 +45,11 @@ pp:hasSource :Patterntest ;
 pp:hasTarget :PatAgain ; 
  pp:hasDescription "Again"^^xsd:string . 
  
+:Patterntest-to-ManyEntries
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :Patterntest ; 
+pp:hasTarget :ManyEntries .
+ 
 :PatAgain-to-Pattern1
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasPattern :PatAgain ; 
