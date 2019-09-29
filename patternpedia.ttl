@@ -220,3 +220,4 @@
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestCreatePattern#TestCreatePattern> .
+<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestWhitespaceAgain#Test Whitespace Again> .
