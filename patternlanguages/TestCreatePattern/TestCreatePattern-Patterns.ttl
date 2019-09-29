@@ -11,3 +11,12 @@
 <https://purl.org/patternpedia/patternlanguages/TestCreatePattern/TestCreatePattern-Patterns> rdf:type owl:Ontology ;
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/TestCreatePattern> .
 
+
+###  https://purl.org/patternpedia/patternlanguages/TestCreatePattern/Pattern#Pattern
+:Pattern rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/TestCreatePattern/TestCreatePatternIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/TestCreatePattern#hasName> "Pattern" ;
+<https://purl.org/patternpedia/patternlanguages/TestCreatePattern#hasIcon> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestCreatePattern#hasContext> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestCreatePattern#hasDrivingQuestion> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/TestCreatePattern#hasSolution> "* Enter your input for this section here." .
