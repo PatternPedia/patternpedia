@@ -218,3 +218,4 @@
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> .
 <https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
+<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns> .
