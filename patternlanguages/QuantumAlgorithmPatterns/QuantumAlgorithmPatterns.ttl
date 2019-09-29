@@ -120,4 +120,4 @@ pp:hasName "QuantumAlgorithmPatterns"^^xsd:string .
 :QuantumAlgorithmPatterns pp:containsPattern :Pattern2 .
 :QuantumAlgorithmPatterns pp:containsPattern :Pattern3 .
 :QuantumAlgorithmPatterns pp:containsPattern :Patternname .
-:QuantumAlgorithmPatterns pp:containsPattern :Patternname .
+:QuantumAlgorithmPatterns pp:containsPattern :PatterntestIcon .
