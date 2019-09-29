@@ -9,5 +9,11 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/QCAlgorithmsPatterns/QCAlgorithmsPatterns-Relations> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QCAlgorithmsPatterns> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QCAlgorithmsPatterns#QCAlgorithmsPatterns> .
 
+
+:CreatingEntanglement-to-UniformSuperposition
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :CreatingEntanglement ; 
+pp:hasTarget :UniformSuperposition .
+ 
