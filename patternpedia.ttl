@@ -212,9 +212,9 @@
                              :PatternPedia ;
                     :hasName "PatternPedia - Linked Open Patterns"^^xsd:string ;
                     :hasLogo "https://avatars2.githubusercontent.com/u/26855294?s=400&u=79a17f6856ac0b53e4658f1206362634904eb8b3&v=4"^^xsd:anyURI .
-:LinkedOpenPatterns pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> .
-:LinkedOpenPatterns pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePatterns> .
-:LinkedOpenPatterns pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> .
-:LinkedOpenPatterns pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> .
-:LinkedOpenPatterns pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> .
-:LinkedOpenPatterns pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
+:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> .
+:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePatterns> .
+:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> .
+:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> .
+:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> .
+:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
