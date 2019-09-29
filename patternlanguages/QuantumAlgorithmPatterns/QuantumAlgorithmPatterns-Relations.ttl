@@ -17,3 +17,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :IconTest ; 
 pp:hasTarget :CreatingEntanglement .
  
+:CreatingEntanglement2-to-CreatingEntanglement
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasPattern :CreatingEntanglement2 ; 
+pp:hasPattern :CreatingEntanglement .
+ 
