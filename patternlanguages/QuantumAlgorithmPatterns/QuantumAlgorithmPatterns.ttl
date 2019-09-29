@@ -114,5 +114,6 @@ pp:hasName "QuantumAlgorithmPatterns"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
-:QuantumAlgorithmPatterns pp:containsPattern :Patternname .
 :QuantumAlgorithmPatterns pp:containsPattern :Pattern2 .
+:QuantumAlgorithmPatterns pp:containsPattern :Patternname .
+:QuantumAlgorithmPatterns pp:containsPattern :Pattern3 .
