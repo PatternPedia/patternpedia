@@ -17,3 +17,8 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :CreatingEntanglement ; 
 pp:hasTarget :UniformSuperposition .
  
+:CreatingEntanglement-to-CreatingEntanglement
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :CreatingEntanglement ; 
+pp:hasTarget :CreatingEntanglement .
+ 
