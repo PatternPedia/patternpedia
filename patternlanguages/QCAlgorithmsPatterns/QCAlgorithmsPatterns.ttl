@@ -116,3 +116,4 @@ pp:hasName "QCAlgorithmsPatterns"^^xsd:string .
 # Individuals
 ##############################################################
 :QCAlgorithmsPatterns pp:containsPattern :CreatingEntanglement .
+:QCAlgorithmsPatterns pp:containsPattern :UniformSuperposition .
