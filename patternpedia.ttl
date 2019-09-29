@@ -212,11 +212,12 @@
                              :PatternPedia ;
                     :hasName "PatternPedia - Linked Open Patterns"^^xsd:string ;
                     :hasLogo "https://avatars2.githubusercontent.com/u/26855294?s=400&u=79a17f6856ac0b53e4658f1206362634904eb8b3&v=4"^^xsd:anyURI .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns> .
-<https://purl.org/patternpedia#LinkedOpenPatterns> <https://purl.org/patternpedia#containsPatternGraph> <https://purl.org/patternpedia/patternlanguages/TestCreatePattern#TestCreatePattern> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/cloudcomputingpatterns#CloudComputingPatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseapplicationarchitecturepatterns#EnterpriseApplicationArchitecturePatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns> .
+:LinkedOpenPatterns :ppcontainsPatternGraph <https://purl.org/patternpedia/patternlanguages/TestCreatePattern#TestCreatePattern> .
+:LinkedOpenPatterns :ppcontainsPatternGraph  <https://purl.org/patternpedia/patternlanguages/QuantumComputingAlgorithms#QuantumComputingAlgorithms> .
