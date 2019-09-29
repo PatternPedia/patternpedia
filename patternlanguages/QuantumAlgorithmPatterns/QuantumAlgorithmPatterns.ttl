@@ -116,7 +116,8 @@ pp:hasName "QuantumAlgorithmPatterns"^^xsd:string .
 ##############################################################
 :QuantumAlgorithmPatterns pp:containsPattern :CreatingEntanglement .
 :QuantumAlgorithmPatterns pp:containsPattern :CreatingEntanglement2 .
+:QuantumAlgorithmPatterns pp:containsPattern :IconTest .
 :QuantumAlgorithmPatterns pp:containsPattern :Pattern2 .
 :QuantumAlgorithmPatterns pp:containsPattern :Pattern3 .
 :QuantumAlgorithmPatterns pp:containsPattern :Patternname .
-:QuantumAlgorithmPatterns pp:containsPattern :IconTest .
+:QuantumAlgorithmPatterns pp:containsPattern :Patternname .
