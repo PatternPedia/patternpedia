@@ -6,7 +6,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dctype: <https://purl.org/dc/dcmitype/> .
 
 
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns> rdf:type owl:Ontology ;
@@ -20,38 +19,38 @@ owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/pat
 # #################################################################
 
 
-### Intent
-:hasIntent rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIntent
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIntent> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "0"^^xsd:integer .
 
 
-### Icon
-:hasIcon rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIcon
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIcon> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "1"^^xsd:integer .
 
 
-### Driving Question
-:hasDrivingQuestion rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasDrivingQuestion
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasDrivingQuestion> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "2"^^xsd:integer .
 
 
-### Context
-:hasContext rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasContext
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasContext> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "3"^^xsd:integer .
 
 
-### Solution
-:hasSolution rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasSolution
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasSolution> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "4"^^xsd:integer .
 
 
-### Known Uses
-:hasKnownUses rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasKnownUses
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasKnownUses> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "5"^^xsd:integer .
 
 
-### Next
-:hasNext rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasNext
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasNext> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "6"^^xsd:integer .
 
 
@@ -60,54 +59,54 @@ pp:hasListIndex "6"^^xsd:integer .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns
+### https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns
 :QuantumAlgorithmPatternsIndividual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIntent ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIntent> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIcon> ; 
 			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange dctype:Image
+			 owl:onDataRange <https://purl.org/dc/dcmitype/Image>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasDrivingQuestion> ; 
 			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
-			 owl:onDataRange xsd:string
+			 owl:onDataRange <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasContext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasSolution> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasKnownUses ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasKnownUses> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasNext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasNext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
-###  https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns
+###  https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns
 :QuantumAlgorithmPatterns rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://images.freeimages.com/images/large-previews/644/sphere-1167759.jpg"^^xsd:anyURI ;
@@ -115,3 +114,4 @@ pp:hasName "QuantumAlgorithmPatterns"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
+:QuantumAlgorithmPatterns pp:containsPattern :Patternname .
