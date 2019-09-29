@@ -1,0 +1,82 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/Test Whitespace#> .
+@base <https://purl.org/patternpedia/patternlanguages/Test Whitespace> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix xml: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dctype: <https://purl.org/dc/dcmitype/> .
+
+
+<https://purl.org/patternpedia/patternlanguages/TestWhitespace> rdf:type owl:Ontology ;
+owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/TestWhitespace/TestWhitespace-Patterns>, <https://purl.org/patternpedia/patternlanguages/TestWhitespace/TestWhitespace-Relations>.
+
+
+# #################################################################
+# #
+# #    Sections / Data Properties
+# #
+# #################################################################
+
+
+### Icon
+:hasIcon rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "0"^^xsd:integer .
+
+
+### Context
+:hasContext rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "1"^^xsd:integer .
+
+
+### Driving Question
+:hasDrivingQuestion rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "2"^^xsd:integer .
+
+
+### Solution
+:hasSolution rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "3"^^xsd:integer .
+
+
+# #################################################################
+# #
+# #    Restrictions / Classes
+# #
+# #################################################################
+### https://purl.org/patternpedia/patternlanguages/TestWhitespace
+:Test WhitespaceIndividual rdf:type owl:Class ; 
+ rdfs:subClassOf pp:Pattern ,
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasIcon ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasContext ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasSolution ; 
+			 owl:allValuesFrom xsd:string
+				] .
+
+
+###  https://purl.org/patternpedia/patternlanguages/TestWhitespace
+:Test Whitespace rdf:type owl:NamedIndividual ,
+pp:PatternLanguage ;
+pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
+pp:hasName "Test Whitespace"^^xsd:string .
+#################################################################
+# Individuals
+##############################################################
