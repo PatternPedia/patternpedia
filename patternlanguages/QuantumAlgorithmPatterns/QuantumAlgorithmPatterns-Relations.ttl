@@ -9,5 +9,11 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns/QuantumAlgorithmPatterns-Relations> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns> .
 
+
+:IconTest-to-CreatingEntanglement
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :IconTest ; 
+pp:hasTarget :CreatingEntanglement .
+ 
