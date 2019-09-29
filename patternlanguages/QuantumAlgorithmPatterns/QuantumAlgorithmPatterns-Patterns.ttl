@@ -12,10 +12,22 @@
 owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#QuantumAlgorithmPatterns> .
 
 
-###  https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns/Patternname#Patternname
+###  https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#Patternname
 :Patternname rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns/QuantumAlgorithmPatternsIndividual> ;
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasName> "Pattern name" ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIntent> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIcon> "![](http://)" ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasDrivingQuestion> " Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasContext> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasSolution> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasKnownUses> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasNext> "* Enter your input for this section here." .
+
+###  https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns/Pattern2#Pattern2
+:Pattern2 rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns/QuantumAlgorithmPatternsIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasName> "Pattern2" ;
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIntent> "* Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasIcon> "![](http://)" ;
 <https://purl.org/patternpedia/patternlanguages/QuantumAlgorithmPatterns#hasDrivingQuestion> " Enter your input for this section here." ;
