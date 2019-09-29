@@ -73,7 +73,7 @@
 :EnterpriseApplicationArchitecturePatterns
     rdf:type owl:NamedIndividual, pp:PatternLanguage ;
     pp:hasLogo "https://martinfowler.com/books/eaa.jpg"^^xsd:anyURI ;
-    pp:hasName "Enterprise Appplication Architecture Patterns"^^xsd:string ;
+    pp:hasName "Enterprise Application Architecture Patterns"^^xsd:string ;
     pp:referredByView <https://purl.org/patternpedia/patternviews/cloudcomputingpatterns-enterpriseapplicationarchitecturepatterns-view#CloudComputingPatterns-EnterpriseApplicationArchitecturePatterns-View> ,
         <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-enterpriseintegrationpatterns-view#EnterpriseApplicationArchitecturePatterns-EnterpriseIntegrationPatterns-View> ,
         <https://purl.org/patternpedia/patternviews/enterpriseapplicationarchitecturepatterns-gangoffourpatterns-view#EnterpriseApplicationArchitecturePatterns-GangofFourPatterns-View> ,
