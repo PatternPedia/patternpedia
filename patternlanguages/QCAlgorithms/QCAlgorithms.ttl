@@ -1,0 +1,117 @@
+@prefix : <https://purl.org/patternpedia/patternlanguages/QCAlgorithms#> .
+@base <https://purl.org/patternpedia/patternlanguages/QCAlgorithms> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pp: <https://purl.org/patternpedia#> .
+@prefix xml: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dctype: <https://purl.org/dc/dcmitype/> .
+
+
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms> rdf:type owl:Ontology ;
+owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/patternlanguages/QCAlgorithms/QCAlgorithms-Patterns>, <https://purl.org/patternpedia/patternlanguages/QCAlgorithms/QCAlgorithms-Relations>.
+
+
+# #################################################################
+# #
+# #    Sections / Data Properties
+# #
+# #################################################################
+
+
+### Intent
+:hasIntent rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "0"^^xsd:integer .
+
+
+### Icon
+:hasIcon rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "1"^^xsd:integer .
+
+
+### Driving Question
+:hasDrivingQuestion rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "2"^^xsd:integer .
+
+
+### Context
+:hasContext rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "3"^^xsd:integer .
+
+
+### Solution
+:hasSolution rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "4"^^xsd:integer .
+
+
+### Known Uses
+:hasKnownUses rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "5"^^xsd:integer .
+
+
+### Next
+:hasNext rdf:type pp:DatatypePropertyListItem  ;
+pp:hasListIndex "6"^^xsd:integer .
+
+
+# #################################################################
+# #
+# #    Restrictions / Classes
+# #
+# #################################################################
+### https://purl.org/patternpedia/patternlanguages/QCAlgorithms
+:QCAlgorithmsIndividual rdf:type owl:Class ; 
+ rdfs:subClassOf pp:Pattern ,
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasIntent ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasIcon ; 
+			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
+			 owl:onDataRange dctype:Image
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasDrivingQuestion ; 
+			 owl:qualifiedCardinality"1"^^xsd:nonNegativeInteger;
+			 owl:onDataRange xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasContext ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasSolution ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasKnownUses ; 
+			 owl:allValuesFrom xsd:string
+				] ,
+
+
+			[ rdf:type owl:Restriction ;
+			 owl:onProperty :hasNext ; 
+			 owl:allValuesFrom xsd:string
+				] .
+
+
+###  https://purl.org/patternpedia/patternlanguages/QCAlgorithms
+:QCAlgorithms rdf:type owl:NamedIndividual ,
+pp:PatternLanguage ;
+pp:hasLogo "https://images.freeimages.com/images/large-previews/21d/digital-dreams-1155366.jpg"^^xsd:anyURI ;
+pp:hasName "QC Algorithms"^^xsd:string .
+#################################################################
+# Individuals
+##############################################################
