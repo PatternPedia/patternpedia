@@ -9,5 +9,17 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/QCAlgorithms/QCAlgorithms-Patterns> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QCAlgorithms> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/QCAlgorithms#QCAlgorithms> .
 
+
+###  https://purl.org/patternpedia/patternlanguages/QCAlgorithms/CreatingEntanglement#CreatingEntanglement
+:CreatingEntanglement rdf:type owl:NamedIndividual ,
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms/QCAlgorithmsIndividual> ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasName> "Creating Entanglement" ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasIntent> "* A strong correlation between **qbits** of a quantum register is often needed.." ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasIcon> "![](http://www.cloudcomputingpatterns.org/icons/processing_component_icon.png)" ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasDrivingQuestion> "How can an entangled state be created? " ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasContext> "* Entanglement is one of the causes of the power of quantum algorithms... " ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasSolution> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasKnownUses> "* Used in many algorithms" ;
+<https://purl.org/patternpedia/patternlanguages/QCAlgorithms#hasNext> "* Enter your input for this section here." .
