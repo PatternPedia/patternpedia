@@ -29,10 +29,16 @@ pp:hasSource :Pattern2 ;
 pp:hasTarget :Pattern3 ; 
  pp:hasDescription "Test relationType undirected UI."^^xsd:string . 
  
-:Pattern3-to-Pattern1
+:Pattern1-to-Pattern3
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasRelationType "isRelatedTo"^^xsd:string ;
-pp:hasPattern :Pattern3 ; 
 pp:hasPattern :Pattern1 ; 
- pp:hasDescription "Test relationType."^^xsd:string . 
+pp:hasPattern :Pattern3 .
+ 
+:Pattern2-to-Pattern1
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasRelationType "isRelatedTo"^^xsd:string ;
+pp:hasPattern :Pattern2 ; 
+pp:hasPattern :Pattern1 ; 
+ pp:hasDescription "Final Test."^^xsd:string . 
  
