@@ -16,7 +16,7 @@ owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patt
 :Pattern1 rdf:type owl:NamedIndividual ,
 <https://purl.org/patternpedia/patternlanguages/test55/Test55Individual> ;
 <https://purl.org/patternpedia/patternlanguages/test55#hasName> "Pattern1" ;
-<https://purl.org/patternpedia/patternlanguages/test55#hasIcon> "* Enter your input for this section here." ;
+<https://purl.org/patternpedia/patternlanguages/test55#hasIcon> "* Icon " ;
 <https://purl.org/patternpedia/patternlanguages/test55#hasContext> "* Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/test55#hasDrivingQuestion> "* Enter your input for this section here." ;
 <https://purl.org/patternpedia/patternlanguages/test55#hasSolution> "* Enter your input for this section here." .
