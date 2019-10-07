@@ -9,5 +9,11 @@
 
 
 <https://purl.org/patternpedia/patternlanguages/test55/test55-Relations> rdf:type owl:Ontology ;
-owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/test55> .
+owl:imports <https://purl.org/patternpedia>, <https://purl.org/patternpedia/patternlanguages/test55#Test55> .
 
+
+:Pattern1-to-Pattern2
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :Pattern1 ; 
+pp:hasTarget :Pattern2 .
+ 
