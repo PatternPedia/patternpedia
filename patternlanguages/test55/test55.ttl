@@ -81,3 +81,4 @@ pp:hasName "Test55"^^xsd:string .
 ##############################################################
 :Test55 pp:containsPattern :Pattern1 .
 :Test55 pp:containsPattern :Pattern2 .
+:Test55 pp:containsPattern :Pattern3 .
