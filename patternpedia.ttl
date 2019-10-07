@@ -218,6 +218,4 @@
 :LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/gangoffourpatterns#GangofFourPatterns> .
 :LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> .
 :LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/patternorientedsoftwarearchitecturepatterns#PatternOrientedSoftwareArchitecturePatterns> .
-:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/Test#Test> .
-:LinkedOpenPatterns :containsPatternGraph <https://purl.org/patternpedia/patternlanguages/TestLanguage#TestLanguage> .
-:LinkedOpenPatterns :containsPatternGraph  <https://purl.org/patternpedia/patternlanguages/Test2#Test2> .
+:LinkedOpenPatterns :containsPatternGraph  <https://purl.org/patternpedia/patternlanguages/test2#Test2> .
