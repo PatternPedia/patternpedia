@@ -18,3 +18,8 @@ pp:hasSource :Broker ;
 pp:hasTarget :Blackboard ; 
  pp:hasDescription "Test links."^^xsd:string . 
  
+:Master-Slave-to-Blackboard
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasSource :Master-Slave ; 
+pp:hasTarget :Blackboard .
+ 
