@@ -24,7 +24,13 @@ pp:hasTarget :Pattern2 .
  
 :Pattern2-to-Pattern1
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasRelationType "Second relation with a relationType."^^xsd:string ;
 pp:hasSource :Pattern2 ; 
 pp:hasTarget :Pattern1 .
+ 
+:Pattern2-to-Pattern3
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasRelationType "consistsOf"^^xsd:string ;
+pp:hasSource :Pattern2 ; 
+pp:hasTarget :Pattern3 ; 
+ pp:hasDescription "Test relationType."^^xsd:string . 
  
