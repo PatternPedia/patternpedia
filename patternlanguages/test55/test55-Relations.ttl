@@ -19,8 +19,10 @@ pp:hasTarget :Pattern2 .
  
 :Pattern2-to-Pattern1
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasRelationType "isRelatedTo"^^xsd:string ;
 pp:hasSource :Pattern2 ; 
-pp:hasTarget :Pattern1 .
+pp:hasTarget :Pattern1 ; 
+ pp:hasDescription "Final Test."^^xsd:string . 
  
 :Pattern2-to-Pattern3
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
@@ -29,16 +31,22 @@ pp:hasSource :Pattern2 ;
 pp:hasTarget :Pattern3 ; 
  pp:hasDescription "Test relationType undirected UI."^^xsd:string . 
  
+:Pattern1-to-Pattern2
+rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
+pp:hasRelationType "isRelatedTo"^^xsd:string ;
+pp:hasPattern :Pattern1 ; 
+pp:hasPattern :Pattern2 .
+ 
 :Pattern1-to-Pattern3
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
 pp:hasRelationType "isRelatedTo"^^xsd:string ;
 pp:hasPattern :Pattern1 ; 
 pp:hasPattern :Pattern3 .
  
-:Pattern2-to-Pattern1
+:Pattern3-to-Pattern4
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasRelationType "isRelatedTo"^^xsd:string ;
-pp:hasPattern :Pattern2 ; 
-pp:hasPattern :Pattern1 ; 
- pp:hasDescription "Final Test."^^xsd:string . 
+pp:hasRelationType "canBeUsedWith"^^xsd:string ;
+pp:hasPattern :Pattern3 ; 
+pp:hasPattern :Pattern4 ; 
+ pp:hasDescription "Test undirected link with relationType and a description."^^xsd:string . 
  
