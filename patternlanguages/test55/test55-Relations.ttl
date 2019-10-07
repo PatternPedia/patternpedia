@@ -17,3 +17,9 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :Pattern1 ; 
 pp:hasTarget :Pattern2 .
  
+:Pattern2-to-Pattern2
+rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
+pp:hasRelationType "This is my first link with a relationtype."^^xsd:string ;
+pp:hasSource :Pattern2 ; 
+pp:hasTarget :Pattern2 .
+ 
