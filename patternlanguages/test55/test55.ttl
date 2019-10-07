@@ -6,7 +6,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dctype: <https://purl.org/dc/dcmitype/> .
 
 
 <https://purl.org/patternpedia/patternlanguages/test55> rdf:type owl:Ontology ;
@@ -20,23 +19,23 @@ owl:imports <https://purl.org/patternpedia> , <https://purl.org/patternpedia/pat
 # #################################################################
 
 
-### Icon
-:hasIcon rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/test55#hasIcon
+<https://purl.org/patternpedia/patternlanguages/test55#hasIcon> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "0"^^xsd:integer .
 
 
-### Context
-:hasContext rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/test55#hasContext
+<https://purl.org/patternpedia/patternlanguages/test55#hasContext> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "1"^^xsd:integer .
 
 
-### Driving Question
-:hasDrivingQuestion rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/test55#hasDrivingQuestion
+<https://purl.org/patternpedia/patternlanguages/test55#hasDrivingQuestion> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "2"^^xsd:integer .
 
 
-### Solution
-:hasSolution rdf:type pp:DatatypePropertyListItem  ;
+### https://purl.org/patternpedia/patternlanguages/test55#hasSolution
+<https://purl.org/patternpedia/patternlanguages/test55#hasSolution> rdf:type pp:DatatypePropertyListItem  ;
 pp:hasListIndex "3"^^xsd:integer .
 
 
@@ -45,34 +44,34 @@ pp:hasListIndex "3"^^xsd:integer .
 # #    Restrictions / Classes
 # #
 # #################################################################
-### https://purl.org/patternpedia/patternlanguages/test55
+### https://purl.org/patternpedia/patternlanguages/test55#Test55
 :Test55Individual rdf:type owl:Class ; 
  rdfs:subClassOf pp:Pattern ,
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasIcon ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/test55#hasIcon> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasContext ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/test55#hasContext> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasDrivingQuestion ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/test55#hasDrivingQuestion> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] ,
 
 
 			[ rdf:type owl:Restriction ;
-			 owl:onProperty :hasSolution ; 
-			 owl:allValuesFrom xsd:string
+			 owl:onProperty <https://purl.org/patternpedia/patternlanguages/test55#hasSolution> ; 
+			 owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string>
 				] .
 
 
-###  https://purl.org/patternpedia/patternlanguages/test55
+###  https://purl.org/patternpedia/patternlanguages/test55#Test55
 :Test55 rdf:type owl:NamedIndividual ,
 pp:PatternLanguage ;
 pp:hasLogo "https://placekitten.com/300/200"^^xsd:anyURI ;
@@ -80,3 +79,4 @@ pp:hasName "Test55"^^xsd:string .
 #################################################################
 # Individuals
 ##############################################################
+:Test55 pp:containsPattern :Pattern1 .
