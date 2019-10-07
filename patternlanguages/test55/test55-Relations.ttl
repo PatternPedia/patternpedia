@@ -17,11 +17,6 @@ rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :Pattern1 ; 
 pp:hasTarget :Pattern2 .
  
-:Pattern2-to-Pattern2
-rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
-pp:hasSource :Pattern2 ; 
-pp:hasTarget :Pattern2 .
- 
 :Pattern2-to-Pattern1
 rdf:type owl:NamedIndividual , pp:DirectedPatternRelationDescriptor ;
 pp:hasSource :Pattern2 ; 
@@ -33,11 +28,6 @@ pp:hasRelationType "isRelatedTo"^^xsd:string ;
 pp:hasSource :Pattern2 ; 
 pp:hasTarget :Pattern3 ; 
  pp:hasDescription "Test relationType undirected UI."^^xsd:string . 
- 
-:Pattern2-to-Pattern2
-rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
-pp:hasPattern :Pattern2 ; 
-pp:hasPattern :Pattern2 .
  
 :Pattern3-to-Pattern1
 rdf:type owl:NamedIndividual , pp:UndirectedPatternRelationDescriptor ;
