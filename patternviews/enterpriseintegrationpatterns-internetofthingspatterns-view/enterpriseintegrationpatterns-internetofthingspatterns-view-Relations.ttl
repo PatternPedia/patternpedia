@@ -18,10 +18,10 @@
     pp:hasDescription "Until the device is online again, it is possible that the sent operations are no longer relevant. Expired commands should not be considered. This mechanism can be found in the Message Expiration Pattern of Hohpe and Woolf, which is why Reinfurt et al. refer to it."^^xsd:string .
 
 
-:RulesEngine-to-ContentBasedRouter
+:RulesEngine-to-Content-BasedRouter
     rdf:type owl:NamedIndividual, pp:DirectedPatternRelationDescriptor ;
     pp:hasSource iot:RulesEngine ;
-    pp:hasTarget eip:ContentBasedRouter ;
+    pp:hasTarget eip:Content-BasedRouter ;
     pp:hasDescription "A content based router can decide the destination based on the content of a message. Reinfurt et al. therefore refer to the similarity to their Rules Engine. However, a rules engine can accept additional data for the decisions, which is not the case with the Content Based Router."^^xsd:string .
 
 

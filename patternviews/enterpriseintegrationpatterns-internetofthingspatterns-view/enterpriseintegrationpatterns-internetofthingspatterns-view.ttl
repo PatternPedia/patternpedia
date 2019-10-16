@@ -24,7 +24,7 @@
     pp:containsPatternGraph <https://purl.org/patternpedia/patternlanguages/enterpriseintegrationpatterns#EnterpriseIntegrationPatterns> ,
         <https://purl.org/patternpedia/patternlanguages/internetofthingspatterns#InternetofThingsPatterns> ;
     pp:containsPatternRelationDescriptor :DeviceShadow-to-MessageExpiration ,
-        :RulesEngine-to-ContentBasedRouter ,
+        :RulesEngine-to-Content-BasedRouter ,
         :DeviceWakeupTrigger-to-CorrelationIdentifier ,
         :DeviceWakeupTrigger-to-CommandMessage ,
         :DeviceWakeupTrigger-to-EventMessage ,
